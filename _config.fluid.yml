@@ -92,7 +92,7 @@ fun_features:
 
     # 游标字符
     # Cursor character
-    cursorChar: " 🍀"
+    cursorChar: " 🚑"
 
     # 是否循环播放效果
     # If true, loop animation
