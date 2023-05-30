@@ -146,8 +146,8 @@ color:
 
   # 顶部菜单背景色
   # Color of navigation bar background
-  navbar_bg_color: "#2f4154"
-  navbar_bg_color_dark: "#1f3144"
+  navbar_bg_color: "#57c52b"
+  navbar_bg_color_dark: "#57c52b"
 
   # 顶部菜单字体色
   # Color of navigation bar text
@@ -186,13 +186,13 @@ color:
 
   # 文章超链接字体色
   # Color of post link
-  post_link_color: "#0366d6"
-  post_link_color_dark: "#1589e9"
+  post_link_color: "#57c52b"
+  post_link_color_dark: "#57c52b"
 
   # 超链接悬浮时字体色
   # Color of link when hovering
-  link_hover_color: "#30a9de"
-  link_hover_color_dark: "#30a9de"
+  link_hover_color: "#3fc808"
+  link_hover_color_dark: "#3fc808"
 
   # 超链接悬浮背景色
   # Color of link background when hovering
@@ -236,7 +236,7 @@ custom_js:
 
 # 指定自定义 .css 文件路径，用法和 custom_js 相同
 # The usage is the same as custom_js
-custom_css:
+custom_css: /styles/global.css
 
 # 网页访问统计
 # Analysis of website visitors
