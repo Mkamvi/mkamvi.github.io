@@ -13,6 +13,6 @@ fetch('https://api.eatrice.top')
 </script> `;
 
 hexo.extend.filter.register("theme_inject", function (injects) {
-  injects.postMarkdownEnd.raw("default", p, { key: "value" }, -1);
-  injects.bodyEnd.raw("default", s);
+  injects.postMarkdownEnd.raw("rainbow-tag", p);
+  injects.postMarkdownEnd.raw("rainbow-script", s);
 });
