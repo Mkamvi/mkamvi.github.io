@@ -4,6 +4,31 @@
   
   
   <entry>
+    <title>终于都弄完了</title>
+    <link href="/%E6%97%A5%E5%B8%B8%E8%AE%B0%E5%BD%95/2023/06/01/20/daily/2023-06-01/"/>
+    <url>/%E6%97%A5%E5%B8%B8%E8%AE%B0%E5%BD%95/2023/06/01/20/daily/2023-06-01/</url>
+    
+    <content type="html"><![CDATA[<p>今天早上把fluid主题的相关文档基本都看完了，包括进阶脚本注入部分，然后顺手把rainbow也给接了进来。</p><p>下午接着看实时航线统计的事，使用polyline作为动态航线展示，然后通过轨迹路线模拟飞机航行过程，就是数量太多时有性能问题，明天需要再整理下。</p><p>晚上接着在window系统配置nvim，过程中装了scoop，然后还报几个错误，不过不影响使用，缓几天了再研究研究。</p><p>然后今天的结果是：家里电脑该弄的都弄好了，接下来就是撸起袖子开干的时候了。</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>日常记录</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>日常记录</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>算了，就随意吧</title>
     <link href="/%E6%97%A5%E5%B8%B8%E8%AE%B0%E5%BD%95/2023/06/01/09/daily/2023-05-31/"/>
     <url>/%E6%97%A5%E5%B8%B8%E8%AE%B0%E5%BD%95/2023/06/01/09/daily/2023-05-31/</url>
