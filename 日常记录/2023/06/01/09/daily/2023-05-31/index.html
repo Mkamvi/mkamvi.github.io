@@ -24,7 +24,7 @@
 <meta property="og:description" content="早上写了一个字符串替换脚本，是从 Excel 读取一个映射关系，然后对一个 zip 文件里的内容进行关键词替换。 下午又接着研究 Gis 实时航线统计实现方式，目前简单尝试了通过内置的 Polyline 组件模拟航线，但数量大的话会卡。 GeForce Experience 突然登录不上了，挂 VPN、修改 DNS，然并没啥用。 然后想在 Window 系统装下 Nvim，方便后面写博客用，但 p">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2023-06-01T09:38:55.000Z">
-<meta property="article:modified_time" content="2023-06-01T03:02:55.520Z">
+<meta property="article:modified_time" content="2023-06-01T03:24:27.774Z">
 <meta property="article:author" content="不良帅">
 <meta property="article:tag" content="日常记录">
 <meta name="twitter:card" content="summary_large_image">
@@ -236,7 +236,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          317 字
+          306 字
         
       </span>
     
@@ -309,11 +309,8 @@
 <p>然后想在 Window 系统装下 Nvim，方便后面写博客用，但 packer 安装依赖失败，Powershell 对系统代理不生效。也是配了$env:HTTP_PROXY 啥的，然并卵用。</p>
 <p>最后尝试 curl chrome 时提示需要在 IE 浏览器做初始化配置，于是打开了 IE，然后就好了…</p>
 <p>关键是 GeForce Ex 登录页也能出来了…</p>
-<blockquote>
-<p>天啦，本帅这是在作甚 ！</p>
-</blockquote>
 
-                
+                <blockquote><p id='rainbow'> 🏝️ </p> <blockquote>
               </div>
             
             <hr/>
@@ -684,6 +681,16 @@
 
 
   
+  <script>
+fetch('https://api.eatrice.top')
+  .then(response => response.json())
+  .then(data => {
+    var rainbow = document.getElementById('rainbow');
+    rainbow.innerHTML = data.Content;
+    rainbow.href = "https://rainbow.eatrice.top/?ID=" + data.ID;
+  })
+  .catch(console.error)
+</script> 
 
   <noscript>
     <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
