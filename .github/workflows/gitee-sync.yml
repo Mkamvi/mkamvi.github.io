@@ -1,0 +1,23 @@
+name: Sync to gitee
+
+on:
+  push:
+    branches:
+      - gh-pages # default branch
+
+jobs:
+  pages:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Organization mirror
+        uses: Yikun/hub-mirror-action@mappings
+        with:
+          src: github/Mkamvi
+          dst: gitee/Mkamvi
+          dst_key: ${{ secrets.SYNC_GITEE_PRIVATE_KEY }}
+          dst_token: ${{ secrets.GITEE_TOKEN }}
+          mapping: "mkamvi.github.io=>iWuzhi"
+          static_list: "mkamvi.github.io"
+          force_update: true
