@@ -16,14 +16,14 @@
   <meta name="author" content="不良帅">
   <meta name="keywords" content="大帅, 博客, 不良帅">
   
-    <meta name="description" content="今天仔细分析了下实时航线的实现方式，了解了下如何计算球面的两点间距离(参考 Great-circle distance 和 Haversine formula)，然后优化了下飞机落地方向。 接着研究了两点之间动画插值方式  通过两点计算中间位置坐标 设置中间位置高度(类抛物线) 通过 Cesium.CatmullRomSplineI 获取任意时间点位置(evaluate) 通过自定义插值数量与 C">
+    <meta name="description" content="一首歌循环了整整一天，我也是个大傻子。 早上主要看了下数字城市案例细节呈现及实现方式，然后下午帮同事又跑了一次zip文件内容替换的脚本。 然后今天计划开始把WebGL再系统的学习一次了，大概是把学习路线给整好了，后面就慢慢整理起来就行了。 然后想不到的是Gitee的认证通过了，原本以为至少要一天以上的时间，就顺便从Github把这个博客同步过来了，Gitee虽然国内访问快，但 自定义域名需要收费，">
 <meta property="og:type" content="article">
-<meta property="og:title" content="今天是起飞的一天">
-<meta property="og:url" content="https://mkamv.xyz/%E6%97%A5%E5%B8%B8%E8%AE%B0%E5%BD%95/2023/06/02/18/daily/2023/06/02/index.html">
+<meta property="og:title" content="脑子进水了">
+<meta property="og:url" content="https://mkamv.xyz/%E6%97%A5%E5%B8%B8%E8%AE%B0%E5%BD%95/2023/06/05/21/daily/2023/06/05/index.html">
 <meta property="og:site_name" content="不良帅本帅">
-<meta property="og:description" content="今天仔细分析了下实时航线的实现方式，了解了下如何计算球面的两点间距离(参考 Great-circle distance 和 Haversine formula)，然后优化了下飞机落地方向。 接着研究了两点之间动画插值方式  通过两点计算中间位置坐标 设置中间位置高度(类抛物线) 通过 Cesium.CatmullRomSplineI 获取任意时间点位置(evaluate) 通过自定义插值数量与 C">
+<meta property="og:description" content="一首歌循环了整整一天，我也是个大傻子。 早上主要看了下数字城市案例细节呈现及实现方式，然后下午帮同事又跑了一次zip文件内容替换的脚本。 然后今天计划开始把WebGL再系统的学习一次了，大概是把学习路线给整好了，后面就慢慢整理起来就行了。 然后想不到的是Gitee的认证通过了，原本以为至少要一天以上的时间，就顺便从Github把这个博客同步过来了，Gitee虽然国内访问快，但 自定义域名需要收费，">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2023-06-02T18:00:18.000Z">
+<meta property="article:published_time" content="2023-06-05T21:39:02.000Z">
 <meta property="article:modified_time" content="2023-06-05T14:19:10.289Z">
 <meta property="article:author" content="不良帅">
 <meta property="article:tag" content="日常记录">
@@ -31,7 +31,7 @@
   
   
   
-  <title>今天是起飞的一天 - 不良帅本帅</title>
+  <title>脑子进水了 - 不良帅本帅</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -201,7 +201,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="今天是起飞的一天"></span>
+            <span id="subtitle" data-typed-text="脑子进水了"></span>
           
         </div>
 
@@ -212,8 +212,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2023-06-02 18:00" pubdate>
-          2023年6月2日 晚上
+        <time datetime="2023-06-05 21:39" pubdate>
+          2023年6月5日 晚上
         </time>
       </span>
     
@@ -224,7 +224,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          312 字
+          515 字
         
       </span>
     
@@ -235,7 +235,7 @@
         
         
         
-          3 分钟
+          5 分钟
         
       </span>
     
@@ -286,20 +286,21 @@
         <div id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">今天是起飞的一天</h1>
+            <h1 style="display: none">脑子进水了</h1>
             
             
               <div class="markdown-body">
                 
-                <p>今天仔细分析了下实时航线的实现方式，了解了下如何计算球面的两点间距离(参考 Great-circle distance 和 Haversine formula)，然后优化了下飞机落地方向。</p>
-<p>接着研究了两点之间动画插值方式</p>
-<ol>
-<li>通过两点计算中间位置坐标</li>
-<li>设置中间位置高度(类抛物线)</li>
-<li>通过 Cesium.CatmullRomSplineI 获取任意时间点位置(evaluate)</li>
-<li>通过自定义插值数量与 CatmullRomSplineI 时间点映射即可获得每个时间点对应的坐标位置</li>
-</ol>
-<p>然后把飞行动画从Track(历史轨迹)替换成了DynamicLayer(动态图层)+DynamicModel(动态模型)方式，因为历史轨迹无法实时调整飞机位置，动态模型可以做到。</p>
+                <p>一首歌循环了整整一天，我也是个大傻子。</p>
+<p>早上主要看了下数字城市案例细节呈现及实现方式，然后下午帮同事又跑了一次zip文件内容替换的脚本。</p>
+<p>然后今天计划开始把WebGL再系统的学习一次了，大概是把学习路线给整好了，后面就慢慢整理起来就行了。</p>
+<p>然后想不到的是Gitee的认证通过了，原本以为至少要一天以上的时间，就顺便从Github把这个博客同步过来了，Gitee虽然国内访问快，但
+自定义域名需要收费，这个就很烦，我的域名又没有备案，备案又需要服务器，然后我又不想买，所以就陷入死循环了。所以今天买了七牛云，想试下
+能否直接使用域名解析，不行的话就当个存储服务吧。</p>
+<p>然后就是往Gitee同步代码的事，本来想通过Github Action触发自动同步， 但发现在Github通过Action自动构建后更新的分支代码无法触发Push流程，这就很烦，算
+了，这两天再研究下Github Action，然后自己写个流水线脚本好了。</p>
+<p>然后这会发现Hexo页面预览竟然会跟着换行符而换行，然后搜了一下配置了mark，但这样会导致页面有个空格，无语……………….. 又是一个问题……..</p>
+<p>然后这两天比较赖床，早上起的很晚，Blender都没时间练习了…洗洗睡明天早起吧……</p>
 
                 <blockquote><p id='rainbow'> 🏝️ </p> <blockquote>
   <script>
@@ -355,8 +356,8 @@ fetch('https://api.eatrice.top')
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>今天是起飞的一天</div>
-      <div>https://mkamv.xyz/日常记录/2023/06/02/18/daily/2023/06/02/</div>
+      <div>脑子进水了</div>
+      <div>https://mkamv.xyz/日常记录/2023/06/05/21/daily/2023/06/05/</div>
     </div>
     <div class="license-meta">
       
@@ -368,7 +369,7 @@ fetch('https://api.eatrice.top')
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2023年6月2日</div>
+          <div>2023年6月5日</div>
         </div>
       
       
@@ -400,18 +401,12 @@ fetch('https://api.eatrice.top')
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/%E6%97%A5%E5%B8%B8%E8%AE%B0%E5%BD%95/2023/06/05/21/daily/2023/06/05/" title="脑子进水了">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">脑子进水了</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/Gis/2023/06/02/16/gis/dc/%E6%A6%82%E8%A7%88/" title="DC文档概览">
-                        <span class="hidden-mobile">DC文档概览</span>
+                      <a href="/%E6%97%A5%E5%B8%B8%E8%AE%B0%E5%BD%95/2023/06/02/18/daily/2023/06/02/" title="今天是起飞的一天">
+                        <span class="hidden-mobile">今天是起飞的一天</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
@@ -434,7 +429,7 @@ fetch('https://api.eatrice.top')
         var options = Object.assign(
           {"clientID":"380b721444e388f986da","clientSecret":"cd4569aa7c4e07f1301593bbd51fb45572592099","repo":"mkamvi.github.io","owner":"Mkamvi","admin":["Mkamvi"],"language":"zh-CN","labels":["Gitalk"],"perPage":10,"pagerDirection":"last","distractionFreeMode":false,"createIssueManually":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token"},
           {
-            id: 'bdad5d91867fb0355966d03ad450d9a4'
+            id: 'feef36aec5e6a68de2b16076f163825e'
           }
         )
         var gitalk = new Gitalk(options);
