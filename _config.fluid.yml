@@ -425,7 +425,12 @@ footer:
   # 页脚第一行文字的 HTML，建议保留 Fluid 的链接，用于向更多人推广本主题
   # HTML of the first line of the footer, it is recommended to keep the Fluid link to promote this theme to more people
   content: '
-    做一事，而后浪迹天涯
+    <p>
+    做一事，而后浪迹天涯 <br />
+    </p>
+    <div style="color: #9aa59d;">
+      国内用户请访问(⚡️)：<a href="https://iwuzhi.gitee.io">https://iwuzhi.gitee.io</a>
+    </div>
   '
 
   # 展示网站的 PV、UV 统计数
