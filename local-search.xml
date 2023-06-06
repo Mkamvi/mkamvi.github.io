@@ -31,6 +31,31 @@
   
   
   <entry>
+    <title>雨终于停了</title>
+    <link href="/%E6%97%A5%E5%B8%B8%E8%AE%B0%E5%BD%95/2023/06/06/07/daily/2023/06/06/"/>
+    <url>/%E6%97%A5%E5%B8%B8%E8%AE%B0%E5%BD%95/2023/06/06/07/daily/2023/06/06/</url>
+    
+    <content type="html"><![CDATA[<p>处理了下家里电脑NeoVim启动报错问题，通过scoop装了gcc，然后发现lualine插件中文会乱码，便先把后半段给截掉了，后面再看看吧。</p><p>然后就是Blender了，今天主要看了：</p><ol><li>Mask： 主要用途是在雕塑的时候可以保护细节不被影响，还有就是控制显示和隐藏</li><li>Face Sets: 网格体分组(使用不同的颜色标记)</li></ol><p>缓存了下数字城市的白模数据，然后通过自定义着色器程序添加了环形动画。</p><p>确认了大屏3D渲染新方案，确认了数据格式的准确性。</p><p>优先开始看Github Action了，要不后面都得手动同步，好麻烦。</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>日常记录</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>日常记录</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>脑子进水了</title>
     <link href="/%E6%97%A5%E5%B8%B8%E8%AE%B0%E5%BD%95/2023/06/05/21/daily/2023/06/05/"/>
     <url>/%E6%97%A5%E5%B8%B8%E8%AE%B0%E5%BD%95/2023/06/05/21/daily/2023/06/05/</url>
