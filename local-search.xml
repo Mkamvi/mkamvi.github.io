@@ -4,6 +4,31 @@
   
   
   <entry>
+    <title>柳神真真真真真的太帅了</title>
+    <link href="/%E6%97%A5%E5%B8%B8%E8%AE%B0%E5%BD%95/2023/06/07/21/daily/2023/06/07/"/>
+    <url>/%E6%97%A5%E5%B8%B8%E8%AE%B0%E5%BD%95/2023/06/07/21/daily/2023/06/07/</url>
+    
+    <content type="html"><![CDATA[<p>咋这么困，🤔</p><p>今天把Github的基础部分基本都看完了，包括：</p><ol><li>如何使用变量</li><li>如何添加脚本</li><li>作业之间如何共享数据</li><li>如何撰写表达式（表达式里有个过滤器，看着不常用，但很有意思）</li></ol><p>然后是3D大屏部分是把3D模型与2D图纸交互部分的绑定逻辑添加了快捷绑定方案，因为这部分工作需要其他人来做。主要包括：</p><ol><li>从模型数据拼接交换代码</li><li>添加输入框来展示交换代码</li><li>添加复制按钮来快速实现代码复制操作</li><li>然后简单画了绑定过程示意图</li></ol><p>然后今天又又又又又起晚了……………本帅的Blender大计啊………………….😫……………………….</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>日常记录</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>日常记录</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>基本功能- Gihub Actions</title>
     <link href="/github/2023/06/07/10/github/gh-actions/basic-feture/"/>
     <url>/github/2023/06/07/10/github/gh-actions/basic-feture/</url>
