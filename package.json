@@ -7,7 +7,8 @@
     "clean": "hexo clean",
     "deploy": "hexo deploy",
     "server": "hexo server",
-    "g:w": "hexo generate -w"
+    "g:w": "hexo generate -w",
+    "d": "hexo new daily -p daily/2023/06/$d"
   },
   "hexo": {
     "version": "6.3.0"
