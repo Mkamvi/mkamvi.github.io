@@ -1,9 +1,9 @@
 ---
-title: 基本功能- Gihub Actions
+title: 基本功能 - Gihub Actions
 date: 2023-06-07 10:08:56
 tags:
   - github
-  - github-actions
+  - gh-actions
 categories:
   - github
 ---
