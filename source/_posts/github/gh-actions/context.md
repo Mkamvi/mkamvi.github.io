@@ -55,6 +55,7 @@ jobs:
   actor: 触发初始工作流运行的用户的用户名
 }
 ```
+
 ```YAML
 name: Run CI
 on: [push, pull_request]
@@ -85,6 +86,7 @@ jobs:
   <env_name>: 特定环境变量的值
 }
 ```
+
 ```YAML
 name: Hi Mascot
 on: push
@@ -106,4 +108,62 @@ jobs:
       mascot: Tux
     steps:
       - run: echo 'Hi ${{ env.mascot }}'  # Hi Tux
+```
+
+3. vars
+
+   vars 上下文的内容是配置变量名称与其值的映射。
+
+```YAML
+on:
+  workflow_dispatch:
+env:
+  # Setting an environment variable with the value of a configuration variable
+  env_var: ${{ vars.ENV_CONTEXT_VAR }}
+
+jobs:
+  display-variables:
+    name: ${{ vars.JOB_NAME }}
+    # You can use configuration variables with the `vars` context for dynamic jobs
+    if: ${{ vars.USE_VARIABLES == 'true' }}
+    runs-on: ${{ vars.RUNNER }}
+    environment: ${{ vars.ENVIRONMENT_STAGE }}
+    steps:
+    - name: Use variables
+      run: |
+        echo "repository variable : $REPOSITORY_VAR"
+        echo "organization variable : $ORGANIZATION_VAR"
+        echo "overridden variable : $OVERRIDE_VAR"
+        echo "variable from shell environment : $env_var"
+      env:
+        REPOSITORY_VAR: ${{ vars.REPOSITORY_VAR }}
+        ORGANIZATION_VAR: ${{ vars.ORGANIZATION_VAR }}
+        OVERRIDE_VAR: ${{ vars.OVERRIDE_VAR }}
+
+    - name: ${{ vars.HELLO_WORLD_STEP }}
+      if: ${{ vars.HELLO_WORLD_ENABLED == 'true' }}
+      uses: actions/hello-world-javascript-action@main
+      with:
+        who-to-greet: ${{ vars.GREET_NAME }}
+```
+
+4. job
+
+   job 上下文包含当前正在运行的作业相关信息
+
+```JSON
+{
+  // 作业的容器相关信息
+  container: {
+    id: 容器的 ID,
+    network: 容器网络的 ID,
+  },
+  // 为作业创建的服务容器
+  services: {
+    id: 服务容器的 ID,
+    network: 服务容器网络的 ID,
+    ports: 服务容器显露的端口,
+    status: 作业的当前状态 success | failure | cancelled
+  }
+}
 ```
