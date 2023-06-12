@@ -13,7 +13,7 @@ jobs:
         uses: Yikun/hub-mirror-action@mappings
         with:
           src: github/Mkamvi
-          dst: gitee/Mkamvi
+          dst: gitee/iWuzhi
           dst_key: ${{ secrets.SYNC_GITEE_PRIVATE_KEY }}
           dst_token: ${{ secrets.GITEE_TOKEN }}
           mappings: "mkamvi.github.io=>iWuzhi"
