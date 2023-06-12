@@ -1,7 +1,7 @@
 name: Sync to gitee
 
 on:
-  push:
+  deployment:
     branches:
       - gh-pages # default branch
 
