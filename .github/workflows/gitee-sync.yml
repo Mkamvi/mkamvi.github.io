@@ -1,9 +1,7 @@
 name: Sync to gitee
 
 on:
-  deployment:
-    branches:
-      - gh-pages # default branch
+  deployment
 
 jobs:
   pages:
