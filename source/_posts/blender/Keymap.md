@@ -1,5 +1,5 @@
 ---
-title: 快捷键
+title: 快捷键 - Blender
 date: 2023-06-14 10:00:22
 tags:
   - Blender
