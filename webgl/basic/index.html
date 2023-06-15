@@ -16,22 +16,22 @@
   <meta name="author" content="不良帅">
   <meta name="keywords" content="大帅, 博客, 不良帅">
   
-    <meta name="description" content="偶然回头，才发现背后已然是一片空白。 也曾有过几次想要写点东西，切切实实的记录下来，而不是靠那逐渐消亡的脑细胞，但最终都以各种理由中断，比如工作太忙、现在学到的东西过于浅薄，无法掏出正真有价值的知识、甚至天真的想靠自己天才般的头脑把所有的知识都真正占为己有。无论短期记忆、长期记忆，最终都经不住时间的摧残，最后留给你的，只有习惯和空白。 上大学的时候，在博客园坚持过好长一段时间，每天都写博客(我的博">
+    <meta name="description" content="概述WebGL 在电脑的 GPU 中运行。因此你需要使用能够在 GPU 上运行的代码。 这样的代码需要提供成对的方法。每对方法中一个叫顶点着色器， 另一个叫片段着色器，并且使用一种和 C 或 C++类似的强类型的语言 GLSL。 (GL 着色语言)。 每一对组合起来称作一个 program（着色程序）。 顶点着色器的作用是计算顶点的位置。根据计算出的一系列顶点位置，WebGL 可以对点， 线和三角">
 <meta property="og:type" content="article">
-<meta property="og:title" content="时光荏苒，当以笔代替消逝的记忆">
-<meta property="og:url" content="https://mkamv.xyz/Hello/hello/index.html">
+<meta property="og:title" content="基础 - WebGL">
+<meta property="og:url" content="https://mkamv.xyz/webgl/basic/index.html">
 <meta property="og:site_name" content="不良帅本帅">
-<meta property="og:description" content="偶然回头，才发现背后已然是一片空白。 也曾有过几次想要写点东西，切切实实的记录下来，而不是靠那逐渐消亡的脑细胞，但最终都以各种理由中断，比如工作太忙、现在学到的东西过于浅薄，无法掏出正真有价值的知识、甚至天真的想靠自己天才般的头脑把所有的知识都真正占为己有。无论短期记忆、长期记忆，最终都经不住时间的摧残，最后留给你的，只有习惯和空白。 上大学的时候，在博客园坚持过好长一段时间，每天都写博客(我的博">
+<meta property="og:description" content="概述WebGL 在电脑的 GPU 中运行。因此你需要使用能够在 GPU 上运行的代码。 这样的代码需要提供成对的方法。每对方法中一个叫顶点着色器， 另一个叫片段着色器，并且使用一种和 C 或 C++类似的强类型的语言 GLSL。 (GL 着色语言)。 每一对组合起来称作一个 program（着色程序）。 顶点着色器的作用是计算顶点的位置。根据计算出的一系列顶点位置，WebGL 可以对点， 线和三角">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2023-05-30T16:50:46.000Z">
-<meta property="article:modified_time" content="2023-06-14T13:17:44.160Z">
+<meta property="article:published_time" content="2023-06-15T16:29:08.000Z">
+<meta property="article:modified_time" content="2023-06-15T10:22:56.159Z">
 <meta property="article:author" content="不良帅">
-<meta property="article:tag" content="开始">
+<meta property="article:tag" content="WebGL">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title>时光荏苒，当以笔代替消逝的记忆 - 不良帅本帅</title>
+  <title>基础 - WebGL - 不良帅本帅</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -201,7 +201,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="时光荏苒，当以笔代替消逝的记忆"></span>
+            <span id="subtitle" data-typed-text="基础 - WebGL"></span>
           
         </div>
 
@@ -212,8 +212,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2023-05-30 16:50" pubdate>
-          2023年5月30日 下午
+        <time datetime="2023-06-15 16:29" pubdate>
+          2023年6月15日 下午
         </time>
       </span>
     
@@ -224,7 +224,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          727 字
+          898 字
         
       </span>
     
@@ -235,7 +235,7 @@
         
         
         
-          7 分钟
+          8 分钟
         
       </span>
     
@@ -286,18 +286,33 @@
         <div id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">时光荏苒，当以笔代替消逝的记忆</h1>
+            <h1 style="display: none">基础 - WebGL</h1>
             
             
               <div class="markdown-body">
                 
-                <p>偶然回头，才发现背后已然是一片空白。</p>
-<p>也曾有过几次想要写点东西，切切实实的记录下来，而不是靠那逐渐消亡的脑细胞，但最终都以各种理由中断，比如工作太忙、现在学到的东西过于浅薄，无法掏出正真有价值的知识、甚至天真的想靠自己天才般的头脑把所有的知识都真正占为己有。无论短期记忆、长期记忆，最终都经不住时间的摧残，最后留给你的，只有习惯和空白。</p>
-<p>上大学的时候，在博客园坚持过好长一段时间，每天都写博客(<a target="_blank" rel="noopener" href="https://www.cnblogs.com/realsoul/">我的博客</a>)，那时也是刚好刚开始接触编程的一些知识吧，兴致很高，而且也有足够的时间。从纸上谈兵到真正实战，真的是一大步，实习那会真的是一直忙着写Bug，也就不再写博客了。</p>
-<p>这次决定开始从头积累，也有想过用博客园，或者掘金（CSDN、新浪什么的就不用考虑了，全是广告），不过就是颜值不过关，也想直接自己做个博客网站，但想想有归档、标签、搜索等，感觉功能还蛮复杂的，关键是没有设计自己做出来的东西总感觉会不满意，然后一直改，一直改，最后就疯了。还有就是之前见过Hexo fluid这个主题，真的是一见钟情，非常简洁。</p>
-<p>这个博客从创建到配置到自己满意，大概花了半天的时间吧。Hexo真的很强大，不折腾的话，估计半个小时就搞好了吧。搁在以前，肯定是要自己搞一套主题，或者模仿Hexo搭个类似的框架，然后再半途而废，因为自己搞的主题是在是太丑了，而且自己的想法随时可能会变，改来改去就烦了。现在这种什么都想自己搞一套的想法转瞬即逝，以前是要自己代码敲得爽，现在是要程序用的爽。</p>
-<p>发现自己真的变了很多，以前写这种Hello World的时候，一定要先定个小目标：比如每天写个10篇博客。现在觉得真的没必要强迫自己每天去写博客了，我只想把自己不想忘记的东西记录在这里。</p>
-<p>6月，有个好的开始吧。</p>
+                <h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><p>WebGL 在电脑的 GPU 中运行。因此你需要使用能够在 GPU 上运行的代码。 这样的代码需要提供成对的方法。每对方法中一个叫顶点着色器， 另一个叫片段着色器，并且使用一种和 C 或 C++类似的强类型的语言 GLSL。 (GL 着色语言)。 每一对组合起来称作一个 program（着色程序）。</p>
+<p>顶点着色器的作用是计算顶点的位置。根据计算出的一系列顶点位置，WebGL 可以对点， 线和三角形在内的一些图元进行光栅化处理。当对这些图元进行光栅化处理时需要使用片段着色器方法。 片段着色器的作用是计算出当前绘制图元中每个像素的颜色值。</p>
+<p>几乎整个 WebGL API 都是关于如何设置这些成对方法的状态值以及运行它们。 对于想要绘制的每一个对象，都需要先设置一系列状态值，然后通过调用 gl.drawArrays 或 gl.drawElements 运行一个着色方法对，使得你的着色器对能够在 GPU 上运行。</p>
+<p>这些方法对所需的任何数据都需要发送到 GPU，这里有着色器获取数据的 4 种方法：</p>
+<ol>
+<li>属性(Attributes)和缓冲</li>
+</ol>
+<p>缓冲是发送到 GPU 的一些二进制数据序列，通常情况下缓冲数据包括位置，法向量，纹理坐标，顶点颜色值等。 你可以存储任何数据。</p>
+<p>属性用来指明怎么从缓冲中获取所需数据并将它提供给顶点着色器。 例如你可能在缓冲中用三个 32 位的浮点型数据存储一个位置值。 对于一个确切的属性你需要告诉它从哪个缓冲中获取数据，获取什么类型的数据（三个 32 位的浮点数据）， 起始偏移值是多少，到下一个位置的字节数是多少。</p>
+<p>缓冲不是随意读取的。事实上顶点着色器运行的次数是一个指定的确切数字， 每一次运行属性会从指定的缓冲中按照指定规则依次获取下一个值。</p>
+<ol start="2">
+<li>全局变量(Uniforms)</li>
+</ol>
+<p>全局变量在着色程序运行前赋值，在运行过程中全局有效。</p>
+<ol start="3">
+<li>纹理(Textures)</li>
+</ol>
+<p>纹理是一个数据序列，可以在着色程序运行中随意读取其中的数据。 大多数情况存放的是图像数据，但是纹理仅仅是数据序列， 你也可以随意存放除了颜色数据以外的其它数据</p>
+<ol start="4">
+<li>可变量(Varyings)</li>
+</ol>
+<p>可变量是一种顶点着色器给片段着色器传值的方式，依照渲染的图元是点， 线还是三角形，顶点着色器中设置的可变量会在片段着色器运行中获取不同的插值</p>
 
                 <blockquote><p id='rainbow'> 🏝️ </p> <blockquote>
   <script>
@@ -316,11 +331,32 @@ fetch('https://api.eatrice.top')
             <div>
               <div class="post-metas my-3">
   
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/WebGL/" class="category-chain-item">WebGL</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
   
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/%E5%BC%80%E5%A7%8B/">#开始</a>
+        <a href="/tags/WebGL/">#WebGL</a>
       
     </div>
   
@@ -332,8 +368,8 @@ fetch('https://api.eatrice.top')
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>时光荏苒，当以笔代替消逝的记忆</div>
-      <div>https://mkamv.xyz/Hello/hello/</div>
+      <div>基础 - WebGL</div>
+      <div>https://mkamv.xyz/webgl/basic/</div>
     </div>
     <div class="license-meta">
       
@@ -345,7 +381,7 @@ fetch('https://api.eatrice.top')
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2023年5月30日</div>
+          <div>2023年6月15日</div>
         </div>
       
       
@@ -377,15 +413,15 @@ fetch('https://api.eatrice.top')
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/daily/2023/05/31/" title="算了，就随意吧">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">算了，就随意吧</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
+                    
+                      <a href="/daily/2023/06/14/" title="你读书，就是为了杀人吗？！">
+                        <span class="hidden-mobile">你读书，就是为了杀人吗？！</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
                     
                   </article>
                 </div>
@@ -405,7 +441,7 @@ fetch('https://api.eatrice.top')
         var options = Object.assign(
           {"clientID":"380b721444e388f986da","clientSecret":"cd4569aa7c4e07f1301593bbd51fb45572592099","repo":"mkamvi.github.io","owner":"Mkamvi","admin":["Mkamvi"],"language":"zh-CN","labels":["Gitalk"],"perPage":10,"pagerDirection":"last","distractionFreeMode":false,"createIssueManually":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token"},
           {
-            id: '16315cf25549a488f227d346e89e6028'
+            id: '6ba6d00e6cf5721f1f5556f07caf47da'
           }
         )
         var gitalk = new Gitalk(options);
