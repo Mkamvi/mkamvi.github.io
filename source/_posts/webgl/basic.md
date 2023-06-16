@@ -36,3 +36,150 @@ WebGL 在电脑的 GPU 中运行。因此你需要使用能够在 GPU 上运行�
 4. 可变量(Varyings)
 
 可变量是一种顶点着色器给片段着色器传值的方式，依照渲染的图元是点， 线还是三角形，顶点着色器中设置的可变量会在片段着色器运行中获取不同的插值
+
+
+### 基础示例
+
+![WebGL基础创建过程](/img/posts/WebGL基础创建过程.png)
+
+```HTML
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title></title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- <link href="css/style.css" rel="stylesheet" /> -->
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      #canvas {
+        width: 99vw;
+        height: 99vh;
+      }
+    </style>
+  </head>
+  <body>
+    <canvas id="canvas"></canvas>
+
+    <script id="vertex-shader-2d" type="notjs">
+
+      // 一个属性变量，将会从缓冲中获取数据
+      attribute vec4 a_position;
+
+      void main() {
+        // gl_Position 是一个顶点着色器主要设置的变量
+        gl_Position = a_position;
+      }
+    </script>
+
+    <script id="fragment-shader-2d" type="notjs">
+      precision mediump float;
+
+      void main() {
+        gl_FragColor = vec4(1, 0, 0.5, 1);
+      }
+    </script>
+
+    <script>
+      const canvas = document.querySelector("#canvas");
+      const gl = canvas.getContext("webgl");
+
+      const vertexShaderSource =
+        document.querySelector("#vertex-shader-2d").text;
+      const fragmentShaderSource = document.querySelector(
+        "#fragment-shader-2d"
+      ).text;
+
+      const vertexShader = createShader(
+        gl,
+        gl.VERTEX_SHADER,
+        vertexShaderSource
+      );
+
+      const fragmentShader = createShader(
+        gl,
+        gl.FRAGMENT_SHADER,
+        fragmentShaderSource
+      );
+
+      function createShader(gl, type, source) {
+        const shader = gl.createShader(type);
+        gl.shaderSource(shader, source);
+        gl.compileShader(shader);
+        const success = gl.getShaderParameter(shader, gl.COMPILE_STATUS);
+        if (success) {
+          return shader;
+        }
+        console.log(gl.getShaderInfoLog(shader));
+        gl.deleteShader(shader);
+      }
+
+      function createProgram(gl, vertexShader, fragmentShader) {
+        const program = gl.createProgram();
+        gl.attachShader(program, vertexShader);
+        gl.attachShader(program, fragmentShader);
+        gl.linkProgram(program);
+
+        const success = gl.getProgramParameter(program, gl.LINK_STATUS);
+
+        if (success) return program;
+
+        console.log(gl.getProgramInfoLog(program));
+        gl.deleteProgram(program);
+      }
+
+      const program = createProgram(gl, vertexShader, fragmentShader);
+
+      const positionAttributeLocation = gl.getAttribLocation(
+        program,
+        "a_position"
+      );
+
+      const positionBuffer = gl.createBuffer();
+
+      gl.bindBuffer(gl.ARRAY_BUFFER, positionBuffer);
+
+      const positions = [0, 0, 0, 0.5, 0.7, 0];
+
+      gl.bufferData(
+        gl.ARRAY_BUFFER,
+        new Float32Array(positions),
+        gl.STATIC_DRAW
+      );
+
+      // 一个是拥有的实际像素个数，一个是显示的大小
+      gl.viewport(0, 0, gl.canvas.width, gl.canvas.height);
+
+      gl.clearColor(0, 0, 0, 0);
+      gl.clear(gl.COLOR_BUFFER_BIT);
+
+      gl.useProgram(program);
+
+      gl.enableVertexAttribArray(positionAttributeLocation);
+
+      const size = 2;
+      const type = gl.FLOAT;
+      const normalize = false;
+      const stride = 0;
+      const offset = 0;
+
+      gl.vertexAttribPointer(
+        positionAttributeLocation,
+        size,
+        type,
+        normalize,
+        stride,
+        offset
+      );
+
+      const primitiveType = gl.TRIANGLES;
+      const count = 3;
+      gl.drawArrays(primitiveType, offset, count);
+    </script>
+  </body>
+</html>
+```
