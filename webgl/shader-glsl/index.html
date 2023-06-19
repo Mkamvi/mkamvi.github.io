@@ -1,0 +1,765 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/%E8%89%AF_%E5%B8%85.jpeg">
+  <link rel="icon" href="/img/%E8%89%AF_%E5%B8%85.jpeg">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#57c52b">
+  <meta name="author" content="不良帅">
+  <meta name="keywords" content="大帅, 博客, 不良帅">
+  
+    <meta name="description" content="顶点着色器一个顶点着色器的工作是生成裁剪空间坐标值，通常是以下的形式 123void main() &amp;#123;   gl_Position &#x3D; doMathToMakeClipspaceCoordinates&amp;#125;  每个顶点调用一次（顶点）着色器，每次调用都需要设置一个特殊的全局变量 gl_Position， 该变量的值就是裁减空间坐标值 顶点着色器需要的数据，可以通过以下三种方式获得:">
+<meta property="og:type" content="article">
+<meta property="og:title" content="着色器和GLSL - WebGL">
+<meta property="og:url" content="https://mkamv.xyz/webgl/shader-glsl/index.html">
+<meta property="og:site_name" content="不良帅本帅">
+<meta property="og:description" content="顶点着色器一个顶点着色器的工作是生成裁剪空间坐标值，通常是以下的形式 123void main() &amp;#123;   gl_Position &#x3D; doMathToMakeClipspaceCoordinates&amp;#125;  每个顶点调用一次（顶点）着色器，每次调用都需要设置一个特殊的全局变量 gl_Position， 该变量的值就是裁减空间坐标值 顶点着色器需要的数据，可以通过以下三种方式获得:">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2023-06-19T11:47:05.000Z">
+<meta property="article:modified_time" content="2023-06-19T06:48:19.141Z">
+<meta property="article:author" content="不良帅">
+<meta property="article:tag" content="WebGL">
+<meta name="twitter:card" content="summary_large_image">
+  
+  
+  
+  <title>着色器和GLSL - WebGL - 不良帅本帅</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+  
+<link rel="stylesheet" href="/styles/global.css">
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"mkamv.xyz","root":"/","version":"1.9.4","typing":{"enable":true,"typeSpeed":70,"cursorChar":" 🐳","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"left","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>不良帅正在睡觉</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/%E8%89%AF_%E5%B1%85.jpg') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.7)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="着色器和GLSL - WebGL"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2023-06-19 11:47" pubdate>
+          2023年6月19日 中午
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          6.6k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          56 分钟
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="padding-left: 2rem; margin-right: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">着色器和GLSL - WebGL</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <h3 id="顶点着色器"><a href="#顶点着色器" class="headerlink" title="顶点着色器"></a>顶点着色器</h3><p>一个顶点着色器的工作是生成裁剪空间坐标值，通常是以下的形式</p>
+<figure class="highlight glsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs GLSL"><span class="hljs-type">void</span> main() &#123;<br>   <span class="hljs-built_in">gl_Position</span> = doMathToMakeClipspaceCoordinates<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>每个顶点调用一次（顶点）着色器，每次调用都需要设置一个特殊的全局变量 gl_Position， 该变量的值就是裁减空间坐标值</p>
+<p>顶点着色器需要的数据，可以通过以下三种方式获得:</p>
+<ol>
+<li>Attributes 属性 (从缓冲中获取的数据)</li>
+</ol>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><code class="hljs JavaScript"><span class="hljs-comment">// 创建缓冲</span><br><span class="hljs-keyword">var</span> buf = gl.<span class="hljs-title function_">createBuffer</span>();<br><br><span class="hljs-comment">// 将数据存入缓冲</span><br>gl.<span class="hljs-title function_">bindBuffer</span>(gl.<span class="hljs-property">ARRAY_BUFFER</span>, buf);<br>gl.<span class="hljs-title function_">bufferData</span>(gl.<span class="hljs-property">ARRAY_BUFFER</span>, someData, gl.<span class="hljs-property">STATIC_DRAW</span>);<br><br><span class="hljs-comment">// 初始化的时候，在你制作的（着色）程序中找到属性所在地址</span><br><span class="hljs-keyword">var</span> positionLoc = gl.<span class="hljs-title function_">getAttribLocation</span>(someShaderProgram, <span class="hljs-string">&quot;a_position&quot;</span>);<br><br><span class="hljs-comment">// 开启从缓冲中获取数据</span><br>gl.<span class="hljs-title function_">enableVertexAttribArray</span>(positionLoc);<br><br><span class="hljs-keyword">var</span> numComponents = <span class="hljs-number">3</span>;  <span class="hljs-comment">// (x, y, z)</span><br><span class="hljs-keyword">var</span> type = gl.<span class="hljs-property">FLOAT</span>;    <span class="hljs-comment">// 32位浮点数据</span><br><span class="hljs-keyword">var</span> normalize = <span class="hljs-literal">false</span>;  <span class="hljs-comment">// 不标准化</span><br><span class="hljs-keyword">var</span> offset = <span class="hljs-number">0</span>;         <span class="hljs-comment">// 从缓冲起始位置开始获取</span><br><span class="hljs-keyword">var</span> stride = <span class="hljs-number">0</span>;         <span class="hljs-comment">// 到下一个数据跳多少位内存</span><br>                        <span class="hljs-comment">// 0 = 使用当前的单位个数和单位长度 （ 3 * Float32Array.BYTES_PER_ELEMENT ）</span><br><br><span class="hljs-comment">// 告诉WebGL怎么从缓冲中获取数据传递给属性</span><br>gl.<span class="hljs-title function_">vertexAttribPointer</span>(positionLoc, numComponents, type, <span class="hljs-literal">false</span>, stride, offset);<br><br></code></pre></td></tr></table></figure>
+
+<figure class="highlight glsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs GLSL"><span class="hljs-comment">// 属性可以用 float, vec2, vec3, vec4, mat2, mat3 和 mat4 数据类型</span><br><span class="hljs-keyword">attribute</span> <span class="hljs-type">vec4</span> a_position;<br><br><span class="hljs-comment">// 不做任何运算直接将数据传递给gl_Position</span><br><span class="hljs-type">void</span> main() &#123;<br>   <span class="hljs-built_in">gl_Position</span> = a_position;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<ol start="2">
+<li>Uniforms 全局变量 (在一次绘制中对所有顶点保持一致值)</li>
+</ol>
+<p>全局变量在一次绘制过程中传递给着色器的值都一样</p>
+<figure class="highlight glsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs GLSL"><span class="hljs-keyword">attribute</span> <span class="hljs-type">vec4</span> a_position;<br><span class="hljs-keyword">uniform</span> <span class="hljs-type">vec4</span> u_offset;<br><br><span class="hljs-type">void</span> main() &#123;<br>   <span class="hljs-built_in">gl_Position</span> = a_position + u_offset;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs JavaScript"><span class="hljs-comment">// 在初始化时找到全局变量的地址</span><br><span class="hljs-keyword">var</span> offsetLoc = gl.<span class="hljs-title function_">getUniformLocation</span>(someProgram, <span class="hljs-string">&quot;u_offset&quot;</span>);<br><br><span class="hljs-comment">// 在绘制前设置全局变量</span><br>gl.<span class="hljs-title function_">uniform4fv</span>(offsetLoc, [<span class="hljs-number">1</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>]);  <span class="hljs-comment">// 向右偏移一半屏幕宽度</span><br></code></pre></td></tr></table></figure>
+
+<p>要注意的是全局变量属于单个着色程序，如果多个着色程序有同名全局变量，需要找到每个全局变量并设置自己的值。 我们调用 gl.uniform???的时候只是设置了当前程序的全局变量，当前程序是传递给 gl.useProgram 的最后一个程序</p>
+<p>全局变量有很多类型，对应的类型有对应的设置方法:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><code class="hljs JavaScript">gl.<span class="hljs-property">uniform1f</span> (floatUniformLoc, v);                 <span class="hljs-comment">// float</span><br>gl.<span class="hljs-title function_">uniform1fv</span>(floatUniformLoc, [v]);               <span class="hljs-comment">// float 或 float array</span><br>gl.<span class="hljs-property">uniform2f</span> (vec2UniformLoc,  v0, v1);            <span class="hljs-comment">// vec2</span><br>gl.<span class="hljs-title function_">uniform2fv</span>(vec2UniformLoc,  [v0, v1]);          <span class="hljs-comment">// vec2 或 vec2 array</span><br>gl.<span class="hljs-property">uniform3f</span> (vec3UniformLoc,  v0, v1, v2);        <span class="hljs-comment">// vec3</span><br>gl.<span class="hljs-title function_">uniform3fv</span>(vec3UniformLoc,  [v0, v1, v2]);      <span class="hljs-comment">// vec3 或 vec3 array</span><br>gl.<span class="hljs-property">uniform4f</span> (vec4UniformLoc,  v0, v1, v2, v4);    <span class="hljs-comment">// vec4</span><br>gl.<span class="hljs-title function_">uniform4fv</span>(vec4UniformLoc,  [v0, v1, v2, v4]);  <span class="hljs-comment">// vec4 或 vec4 array</span><br><br>gl.<span class="hljs-title function_">uniformMatrix2fv</span>(mat2UniformLoc, <span class="hljs-literal">false</span>, [  4x element array ])  <span class="hljs-comment">// mat2 或 mat2 array</span><br>gl.<span class="hljs-title function_">uniformMatrix3fv</span>(mat3UniformLoc, <span class="hljs-literal">false</span>, [  9x element array ])  <span class="hljs-comment">// mat3 或 mat3 array</span><br>gl.<span class="hljs-title function_">uniformMatrix4fv</span>(mat4UniformLoc, <span class="hljs-literal">false</span>, [ 16x element array ])  <span class="hljs-comment">// mat4 或 mat4 array</span><br><br>gl.<span class="hljs-property">uniform1i</span> (intUniformLoc,   v);                 <span class="hljs-comment">// int</span><br>gl.<span class="hljs-title function_">uniform1iv</span>(intUniformLoc, [v]);                 <span class="hljs-comment">// int 或 int array</span><br>gl.<span class="hljs-property">uniform2i</span> (ivec2UniformLoc, v0, v1);            <span class="hljs-comment">// ivec2</span><br>gl.<span class="hljs-title function_">uniform2iv</span>(ivec2UniformLoc, [v0, v1]);          <span class="hljs-comment">// ivec2 或 ivec2 array</span><br>gl.<span class="hljs-property">uniform3i</span> (ivec3UniformLoc, v0, v1, v2);        <span class="hljs-comment">// ivec3</span><br>gl.<span class="hljs-title function_">uniform3iv</span>(ivec3UniformLoc, [v0, v1, v2]);      <span class="hljs-comment">// ivec3 or ivec3 array</span><br>gl.<span class="hljs-property">uniform4i</span> (ivec4UniformLoc, v0, v1, v2, v4);    <span class="hljs-comment">// ivec4</span><br>gl.<span class="hljs-title function_">uniform4iv</span>(ivec4UniformLoc, [v0, v1, v2, v4]);  <span class="hljs-comment">// ivec4 或 ivec4 array</span><br><br>gl.<span class="hljs-property">uniform1i</span> (sampler2DUniformLoc,   v);           <span class="hljs-comment">// sampler2D (textures)</span><br>gl.<span class="hljs-title function_">uniform1iv</span>(sampler2DUniformLoc, [v]);           <span class="hljs-comment">// sampler2D 或 sampler2D array</span><br><br>gl.<span class="hljs-property">uniform1i</span> (samplerCubeUniformLoc,   v);         <span class="hljs-comment">// samplerCube (textures)</span><br>gl.<span class="hljs-title function_">uniform1iv</span>(samplerCubeUniformLoc, [v]);         <span class="hljs-comment">// samplerCube 或 samplerCube array</span><br></code></pre></td></tr></table></figure>
+
+<p>还有一些类型 bool, bvec2, bvec3, and bvec4。它们可用 gl.uniform?f?或 gl.uniform?i?</p>
+<p>一个数组可以一次设置所有的全局变量:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs JavaScript"><span class="hljs-comment">// 着色器里</span><br>uniform vec2 u_someVec2[<span class="hljs-number">3</span>];<br><br><span class="hljs-comment">// JavaScript 初始化时</span><br><span class="hljs-keyword">var</span> someVec2Loc = gl.<span class="hljs-title function_">getUniformLocation</span>(someProgram, <span class="hljs-string">&quot;u_someVec2&quot;</span>);<br><br><span class="hljs-comment">// 渲染的时候</span><br>gl.<span class="hljs-title function_">uniform2fv</span>(someVec2Loc, [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>, <span class="hljs-number">6</span>]);  <span class="hljs-comment">// 设置数组 u_someVec2</span><br></code></pre></td></tr></table></figure>
+
+<p>如果你想单独设置数组中的某个值，就要单独找到该值的地址:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs JavaScript"><span class="hljs-comment">// JavaScript 初始化时</span><br><span class="hljs-keyword">var</span> someVec2Element0Loc = gl.<span class="hljs-title function_">getUniformLocation</span>(someProgram, <span class="hljs-string">&quot;u_someVec2[0]&quot;</span>);<br><span class="hljs-keyword">var</span> someVec2Element1Loc = gl.<span class="hljs-title function_">getUniformLocation</span>(someProgram, <span class="hljs-string">&quot;u_someVec2[1]&quot;</span>);<br><span class="hljs-keyword">var</span> someVec2Element2Loc = gl.<span class="hljs-title function_">getUniformLocation</span>(someProgram, <span class="hljs-string">&quot;u_someVec2[2]&quot;</span>);<br><br><span class="hljs-comment">// 渲染的时候</span><br>gl.<span class="hljs-title function_">uniform2fv</span>(someVec2Element0Loc, [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>]);  <span class="hljs-comment">// set element 0</span><br>gl.<span class="hljs-title function_">uniform2fv</span>(someVec2Element1Loc, [<span class="hljs-number">3</span>, <span class="hljs-number">4</span>]);  <span class="hljs-comment">// set element 1</span><br>gl.<span class="hljs-title function_">uniform2fv</span>(someVec2Element2Loc, [<span class="hljs-number">5</span>, <span class="hljs-number">6</span>]);  <span class="hljs-comment">// set element 2</span><br></code></pre></td></tr></table></figure>
+
+<p>同样的，如果你创建了一个结构体:</p>
+<figure class="highlight glsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs GLSL">struct SomeStruct &#123;<br>  <span class="hljs-type">bool</span> active;<br>  <span class="hljs-type">vec2</span> someVec2;<br>&#125;;<br><span class="hljs-keyword">uniform</span> SomeStruct u_someThing;<br></code></pre></td></tr></table></figure>
+
+<p>你需要找到每个元素的地址</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs JavaScript"><span class="hljs-keyword">var</span> someThingActiveLoc = gl.<span class="hljs-title function_">getUniformLocation</span>(someProgram, <span class="hljs-string">&quot;u_someThing.active&quot;</span>);<br><span class="hljs-keyword">var</span> someThingSomeVec2Loc = gl.<span class="hljs-title function_">getUniformLocation</span>(someProgram, <span class="hljs-string">&quot;u_someThing.someVec2&quot;</span>);<br></code></pre></td></tr></table></figure>
+
+<ol start="3">
+<li>⌛️ Textures 纹理 (从像素或纹理元素中获取的数据)</li>
+</ol>
+<h3 id="片段着色器"><a href="#片段着色器" class="headerlink" title="片段着色器"></a>片段着色器</h3><p>一个片段着色器的工作是为当前光栅化的像素提供颜色值，通常是以下的形式:</p>
+<figure class="highlight glsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs GLSL"><span class="hljs-keyword">precision</span> <span class="hljs-keyword">mediump</span> <span class="hljs-type">float</span>;<br><br><span class="hljs-type">void</span> main() &#123;<br>   <span class="hljs-built_in">gl_FragColor</span> = doMathToMakeAColor;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>每个像素都将调用一次片段着色器，每次调用需要从你设置的特殊全局变量 gl_FragColor 中获取颜色信息</p>
+<p>片段着色器所需的数据，可以通过以下三种方式获取:</p>
+<ol>
+<li>Uniforms 全局变量 (values that stay the same for every pixel of a single draw call)</li>
+</ol>
+<p>同上(顶点着色器)</p>
+<ol start="2">
+<li>Textures 纹理 (data from pixels&#x2F;texels)</li>
+</ol>
+<p>在着色器中获取纹理信息，可以先创建一个 sampler2D 类型全局变量，然后用 GLSL 方法 texture2D 从纹理中提取信息:</p>
+<figure class="highlight glsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs GLSL"><span class="hljs-keyword">precision</span> <span class="hljs-keyword">mediump</span> <span class="hljs-type">float</span>;<br><br><span class="hljs-keyword">uniform</span> <span class="hljs-type">sampler2D</span> u_texture;<br><br><span class="hljs-type">void</span> main() &#123;<br>   <span class="hljs-type">vec2</span> texcoord = <span class="hljs-type">vec2</span>(<span class="hljs-number">0.5</span>, <span class="hljs-number">0.5</span>);  <span class="hljs-comment">// 获取纹理中心的值</span><br>   <span class="hljs-built_in">gl_FragColor</span> = <span class="hljs-built_in">texture2D</span>(u_texture, texcoord);<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>从纹理中获取的数据取决于很多设置。 至少要创建并给纹理填充数据，例如</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><code class="hljs JavaScript"><span class="hljs-keyword">var</span> tex = gl.<span class="hljs-title function_">createTexture</span>();<br>gl.<span class="hljs-title function_">bindTexture</span>(gl.<span class="hljs-property">TEXTURE_2D</span>, tex);<br><span class="hljs-keyword">var</span> level = <span class="hljs-number">0</span>;<br><span class="hljs-keyword">var</span> width = <span class="hljs-number">2</span>;<br><span class="hljs-keyword">var</span> height = <span class="hljs-number">1</span>;<br><span class="hljs-keyword">var</span> data = <span class="hljs-keyword">new</span> <span class="hljs-title class_">Uint8Array</span>([<br>   <span class="hljs-number">255</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">255</span>,   <span class="hljs-comment">// 一个红色的像素</span><br>   <span class="hljs-number">0</span>, <span class="hljs-number">255</span>, <span class="hljs-number">0</span>, <span class="hljs-number">255</span>,   <span class="hljs-comment">// 一个绿色的像素</span><br>]);<br>gl.<span class="hljs-title function_">texImage2D</span>(gl.<span class="hljs-property">TEXTURE_2D</span>, level, gl.<span class="hljs-property">RGBA</span>, width, height, <span class="hljs-number">0</span>, gl.<span class="hljs-property">RGBA</span>, gl.<span class="hljs-property">UNSIGNED_BYTE</span>, data);<br>gl.<span class="hljs-title function_">texParameteri</span>(gl.<span class="hljs-property">TEXTURE_2D</span>, gl.<span class="hljs-property">TEXTURE_MIN_FILTER</span>, gl.<span class="hljs-property">LINEAR</span>);<br><br><span class="hljs-comment">// 初始化时找到全局变量的地址</span><br><span class="hljs-keyword">var</span> someSamplerLoc = gl.<span class="hljs-title function_">getUniformLocation</span>(someProgram, <span class="hljs-string">&quot;u_texture&quot;</span>);<br><br><span class="hljs-comment">// 在渲染的时候WebGL要求纹理必须绑定到一个纹理单元上</span><br><span class="hljs-keyword">var</span> unit = <span class="hljs-number">5</span>;  <span class="hljs-comment">// 挑选一个纹理单元</span><br>gl.<span class="hljs-title function_">activeTexture</span>(gl.<span class="hljs-property">TEXTURE0</span> + unit);<br>gl.<span class="hljs-title function_">bindTexture</span>(gl.<span class="hljs-property">TEXTURE_2D</span>, tex);<br><br><span class="hljs-comment">// 告诉着色器你要使用的纹理在那个纹理单元</span><br>gl.<span class="hljs-title function_">uniform1i</span>(someSamplerLoc, unit);<br><br></code></pre></td></tr></table></figure>
+
+<ol start="3">
+<li>Varyings 可变量 (data passed from the vertex shader and interpolated)</li>
+</ol>
+<p>可变量是一种顶点着色器给片段着色器传值的方式</p>
+<p>为了使用可变量，要在两个着色器中定义同名的可变量。 给顶点着色器中可变量设置的值，会作为参考值进行内插，在绘制像素时传给片段着色器的可变量</p>
+<figure class="highlight glsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><code class="hljs glsl"><span class="hljs-comment">// 顶点着色器</span><br><span class="hljs-keyword">attribute</span> <span class="hljs-type">vec4</span> a_position;<br><br><span class="hljs-keyword">uniform</span> <span class="hljs-type">vec4</span> u_offset;<br><br><span class="hljs-keyword">varying</span> <span class="hljs-type">vec4</span> v_positionWithOffset;<br><br><span class="hljs-type">void</span> main() &#123;<br>  <span class="hljs-built_in">gl_Position</span> = a_position + u_offset;<br>  v_positionWithOffset = a_position + u_offset;<br>&#125;<br><br><br><span class="hljs-comment">// 片段着色器</span><br><span class="hljs-keyword">precision</span> <span class="hljs-keyword">mediump</span> <span class="hljs-type">float</span>;<br><br><span class="hljs-keyword">varying</span> <span class="hljs-type">vec4</span> v_positionWithOffset;<br><br><span class="hljs-type">void</span> main() &#123;<br>  <span class="hljs-comment">// 从裁剪空间 (-1 &lt;-&gt; +1) 转换到颜色空间 (0 -&gt; 1).</span><br>  <span class="hljs-type">vec4</span> color = v_positionWithOffset * <span class="hljs-number">0.5</span> + <span class="hljs-number">0.5</span>;<br>  <span class="hljs-built_in">gl_FragColor</span> = color;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<h3 id="GLSL"><a href="#GLSL" class="headerlink" title="GLSL"></a>GLSL</h3><p>GLSL 全称是 Graphics Library Shader Language （图形库着色器语言），是着色器使用的语言。 它有一些不同于 JavaScript 的特性，主要目的是为栅格化图形提供常用的计算功能。 所以它内建的数据类型例如 vec2, vec3 和 vec4 分别代表两个值，三个值和四个值， 类似的还有 mat2, mat3 和 mat4 分别代表 2x2, 3x3 和 4x4 矩阵。 你可以做一些运算例如常量和矢量的乘法</p>
+<figure class="highlight glsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs GLSL"><span class="hljs-type">vec4</span> a = <span class="hljs-type">vec4</span>(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>);<br><span class="hljs-type">vec4</span> b = a * <span class="hljs-number">2.0</span>;<br><span class="hljs-comment">// b 现在是 vec4(2, 4, 6, 8);</span><br><br><br><span class="hljs-comment">// 做矩阵乘法以及矢量和矩阵的乘法</span><br><span class="hljs-type">mat4</span> a = ???<br><span class="hljs-type">mat4</span> b = ???<br><span class="hljs-type">mat4</span> c = a * b;<br><br><span class="hljs-type">vec4</span> v = ???<br><span class="hljs-type">vec4</span> y = c * v;<br><br></code></pre></td></tr></table></figure>
+
+<p>他还为矢量数据提供多种分量选择器，例如 vec4:</p>
+<ul>
+<li>v.x 和 v.s 以及 v.r ， v[0] 表达的是同一个分量。</li>
+<li>v.y 和 v.t 以及 v.g ， v[1] 表达的是同一个分量。</li>
+<li>v.z 和 v.p 以及 v.b ， v[2] 表达的是同一个分量。</li>
+<li>v.w 和 v.q 以及 v.a ， v[3] 表达的是同一个分量。</li>
+</ul>
+<p>它还支持矢量调制，意味者你可以交换或重复分量:</p>
+<figure class="highlight glsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><code class="hljs GLSL">v.yyyy<br>同<br><span class="hljs-type">vec4</span>(v.y, v.y, v.y, v.y)<br><br>v.bgra<br>同<br><span class="hljs-type">vec4</span>(v.b, v.g, v.r, v.a)<br><br><span class="hljs-type">vec4</span>(v.rgb, <span class="hljs-number">1</span>)<br>同<br><span class="hljs-type">vec4</span>(v.r, v.g, v.b, <span class="hljs-number">1</span>)<br><br><span class="hljs-type">vec4</span>(<span class="hljs-number">1</span>)<br>同<br><span class="hljs-type">vec4</span>(<span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>)<br><br></code></pre></td></tr></table></figure>
+
+<p>值得注意的是 GLSL 是一个强类型的语言:</p>
+<figure class="highlight fortran"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs fortran"><span class="hljs-built_in">float</span> f = <span class="hljs-number">1</span>;  // 错误，<span class="hljs-number">1</span>是<span class="hljs-built_in">int</span>类型，不能将<span class="hljs-built_in">int</span>型赋值给<span class="hljs-built_in">float</span><br><span class="hljs-built_in">float</span> f = <span class="hljs-number">1.0</span>;      // 使用<span class="hljs-built_in">float</span><br><span class="hljs-built_in">float</span> f = <span class="hljs-built_in">float</span>(<span class="hljs-number">1</span>)  // 转换<span class="hljs-keyword">integer</span>为<span class="hljs-built_in">float</span><br><br></code></pre></td></tr></table></figure>
+
+<p>上例中 vec4(v.rgb, 1) 不会因为 1 报错，因为 vec4 内部进行了转换类似 float(1)</p>
+<p>GLSL 有一系列内置方法，其中大多数运算支持多种数据类型，并且一次可以运算多个分量，例如:</p>
+<figure class="highlight glsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><code class="hljs glsl"><span class="hljs-comment">// T可以是 float, vec2, vec3 或 vec4 。如果你传的是 vec4 返回的也是 vec4, 返回结果对应每个分量的正弦值。换句话说如果 v 是 vec4 类型</span><br>T <span class="hljs-built_in">sin</span>(T angle)<br><br><span class="hljs-type">vec4</span> s = <span class="hljs-built_in">sin</span>(v)<br>同<br><span class="hljs-type">vec4</span> s = <span class="hljs-type">vec4</span>(<span class="hljs-built_in">sin</span>(v.x), <span class="hljs-built_in">sin</span>(v.y), <span class="hljs-built_in">sin</span>(v.z), <span class="hljs-built_in">sin</span>(v.w))<br><br><span class="hljs-type">vec4</span> m = <span class="hljs-built_in">mix</span>(v1, v2, f);<br>同<br><span class="hljs-type">vec4</span> m = <span class="hljs-type">vec4</span>(<br>  <span class="hljs-built_in">mix</span>(v1.x, v2.x, f),<br>  <span class="hljs-built_in">mix</span>(v1.y, v2.y, f),<br>  <span class="hljs-built_in">mix</span>(v1.z, v2.z, f),<br>  <span class="hljs-built_in">mix</span>(v1.w, v2.w, f));<br></code></pre></td></tr></table></figure>
+
+                <blockquote><p id='rainbow'> 🏝️ </p> <blockquote>
+  <script>
+fetch('https://api.eatrice.top')
+  .then(response => response.json())
+  .then(data => {
+    var rainbow = document.getElementById('rainbow');
+    rainbow.innerHTML = data.Content;
+    rainbow.href = "https://rainbow.eatrice.top/?ID=" + data.ID;
+  })
+  .catch(console.error)
+</script> 
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/WebGL/" class="category-chain-item">WebGL</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/WebGL/">#WebGL</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>着色器和GLSL - WebGL</div>
+      <div>https://mkamv.xyz/webgl/shader-glsl/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>不良帅</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2023年6月19日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/webgl/principle/" title="工作原理 - WebGL">
+                        <span class="hidden-mobile">工作原理 - WebGL</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+  
+  
+    <article id="comments" lazyload>
+      
+  <div id="gitalk-container"></div>
+  <script type="text/javascript">
+    Fluid.utils.loadComments('#gitalk-container', function() {
+      Fluid.utils.createCssLink('/css/gitalk.css')
+      Fluid.utils.createScript('https://lib.baomitu.com/gitalk/1.8.0/gitalk.min.js', function() {
+        var options = Object.assign(
+          {"clientID":"380b721444e388f986da","clientSecret":"cd4569aa7c4e07f1301593bbd51fb45572592099","repo":"mkamvi.github.io","owner":"Mkamvi","admin":["Mkamvi"],"language":"zh-CN","labels":["Gitalk"],"perPage":10,"pagerDirection":"last","distractionFreeMode":false,"createIssueManually":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token"},
+          {
+            id: '4ea64f9055cd3946612ceab785e62c38'
+          }
+        )
+        var gitalk = new Gitalk(options);
+        gitalk.render('gitalk-container');
+      });
+    });
+  </script>
+  <noscript>Please enable JavaScript to view the comments</noscript>
+
+
+    </article>
+  
+
+
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <p> 做一事，而后浪迹天涯 <br /> </p> <div style="color: #9aa59d;"> 国内用户请访问(⚡️)：<a target="_blank" rel="noopener" href="https://iwuzhi.gitee.io">https://iwuzhi.gitee.io</a> </div> 
+    </div>
+  
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.0/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.18.2/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>
