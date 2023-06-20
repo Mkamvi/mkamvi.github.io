@@ -54,31 +54,6 @@
   
   
   <entry>
-    <title>惟愿你能，得到拯救</title>
-    <link href="/daily/2023/06/15/"/>
-    <url>/daily/2023/06/15/</url>
-    
-    <content type="html"><![CDATA[<p>3D大屏项目数据看板展示数据项调整，然后接着整数字城市案例，添加了光锥和流动线</p><p>然后WebGL开始整理起来了，不过和同事瞎掰了会，没看多少 🦝：</p><ol><li>顶点着色器</li><li>片段着色器</li><li>GLSL</li><li>围绕两个着色器的状态数据、数据共享及传递过程</li></ol><p>然后刷剧太晚了，早上没起来，明天再弄轮子吧 😭</p>]]></content>
-    
-    
-    <categories>
-      
-      <category>日常记录</category>
-      
-    </categories>
-    
-    
-    <tags>
-      
-      <tag>日常记录</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
     <title>基础 - WebGL</title>
     <link href="/webgl/basic/"/>
     <url>/webgl/basic/</url>
@@ -96,31 +71,6 @@
     <tags>
       
       <tag>WebGL</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
-    <title>你读书，就是为了杀人吗？！</title>
-    <link href="/daily/2023/06/14/"/>
-    <url>/daily/2023/06/14/</url>
-    
-    <content type="html"><![CDATA[<p>3D大屏的事基本弄的差不多了，然后今天就接着整数字城市了，添加了中心点动态墙、四面体模型、及底部旋转圆动画</p><p>本来还想看看WebGL的，但是中途有个紧急上线，给耽搁了 😫</p><p>然后今天整理了下Blender的快捷键，算是复习了一遍基础操作吧</p><p>然后早上总算是把180°的自行车主杠给弄好了，还是使用细分跟平滑，明天终于能整车轮了🤸‍♂️</p>]]></content>
-    
-    
-    <categories>
-      
-      <category>日常记录</category>
-      
-    </categories>
-    
-    
-    <tags>
-      
-      <tag>日常记录</tag>
       
     </tags>
     
@@ -154,131 +104,6 @@
   
   
   <entry>
-    <title>杀人犯，你好</title>
-    <link href="/daily/2023/06/13/"/>
-    <url>/daily/2023/06/13/</url>
-    
-    <content type="html"><![CDATA[<p>今天接着把2D&#x2F;3D交互那坨代码优化了下， 对接了下实时数据，还发现一个问题：</p><p>在云桌面测试时，发现模拟点击事件找不到对应设备，因为云桌面比较卡，然后模型加载较慢，所以导致在透传鼠标事件获取目标设备时，设备还没渲染到可视区域。于是加了30S的递归循环，在没读到设备前，每一秒都去重新尝试一下，直到找到设备为止，这样基本就能找到设备了。</p><p>然后早上试了下使用倒角实现180°的转弯，结果还是不太理想，总觉得差些啥，今天上班路上仔细打量了下路边的自行车，唉，了然，对于立方体的上下两个边没有过渡，果然还得用细分加平滑去做，明天再做一遍看看效果吧 🤹‍♂️</p><p>哦，上班时还偷偷耍了会Emacs，几天没练，组合键都忘光了要，干啥都要至少3个键位，干啥都离不开ctrl键，算了，吃灰去吧，不想练了</p>]]></content>
-    
-    
-    <categories>
-      
-      <category>日常记录</category>
-      
-    </categories>
-    
-    
-    <tags>
-      
-      <tag>日常记录</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
-    <title>我是马修，我无话可说</title>
-    <link href="/daily/2023/06/12/"/>
-    <url>/daily/2023/06/12/</url>
-    
-    <content type="html"><![CDATA[<p>今天接着处理了模拟点击事件会导致多个子设备穿透的事，然后对了下接口，不过还没弄完。</p><p>然后很开心的一件事是Github和Gitee同步的事终于处理好了，终于不用手动同步了。配置脚本大概是这个样子：</p><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br></pre></td><td class="code"><pre><code class="hljs YAML"><span class="hljs-attr">name:</span> <span class="hljs-string">deploy</span><br><br><span class="hljs-attr">on:</span><br>  <span class="hljs-attr">push:</span><br>    <span class="hljs-attr">branches:</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-string">main</span> <span class="hljs-comment"># default branch</span><br><br><span class="hljs-attr">jobs:</span><br>  <span class="hljs-attr">build-and-deploy:</span><br>    <span class="hljs-attr">runs-on:</span> <span class="hljs-string">ubuntu-latest</span><br>    <span class="hljs-attr">permissions:</span><br>      <span class="hljs-attr">contents:</span> <span class="hljs-string">write</span><br>    <span class="hljs-attr">steps:</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-attr">uses:</span> <span class="hljs-string">actions/checkout@v3</span><br>        <span class="hljs-attr">with:</span><br>          <span class="hljs-attr">token:</span> <span class="hljs-string">$&#123;&#123;</span> <span class="hljs-string">secrets.GITHUB_TOKEN</span> <span class="hljs-string">&#125;&#125;</span><br>          <span class="hljs-comment"># If your repository depends on submodule, please see: https://github.com/actions/checkout</span><br>          <span class="hljs-attr">submodules:</span> <span class="hljs-string">recursive</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-attr">name:</span> <span class="hljs-string">Use</span> <span class="hljs-string">Node.js</span> <span class="hljs-number">16.</span><span class="hljs-string">x</span><br>        <span class="hljs-attr">uses:</span> <span class="hljs-string">actions/setup-node@v2</span><br>        <span class="hljs-attr">with:</span><br>          <span class="hljs-attr">node-version:</span> <span class="hljs-string">&quot;16&quot;</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-attr">name:</span> <span class="hljs-string">Cache</span> <span class="hljs-string">NPM</span> <span class="hljs-string">dependencies</span><br>        <span class="hljs-attr">uses:</span> <span class="hljs-string">actions/cache@v2</span><br>        <span class="hljs-attr">with:</span><br>          <span class="hljs-attr">path:</span> <span class="hljs-string">node_modules</span><br>          <span class="hljs-attr">key:</span> <span class="hljs-string">$&#123;&#123;</span> <span class="hljs-string">runner.OS</span> <span class="hljs-string">&#125;&#125;-npm-cache</span><br>          <span class="hljs-attr">restore-keys:</span> <span class="hljs-string">|</span><br><span class="hljs-string">            $&#123;&#123; runner.OS &#125;&#125;-npm-cache</span><br><span class="hljs-string"></span>      <span class="hljs-bullet">-</span> <span class="hljs-attr">name:</span> <span class="hljs-string">Install</span> <span class="hljs-string">Dependencies</span><br>        <span class="hljs-attr">run:</span> <span class="hljs-string">npm</span> <span class="hljs-string">install</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-attr">name:</span> <span class="hljs-string">Build</span><br>        <span class="hljs-attr">run:</span> <span class="hljs-string">npm</span> <span class="hljs-string">run</span> <span class="hljs-string">build</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-attr">name:</span> <span class="hljs-string">Deploy</span><br>        <span class="hljs-attr">uses:</span> <span class="hljs-string">peaceiris/actions-gh-pages@v3</span><br>        <span class="hljs-attr">with:</span><br>          <span class="hljs-attr">github_token:</span> <span class="hljs-string">$&#123;&#123;</span> <span class="hljs-string">secrets.GITHUB_TOKEN</span> <span class="hljs-string">&#125;&#125;</span><br>          <span class="hljs-attr">publish_dir:</span> <span class="hljs-string">./public</span><br><br>  <span class="hljs-attr">sync-to-gitee:</span><br>    <span class="hljs-attr">needs:</span> <span class="hljs-string">build-and-deploy</span><br>    <span class="hljs-attr">runs-on:</span> <span class="hljs-string">ubuntu-latest</span><br>    <span class="hljs-attr">permissions:</span><br>      <span class="hljs-attr">contents:</span> <span class="hljs-string">write</span><br>    <span class="hljs-attr">steps:</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-attr">name:</span> <span class="hljs-string">Organization</span> <span class="hljs-string">mirror</span><br>        <span class="hljs-attr">uses:</span> <span class="hljs-string">Yikun/hub-mirror-action@mappings</span><br>        <span class="hljs-attr">with:</span><br>          <span class="hljs-attr">src:</span> <span class="hljs-string">github/Mkamvi</span><br>          <span class="hljs-attr">dst:</span> <span class="hljs-string">gitee/iWuzhi</span><br>          <span class="hljs-attr">dst_key:</span> <span class="hljs-string">$&#123;&#123;</span> <span class="hljs-string">secrets.SYNC_GITEE_PRIVATE_KEY</span> <span class="hljs-string">&#125;&#125;</span><br>          <span class="hljs-attr">dst_token:</span> <span class="hljs-string">$&#123;&#123;</span> <span class="hljs-string">secrets.GITEE_TOKEN</span> <span class="hljs-string">&#125;&#125;</span><br>          <span class="hljs-attr">mappings:</span> <span class="hljs-string">&quot;mkamvi.github.io=&gt;iWuzhi&quot;</span><br>          <span class="hljs-attr">static_list:</span> <span class="hljs-string">&quot;mkamvi.github.io&quot;</span><br>          <span class="hljs-attr">force_update:</span> <span class="hljs-literal">true</span><br><br>  <span class="hljs-attr">reload-gitee-pages:</span><br>    <span class="hljs-attr">needs:</span> <span class="hljs-string">sync-to-gitee</span><br>    <span class="hljs-attr">runs-on:</span> <span class="hljs-string">ubuntu-latest</span><br>    <span class="hljs-attr">steps:</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-attr">name:</span> <span class="hljs-string">Build</span> <span class="hljs-string">Gitee</span> <span class="hljs-string">Pages</span><br>        <span class="hljs-attr">uses:</span> <span class="hljs-string">yanglbme/gitee-pages-action@main</span><br>        <span class="hljs-attr">with:</span><br>          <span class="hljs-comment"># 注意替换为你的 Gitee 用户名</span><br>          <span class="hljs-attr">gitee-username:</span> <span class="hljs-string">iWuzhi</span><br>          <span class="hljs-comment"># 注意在 Settings-&gt;Secrets 配置 GITEE_PASSWORD</span><br>          <span class="hljs-attr">gitee-password:</span> <span class="hljs-string">$&#123;&#123;</span> <span class="hljs-string">secrets.GITEE_PASSWORD</span> <span class="hljs-string">&#125;&#125;</span><br>          <span class="hljs-comment"># 注意替换为你的 Gitee 仓库，仓库名严格区分大小写，请准确填写，否则会出错</span><br>          <span class="hljs-attr">gitee-repo:</span> <span class="hljs-string">iWuzhi</span><br>          <span class="hljs-comment"># 要部署的分支，默认是 master，若是其他分支，则需要指定（指定的分支必须存在）</span><br>          <span class="hljs-attr">branch:</span> <span class="hljs-string">gh-pages</span><br></code></pre></td></tr></table></figure><p>大概流程是，Github遇到push事件后，开始构建流程，构建完再触发部署流程，这波完了Github就已经部署好了。然后往Gitee同步代码，接着再触发Gitee Pages重新部署，然后Gitee也就部署好了，耶~</p>]]></content>
-    
-    
-    <categories>
-      
-      <category>日常记录</category>
-      
-    </categories>
-    
-    
-    <tags>
-      
-      <tag>日常记录</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
-    <title>时间变慢了，那就慢慢来吧</title>
-    <link href="/daily/2023/06/11/"/>
-    <url>/daily/2023/06/11/</url>
-    
-    <content type="html"><![CDATA[<p>今天突然发现竟然对自行车的结构好陌生啊，找了几张参考图，零件好多啊…….，中间还看到了几个摩托车案例，好帅啊，自行车弄完就弄摩托车吧  🏍️，单车变摩托  🤣</p><p>本以为2小时就能弄完，没想到竟然卡在了180°的拐弯上，算是把平滑、细分修改器、曲线、曲线修改器、曲线倒角都练习了一遍 🤣</p><p>这周抽时间接着弄吧  😮‍💨</p>]]></content>
-    
-    
-    <categories>
-      
-      <category>日常记录</category>
-      
-    </categories>
-    
-    
-    <tags>
-      
-      <tag>日常记录</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
-    <title>星河挂在天上</title>
-    <link href="/daily/2023/06/10/"/>
-    <url>/daily/2023/06/10/</url>
-    
-    <content type="html"><![CDATA[<p>哈哈哈哈哈哈哈<span style='margin-right: 14px;'></span>每次看她都笑的好开心</p><p>今天认证了下七牛云，结果是只分配了一个临时域名(能用 30 天)，好气哦，算了，那就先这么用着吧，备案流程实在是太麻烦了 😩</p><p>然后今天基本啥也没干，看看天、发发呆、听听歌、擦擦桌、补补觉，就这样慢悠悠的度过一天也挺好 🫠</p><p>然后明天就做个自行车吧 _____🚲__🚲_🚲___🚲_🚲🚲_🚲_________</p>]]></content>
-    
-    
-    <categories>
-      
-      <category>日常记录</category>
-      
-    </categories>
-    
-    
-    <tags>
-      
-      <tag>日常记录</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
-    <title>乱七八糟</title>
-    <link href="/daily/2023/06/09/"/>
-    <url>/daily/2023/06/09/</url>
-    
-    <content type="html"><![CDATA[<p>今天主要跟后端对接了下位号位置关联的事，然后发现一个问题：同一个位置下在模拟点击事件的时候，可能对应多个子设备穿透的问题，但目前只取了第一个，后台可能因为没有位号并未入库，所以会查不出设备信息，这个就有点烦。只能去调整SDK去做适配，通过检索匹配有效设备后再触发点击效果事件，不过还没弄完，麻烦 😩</p><p>然后Github Action上下文部分补充了：</p><ol><li>vars</li><li>job</li></ol><p>然后早上起不来了… 😩</p>]]></content>
-    
-    
-    <categories>
-      
-      <category>日常记录</category>
-      
-    </categories>
-    
-    
-    <tags>
-      
-      <tag>日常记录</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
     <title>上下文 - Github Actions</title>
     <link href="/github/gh-actions/context/"/>
     <url>/github/gh-actions/context/</url>
@@ -298,56 +123,6 @@
       <tag>github</tag>
       
       <tag>gh-actions</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
-    <title>兜兜转转，又回到了原点</title>
-    <link href="/daily/2023/06/08/"/>
-    <url>/daily/2023/06/08/</url>
-    
-    <content type="html"><![CDATA[<p>今天继续看了Github Action的Context主题，主要还是如何在脚本执行过程中使用系统变量，以更加灵活的编写脚本，不过系统变量有点多，还没看完，脑壳疼</p><p>然后本来计划看看WebGL，然后接着做数字城市，但2D和3D的交互实现方案不满意，只能去优化方案：</p><ol><li>通过解析模型(GLTF)查找位置信息，然后根据节点ID入库(需要去熟悉GLTF，极其麻烦)</li><li>在客户端遍历模型入口文件，通过借助Cesium的能力，由客户端发起位置入库命令(需要前后端配合，比较麻烦)</li><li>通过解析scenetree.json(切片工具产生的模型结构树)文件，直接入库(采用)</li></ol><p>然后Blender今天多少也算是看了一点：😂</p><ol><li>遮罩可以快速制作有机物动画(变形、动作…)</li><li>雕刻时如何合并两个对象<ul><li>ctrl + j: 合并对象</li><li>R + remesh: 重新计算网格体</li></ul></li></ol>]]></content>
-    
-    
-    <categories>
-      
-      <category>日常记录</category>
-      
-    </categories>
-    
-    
-    <tags>
-      
-      <tag>日常记录</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
-    <title>柳神真真真真真的太帅了</title>
-    <link href="/daily/2023/06/07/"/>
-    <url>/daily/2023/06/07/</url>
-    
-    <content type="html"><![CDATA[<p>咋这么困，🤔</p><p>今天把Github的基础部分基本都看完了，包括：</p><ol><li>如何使用变量</li><li>如何添加脚本</li><li>作业之间如何共享数据</li><li>如何撰写表达式（表达式里有个过滤器，看着不常用，但很有意思）</li></ol><p>然后是3D大屏部分是把3D模型与2D图纸交互部分的绑定逻辑添加了快捷绑定方案，因为这部分工作需要其他人来做。主要包括：</p><ol><li>从模型数据拼接交换代码</li><li>添加输入框来展示交换代码</li><li>添加复制按钮来快速实现代码复制操作</li><li>然后简单画了绑定过程示意图</li></ol><p>然后今天又又又又又起晚了……………本帅的Blender大计啊………………….😫……………………….</p>]]></content>
-    
-    
-    <categories>
-      
-      <category>日常记录</category>
-      
-    </categories>
-    
-    
-    <tags>
-      
-      <tag>日常记录</tag>
       
     </tags>
     
@@ -410,81 +185,6 @@
   
   
   <entry>
-    <title>雨终于停了</title>
-    <link href="/daily/2023/06/06/"/>
-    <url>/daily/2023/06/06/</url>
-    
-    <content type="html"><![CDATA[<p>处理了下家里电脑NeoVim启动报错问题，通过scoop装了gcc，然后发现lualine插件中文会乱码，便先把后半段给截掉了，后面再看看吧。</p><p>然后就是Blender了，今天主要看了：</p><ol><li>Mask： 主要用途是在雕塑的时候可以保护细节不被影响，还有就是控制显示和隐藏</li><li>Face Sets: 网格体分组(使用不同的颜色标记)</li></ol><p>缓存了下数字城市的白模数据，然后通过自定义着色器程序添加了环形动画。</p><p>确认了大屏3D渲染新方案，确认了数据格式的准确性。</p><p>优先开始看Github Action了，要不后面都得手动同步，好麻烦。</p>]]></content>
-    
-    
-    <categories>
-      
-      <category>日常记录</category>
-      
-    </categories>
-    
-    
-    <tags>
-      
-      <tag>日常记录</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
-    <title>脑子进水了</title>
-    <link href="/daily/2023/06/05/"/>
-    <url>/daily/2023/06/05/</url>
-    
-    <content type="html"><![CDATA[<p>一首歌循环了整整一天，我也是个大傻子。</p><p>早上主要看了下数字城市案例细节呈现及实现方式，然后下午帮同事又跑了一次zip文件内容替换的脚本。</p><p>然后今天计划开始把WebGL再系统的学习一次了，大概是把学习路线给整好了，后面就慢慢整理起来就行了。</p><p>然后想不到的是Gitee的认证通过了，原本以为至少要一天以上的时间，就顺便从Github把这个博客同步过来了，Gitee虽然国内访问快，但自定义域名需要收费，这个就很烦，我的域名又没有备案，备案又需要服务器，然后我又不想买，所以就陷入死循环了。所以今天买了七牛云，想试下能否直接使用域名解析，不行的话就当个存储服务吧。</p><p>然后就是往Gitee同步代码的事，本来想通过Github Action触发自动同步， 但发现在Github通过Action自动构建后更新的分支代码无法触发Push流程，这就很烦，算了，这两天再研究下Github Action，然后自己写个流水线脚本好了。</p><p>然后这会发现Hexo页面预览竟然会跟着换行符而换行，然后搜了一下配置了mark，但这样会导致页面有个空格，无语……………….. 又是一个问题……..</p><p>然后这两天比较赖床，早上起的很晚，Blender都没时间练习了…洗洗睡明天早起吧……</p>]]></content>
-    
-    
-    <categories>
-      
-      <category>日常记录</category>
-      
-    </categories>
-    
-    
-    <tags>
-      
-      <tag>日常记录</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
-    <title>今天是起飞的一天</title>
-    <link href="/daily/2023/06/02/"/>
-    <url>/daily/2023/06/02/</url>
-    
-    <content type="html"><![CDATA[<p>今天仔细分析了下实时航线的实现方式，了解了下如何计算球面的两点间距离(参考 Great-circle distance 和 Haversine formula)，然后优化了下飞机落地方向。</p><p>接着研究了两点之间动画插值方式</p><ol><li>通过两点计算中间位置坐标</li><li>设置中间位置高度(类抛物线)</li><li>通过 Cesium.CatmullRomSplineI 获取任意时间点位置(evaluate)</li><li>通过自定义插值数量与 CatmullRomSplineI 时间点映射即可获得每个时间点对应的坐标位置</li></ol><p>然后把飞行动画从Track(历史轨迹)替换成了DynamicLayer(动态图层)+DynamicModel(动态模型)方式，因为历史轨迹无法实时调整飞机位置，动态模型可以做到。</p>]]></content>
-    
-    
-    <categories>
-      
-      <category>日常记录</category>
-      
-    </categories>
-    
-    
-    <tags>
-      
-      <tag>日常记录</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
     <title>DC文档概览</title>
     <link href="/gis/dc/%E6%A6%82%E8%A7%88/"/>
     <url>/gis/dc/%E6%A6%82%E8%A7%88/</url>
@@ -506,56 +206,6 @@
       <tag>DC</tag>
       
       <tag>Cesium</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
-    <title>终于都弄完了</title>
-    <link href="/daily/2023/06/01/"/>
-    <url>/daily/2023/06/01/</url>
-    
-    <content type="html"><![CDATA[<p>今天早上把fluid主题的相关文档基本都看完了，包括进阶脚本注入部分，然后顺手把rainbow也给接了进来。</p><p>下午接着看实时航线统计的事，使用polyline作为动态航线展示，然后通过轨迹路线模拟飞机航行过程，就是数量太多时有性能问题，明天需要再整理下。</p><p>晚上接着在window系统配置nvim，过程中装了scoop，然后还报几个错误，不过不影响使用，缓几天了再研究研究。</p><p>然后今天的结果是：家里电脑该弄的都弄好了，接下来就是撸起袖子开干的时候了。</p>]]></content>
-    
-    
-    <categories>
-      
-      <category>日常记录</category>
-      
-    </categories>
-    
-    
-    <tags>
-      
-      <tag>日常记录</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
-    <title>算了，就随意吧</title>
-    <link href="/daily/2023/05/31/"/>
-    <url>/daily/2023/05/31/</url>
-    
-    <content type="html"><![CDATA[<p>早上写了一个字符串替换脚本，是从 Excel 读取一个映射关系，然后对一个 zip 文件里的内容进行关键词替换。</p><p>下午又接着研究 Gis 实时航线统计实现方式，目前简单尝试了通过内置的 Polyline 组件模拟航线，但数量大的话会卡。</p><p>GeForce Experience 突然登录不上了，挂 VPN、修改 DNS，然并没啥用。</p><p>然后想在 Window 系统装下 Nvim，方便后面写博客用，但 packer 安装依赖失败，Powershell 对系统代理不生效。也是配了$env:HTTP_PROXY 啥的，然并卵用。</p><p>最后尝试 curl google.com时提示需要在 IE 浏览器做初始化配置，于是打开了 IE，然后就好了…</p><p>关键是 GeForce Ex 登录页也能出来了…</p>]]></content>
-    
-    
-    <categories>
-      
-      <category>日常记录</category>
-      
-    </categories>
-    
-    
-    <tags>
-      
-      <tag>日常记录</tag>
       
     </tags>
     

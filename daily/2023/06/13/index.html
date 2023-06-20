@@ -24,7 +24,7 @@
 <meta property="og:description" content="今天接着把2D&#x2F;3D交互那坨代码优化了下， 对接了下实时数据，还发现一个问题： 在云桌面测试时，发现模拟点击事件找不到对应设备，因为云桌面比较卡，然后模型加载较慢，所以导致在透传鼠标事件获取目标设备时，设备还没渲染到可视区域。于是加了30S的递归循环，在没读到设备前，每一秒都去重新尝试一下，直到找到设备为止，这样基本就能找到设备了。 然后早上试了下使用倒角实现180°的转弯，结果还是不太">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2023-06-13T20:55:16.000Z">
-<meta property="article:modified_time" content="2023-06-19T06:48:19.141Z">
+<meta property="article:modified_time" content="2023-06-20T06:53:39.486Z">
 <meta property="article:author" content="不良帅">
 <meta property="article:tag" content="日常记录">
 <meta name="twitter:card" content="summary_large_image">
@@ -320,16 +320,6 @@ fetch('https://api.eatrice.top')
 <span class="category-chains">
   
   
-    
-      <span class="category-chain">
-        
-  <a href="/categories/%E6%97%A5%E5%B8%B8%E8%AE%B0%E5%BD%95/" class="category-chain-item">日常记录</a>
-  
-  
-
-      </span>
-    
-  
 </span>
 
     </div>
@@ -390,29 +380,6 @@ fetch('https://api.eatrice.top')
 
 
 
-              
-                <div class="post-prevnext my-3">
-                  <article class="post-prev col-6">
-                    
-                    
-                      <a href="/blender/Keymap/" title="快捷键 - Blender">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">快捷键 - Blender</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
-                  </article>
-                  <article class="post-next col-6">
-                    
-                    
-                      <a href="/daily/2023/06/12/" title="我是马修，我无话可说">
-                        <span class="hidden-mobile">我是马修，我无话可说</span>
-                        <span class="visible-mobile">下一篇</span>
-                        <i class="iconfont icon-arrowright"></i>
-                      </a>
-                    
-                  </article>
-                </div>
               
             </div>
 
