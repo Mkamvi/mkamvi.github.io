@@ -4,6 +4,31 @@
   
   
   <entry>
+    <title>建模网格体编辑 - Blender</title>
+    <link href="/blender/model/mesh/edit/"/>
+    <url>/blender/model/mesh/edit/</url>
+    
+    <content type="html"><![CDATA[<h3 id="访问网格工具"><a href="#访问网格工具" class="headerlink" title="访问网格工具"></a>访问网格工具</h3><ol><li><kbd>Ctrf-f</kbd> : 面工具菜单</li><li><kbd>Ctrl-e</kbd> : 边工具菜单</li><li><kbd>Ctrl-v</kbd> : 顶点工具菜单</li></ol><h3 id="网格工具"><a href="#网格工具" class="headerlink" title="网格工具"></a>网格工具</h3><h5 id="变换"><a href="#变换" class="headerlink" title="变换"></a>变换</h5><ol><li>移动(G)、旋转(R)、缩放(S)</li></ol><h5 id="变换面板"><a href="#变换面板" class="headerlink" title="变换面板"></a>变换面板</h5><h5 id="球形化-网格·变换·球形化-Shift-Alt-S"><a href="#球形化-网格·变换·球形化-Shift-Alt-S" class="headerlink" title="球形化(网格·变换·球形化, Shift-Alt-S)"></a>球形化(网格·变换·球形化, <kbd>Shift-Alt-S</kbd>)</h5><p>球形化 变换会赋予选中元素球形特征。</p><h5 id="切变-物体-x2F-网格-x2F-曲线-x2F-曲面-‣-变换-‣-切变-Shift-Ctrl-Alt-S"><a href="#切变-物体-x2F-网格-x2F-曲线-x2F-曲面-‣-变换-‣-切变-Shift-Ctrl-Alt-S" class="headerlink" title="切变(物体&#x2F;网格&#x2F;曲线&#x2F;曲面 ‣ 变换 ‣ 切变, Shift-Ctrl-Alt-S)"></a>切变(物体&#x2F;网格&#x2F;曲线&#x2F;曲面 ‣ 变换 ‣ 切变, <kbd>Shift-Ctrl-Alt-S</kbd>)</h5><p>切变是两个平行表面的相向运动。执行该变换时，选中元素会沿着当前视图的水平轴向移动。轴线位置由 轴心点 确定。所有位于该轴<code>上方</code> 的元素移动（切变）方向与鼠标指针一致（但总是平行于水平轴）。所有位于该轴<code>下方</code> 的元素移动方向与鼠标指针相反。</p><h5 id="弯曲-物体-x2F-网格-x2F-曲线-x2F-曲面-‣-变换-‣-弯曲-Shift-W"><a href="#弯曲-物体-x2F-网格-x2F-曲线-x2F-曲面-‣-变换-‣-弯曲-Shift-W" class="headerlink" title="弯曲(物体&#x2F;网格&#x2F;曲线&#x2F;曲面 ‣ 变换 ‣ 弯曲, Shift-W)"></a>弯曲(物体&#x2F;网格&#x2F;曲线&#x2F;曲面 ‣ 变换 ‣ 弯曲, <kbd>Shift-W</kbd>)</h5><p>该工具通过旋转一长条选中元素，形成鼠标指针和 3D 游标之间的弧形。</p><h5 id="推-x2F-拉-工具栏-‣-法向缩放-‣-推-x2F-拉"><a href="#推-x2F-拉-工具栏-‣-法向缩放-‣-推-x2F-拉" class="headerlink" title="推&#x2F;拉(工具栏 ‣ 法向缩放 ‣ 推&#x2F;拉)"></a>推&#x2F;拉(工具栏 ‣ 法向缩放 ‣ 推&#x2F;拉)</h5><p>推&#x2F;拉 工具会移动选中元素（物体，顶点、边或面），使之靠近（推）或远离（拉）。具体来说就是，每个元素以相同的距离向中心点靠近或远离。距离值通过上（推）下（拉）移动鼠标控制，数值输入或通过滑块控制。</p><h5 id="弯绕-物体-x2F-网格-x2F-曲线-x2F-曲面-‣-变换-‣-弯绕，自行车自行车自行车"><a href="#弯绕-物体-x2F-网格-x2F-曲线-x2F-曲面-‣-变换-‣-弯绕，自行车自行车自行车" class="headerlink" title="弯绕(物体&#x2F;网格&#x2F;曲线&#x2F;曲面 ‣ 变换 ‣ 弯绕，自行车自行车自行车)"></a>弯绕(物体&#x2F;网格&#x2F;曲线&#x2F;曲面 ‣ 变换 ‣ 弯绕，自行车自行车自行车)</h5><p>弯绕 变换接受选中元素，绕 3D 游标将选中元素弯曲特定角度。注意该变换的结果总是取决于 3D 游标的位置，轴心点对其没有影响。 弯绕 变换的结果还取决于视图方向。</p><h5 id="随机-网格-‣-变换-‣-随机"><a href="#随机-网格-‣-变换-‣-随机" class="headerlink" title="随机(网格 ‣ 变换 ‣ 随机)"></a>随机(网格 ‣ 变换 ‣ 随机)</h5><p>编辑模式的 随机 工具可以让您沿网格顶点的法向置换顶点。</p><h5 id="法向缩放-网格-‣-变换-‣-法向缩放"><a href="#法向缩放-网格-‣-变换-‣-法向缩放" class="headerlink" title="法向缩放(网格 ‣ 变换 ‣ 法向缩放)"></a>法向缩放(网格 ‣ 变换 ‣ 法向缩放)</h5><p>该工具作用于 标准法向网格 ，沿其自身法线方向（垂直于所在面）移动顶点&#x2F;边&#x2F;面，实现缩小&#x2F;膨胀。</p><h5 id="重置蒙皮尺寸-网格-‣-变换-‣-重置蒙皮尺寸"><a href="#重置蒙皮尺寸-网格-‣-变换-‣-重置蒙皮尺寸" class="headerlink" title="重置蒙皮尺寸(网格 ‣ 变换 ‣ 重置蒙皮尺寸)"></a>重置蒙皮尺寸(网格 ‣ 变换 ‣ 重置蒙皮尺寸)</h5><p>当使用 蒙皮修改器 时，该工具用于设置每个顶点的蒙皮半径。X轴和Y轴的非均匀缩放可以通过通常的轴锁定 X 或 Y 进行访问。半径也可以在3D视图的侧边栏的 Transform 面板中调整。所有顶点的平均半径都可以在3D视图中预览，预览显示为以围绕顶点的虚线圆。</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Blender</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Blender</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>二维平移 - WebGL</title>
     <link href="/webgl/2d-transform/"/>
     <url>/webgl/2d-transform/</url>
