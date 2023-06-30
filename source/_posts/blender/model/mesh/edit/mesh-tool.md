@@ -1,5 +1,5 @@
 ---
-title: 建模网格体编辑 - Blender
+title: 建模网格体编辑 · 网格工具 - Blender
 date: 2023-06-28 10:58:43
 tags:
   - Blender
