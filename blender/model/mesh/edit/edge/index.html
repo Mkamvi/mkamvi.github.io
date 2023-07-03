@@ -16,22 +16,22 @@
   <meta name="author" content="不良帅">
   <meta name="keywords" content="大帅,博客,不良帅,mkamv,mkamvi">
   
-    <meta name="description" content="今天接着把2D&#x2F;3D交互那坨代码优化了下， 对接了下实时数据，还发现一个问题： 在云桌面测试时，发现模拟点击事件找不到对应设备，因为云桌面比较卡，然后模型加载较慢，所以导致在透传鼠标事件获取目标设备时，设备还没渲染到可视区域。于是加了30S的递归循环，在没读到设备前，每一秒都去重新尝试一下，直到找到设备为止，这样基本就能找到设备了。 然后早上试了下使用倒角实现180°的转弯，结果还是不太">
+    <meta name="description" content="挤出边线(边 ‣ 挤出边线, Alt-E)边线倒角边线倒角(边 ‣ 边线倒角, Ctrl-B)顶点滑移(顶点 ‣ 滑移顶点, Shift-Ctrl-B桥接循环边(边 ‣ 桥接循环边)螺旋(边 ‣ 螺旋)细分(边 ‣ 细分)细分并排边(边 ‣ 细分并排边)反细分(边 ‣ 反细分)旋转边线(边 ‣ 顺时针旋转边&#x2F;逆时针旋转边)滑移边线(边 ‣ 滑移边线)偏移边线并滑移(边 ‣ 偏移边线并滑移">
 <meta property="og:type" content="article">
-<meta property="og:title" content="杀人犯，你好">
-<meta property="og:url" content="https://mkamv.xyz/daily/2023/06/13/index.html">
+<meta property="og:title" content="建模网格体编辑 · 边 - Blender">
+<meta property="og:url" content="https://mkamv.xyz/blender/model/mesh/edit/edge/index.html">
 <meta property="og:site_name" content="不良帅本帅">
-<meta property="og:description" content="今天接着把2D&#x2F;3D交互那坨代码优化了下， 对接了下实时数据，还发现一个问题： 在云桌面测试时，发现模拟点击事件找不到对应设备，因为云桌面比较卡，然后模型加载较慢，所以导致在透传鼠标事件获取目标设备时，设备还没渲染到可视区域。于是加了30S的递归循环，在没读到设备前，每一秒都去重新尝试一下，直到找到设备为止，这样基本就能找到设备了。 然后早上试了下使用倒角实现180°的转弯，结果还是不太">
+<meta property="og:description" content="挤出边线(边 ‣ 挤出边线, Alt-E)边线倒角边线倒角(边 ‣ 边线倒角, Ctrl-B)顶点滑移(顶点 ‣ 滑移顶点, Shift-Ctrl-B桥接循环边(边 ‣ 桥接循环边)螺旋(边 ‣ 螺旋)细分(边 ‣ 细分)细分并排边(边 ‣ 细分并排边)反细分(边 ‣ 反细分)旋转边线(边 ‣ 顺时针旋转边&#x2F;逆时针旋转边)滑移边线(边 ‣ 滑移边线)偏移边线并滑移(边 ‣ 偏移边线并滑移">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2023-06-13T20:55:16.000Z">
+<meta property="article:published_time" content="2023-07-03T10:29:31.000Z">
 <meta property="article:modified_time" content="2023-07-03T03:44:35.931Z">
 <meta property="article:author" content="不良帅">
-<meta property="article:tag" content="日常记录">
+<meta property="article:tag" content="Blender">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title>杀人犯，你好 - 不良帅本帅</title>
+  <title>建模网格体编辑 · 边 - Blender - 不良帅本帅</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -201,7 +201,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="杀人犯，你好"></span>
+            <span id="subtitle" data-typed-text="建模网格体编辑 · 边 - Blender"></span>
           
         </div>
 
@@ -212,8 +212,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2023-06-13 20:55" pubdate>
-          2023年6月13日 晚上
+        <time datetime="2023-07-03 10:29" pubdate>
+          2023年7月3日 上午
         </time>
       </span>
     
@@ -224,7 +224,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          342 字
+          308 字
         
       </span>
     
@@ -286,16 +286,12 @@
         <div id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">杀人犯，你好</h1>
+            <h1 style="display: none">建模网格体编辑 · 边 - Blender</h1>
             
             
               <div class="markdown-body">
                 
-                <p>今天接着把2D&#x2F;3D交互那坨代码优化了下， 对接了下实时数据，还发现一个问题：</p>
-<p>在云桌面测试时，发现模拟点击事件找不到对应设备，因为云桌面比较卡，然后模型加载较慢，所以导致在透传鼠标事件获取目标设备时，设备还没渲染到可视区域。于是加了30S的递归循环，在没读到设备前，每一秒都去重新尝试一下，直到找到设备为止，这样基本就能找到设备了。</p>
-<p>然后早上试了下使用倒角实现180°的转弯，结果还是不太理想，总觉得差些啥，今天上班路上仔细打量了下路边的自行车，唉，了然，对于立方体的上下两个边没有过渡，果然还得用细分加平滑去做，明天再做一遍看看效果吧 🤹‍♂️</p>
-<p>哦，上班时还偷偷耍了会Emacs，几天没练，组合键都忘光了要，干啥都要至少3个键位，干啥都离不开ctrl键，算了，吃灰去吧，不想练了</p>
-
+                <h2 id="挤出边线-边-‣-挤出边线-Alt-E"><a href="#挤出边线-边-‣-挤出边线-Alt-E" class="headerlink" title="挤出边线(边 ‣ 挤出边线, Alt-E)"></a>挤出边线(边 ‣ 挤出边线, <kbd>Alt-E</kbd>)</h2><h2 id="边线倒角"><a href="#边线倒角" class="headerlink" title="边线倒角"></a>边线倒角</h2><h4 id="边线倒角-边-‣-边线倒角-Ctrl-B"><a href="#边线倒角-边-‣-边线倒角-Ctrl-B" class="headerlink" title="边线倒角(边 ‣ 边线倒角, Ctrl-B)"></a>边线倒角(边 ‣ 边线倒角, <kbd>Ctrl-B</kbd>)</h4><h4 id="顶点滑移-顶点-‣-滑移顶点-Shift-Ctrl-B"><a href="#顶点滑移-顶点-‣-滑移顶点-Shift-Ctrl-B" class="headerlink" title="顶点滑移(顶点 ‣ 滑移顶点, Shift-Ctrl-B"></a>顶点滑移(顶点 ‣ 滑移顶点, <kbd>Shift-Ctrl-B</kbd></h4><h2 id="桥接循环边-边-‣-桥接循环边"><a href="#桥接循环边-边-‣-桥接循环边" class="headerlink" title="桥接循环边(边 ‣ 桥接循环边)"></a>桥接循环边(边 ‣ 桥接循环边)</h2><h2 id="螺旋-边-‣-螺旋"><a href="#螺旋-边-‣-螺旋" class="headerlink" title="螺旋(边 ‣ 螺旋)"></a>螺旋(边 ‣ 螺旋)</h2><h2 id="细分-边-‣-细分"><a href="#细分-边-‣-细分" class="headerlink" title="细分(边 ‣ 细分)"></a>细分(边 ‣ 细分)</h2><h2 id="细分并排边-边-‣-细分并排边"><a href="#细分并排边-边-‣-细分并排边" class="headerlink" title="细分并排边(边 ‣ 细分并排边)"></a>细分并排边(边 ‣ 细分并排边)</h2><h2 id="反细分-边-‣-反细分"><a href="#反细分-边-‣-反细分" class="headerlink" title="反细分(边 ‣ 反细分)"></a>反细分(边 ‣ 反细分)</h2><h2 id="旋转边线-边-‣-顺时针旋转边-x2F-逆时针旋转边"><a href="#旋转边线-边-‣-顺时针旋转边-x2F-逆时针旋转边" class="headerlink" title="旋转边线(边 ‣ 顺时针旋转边&#x2F;逆时针旋转边)"></a>旋转边线(边 ‣ 顺时针旋转边&#x2F;逆时针旋转边)</h2><h2 id="滑移边线-边-‣-滑移边线"><a href="#滑移边线-边-‣-滑移边线" class="headerlink" title="滑移边线(边 ‣ 滑移边线)"></a>滑移边线(边 ‣ 滑移边线)</h2><h2 id="偏移边线并滑移-边-‣-偏移边线并滑移-Shift-Ctrl-R"><a href="#偏移边线并滑移-边-‣-偏移边线并滑移-Shift-Ctrl-R" class="headerlink" title="偏移边线并滑移(边 ‣ 偏移边线并滑移, Shift-Ctrl-R)"></a>偏移边线并滑移(边 ‣ 偏移边线并滑移, <kbd>Shift-Ctrl-R</kbd>)</h2><h2 id="环切并滑移-边-‣-环切并滑移-Ctrl-R"><a href="#环切并滑移-边-‣-环切并滑移-Ctrl-R" class="headerlink" title="环切并滑移(边 ‣ 环切并滑移, Ctrl-R)"></a>环切并滑移(边 ‣ 环切并滑移, <kbd>Ctrl-R</kbd>)</h2><h2 id="边数据"><a href="#边数据" class="headerlink" title="边数据"></a>边数据</h2><h4 id="折痕边-折痕边-Shift-E"><a href="#折痕边-折痕边-Shift-E" class="headerlink" title="折痕边(折痕边, Shift-E)"></a>折痕边(折痕边, <kbd>Shift-E</kbd>)</h4><h4 id="倒角边权重-边·边线倒角"><a href="#倒角边权重-边·边线倒角" class="headerlink" title="倒角边权重(边·边线倒角)"></a>倒角边权重(边·边线倒角)</h4><h4 id="标记缝合边-amp-清除缝合边-边-‣-标记缝合线-x2F-清除缝合线"><a href="#标记缝合边-amp-清除缝合边-边-‣-标记缝合线-x2F-清除缝合线" class="headerlink" title="标记缝合边&amp;清除缝合边(边 ‣ 标记缝合线&#x2F;清除缝合线)"></a>标记缝合边&amp;清除缝合边(边 ‣ 标记缝合线&#x2F;清除缝合线)</h4><h4 id="标记锐变-amp-清除锐边-边-‣-标记锐边-x2F-清除锐边"><a href="#标记锐变-amp-清除锐边-边-‣-标记锐边-x2F-清除锐边" class="headerlink" title="标记锐变&amp;清除锐边(边 ‣ 标记锐边&#x2F;清除锐边)"></a>标记锐变&amp;清除锐边(边 ‣ 标记锐边&#x2F;清除锐边)</h4>
                 <blockquote><p id='rainbow'> 🏝️ </p> <blockquote>
   <script>
 fetch('https://api.eatrice.top')
@@ -320,6 +316,16 @@ fetch('https://api.eatrice.top')
 <span class="category-chains">
   
   
+    
+      <span class="category-chain">
+        
+  <a href="/categories/Blender/" class="category-chain-item">Blender</a>
+  
+  
+
+      </span>
+    
+  
 </span>
 
     </div>
@@ -328,7 +334,7 @@ fetch('https://api.eatrice.top')
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/%E6%97%A5%E5%B8%B8%E8%AE%B0%E5%BD%95/">#日常记录</a>
+        <a href="/tags/Blender/">#Blender</a>
       
     </div>
   
@@ -340,8 +346,8 @@ fetch('https://api.eatrice.top')
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>杀人犯，你好</div>
-      <div>https://mkamv.xyz/daily/2023/06/13/</div>
+      <div>建模网格体编辑 · 边 - Blender</div>
+      <div>https://mkamv.xyz/blender/model/mesh/edit/edge/</div>
     </div>
     <div class="license-meta">
       
@@ -353,7 +359,7 @@ fetch('https://api.eatrice.top')
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2023年6月13日</div>
+          <div>2023年7月3日</div>
         </div>
       
       
@@ -381,6 +387,23 @@ fetch('https://api.eatrice.top')
 
 
               
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/blender/model/mesh/edit/vertex-tool/" title="建模网格体编辑 · 顶点工具 - Blender">
+                        <span class="hidden-mobile">建模网格体编辑 · 顶点工具 - Blender</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
             </div>
 
             
@@ -396,7 +419,7 @@ fetch('https://api.eatrice.top')
         var options = Object.assign(
           {"clientID":"380b721444e388f986da","clientSecret":"cd4569aa7c4e07f1301593bbd51fb45572592099","repo":"mkamvi.github.io","owner":"Mkamvi","admin":["Mkamvi"],"language":"zh-CN","labels":["Gitalk"],"perPage":10,"pagerDirection":"last","distractionFreeMode":false,"createIssueManually":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token"},
           {
-            id: '4c04a464572476903d431db376ad6950'
+            id: '6ce51aa8df0462a92b3e429bba0db479'
           }
         )
         var gitalk = new Gitalk(options);
