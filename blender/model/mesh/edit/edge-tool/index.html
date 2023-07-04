@@ -16,22 +16,22 @@
   <meta name="author" content="不良帅">
   <meta name="keywords" content="大帅,博客,不良帅,mkamv,mkamvi,不良帅的博客,mkamv的博客">
   
-    <meta name="description" content="今天继续看了Github Action的Context主题，主要还是如何在脚本执行过程中使用系统变量，以更加灵活的编写脚本，不过系统变量有点多，还没看完，脑壳疼 然后本来计划看看WebGL，然后接着做数字城市，但2D和3D的交互实现方案不满意，只能去优化方案：  通过解析模型(GLTF)查找位置信息，然后根据节点ID入库(需要去熟悉GLTF，极其麻烦) 在客户端遍历模型入口文件，通过借助Cesiu">
+    <meta name="description" content="挤出边线(边 ‣ 挤出边线, Alt-E)边线倒角边线倒角(边 ‣ 边线倒角, Ctrl-B)顶点滑移(顶点 ‣ 滑移顶点, Shift-Ctrl-B桥接循环边(边 ‣ 桥接循环边)螺旋(边 ‣ 螺旋)细分(边 ‣ 细分)细分并排边(边 ‣ 细分并排边)反细分(边 ‣ 反细分)旋转边线(边 ‣ 顺时针旋转边&#x2F;逆时针旋转边)滑移边线(边 ‣ 滑移边线)偏移边线并滑移(边 ‣ 偏移边线并滑移">
 <meta property="og:type" content="article">
-<meta property="og:title" content="兜兜转转，又回到了原点">
-<meta property="og:url" content="https://mkamv.xyz/daily/2023/06/08/index.html">
+<meta property="og:title" content="建模网格体编辑 · 边工具 - Blender">
+<meta property="og:url" content="https://mkamv.xyz/blender/model/mesh/edit/edge-tool/index.html">
 <meta property="og:site_name" content="不良帅本帅">
-<meta property="og:description" content="今天继续看了Github Action的Context主题，主要还是如何在脚本执行过程中使用系统变量，以更加灵活的编写脚本，不过系统变量有点多，还没看完，脑壳疼 然后本来计划看看WebGL，然后接着做数字城市，但2D和3D的交互实现方案不满意，只能去优化方案：  通过解析模型(GLTF)查找位置信息，然后根据节点ID入库(需要去熟悉GLTF，极其麻烦) 在客户端遍历模型入口文件，通过借助Cesiu">
+<meta property="og:description" content="挤出边线(边 ‣ 挤出边线, Alt-E)边线倒角边线倒角(边 ‣ 边线倒角, Ctrl-B)顶点滑移(顶点 ‣ 滑移顶点, Shift-Ctrl-B桥接循环边(边 ‣ 桥接循环边)螺旋(边 ‣ 螺旋)细分(边 ‣ 细分)细分并排边(边 ‣ 细分并排边)反细分(边 ‣ 反细分)旋转边线(边 ‣ 顺时针旋转边&#x2F;逆时针旋转边)滑移边线(边 ‣ 滑移边线)偏移边线并滑移(边 ‣ 偏移边线并滑移">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2023-06-08T11:09:31.000Z">
+<meta property="article:published_time" content="2023-07-03T10:29:31.000Z">
 <meta property="article:modified_time" content="2023-07-04T02:55:27.612Z">
 <meta property="article:author" content="不良帅">
-<meta property="article:tag" content="日常记录">
+<meta property="article:tag" content="Blender">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title>兜兜转转，又回到了原点 - 不良帅本帅</title>
+  <title>建模网格体编辑 · 边工具 - Blender - 不良帅本帅</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -201,7 +201,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="兜兜转转，又回到了原点"></span>
+            <span id="subtitle" data-typed-text="建模网格体编辑 · 边工具 - Blender"></span>
           
         </div>
 
@@ -212,8 +212,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2023-06-08 11:09" pubdate>
-          2023年6月8日 上午
+        <time datetime="2023-07-03 10:29" pubdate>
+          2023年7月3日 上午
         </time>
       </span>
     
@@ -224,7 +224,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          351 字
+          308 字
         
       </span>
     
@@ -286,28 +286,12 @@
         <div id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">兜兜转转，又回到了原点</h1>
+            <h1 style="display: none">建模网格体编辑 · 边工具 - Blender</h1>
             
             
               <div class="markdown-body">
                 
-                <p>今天继续看了Github Action的Context主题，主要还是如何在脚本执行过程中使用系统变量，以更加灵活的编写脚本，不过系统变量有点多，还没看完，脑壳疼</p>
-<p>然后本来计划看看WebGL，然后接着做数字城市，但2D和3D的交互实现方案不满意，只能去优化方案：</p>
-<ol>
-<li>通过解析模型(GLTF)查找位置信息，然后根据节点ID入库(需要去熟悉GLTF，极其麻烦)</li>
-<li>在客户端遍历模型入口文件，通过借助Cesium的能力，由客户端发起位置入库命令(需要前后端配合，比较麻烦)</li>
-<li>通过解析scenetree.json(切片工具产生的模型结构树)文件，直接入库(采用)</li>
-</ol>
-<p>然后Blender今天多少也算是看了一点：😂</p>
-<ol>
-<li>遮罩可以快速制作有机物动画(变形、动作…)</li>
-<li>雕刻时如何合并两个对象<ul>
-<li>ctrl + j: 合并对象</li>
-<li>R + remesh: 重新计算网格体</li>
-</ul>
-</li>
-</ol>
-
+                <h2 id="挤出边线-边-‣-挤出边线-Alt-E"><a href="#挤出边线-边-‣-挤出边线-Alt-E" class="headerlink" title="挤出边线(边 ‣ 挤出边线, Alt-E)"></a>挤出边线(边 ‣ 挤出边线, <kbd>Alt-E</kbd>)</h2><h2 id="边线倒角"><a href="#边线倒角" class="headerlink" title="边线倒角"></a>边线倒角</h2><h4 id="边线倒角-边-‣-边线倒角-Ctrl-B"><a href="#边线倒角-边-‣-边线倒角-Ctrl-B" class="headerlink" title="边线倒角(边 ‣ 边线倒角, Ctrl-B)"></a>边线倒角(边 ‣ 边线倒角, <kbd>Ctrl-B</kbd>)</h4><h4 id="顶点滑移-顶点-‣-滑移顶点-Shift-Ctrl-B"><a href="#顶点滑移-顶点-‣-滑移顶点-Shift-Ctrl-B" class="headerlink" title="顶点滑移(顶点 ‣ 滑移顶点, Shift-Ctrl-B"></a>顶点滑移(顶点 ‣ 滑移顶点, <kbd>Shift-Ctrl-B</kbd></h4><h2 id="桥接循环边-边-‣-桥接循环边"><a href="#桥接循环边-边-‣-桥接循环边" class="headerlink" title="桥接循环边(边 ‣ 桥接循环边)"></a>桥接循环边(边 ‣ 桥接循环边)</h2><h2 id="螺旋-边-‣-螺旋"><a href="#螺旋-边-‣-螺旋" class="headerlink" title="螺旋(边 ‣ 螺旋)"></a>螺旋(边 ‣ 螺旋)</h2><h2 id="细分-边-‣-细分"><a href="#细分-边-‣-细分" class="headerlink" title="细分(边 ‣ 细分)"></a>细分(边 ‣ 细分)</h2><h2 id="细分并排边-边-‣-细分并排边"><a href="#细分并排边-边-‣-细分并排边" class="headerlink" title="细分并排边(边 ‣ 细分并排边)"></a>细分并排边(边 ‣ 细分并排边)</h2><h2 id="反细分-边-‣-反细分"><a href="#反细分-边-‣-反细分" class="headerlink" title="反细分(边 ‣ 反细分)"></a>反细分(边 ‣ 反细分)</h2><h2 id="旋转边线-边-‣-顺时针旋转边-x2F-逆时针旋转边"><a href="#旋转边线-边-‣-顺时针旋转边-x2F-逆时针旋转边" class="headerlink" title="旋转边线(边 ‣ 顺时针旋转边&#x2F;逆时针旋转边)"></a>旋转边线(边 ‣ 顺时针旋转边&#x2F;逆时针旋转边)</h2><h2 id="滑移边线-边-‣-滑移边线"><a href="#滑移边线-边-‣-滑移边线" class="headerlink" title="滑移边线(边 ‣ 滑移边线)"></a>滑移边线(边 ‣ 滑移边线)</h2><h2 id="偏移边线并滑移-边-‣-偏移边线并滑移-Shift-Ctrl-R"><a href="#偏移边线并滑移-边-‣-偏移边线并滑移-Shift-Ctrl-R" class="headerlink" title="偏移边线并滑移(边 ‣ 偏移边线并滑移, Shift-Ctrl-R)"></a>偏移边线并滑移(边 ‣ 偏移边线并滑移, <kbd>Shift-Ctrl-R</kbd>)</h2><h2 id="环切并滑移-边-‣-环切并滑移-Ctrl-R"><a href="#环切并滑移-边-‣-环切并滑移-Ctrl-R" class="headerlink" title="环切并滑移(边 ‣ 环切并滑移, Ctrl-R)"></a>环切并滑移(边 ‣ 环切并滑移, <kbd>Ctrl-R</kbd>)</h2><h2 id="边数据"><a href="#边数据" class="headerlink" title="边数据"></a>边数据</h2><h4 id="折痕边-折痕边-Shift-E"><a href="#折痕边-折痕边-Shift-E" class="headerlink" title="折痕边(折痕边, Shift-E)"></a>折痕边(折痕边, <kbd>Shift-E</kbd>)</h4><h4 id="倒角边权重-边·边线倒角"><a href="#倒角边权重-边·边线倒角" class="headerlink" title="倒角边权重(边·边线倒角)"></a>倒角边权重(边·边线倒角)</h4><h4 id="标记缝合边-amp-清除缝合边-边-‣-标记缝合线-x2F-清除缝合线"><a href="#标记缝合边-amp-清除缝合边-边-‣-标记缝合线-x2F-清除缝合线" class="headerlink" title="标记缝合边&amp;清除缝合边(边 ‣ 标记缝合线&#x2F;清除缝合线)"></a>标记缝合边&amp;清除缝合边(边 ‣ 标记缝合线&#x2F;清除缝合线)</h4><h4 id="标记锐变-amp-清除锐边-边-‣-标记锐边-x2F-清除锐边"><a href="#标记锐变-amp-清除锐边-边-‣-标记锐边-x2F-清除锐边" class="headerlink" title="标记锐变&amp;清除锐边(边 ‣ 标记锐边&#x2F;清除锐边)"></a>标记锐变&amp;清除锐边(边 ‣ 标记锐边&#x2F;清除锐边)</h4>
                 <blockquote><p id='rainbow'> 🏝️ </p> <blockquote>
   <script>
 fetch('https://api.eatrice.top')
@@ -332,6 +316,16 @@ fetch('https://api.eatrice.top')
 <span class="category-chains">
   
   
+    
+      <span class="category-chain">
+        
+  <a href="/categories/Blender/" class="category-chain-item">Blender</a>
+  
+  
+
+      </span>
+    
+  
 </span>
 
     </div>
@@ -340,7 +334,7 @@ fetch('https://api.eatrice.top')
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/%E6%97%A5%E5%B8%B8%E8%AE%B0%E5%BD%95/">#日常记录</a>
+        <a href="/tags/Blender/">#Blender</a>
       
     </div>
   
@@ -352,8 +346,8 @@ fetch('https://api.eatrice.top')
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>兜兜转转，又回到了原点</div>
-      <div>https://mkamv.xyz/daily/2023/06/08/</div>
+      <div>建模网格体编辑 · 边工具 - Blender</div>
+      <div>https://mkamv.xyz/blender/model/mesh/edit/edge-tool/</div>
     </div>
     <div class="license-meta">
       
@@ -365,7 +359,7 @@ fetch('https://api.eatrice.top')
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2023年6月8日</div>
+          <div>2023年7月3日</div>
         </div>
       
       
@@ -393,6 +387,29 @@ fetch('https://api.eatrice.top')
 
 
               
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/blender/model/mesh/edit/face-tool/" title="建模网格体编辑 · 面工具 - Blender">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">建模网格体编辑 · 面工具 - Blender</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/blender/model/mesh/edit/vertex-tool/" title="建模网格体编辑 · 顶点工具 - Blender">
+                        <span class="hidden-mobile">建模网格体编辑 · 顶点工具 - Blender</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
             </div>
 
             
@@ -408,7 +425,7 @@ fetch('https://api.eatrice.top')
         var options = Object.assign(
           {"clientID":"380b721444e388f986da","clientSecret":"cd4569aa7c4e07f1301593bbd51fb45572592099","repo":"mkamvi.github.io","owner":"Mkamvi","admin":["Mkamvi"],"language":"zh-CN","labels":["Gitalk"],"perPage":10,"pagerDirection":"last","distractionFreeMode":false,"createIssueManually":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token"},
           {
-            id: '3f4009f9cd8bf0c9d9647ec1a4999ce9'
+            id: 'd1bfd355e90bcf0a054735f176790513'
           }
         )
         var gitalk = new Gitalk(options);

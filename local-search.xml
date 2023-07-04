@@ -4,9 +4,34 @@
   
   
   <entry>
-    <title>建模网格体编辑 · 边 - Blender</title>
-    <link href="/blender/model/mesh/edit/edge/"/>
-    <url>/blender/model/mesh/edit/edge/</url>
+    <title>建模网格体编辑 · 面工具 - Blender</title>
+    <link href="/blender/model/mesh/edit/face-tool/"/>
+    <url>/blender/model/mesh/edit/face-tool/</url>
+    
+    <content type="html"><![CDATA[<h2 id="挤出面-网格-‣-挤出-‣-各面-E"><a href="#挤出面-网格-‣-挤出-‣-各面-E" class="headerlink" title="挤出面(网格 ‣ 挤出 ‣ 各面, E)"></a>挤出面(网格 ‣ 挤出 ‣ 各面, <kbd>E</kbd>)</h2><h2 id="沿法向挤出面-网格-‣-挤出-‣-各面-Alt-E"><a href="#沿法向挤出面-网格-‣-挤出-‣-各面-Alt-E" class="headerlink" title="沿法向挤出面(网格 ‣ 挤出 ‣ 各面, Alt-E)"></a>沿法向挤出面(网格 ‣ 挤出 ‣ 各面, <kbd>Alt-E</kbd>)</h2><h2 id="挤出各个面-网格-‣-挤出-‣-各面-Alt-E-快捷键咋还重复了呢"><a href="#挤出各个面-网格-‣-挤出-‣-各面-Alt-E-快捷键咋还重复了呢" class="headerlink" title="挤出各个面(网格 ‣ 挤出 ‣ 各面, Alt-E, 快捷键咋还重复了呢 ???)"></a>挤出各个面(网格 ‣ 挤出 ‣ 各面, <kbd>Alt-E</kbd>, 快捷键咋还重复了呢 ???)</h2><h2 id="内插面-面-‣-内插面-I"><a href="#内插面-面-‣-内插面-I" class="headerlink" title="内插面(面 ‣ 内插面, I)"></a>内插面(面 ‣ 内插面, <kbd>I</kbd>)</h2><h2 id="尖分面-面-‣-尖分面"><a href="#尖分面-面-‣-尖分面" class="headerlink" title="尖分面(面 ‣ 尖分面, ?)"></a>尖分面(面 ‣ 尖分面, ?)</h2><h2 id="三角面-面-‣-面三角化-Ctrl-T"><a href="#三角面-面-‣-面三角化-Ctrl-T" class="headerlink" title="三角面(面 ‣ 面三角化, Ctrl-T)"></a>三角面(面 ‣ 面三角化, <kbd>Ctrl-T</kbd>)</h2><h2 id="三角面-四角面-面-‣-三角面-gt-四边面-Alt-J"><a href="#三角面-四角面-面-‣-三角面-gt-四边面-Alt-J" class="headerlink" title="三角面-四角面(面 ‣ 三角面 -&gt; 四边面, Alt-J)"></a>三角面-四角面(面 ‣ 三角面 -&gt; 四边面, <kbd>Alt-J</kbd>)</h2><p>此工具需要至少两个相邻三角面，才能生成一个四边面。即使选中偶数个三角面，也可能无法获得全部的四边面。事实上，此工具会从现有的三角面尽可能创建尽可能多的偶数个方形的四边面，这也意味着一些三角面会保留</p><h2 id="面实体化-面-‣-面实体化"><a href="#面实体化-面-‣-面实体化" class="headerlink" title="面实体化(面 ‣ 面实体化)"></a>面实体化(面 ‣ 面实体化)</h2><h2 id="线框-面-‣-完美建面"><a href="#线框-面-‣-完美建面" class="headerlink" title="线框(面 ‣ 完美建面)"></a>线框(面 ‣ 完美建面)</h2><h2 id="填充-面-‣-填充-Alt-F"><a href="#填充-面-‣-填充-Alt-F" class="headerlink" title="填充(面 ‣ 填充, Alt-F)"></a>填充(面 ‣ 填充, <kbd>Alt-F</kbd>)</h2><h2 id="栅格填充-面-‣-栅格填充"><a href="#栅格填充-面-‣-栅格填充" class="headerlink" title="栅格填充(面 ‣ 栅格填充)"></a>栅格填充(面 ‣ 栅格填充)</h2><p>栅格填充 使用一对相连的循环边，或单个闭合的循环边，沿四周几何形状填充栅格</p><h2 id="完美建面-面-‣-完美建面"><a href="#完美建面-面-‣-完美建面" class="headerlink" title="完美建面(面 ‣ 完美建面)"></a>完美建面(面 ‣ 完美建面)</h2><p>减面</p><h2 id="交集·切割-面-‣-交集（切割）"><a href="#交集·切割-面-‣-交集（切割）" class="headerlink" title="交集·切割(面 ‣ 交集（切割）)"></a>交集·切割(面 ‣ 交集（切割）)</h2><h2 id="交集·布尔-面-‣-交集（布尔）"><a href="#交集·布尔-面-‣-交集（布尔）" class="headerlink" title="交集·布尔(面 ‣ 交集（布尔）)"></a>交集·布尔(面 ‣ 交集（布尔）)</h2><h2 id="焊接边线到面-面-‣-焊接边线到面"><a href="#焊接边线到面-面-‣-焊接边线到面" class="headerlink" title="焊接边线到面(面 ‣ 焊接边线到面)"></a>焊接边线到面(面 ‣ 焊接边线到面)</h2><h2 id="平滑着色与平直着色"><a href="#平滑着色与平直着色" class="headerlink" title="平滑着色与平直着色"></a>平滑着色与平直着色</h2><h4 id="平滑着色-物体（Object-‣-平滑着色-Shade-Smooth）"><a href="#平滑着色-物体（Object-‣-平滑着色-Shade-Smooth）" class="headerlink" title="平滑着色(物体（Object) ‣ 平滑着色(Shade Smooth）)"></a>平滑着色(物体（Object) ‣ 平滑着色(Shade Smooth）)</h4><h4 id="平直着色-物体（Object-‣-平直着色-Shade-Flat）"><a href="#平直着色-物体（Object-‣-平直着色-Shade-Flat）" class="headerlink" title="平直着色(物体（Object) ‣ 平直着色(Shade Flat）)"></a>平直着色(物体（Object) ‣ 平直着色(Shade Flat）)</h4><h2 id="面数据"><a href="#面数据" class="headerlink" title="面数据"></a>面数据</h2><h4 id="旋转颜色-面-‣-面数据-‣旋转颜色"><a href="#旋转颜色-面-‣-面数据-‣旋转颜色" class="headerlink" title="旋转颜色(面 ‣ 面数据 ‣旋转颜色)"></a>旋转颜色(面 ‣ 面数据 ‣旋转颜色)</h4><h4 id="翻转颜色-面-‣-面数据-‣反转颜色"><a href="#翻转颜色-面-‣-面数据-‣反转颜色" class="headerlink" title="翻转颜色(面 ‣ 面数据 ‣反转颜色)"></a>翻转颜色(面 ‣ 面数据 ‣反转颜色)</h4><h4 id="旋转UV-面-‣-面数据-‣-旋转-UV"><a href="#旋转UV-面-‣-面数据-‣-旋转-UV" class="headerlink" title="旋转UV (面 ‣ 面数据 ‣ 旋转 UV)"></a>旋转UV (面 ‣ 面数据 ‣ 旋转 UV)</h4><h4 id="翻转UV-面-‣-面数据-‣反转-UV"><a href="#翻转UV-面-‣-面数据-‣反转-UV" class="headerlink" title="翻转UV (面 ‣ 面数据 ‣反转 UV)"></a>翻转UV (面 ‣ 面数据 ‣反转 UV)</h4><h4 id="翻转四边形细分-面-‣-面数据-‣-翻转四边形细分"><a href="#翻转四边形细分-面-‣-面数据-‣-翻转四边形细分" class="headerlink" title="翻转四边形细分(面 ‣ 面数据 ‣ 翻转四边形细分)"></a>翻转四边形细分(面 ‣ 面数据 ‣ 翻转四边形细分)</h4><h4 id="标记自由面-面-‣面数据-‣-标记自由面"><a href="#标记自由面-面-‣面数据-‣-标记自由面" class="headerlink" title="标记自由面 (面 ‣面数据 ‣ 标记自由面)"></a>标记自由面 (面 ‣面数据 ‣ 标记自由面)</h4><h4 id="清除自由面-面-‣面数据-‣-清除自由面"><a href="#清除自由面-面-‣面数据-‣-清除自由面" class="headerlink" title="清除自由面 (面 ‣面数据 ‣ 清除自由面)"></a>清除自由面 (面 ‣面数据 ‣ 清除自由面)</h4>]]></content>
+    
+    
+    <categories>
+      
+      <category>Blender</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Blender</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>建模网格体编辑 · 边工具 - Blender</title>
+    <link href="/blender/model/mesh/edit/edge-tool/"/>
+    <url>/blender/model/mesh/edit/edge-tool/</url>
     
     <content type="html"><![CDATA[<h2 id="挤出边线-边-‣-挤出边线-Alt-E"><a href="#挤出边线-边-‣-挤出边线-Alt-E" class="headerlink" title="挤出边线(边 ‣ 挤出边线, Alt-E)"></a>挤出边线(边 ‣ 挤出边线, <kbd>Alt-E</kbd>)</h2><h2 id="边线倒角"><a href="#边线倒角" class="headerlink" title="边线倒角"></a>边线倒角</h2><h4 id="边线倒角-边-‣-边线倒角-Ctrl-B"><a href="#边线倒角-边-‣-边线倒角-Ctrl-B" class="headerlink" title="边线倒角(边 ‣ 边线倒角, Ctrl-B)"></a>边线倒角(边 ‣ 边线倒角, <kbd>Ctrl-B</kbd>)</h4><h4 id="顶点滑移-顶点-‣-滑移顶点-Shift-Ctrl-B"><a href="#顶点滑移-顶点-‣-滑移顶点-Shift-Ctrl-B" class="headerlink" title="顶点滑移(顶点 ‣ 滑移顶点, Shift-Ctrl-B"></a>顶点滑移(顶点 ‣ 滑移顶点, <kbd>Shift-Ctrl-B</kbd></h4><h2 id="桥接循环边-边-‣-桥接循环边"><a href="#桥接循环边-边-‣-桥接循环边" class="headerlink" title="桥接循环边(边 ‣ 桥接循环边)"></a>桥接循环边(边 ‣ 桥接循环边)</h2><h2 id="螺旋-边-‣-螺旋"><a href="#螺旋-边-‣-螺旋" class="headerlink" title="螺旋(边 ‣ 螺旋)"></a>螺旋(边 ‣ 螺旋)</h2><h2 id="细分-边-‣-细分"><a href="#细分-边-‣-细分" class="headerlink" title="细分(边 ‣ 细分)"></a>细分(边 ‣ 细分)</h2><h2 id="细分并排边-边-‣-细分并排边"><a href="#细分并排边-边-‣-细分并排边" class="headerlink" title="细分并排边(边 ‣ 细分并排边)"></a>细分并排边(边 ‣ 细分并排边)</h2><h2 id="反细分-边-‣-反细分"><a href="#反细分-边-‣-反细分" class="headerlink" title="反细分(边 ‣ 反细分)"></a>反细分(边 ‣ 反细分)</h2><h2 id="旋转边线-边-‣-顺时针旋转边-x2F-逆时针旋转边"><a href="#旋转边线-边-‣-顺时针旋转边-x2F-逆时针旋转边" class="headerlink" title="旋转边线(边 ‣ 顺时针旋转边&#x2F;逆时针旋转边)"></a>旋转边线(边 ‣ 顺时针旋转边&#x2F;逆时针旋转边)</h2><h2 id="滑移边线-边-‣-滑移边线"><a href="#滑移边线-边-‣-滑移边线" class="headerlink" title="滑移边线(边 ‣ 滑移边线)"></a>滑移边线(边 ‣ 滑移边线)</h2><h2 id="偏移边线并滑移-边-‣-偏移边线并滑移-Shift-Ctrl-R"><a href="#偏移边线并滑移-边-‣-偏移边线并滑移-Shift-Ctrl-R" class="headerlink" title="偏移边线并滑移(边 ‣ 偏移边线并滑移, Shift-Ctrl-R)"></a>偏移边线并滑移(边 ‣ 偏移边线并滑移, <kbd>Shift-Ctrl-R</kbd>)</h2><h2 id="环切并滑移-边-‣-环切并滑移-Ctrl-R"><a href="#环切并滑移-边-‣-环切并滑移-Ctrl-R" class="headerlink" title="环切并滑移(边 ‣ 环切并滑移, Ctrl-R)"></a>环切并滑移(边 ‣ 环切并滑移, <kbd>Ctrl-R</kbd>)</h2><h2 id="边数据"><a href="#边数据" class="headerlink" title="边数据"></a>边数据</h2><h4 id="折痕边-折痕边-Shift-E"><a href="#折痕边-折痕边-Shift-E" class="headerlink" title="折痕边(折痕边, Shift-E)"></a>折痕边(折痕边, <kbd>Shift-E</kbd>)</h4><h4 id="倒角边权重-边·边线倒角"><a href="#倒角边权重-边·边线倒角" class="headerlink" title="倒角边权重(边·边线倒角)"></a>倒角边权重(边·边线倒角)</h4><h4 id="标记缝合边-amp-清除缝合边-边-‣-标记缝合线-x2F-清除缝合线"><a href="#标记缝合边-amp-清除缝合边-边-‣-标记缝合线-x2F-清除缝合线" class="headerlink" title="标记缝合边&amp;清除缝合边(边 ‣ 标记缝合线&#x2F;清除缝合线)"></a>标记缝合边&amp;清除缝合边(边 ‣ 标记缝合线&#x2F;清除缝合线)</h4><h4 id="标记锐变-amp-清除锐边-边-‣-标记锐边-x2F-清除锐边"><a href="#标记锐变-amp-清除锐边-边-‣-标记锐边-x2F-清除锐边" class="headerlink" title="标记锐变&amp;清除锐边(边 ‣ 标记锐边&#x2F;清除锐边)"></a>标记锐变&amp;清除锐边(边 ‣ 标记锐边&#x2F;清除锐边)</h4>]]></content>
     
