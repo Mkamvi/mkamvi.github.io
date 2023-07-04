@@ -1,5 +1,5 @@
 ---
-title: 建模网格体编辑 · 边 - Blender
+title: 建模网格体编辑 · 边工具 - Blender
 date: 2023-07-03 10:29:31
 tags:
   - Blender
