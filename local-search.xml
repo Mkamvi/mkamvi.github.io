@@ -4,6 +4,31 @@
   
   
   <entry>
+    <title>将NodeJS应用打成一个可执行文件</title>
+    <link href="/js-libs/pkg/"/>
+    <url>/js-libs/pkg/</url>
+    
+    <content type="html"><![CDATA[<h3 id="核心命令"><a href="#核心命令" class="headerlink" title="核心命令"></a>核心命令</h3><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs cmd">pkg [options] &lt;input&gt;<br></code></pre></td></tr></table></figure><h3 id="核心参数说明"><a href="#核心参数说明" class="headerlink" title="核心参数说明"></a>核心参数说明</h3><ul><li>-t: 指定目标类型，多个类型可用逗号分隔添加</li><li>-c: 指定配置文件</li><li>–out-path: 指定输出目录</li><li>-d: 显示 debug 信息，可以看到虚拟目内的文件结构，但因为加载了 node_modules，有点没法看</li></ul><h3 id="目标类型"><a href="#目标类型" class="headerlink" title="目标类型"></a>目标类型</h3><p>target 分为三个部分，使用中划线分隔：[node 版本]-[平台]-[系统架构]</p><p>示例：node12-win-x64</p><ul><li>node 版本: (node8), node10, node12, node14, node16 or latest</li><li>平台: alpine, linux, linuxstatic, win, macos, (freebsd)</li><li>系统架构: x64, arm64, (armv6, armv7)</li></ul><p>Mac 和 Window 系统一般为：</p><ul><li>Mac: node14-macos-arm64</li><li>Window: node14-win-x64</li></ul><p><em>Tips: Mac支持打出Window版本执行文件</em></p><h3 id="配置文件"><a href="#配置文件" class="headerlink" title="配置文件"></a>配置文件</h3><p>在 package.json 中加入如下部分：</p><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs json"><span class="hljs-attr">&quot;pkg&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">&#123;</span><br>    <span class="hljs-attr">&quot;scripts&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;build/**/*.js&quot;</span><span class="hljs-punctuation">,</span><br>    <span class="hljs-attr">&quot;assets&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">[</span> <span class="hljs-string">&quot;assets&quot;</span><span class="hljs-punctuation">,</span> <span class="hljs-string">&quot;images&quot;</span> <span class="hljs-punctuation">]</span><span class="hljs-punctuation">,</span><br>    <span class="hljs-attr">&quot;targets&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">[</span><br>      <span class="hljs-string">&quot;node14-macos-arm64&quot;</span><span class="hljs-punctuation">,</span><br>      <span class="hljs-string">&quot;node14-win-x64&quot;</span><br>    <span class="hljs-punctuation">]</span><span class="hljs-punctuation">,</span><br>    <span class="hljs-attr">&quot;outputPath&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;dist&quot;</span><br>  <span class="hljs-punctuation">&#125;</span><br></code></pre></td></tr></table></figure><ul><li>scripts: 这个没看懂</li><li>assets: 指定需要额外打包的外部资源</li></ul><h3 id="快照文件系统"><a href="#快照文件系统" class="headerlink" title="快照文件系统"></a>快照文件系统</h3><p>在打包的过程中，pkg会收集项目文件并把它们放到可执行文件内部(叫做快照)，在应用执行过程中可以获取所有快照内文件</p><p>快照结构：&#x2F;snapshot&#x2F;项目名称&#x2F;..资源路径</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>js-libs</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>js-libs</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>建模网格体编辑 · 面工具 - Blender</title>
     <link href="/blender/model/mesh/edit/face-tool/"/>
     <url>/blender/model/mesh/edit/face-tool/</url>
