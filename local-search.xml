@@ -4,6 +4,31 @@
   
   
   <entry>
+    <title>建模网格体属性 · 顶点组 - Blender</title>
+    <link href="/blender/model/attr/vertex-groups/"/>
+    <url>/blender/model/attr/vertex-groups/</url>
+    
+    <content type="html"><![CDATA[<h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>顶点组主要被用来标记属于网格物体或者 晶格 的顶点。想一下椅子的腿和门的铰链，或者一个角色的手、胳膊、四肢、头、脚等。此外，还可以给顶点组里的顶点指定不同的权重值 (范围介于 [ 0.0, 1.0 ] )。因此，顶点组有时候也被称作为 权重组</p><h2 id="用法"><a href="#用法" class="headerlink" title="用法"></a>用法</h2><p>顶点组常用于骨架。但是在 Blender 中也可以用在很多其他方面，比如说：</p><ul><li>蒙皮</li><li>形态键</li><li>修改器</li><li>粒子生成器</li><li>物理仿真</li></ul><h2 id="顶点组面板"><a href="#顶点组面板" class="headerlink" title="顶点组面板"></a>顶点组面板</h2><h2 id="编辑顶点组"><a href="#编辑顶点组" class="headerlink" title="编辑顶点组"></a>编辑顶点组</h2><h2 id="指定顶点组"><a href="#指定顶点组" class="headerlink" title="指定顶点组"></a>指定顶点组</h2><h2 id="创建顶点组"><a href="#创建顶点组" class="headerlink" title="创建顶点组"></a>创建顶点组</h2><h4 id="顶点组面板控制"><a href="#顶点组面板控制" class="headerlink" title="顶点组面板控制"></a>顶点组面板控制</h4><h4 id="删除顶点组"><a href="#删除顶点组" class="headerlink" title="删除顶点组"></a>删除顶点组</h4><h4 id="锁定顶点组"><a href="#锁定顶点组" class="headerlink" title="锁定顶点组"></a>锁定顶点组</h4><h4 id=""><a href="#" class="headerlink" title=""></a></h4>]]></content>
+    
+    
+    <categories>
+      
+      <category>Blender</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Blender</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>建模网格体属性 · 物体数据 - Blender</title>
     <link href="/blender/model/attr/mesh-data/"/>
     <url>/blender/model/attr/mesh-data/</url>
