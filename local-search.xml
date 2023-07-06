@@ -4,6 +4,31 @@
   
   
   <entry>
+    <title>建模网格体属性 · 物体数据 - Blender</title>
+    <link href="/blender/model/attr/mesh-data/"/>
+    <url>/blender/model/attr/mesh-data/</url>
+    
+    <content type="html"><![CDATA[<h2 id="物体数据"><a href="#物体数据" class="headerlink" title="物体数据"></a>物体数据</h2><h4 id="顶点组"><a href="#顶点组" class="headerlink" title="顶点组"></a>顶点组</h4><p>顶点组可用于为一些操作提供群组或权重组。一个物体可以有多个权重组，并且可以在 权重绘制 模式，或者在 编辑模式 通过面板赋值</p><h4 id="形态键"><a href="#形态键" class="headerlink" title="形态键"></a>形态键</h4><p>形态键可用于从一个形状变换至另一个形状</p><h4 id="UV-贴图"><a href="#UV-贴图" class="headerlink" title="UV 贴图"></a>UV 贴图</h4><p>UV映射用于将三维物体映射至二维平面，以确定纹理在三维物体中呈现的位置。不同的UV映射可用于不同的纹理</p><h4 id="颜色属性复制到所选面"><a href="#颜色属性复制到所选面" class="headerlink" title="颜色属性复制到所选面"></a>颜色属性复制到所选面</h4><p>颜色数据可以直接应用于物体的顶点，而不是使用纹理或材料。有两种模式可以绘制颜色属性。使用 顶点绘制 模式，通过启用标题中的绘制掩码来绘制每个面的角落。这对于在低聚物的颜色属性中实现尖锐的边缘很有用。或者使用 “雕刻” 模式，在更高的顶点数量上进行绘制</p><h6 id="颜色属性节点"><a href="#颜色属性节点" class="headerlink" title="颜色属性节点"></a>颜色属性节点</h6><h4 id="颜色属性"><a href="#颜色属性" class="headerlink" title="颜色属性"></a>颜色属性</h4><h4 id="表面贴图"><a href="#表面贴图" class="headerlink" title="表面贴图"></a>表面贴图</h4><h4 id="属性"><a href="#属性" class="headerlink" title="属性"></a>属性</h4><p>属性是存储在每个网格元素中的数据。每个属性都有一个数据类型、域和名称。这个面板只列出自定义属性，不包括所有的内置属性，如 位置 和其他属性，如顶点组</p><h4 id="法向"><a href="#法向" class="headerlink" title="法向"></a>法向</h4><p>几何学中，法线是指垂直于某个元素的一个方向或者直线，该元素通常是一个三角形或面，但也可以是一条直线，曲线 上一点的切线，或者曲面上一点的相切面。法线有助于确定网格的着色方式</p><h4 id="纹理空间"><a href="#纹理空间" class="headerlink" title="纹理空间"></a>纹理空间</h4><p>每个物体都有一个自动生成的UV映射,可以在此处调整这些映射</p><h4 id="重构网格"><a href="#重构网格" class="headerlink" title="重构网格"></a>重构网格</h4><p>网格物体，尤其是已建模为表示活体物体的网格，通常具有不是特别均匀的几何结构。如果物体需要 绑定，或者3D 打印之类的工作流程需要更简单几何形状，则可能导致问题。重构网格是一种使用更均匀的拓扑重建几何图形的技术。按照定义的分辨率，重构网格可以添加或删除拓扑量。重构网格对于 雕刻 尤其有用，可在初始形状基础上生成更好的拓扑</p><h4 id="几何数据"><a href="#几何数据" class="headerlink" title="几何数据"></a>几何数据</h4><p>可以有不同的自定义数据连接到网格物体,这些数据经常在软件内部被使用,也可以导出</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Blender</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Blender</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>建模网格体编辑 · UV工具 - Blender</title>
     <link href="/blender/model/mesh/edit/uv-tool/"/>
     <url>/blender/model/mesh/edit/uv-tool/</url>
