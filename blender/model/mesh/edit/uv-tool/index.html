@@ -16,22 +16,22 @@
   <meta name="author" content="不良帅">
   <meta name="keywords" content="大帅,博客,不良帅,mkamv,mkamvi,不良帅的博客,mkamv的博客">
   
-    <meta name="description" content="咋这么困，🤔 今天把Github的基础部分基本都看完了，包括：  如何使用变量 如何添加脚本 作业之间如何共享数据 如何撰写表达式（表达式里有个过滤器，看着不常用，但很有意思）  然后是3D大屏部分是把3D模型与2D图纸交互部分的绑定逻辑添加了快捷绑定方案，因为这部分工作需要其他人来做。主要包括：  从模型数据拼接交换代码 添加输入框来展示交换代码 添加复制按钮来快速实现代码复制操作 然后简单画">
+    <meta name="description" content="UV 工具(标题栏 ‣ UV, U)Blender 提供了几种 UV 映射方式。比较简单的投影方法使用三维空间到二维空间的映射公式，将点的位置朝点&#x2F;轴面确定的表面插值 展开(UV ‣ 展开, U)展平沿 缝合线 切开后的网格 智能 UV 投射(UV ‣ 智能 UV 投影, U)根据角度阈值切割网格体 光照贴图拼排(UV ‣ 光照贴图拼排, U)将选定的面打包到 UV 边界，主要用于实时渲">
 <meta property="og:type" content="article">
-<meta property="og:title" content="柳神真真真真真的太帅了">
-<meta property="og:url" content="https://mkamv.xyz/daily/2023/06/07/index.html">
+<meta property="og:title" content="建模网格体编辑 · UV工具 - Blender">
+<meta property="og:url" content="https://mkamv.xyz/blender/model/mesh/edit/uv-tool/index.html">
 <meta property="og:site_name" content="不良帅本帅">
-<meta property="og:description" content="咋这么困，🤔 今天把Github的基础部分基本都看完了，包括：  如何使用变量 如何添加脚本 作业之间如何共享数据 如何撰写表达式（表达式里有个过滤器，看着不常用，但很有意思）  然后是3D大屏部分是把3D模型与2D图纸交互部分的绑定逻辑添加了快捷绑定方案，因为这部分工作需要其他人来做。主要包括：  从模型数据拼接交换代码 添加输入框来展示交换代码 添加复制按钮来快速实现代码复制操作 然后简单画">
+<meta property="og:description" content="UV 工具(标题栏 ‣ UV, U)Blender 提供了几种 UV 映射方式。比较简单的投影方法使用三维空间到二维空间的映射公式，将点的位置朝点&#x2F;轴面确定的表面插值 展开(UV ‣ 展开, U)展平沿 缝合线 切开后的网格 智能 UV 投射(UV ‣ 智能 UV 投影, U)根据角度阈值切割网格体 光照贴图拼排(UV ‣ 光照贴图拼排, U)将选定的面打包到 UV 边界，主要用于实时渲">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2023-06-07T21:43:41.000Z">
+<meta property="article:published_time" content="2023-07-06T09:29:42.000Z">
 <meta property="article:modified_time" content="2023-07-06T02:04:31.540Z">
 <meta property="article:author" content="不良帅">
-<meta property="article:tag" content="日常记录">
+<meta property="article:tag" content="Blender">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title>柳神真真真真真的太帅了 - 不良帅本帅</title>
+  <title>建模网格体编辑 · UV工具 - Blender - 不良帅本帅</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -201,7 +201,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="柳神真真真真真的太帅了"></span>
+            <span id="subtitle" data-typed-text="建模网格体编辑 · UV工具 - Blender"></span>
           
         </div>
 
@@ -212,8 +212,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2023-06-07 21:43" pubdate>
-          2023年6月7日 晚上
+        <time datetime="2023-07-06 09:29" pubdate>
+          2023年7月6日 上午
         </time>
       </span>
     
@@ -224,7 +224,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          245 字
+          466 字
         
       </span>
     
@@ -235,7 +235,7 @@
         
         
         
-          3 分钟
+          4 分钟
         
       </span>
     
@@ -286,27 +286,18 @@
         <div id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">柳神真真真真真的太帅了</h1>
+            <h1 style="display: none">建模网格体编辑 · UV工具 - Blender</h1>
             
             
               <div class="markdown-body">
                 
-                <p>咋这么困，🤔</p>
-<p>今天把Github的基础部分基本都看完了，包括：</p>
-<ol>
-<li>如何使用变量</li>
-<li>如何添加脚本</li>
-<li>作业之间如何共享数据</li>
-<li>如何撰写表达式（表达式里有个过滤器，看着不常用，但很有意思）</li>
-</ol>
-<p>然后是3D大屏部分是把3D模型与2D图纸交互部分的绑定逻辑添加了快捷绑定方案，因为这部分工作需要其他人来做。主要包括：</p>
-<ol>
-<li>从模型数据拼接交换代码</li>
-<li>添加输入框来展示交换代码</li>
-<li>添加复制按钮来快速实现代码复制操作</li>
-<li>然后简单画了绑定过程示意图</li>
-</ol>
-<p>然后今天又又又又又起晚了……………本帅的Blender大计啊………………….😫……………………….</p>
+                <h2 id="UV-工具-标题栏-‣-UV-U"><a href="#UV-工具-标题栏-‣-UV-U" class="headerlink" title="UV 工具(标题栏 ‣ UV, U)"></a>UV 工具(标题栏 ‣ UV, <kbd>U</kbd>)</h2><p>Blender 提供了几种 UV 映射方式。比较简单的投影方法使用三维空间到二维空间的映射公式，将点的位置朝点&#x2F;轴面确定的表面插值</p>
+<h2 id="展开-UV-‣-展开-U"><a href="#展开-UV-‣-展开-U" class="headerlink" title="展开(UV ‣ 展开, U)"></a>展开(UV ‣ 展开, <kbd>U</kbd>)</h2><p>展平沿 缝合线 切开后的网格</p>
+<h2 id="智能-UV-投射-UV-‣-智能-UV-投影-U"><a href="#智能-UV-投射-UV-‣-智能-UV-投影-U" class="headerlink" title="智能 UV 投射(UV ‣ 智能 UV 投影, U)"></a>智能 UV 投射(UV ‣ 智能 UV 投影, <kbd>U</kbd>)</h2><p>根据角度阈值切割网格体</p>
+<h2 id="光照贴图拼排-UV-‣-光照贴图拼排-U"><a href="#光照贴图拼排-UV-‣-光照贴图拼排-U" class="headerlink" title="光照贴图拼排(UV ‣ 光照贴图拼排, U)"></a>光照贴图拼排(UV ‣ 光照贴图拼排, <kbd>U</kbd>)</h2><p>将选定的面打包到 UV 边界，主要用于实时渲染</p>
+<h2 id="沿活动四边面展开-UV-‣-沿活动四边面展开-U"><a href="#沿活动四边面展开-UV-‣-沿活动四边面展开-U" class="headerlink" title="沿活动四边面展开(UV ‣ 沿活动四边面展开, U)"></a>沿活动四边面展开(UV ‣ 沿活动四边面展开, <kbd>U</kbd>)</h2><h2 id="块面投影-UV-‣-块面投影-U"><a href="#块面投影-UV-‣-块面投影-U" class="headerlink" title="块面投影(UV ‣ 块面投影, U)"></a>块面投影(UV ‣ 块面投影, <kbd>U</kbd>)</h2><p>块面映射将网格映射到展开的立方体表面。块面映射将网格投影至 6 个分离的平面，创建 6 个 UV 孤岛。在 UV&#x2F;图像编辑器中，会产生重叠，不过可以移动</p>
+<h2 id="柱面投影-柱面投影-U"><a href="#柱面投影-柱面投影-U" class="headerlink" title="柱面投影(柱面投影, U)"></a>柱面投影(柱面投影, <kbd>U</kbd>)</h2><p>通常，要打开一个圆柱体（管子），就好像你纵向切开它并将其折叠平整一样，Blender 希望视图是垂直的，管子 “向上” 站立。不同的视图会以不同的方式将管投射到 UV 贴图上，如果使用，则会扭曲图像</p>
+<h2 id="球面投影-UV-‣-块面投影-U"><a href="#球面投影-UV-‣-块面投影-U" class="headerlink" title="球面投影(UV ‣ 块面投影, U)"></a>球面投影(UV ‣ 块面投影, <kbd>U</kbd>)</h2><h2 id="从视角投影-UV-‣-从视角投影-U"><a href="#从视角投影-UV-‣-从视角投影-U" class="headerlink" title="从视角投影(UV ‣ 从视角投影, U)"></a>从视角投影(UV ‣ 从视角投影, <kbd>U</kbd>)</h2><h2 id="重置-UV-‣-重置-U"><a href="#重置-UV-‣-重置-U" class="headerlink" title="重置(UV ‣ 重置, U)"></a>重置(UV ‣ 重置, <kbd>U</kbd>)</h2><p>重置UV，将每个面映射为填充整个UV栅格，赋予每个面同样的映射</p>
 
                 <blockquote><p id='rainbow'> 🏝️ </p> <blockquote>
   <script>
@@ -332,6 +323,16 @@ fetch('https://api.eatrice.top')
 <span class="category-chains">
   
   
+    
+      <span class="category-chain">
+        
+  <a href="/categories/Blender/" class="category-chain-item">Blender</a>
+  
+  
+
+      </span>
+    
+  
 </span>
 
     </div>
@@ -340,7 +341,7 @@ fetch('https://api.eatrice.top')
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/%E6%97%A5%E5%B8%B8%E8%AE%B0%E5%BD%95/">#日常记录</a>
+        <a href="/tags/Blender/">#Blender</a>
       
     </div>
   
@@ -352,8 +353,8 @@ fetch('https://api.eatrice.top')
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>柳神真真真真真的太帅了</div>
-      <div>https://mkamv.xyz/daily/2023/06/07/</div>
+      <div>建模网格体编辑 · UV工具 - Blender</div>
+      <div>https://mkamv.xyz/blender/model/mesh/edit/uv-tool/</div>
     </div>
     <div class="license-meta">
       
@@ -365,7 +366,7 @@ fetch('https://api.eatrice.top')
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2023年6月7日</div>
+          <div>2023年7月6日</div>
         </div>
       
       
@@ -393,6 +394,23 @@ fetch('https://api.eatrice.top')
 
 
               
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/js-libs/pkg/" title="将NodeJS应用打成一个可执行文件">
+                        <span class="hidden-mobile">将NodeJS应用打成一个可执行文件</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
             </div>
 
             
@@ -408,7 +426,7 @@ fetch('https://api.eatrice.top')
         var options = Object.assign(
           {"clientID":"380b721444e388f986da","clientSecret":"cd4569aa7c4e07f1301593bbd51fb45572592099","repo":"mkamvi.github.io","owner":"Mkamvi","admin":["Mkamvi"],"language":"zh-CN","labels":["Gitalk"],"perPage":10,"pagerDirection":"last","distractionFreeMode":false,"createIssueManually":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token"},
           {
-            id: '8981df2fee9c42f26869edf16c12e2c6'
+            id: '9509d4c313cfbb3f6cc2c17fd20342ea'
           }
         )
         var gitalk = new Gitalk(options);

@@ -4,6 +4,31 @@
   
   
   <entry>
+    <title>建模网格体编辑 · UV工具 - Blender</title>
+    <link href="/blender/model/mesh/edit/uv-tool/"/>
+    <url>/blender/model/mesh/edit/uv-tool/</url>
+    
+    <content type="html"><![CDATA[<h2 id="UV-工具-标题栏-‣-UV-U"><a href="#UV-工具-标题栏-‣-UV-U" class="headerlink" title="UV 工具(标题栏 ‣ UV, U)"></a>UV 工具(标题栏 ‣ UV, <kbd>U</kbd>)</h2><p>Blender 提供了几种 UV 映射方式。比较简单的投影方法使用三维空间到二维空间的映射公式，将点的位置朝点&#x2F;轴面确定的表面插值</p><h2 id="展开-UV-‣-展开-U"><a href="#展开-UV-‣-展开-U" class="headerlink" title="展开(UV ‣ 展开, U)"></a>展开(UV ‣ 展开, <kbd>U</kbd>)</h2><p>展平沿 缝合线 切开后的网格</p><h2 id="智能-UV-投射-UV-‣-智能-UV-投影-U"><a href="#智能-UV-投射-UV-‣-智能-UV-投影-U" class="headerlink" title="智能 UV 投射(UV ‣ 智能 UV 投影, U)"></a>智能 UV 投射(UV ‣ 智能 UV 投影, <kbd>U</kbd>)</h2><p>根据角度阈值切割网格体</p><h2 id="光照贴图拼排-UV-‣-光照贴图拼排-U"><a href="#光照贴图拼排-UV-‣-光照贴图拼排-U" class="headerlink" title="光照贴图拼排(UV ‣ 光照贴图拼排, U)"></a>光照贴图拼排(UV ‣ 光照贴图拼排, <kbd>U</kbd>)</h2><p>将选定的面打包到 UV 边界，主要用于实时渲染</p><h2 id="沿活动四边面展开-UV-‣-沿活动四边面展开-U"><a href="#沿活动四边面展开-UV-‣-沿活动四边面展开-U" class="headerlink" title="沿活动四边面展开(UV ‣ 沿活动四边面展开, U)"></a>沿活动四边面展开(UV ‣ 沿活动四边面展开, <kbd>U</kbd>)</h2><h2 id="块面投影-UV-‣-块面投影-U"><a href="#块面投影-UV-‣-块面投影-U" class="headerlink" title="块面投影(UV ‣ 块面投影, U)"></a>块面投影(UV ‣ 块面投影, <kbd>U</kbd>)</h2><p>块面映射将网格映射到展开的立方体表面。块面映射将网格投影至 6 个分离的平面，创建 6 个 UV 孤岛。在 UV&#x2F;图像编辑器中，会产生重叠，不过可以移动</p><h2 id="柱面投影-柱面投影-U"><a href="#柱面投影-柱面投影-U" class="headerlink" title="柱面投影(柱面投影, U)"></a>柱面投影(柱面投影, <kbd>U</kbd>)</h2><p>通常，要打开一个圆柱体（管子），就好像你纵向切开它并将其折叠平整一样，Blender 希望视图是垂直的，管子 “向上” 站立。不同的视图会以不同的方式将管投射到 UV 贴图上，如果使用，则会扭曲图像</p><h2 id="球面投影-UV-‣-块面投影-U"><a href="#球面投影-UV-‣-块面投影-U" class="headerlink" title="球面投影(UV ‣ 块面投影, U)"></a>球面投影(UV ‣ 块面投影, <kbd>U</kbd>)</h2><h2 id="从视角投影-UV-‣-从视角投影-U"><a href="#从视角投影-UV-‣-从视角投影-U" class="headerlink" title="从视角投影(UV ‣ 从视角投影, U)"></a>从视角投影(UV ‣ 从视角投影, <kbd>U</kbd>)</h2><h2 id="重置-UV-‣-重置-U"><a href="#重置-UV-‣-重置-U" class="headerlink" title="重置(UV ‣ 重置, U)"></a>重置(UV ‣ 重置, <kbd>U</kbd>)</h2><p>重置UV，将每个面映射为填充整个UV栅格，赋予每个面同样的映射</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Blender</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Blender</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>将NodeJS应用打成一个可执行文件</title>
     <link href="/js-libs/pkg/"/>
     <url>/js-libs/pkg/</url>
