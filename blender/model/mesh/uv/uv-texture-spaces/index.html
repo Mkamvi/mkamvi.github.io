@@ -16,22 +16,23 @@
   <meta name="author" content="不良帅">
   <meta name="keywords" content="大帅,博客,不良帅,mkamv,mkamvi,不良帅的博客,mkamv的博客">
   
-    <meta name="description" content="今天早上把fluid主题的相关文档基本都看完了，包括进阶脚本注入部分，然后顺手把rainbow也给接了进来。 下午接着看实时航线统计的事，使用polyline作为动态航线展示，然后通过轨迹路线模拟飞机航行过程，就是数量太多时有性能问题，明天需要再整理下。 晚上接着在window系统配置nvim，过程中装了scoop，然后还报几个错误，不过不影响使用，缓几天了再研究研究。 然后今天的结果是：家里电脑">
+    <meta name="description" content="UV即纹理坐标 纹理即贴图 编辑访问">
 <meta property="og:type" content="article">
-<meta property="og:title" content="终于都弄完了">
-<meta property="og:url" content="https://mkamv.xyz/daily/2023/06/01/index.html">
+<meta property="og:title" content="建模网格体UV · UV &amp; 纹理空间 - Blender">
+<meta property="og:url" content="https://mkamv.xyz/blender/model/mesh/uv/uv-texture-spaces/index.html">
 <meta property="og:site_name" content="不良帅本帅">
-<meta property="og:description" content="今天早上把fluid主题的相关文档基本都看完了，包括进阶脚本注入部分，然后顺手把rainbow也给接了进来。 下午接着看实时航线统计的事，使用polyline作为动态航线展示，然后通过轨迹路线模拟飞机航行过程，就是数量太多时有性能问题，明天需要再整理下。 晚上接着在window系统配置nvim，过程中装了scoop，然后还报几个错误，不过不影响使用，缓几天了再研究研究。 然后今天的结果是：家里电脑">
+<meta property="og:description" content="UV即纹理坐标 纹理即贴图 编辑访问">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2023-06-01T20:27:38.000Z">
+<meta property="article:published_time" content="2023-07-07T10:15:19.000Z">
 <meta property="article:modified_time" content="2023-07-07T03:16:16.433Z">
 <meta property="article:author" content="不良帅">
-<meta property="article:tag" content="日常记录">
+<meta property="article:tag" content="Blender">
+<meta property="article:tag" content="[object Object]">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title>终于都弄完了 - 不良帅本帅</title>
+  <title>建模网格体UV · UV &amp; 纹理空间 - Blender - 不良帅本帅</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -213,7 +214,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="终于都弄完了"></span>
+            <span id="subtitle" data-typed-text="建模网格体UV · UV &amp; 纹理空间 - Blender"></span>
           
         </div>
 
@@ -224,8 +225,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2023-06-01 20:27" pubdate>
-          2023年6月1日 晚上
+        <time datetime="2023-07-07 10:15" pubdate>
+          2023年7月7日 上午
         </time>
       </span>
     
@@ -236,7 +237,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          221 字
+          16 字
         
       </span>
     
@@ -247,7 +248,7 @@
         
         
         
-          2 分钟
+          1 分钟
         
       </span>
     
@@ -298,16 +299,14 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">终于都弄完了</h1>
+            <h1 id="seo-header">建模网格体UV · UV &amp; 纹理空间 - Blender</h1>
             
             
               <div class="markdown-body">
                 
-                <p>今天早上把fluid主题的相关文档基本都看完了，包括进阶脚本注入部分，然后顺手把rainbow也给接了进来。</p>
-<p>下午接着看实时航线统计的事，使用polyline作为动态航线展示，然后通过轨迹路线模拟飞机航行过程，就是数量太多时有性能问题，明天需要再整理下。</p>
-<p>晚上接着在window系统配置nvim，过程中装了scoop，然后还报几个错误，不过不影响使用，缓几天了再研究研究。</p>
-<p>然后今天的结果是：家里电脑该弄的都弄好了，接下来就是撸起袖子开干的时候了。</p>
-
+                <h2 id="UV"><a href="#UV" class="headerlink" title="UV"></a>UV</h2><p>即纹理坐标</p>
+<h2 id="纹理"><a href="#纹理" class="headerlink" title="纹理"></a>纹理</h2><p>即贴图</p>
+<h2 id="编辑"><a href="#编辑" class="headerlink" title="编辑"></a>编辑</h2><h2 id="访问"><a href="#访问" class="headerlink" title="访问"></a>访问</h2>
                 <blockquote><p id='rainbow'> 🏝️ </p> <blockquote>
   <script>
 fetch('https://api.eatrice.top')
@@ -325,22 +324,13 @@ fetch('https://api.eatrice.top')
             <div>
               <div class="post-metas my-3">
   
-    <div class="post-meta mr-3 d-flex align-items-center">
-      <i class="iconfont icon-category"></i>
-      
-
-<span class="category-chains">
-  
-  
-</span>
-
-    </div>
-  
   
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/%E6%97%A5%E5%B8%B8%E8%AE%B0%E5%BD%95/" class="print-no-link">#日常记录</a>
+        <a href="/tags/Blender/" class="print-no-link">#Blender</a>
+      
+        <a href="/tags/object-Object/" class="print-no-link">#[object Object]</a>
       
     </div>
   
@@ -352,8 +342,8 @@ fetch('https://api.eatrice.top')
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>终于都弄完了</div>
-      <div>https://mkamv.xyz/daily/2023/06/01/</div>
+      <div>建模网格体UV · UV &amp; 纹理空间 - Blender</div>
+      <div>https://mkamv.xyz/blender/model/mesh/uv/uv-texture-spaces/</div>
     </div>
     <div class="license-meta">
       
@@ -365,7 +355,7 @@ fetch('https://api.eatrice.top')
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2023年6月1日</div>
+          <div>2023年7月7日</div>
         </div>
       
       
@@ -393,6 +383,29 @@ fetch('https://api.eatrice.top')
 
 
               
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/blender/model/mesh/uv/uv-unwrapping/" title="建模网格体UV · 展开 - Blender">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">建模网格体UV · 展开 - Blender</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/blender/model/mesh/attr/custom-data/" title="建模网格体属性 · 几何数据 - Blender">
+                        <span class="hidden-mobile">建模网格体属性 · 几何数据 - Blender</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
             </div>
 
             
@@ -408,7 +421,7 @@ fetch('https://api.eatrice.top')
         var options = Object.assign(
           {"clientID":"380b721444e388f986da","clientSecret":"cd4569aa7c4e07f1301593bbd51fb45572592099","repo":"mkamvi.github.io","owner":"Mkamvi","admin":["Mkamvi"],"language":"zh-CN","labels":["Gitalk"],"perPage":10,"pagerDirection":"last","distractionFreeMode":false,"createIssueManually":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token"},
           {
-            id: '943c5fe424de70da8d9a203cbee109e3'
+            id: '7b94bc858b11164aab277dac7b58cb43'
           }
         )
         var gitalk = new Gitalk(options);
