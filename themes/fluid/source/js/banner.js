@@ -1,81 +1,304 @@
-const canvasEle = document.querySelector("#banner-canvas");
-const particlesJSEle = document.querySelector("#particles-js");
+(function ($) {
+  var Vector = function (x, y) {
+    this.x = x || 0;
 
-canvasEle.style.position = "absolute";
-canvasEle.style.width = "100%";
-canvasEle.style.height = "100%";
+    this.y = y || 0;
+  };
 
-particlesJSEle.style.position = "absolute";
-particlesJSEle.style.width = "100%";
-particlesJSEle.style.height = "100%";
-particlesJSEle.style.background = "rgba(37,50,40,0.7)";
+  Vector.prototype = {
+    add: function (v) {
+      this.x += v.x;
 
-// console.log(canvasEle);
+      this.y += v.y;
 
-console.clear();
-var doc = document;
-var flower = doc.querySelector(".flower");
-var range = doc.querySelector(".range");
-var petalPartMarkup =
-  '<div class="box"> \
-                    <div class="shape"></div> \
-                </div>';
-var maxParts = 20;
-var maxPetalsDef = 6;
-var maxPetals = maxPetalsDef;
-var partsFontStepDef = 25 / maxParts;
-var partsFontStep = partsFontStepDef;
-var huetStep = 150 / maxParts;
-createFlower();
-function createFlower() {
-  var angle = 360 / maxPetals;
-  for (var i = 0; i < maxPetals; i++) {
-    var petal = createPetal();
-    var currAngle = angle * i + "deg";
-    var transform =
-      "transform: rotateY(" + currAngle + ") rotateX(-30deg) translateZ(9vmin)";
-    petal.setAttribute("style", transform);
-    flower.appendChild(petal);
+      return this;
+    },
+
+    length: function () {
+      return Math.sqrt(this.x * this.x + this.y * this.y);
+    },
+
+    rotate: function (theta) {
+      var x = this.x;
+
+      var y = this.y;
+
+      this.x = Math.cos(theta) * this.x - Math.sin(theta) * this.y;
+
+      this.y = Math.sin(theta) * this.x + Math.cos(theta) * this.y;
+
+      //this.x = Math.cos(theta) * x - Math.sin(theta) * y;
+
+      //this.y = Math.sin(theta) * x + Math.cos(theta) * y;
+
+      return this;
+    },
+
+    mult: function (f) {
+      this.x *= f;
+
+      this.y *= f;
+
+      return this;
+    },
+  };
+
+  var Leaf = function (p, r, c, ctx) {
+    this.p = p || null;
+
+    this.r = r || 0;
+
+    this.c = c || "rgba(255,255,255,1.0)";
+
+    this.ctx = ctx;
+  };
+
+  Leaf.prototype = {
+    render: function () {
+      var that = this;
+
+      var ctx = this.ctx;
+
+      var f = Branch.random(1, 2);
+
+      for (var i = 0; i < 5; i++) {
+        (function (r) {
+          setTimeout(function () {
+            ctx.beginPath();
+
+            ctx.fillStyle = "red";
+
+            ctx.moveTo(that.p.x, that.p.y);
+
+            ctx.arc(that.p.x, that.p.y, r, 0, Branch.circle, true);
+
+            ctx.fill();
+          }, r * 60);
+        })(i);
+      }
+    },
+  };
+
+  var Branch = function (p, v, r, c, t) {
+    this.p = p || null;
+
+    this.v = v || null;
+
+    this.r = r || 0;
+
+    this.length = 0;
+
+    this.generation = 1;
+
+    this.tree = t || null;
+
+    this.color = c || "rgba(255,255,255,1.0)";
+
+    this.register();
+  };
+
+  Branch.prototype = {
+    register: function () {
+      this.tree.addBranch(this);
+    },
+
+    draw: function () {
+      var ctx = this.tree.ctx;
+
+      ctx.beginPath();
+
+      ctx.fillStyle = 'green';
+
+      ctx.moveTo(this.p.x, this.p.y);
+
+      ctx.arc(this.p.x, this.p.y, this.r, 0, Branch.circle, true);
+
+      ctx.fill();
+    },
+
+    modify: function () {
+      var angle = 0.15 - 0.1 / this.generation;
+
+      this.p.add(this.v);
+
+      this.length += this.v.length();
+
+      this.r *= 0.99;
+
+      this.v.rotate(Branch.random(-angle, angle));
+
+      if (this.r < 0.8 || this.generation > 10) {
+        this.tree.removeBranch(this);
+
+        var l = new Leaf(this.p, 10, this.color, this.tree.ctx);
+
+        l.render();
+      }
+    },
+
+    grow: function () {
+      this.draw();
+
+      this.modify();
+
+      this.fork();
+    },
+
+    fork: function () {
+      var p = this.length - Branch.random(100, 200); // + (this.generation * 10);
+
+      if (p > 0) {
+        var n = Math.round(Branch.random(1, 3));
+
+        this.tree.stat.fork += n - 1;
+
+        for (var i = 0; i < n; i++) {
+          Branch.clone(this);
+        }
+
+        this.tree.removeBranch(this);
+      }
+    },
+  };
+
+  Branch.circle = 2 * Math.PI;
+
+  Branch.random = function (min, max) {
+    return Math.random() * (max - min) + min;
+  };
+
+  Branch.clone = function (b) {
+    var r = new Branch(
+      new Vector(b.p.x, b.p.y),
+      new Vector(b.v.x, b.v.y),
+      b.r,
+      b.color,
+      b.tree
+    );
+
+    r.generation = b.generation + 1;
+
+    return r;
+  };
+
+  Branch.rgba = function (r, g, b, a) {
+    return "rgba(" + r + "," + g + "," + b + "," + a + ")";
+  };
+
+  Branch.randomrgba = function (min, max, a) {
+    return Branch.rgba(
+      Math.round(Branch.random(0, 125)),
+      Math.round(Branch.random(255, 255)),
+      Math.round(Branch.random(0, 0)),
+      a
+    );
+  };
+
+  var Tree = function () {
+    var branches = [];
+
+    var timer;
+
+    this.stat = {
+      fork: 0,
+
+      length: 0,
+    };
+
+    this.addBranch = function (b) {
+      branches.push(b);
+    };
+
+    this.removeBranch = function (b) {
+      for (var i = 0; i < branches.length; i++) {
+        if (branches[i] === b) {
+          branches.splice(i, 1);
+
+          return;
+        }
+      }
+    };
+
+    this.render = function (fn) {
+      var that = this;
+
+      timer = setInterval(function () {
+        fn.apply(that, arguments);
+
+        if (branches.length > 0) {
+          for (var i = 0; i < branches.length; i++) {
+            branches[i].grow();
+          }
+        } else {
+          //clearInterval(timer);
+        }
+      }, 1000 / 30);
+    };
+
+    this.init = function (ctx) {
+      this.ctx = ctx;
+    };
+
+    this.abort = function () {
+      branches = [];
+
+      this.stat = {
+        fork: 0,
+
+        length: 0,
+      };
+    };
+  };
+
+  function init() {
+    // init
+
+    var $window = $(window);
+
+    var $body = $("body");
+
+    var canvas_width = $window.width();
+
+    var canvas_height = $window.height();
+
+    var center_x = canvas_width / 2;
+
+    var stretch_factor = 600 / canvas_height;
+
+    var y_speed = 3 / stretch_factor;
+
+    // tx
+
+    var canvas = $("#banner-canvas")[0];
+
+    canvas.width = canvas_width;
+
+    canvas.height = canvas_height;
+
+    var ctx = canvas.getContext("2d");
+
+    ctx.globalCompositeOperation = "lighter";
+
+    // tree
+
+    var t = new Tree();
+
+    t.init(ctx);
+
+    for (var i = 0; i < 7; i++) {
+      new Branch(
+        new Vector(center_x, canvas_height),
+        new Vector(Math.random(-1, 1), -y_speed),
+        15 / stretch_factor,
+        Branch.randomrgba(0, 255, 1),
+        t
+      );
+    }
+
+    t.render(function () {});
   }
-}
-function createPetal() {
-  var box = createBox(null, 0);
-  var petal = doc.createElement("div");
-  petal.classList.add("petal");
-  for (var i = 1; i <= maxParts; i++) {
-    newBox = createBox(box, i);
-    box = newBox;
-  }
-  petal.appendChild(box);
-  return petal;
-}
-function createBox(box, pos) {
-  var fontSize = partsFontStep * (maxParts - pos) + "vmin";
-  var half = maxParts / 2;
-  var bright = "50";
-  if (pos < half + 1) {
-    fontSize = partsFontStep * pos + "vmin";
-  } else {
-    bright = 10 + (40 / half) * (maxParts - pos);
-  }
-  var color = "hsl(" + huetStep * pos + ", 100%, " + bright + "%)";
-  var newShape = doc.createElement("div");
-  newShape.classList.add("shape");
-  var newBox = doc.createElement("div");
-  newBox.classList.add("box");
-  var boxStyle = ["color: " + color, "font-size: " + fontSize].join(";");
-  newBox.setAttribute("style", boxStyle);
-  if (box) {
-    newBox.appendChild(box);
-  }
-  newBox.appendChild(newShape);
-  return newBox;
-}
-function out(content) {
-  console.log(content);
-}
 
-
-particlesJS.load('particles-js', 'assets/particles.json', function() {
-  console.log('callback - particles.js config loaded');
-});
+  $(function () {
+    init();
+  });
+})(window.jQuery);
