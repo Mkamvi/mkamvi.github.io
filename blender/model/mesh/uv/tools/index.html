@@ -16,22 +16,22 @@
   <meta name="author" content="不良帅">
   <meta name="keywords" content="大帅,博客,不良帅,mkamv,mkamvi,不良帅的博客,mkamv的博客">
   
-    <meta name="description" content="3D大屏的事基本弄的差不多了，然后今天就接着整数字城市了，添加了中心点动态墙、四面体模型、及底部旋转圆动画 本来还想看看WebGL的，但是中途有个紧急上线，给耽搁了 😫 然后今天整理了下Blender的快捷键，算是复习了一遍基础操作吧 然后早上总算是把180°的自行车主杠给弄好了，还是使用细分跟平滑，明天终于能整车轮了🤸‍♂️">
+    <meta name="description" content="工具栏撕裂(V)撕裂工具将UV组件（顶点、边、面）与连接的组件分离。这些组件是沿着鼠标指针的方向被撕开的 抓取抓起用于拖动UV 松弛更均匀地分配UV。它的作用是沿着UV边缘拉动顶点，使UV解包达到平衡 夹捏笔刷夹捏笔刷用于向笔刷中心移动UV顶点。可以按下 Ctrl-LMB 反转夹捏效果">
 <meta property="og:type" content="article">
-<meta property="og:title" content="你读书，就是为了杀人吗？！">
-<meta property="og:url" content="https://mkamv.xyz/daily/2023/06/14/index.html">
+<meta property="og:title" content="建模网格体UV · 工具 - Blender">
+<meta property="og:url" content="https://mkamv.xyz/blender/model/mesh/uv/tools/index.html">
 <meta property="og:site_name" content="不良帅本帅">
-<meta property="og:description" content="3D大屏的事基本弄的差不多了，然后今天就接着整数字城市了，添加了中心点动态墙、四面体模型、及底部旋转圆动画 本来还想看看WebGL的，但是中途有个紧急上线，给耽搁了 😫 然后今天整理了下Blender的快捷键，算是复习了一遍基础操作吧 然后早上总算是把180°的自行车主杠给弄好了，还是使用细分跟平滑，明天终于能整车轮了🤸‍♂️">
+<meta property="og:description" content="工具栏撕裂(V)撕裂工具将UV组件（顶点、边、面）与连接的组件分离。这些组件是沿着鼠标指针的方向被撕开的 抓取抓起用于拖动UV 松弛更均匀地分配UV。它的作用是沿着UV边缘拉动顶点，使UV解包达到平衡 夹捏笔刷夹捏笔刷用于向笔刷中心移动UV顶点。可以按下 Ctrl-LMB 反转夹捏效果">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2023-06-14T21:00:38.000Z">
+<meta property="article:published_time" content="2023-07-12T10:59:46.000Z">
 <meta property="article:modified_time" content="2023-07-12T03:52:49.175Z">
 <meta property="article:author" content="不良帅">
-<meta property="article:tag" content="日常记录">
+<meta property="article:tag" content="Blender">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title>你读书，就是为了杀人吗？！ - 不良帅本帅</title>
+  <title>建模网格体UV · 工具 - Blender - 不良帅本帅</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -209,7 +209,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="你读书，就是为了杀人吗？！"></span>
+            <span id="subtitle" data-typed-text="建模网格体UV · 工具 - Blender"></span>
           
         </div>
 
@@ -220,8 +220,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2023-06-14 21:00" pubdate>
-          2023年6月14日 晚上
+        <time datetime="2023-07-12 10:59" pubdate>
+          2023年7月12日 上午
         </time>
       </span>
     
@@ -232,7 +232,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          162 字
+          138 字
         
       </span>
     
@@ -295,15 +295,15 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">你读书，就是为了杀人吗？！</h1>
+            <h1 id="seo-header">建模网格体UV · 工具 - Blender</h1>
             
             
               <div class="markdown-body">
                 
-                <p>3D大屏的事基本弄的差不多了，然后今天就接着整数字城市了，添加了中心点动态墙、四面体模型、及底部旋转圆动画</p>
-<p>本来还想看看WebGL的，但是中途有个紧急上线，给耽搁了 😫</p>
-<p>然后今天整理了下Blender的快捷键，算是复习了一遍基础操作吧</p>
-<p>然后早上总算是把180°的自行车主杠给弄好了，还是使用细分跟平滑，明天终于能整车轮了🤸‍♂️</p>
+                <h2 id="工具栏"><a href="#工具栏" class="headerlink" title="工具栏"></a>工具栏</h2><h3 id="撕裂-V"><a href="#撕裂-V" class="headerlink" title="撕裂(V)"></a>撕裂(<kbd>V</kbd>)</h3><p>撕裂工具将UV组件（顶点、边、面）与连接的组件分离。这些组件是沿着鼠标指针的方向被撕开的</p>
+<h3 id="抓取"><a href="#抓取" class="headerlink" title="抓取"></a>抓取</h3><p>抓起用于拖动UV</p>
+<h3 id="松弛"><a href="#松弛" class="headerlink" title="松弛"></a>松弛</h3><p>更均匀地分配UV。它的作用是沿着UV边缘拉动顶点，使UV解包达到平衡</p>
+<h3 id="夹捏笔刷"><a href="#夹捏笔刷" class="headerlink" title="夹捏笔刷"></a>夹捏笔刷</h3><p>夹捏笔刷用于向笔刷中心移动UV顶点。可以按下 Ctrl-LMB 反转夹捏效果</p>
 
                 <blockquote><p id='rainbow'> 🏝️ </p> <blockquote>
   <script>
@@ -329,6 +329,16 @@ fetch('https://api.eatrice.top')
 <span class="category-chains">
   
   
+    
+      <span class="category-chain">
+        
+  <a href="/categories/Blender/" class="category-chain-item">Blender</a>
+  
+  
+
+      </span>
+    
+  
 </span>
 
     </div>
@@ -337,7 +347,7 @@ fetch('https://api.eatrice.top')
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/%E6%97%A5%E5%B8%B8%E8%AE%B0%E5%BD%95/" class="print-no-link">#日常记录</a>
+        <a href="/tags/Blender/" class="print-no-link">#Blender</a>
       
     </div>
   
@@ -349,8 +359,8 @@ fetch('https://api.eatrice.top')
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>你读书，就是为了杀人吗？！</div>
-      <div>https://mkamv.xyz/daily/2023/06/14/</div>
+      <div>建模网格体UV · 工具 - Blender</div>
+      <div>https://mkamv.xyz/blender/model/mesh/uv/tools/</div>
     </div>
     <div class="license-meta">
       
@@ -362,7 +372,7 @@ fetch('https://api.eatrice.top')
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2023年6月14日</div>
+          <div>2023年7月12日</div>
         </div>
       
       
@@ -390,6 +400,23 @@ fetch('https://api.eatrice.top')
 
 
               
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/blender/model/mesh/uv/edit/" title="建模网格体UV · 编辑 - Blender">
+                        <span class="hidden-mobile">建模网格体UV · 编辑 - Blender</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
             </div>
 
             
@@ -405,7 +432,7 @@ fetch('https://api.eatrice.top')
         var options = Object.assign(
           {"clientID":"380b721444e388f986da","clientSecret":"cd4569aa7c4e07f1301593bbd51fb45572592099","repo":"mkamvi.github.io","owner":"Mkamvi","admin":["Mkamvi"],"language":"zh-CN","labels":["Gitalk"],"perPage":10,"pagerDirection":"last","distractionFreeMode":false,"createIssueManually":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token"},
           {
-            id: '38996a44ecbe4ef9dcc5aed1b9557f31'
+            id: 'cbe8422367d5205f36b6a66253af8ff0'
           }
         )
         var gitalk = new Gitalk(options);

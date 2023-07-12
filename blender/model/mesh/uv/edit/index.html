@@ -16,22 +16,22 @@
   <meta name="author" content="不良帅">
   <meta name="keywords" content="大帅,博客,不良帅,mkamv,mkamvi,不良帅的博客,mkamv的博客">
   
-    <meta name="description" content="3D大屏的事基本弄的差不多了，然后今天就接着整数字城市了，添加了中心点动态墙、四面体模型、及底部旋转圆动画 本来还想看看WebGL的，但是中途有个紧急上线，给耽搁了 😫 然后今天整理了下Blender的快捷键，算是复习了一遍基础操作吧 然后早上总算是把180°的自行车主杠给弄好了，还是使用细分跟平滑，明天终于能整车轮了🤸‍♂️">
+    <meta name="description" content="编辑 将一些碎片（UV 贴图）重新缝合到一起 最大化地利用图像空间 对细节面进行放大 调整&#x2F;缩放被拉伸的面 缩小过于粗糙和细节过多的面  使用最小的给定空间，让大多数像素点给予 UV 贴图尽可能多的细节和精度。一个 UV 面可以小到一个像素（组成整张图像的小点）大小，也可以达到填满整个图像。你可能需要先做一些大的调整，然后再对布局进行微调 变换(UV ‣ 变换) 移动(G) 旋转(R)">
 <meta property="og:type" content="article">
-<meta property="og:title" content="你读书，就是为了杀人吗？！">
-<meta property="og:url" content="https://mkamv.xyz/daily/2023/06/14/index.html">
+<meta property="og:title" content="建模网格体UV · 编辑 - Blender">
+<meta property="og:url" content="https://mkamv.xyz/blender/model/mesh/uv/edit/index.html">
 <meta property="og:site_name" content="不良帅本帅">
-<meta property="og:description" content="3D大屏的事基本弄的差不多了，然后今天就接着整数字城市了，添加了中心点动态墙、四面体模型、及底部旋转圆动画 本来还想看看WebGL的，但是中途有个紧急上线，给耽搁了 😫 然后今天整理了下Blender的快捷键，算是复习了一遍基础操作吧 然后早上总算是把180°的自行车主杠给弄好了，还是使用细分跟平滑，明天终于能整车轮了🤸‍♂️">
+<meta property="og:description" content="编辑 将一些碎片（UV 贴图）重新缝合到一起 最大化地利用图像空间 对细节面进行放大 调整&#x2F;缩放被拉伸的面 缩小过于粗糙和细节过多的面  使用最小的给定空间，让大多数像素点给予 UV 贴图尽可能多的细节和精度。一个 UV 面可以小到一个像素（组成整张图像的小点）大小，也可以达到填满整个图像。你可能需要先做一些大的调整，然后再对布局进行微调 变换(UV ‣ 变换) 移动(G) 旋转(R)">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2023-06-14T21:00:38.000Z">
+<meta property="article:published_time" content="2023-07-12T03:52:49.175Z">
 <meta property="article:modified_time" content="2023-07-12T03:52:49.175Z">
 <meta property="article:author" content="不良帅">
-<meta property="article:tag" content="日常记录">
+<meta property="article:tag" content="Blender">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title>你读书，就是为了杀人吗？！ - 不良帅本帅</title>
+  <title>建模网格体UV · 编辑 - Blender - 不良帅本帅</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -209,7 +209,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="你读书，就是为了杀人吗？！"></span>
+            <span id="subtitle" data-typed-text="建模网格体UV · 编辑 - Blender"></span>
           
         </div>
 
@@ -220,8 +220,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2023-06-14 21:00" pubdate>
-          2023年6月14日 晚上
+        <time datetime="2023-07-12 03:52" pubdate>
+          2023年7月12日 凌晨
         </time>
       </span>
     
@@ -232,7 +232,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          162 字
+          441 字
         
       </span>
     
@@ -243,7 +243,7 @@
         
         
         
-          2 分钟
+          4 分钟
         
       </span>
     
@@ -295,16 +295,27 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">你读书，就是为了杀人吗？！</h1>
+            <h1 id="seo-header">建模网格体UV · 编辑 - Blender</h1>
             
             
               <div class="markdown-body">
                 
-                <p>3D大屏的事基本弄的差不多了，然后今天就接着整数字城市了，添加了中心点动态墙、四面体模型、及底部旋转圆动画</p>
-<p>本来还想看看WebGL的，但是中途有个紧急上线，给耽搁了 😫</p>
-<p>然后今天整理了下Blender的快捷键，算是复习了一遍基础操作吧</p>
-<p>然后早上总算是把180°的自行车主杠给弄好了，还是使用细分跟平滑，明天终于能整车轮了🤸‍♂️</p>
-
+                <h2 id="编辑"><a href="#编辑" class="headerlink" title="编辑"></a>编辑</h2><ul>
+<li>将一些碎片（UV 贴图）重新缝合到一起</li>
+<li>最大化地利用图像空间</li>
+<li>对细节面进行放大</li>
+<li>调整&#x2F;缩放被拉伸的面</li>
+<li>缩小过于粗糙和细节过多的面</li>
+</ul>
+<p>使用最小的给定空间，让大多数像素点给予 UV 贴图尽可能多的细节和精度。一个 UV 面可以小到一个像素（组成整张图像的小点）大小，也可以达到填满整个图像。你可能需要先做一些大的调整，然后再对布局进行微调</p>
+<h3 id="变换-UV-‣-变换"><a href="#变换-UV-‣-变换" class="headerlink" title="变换(UV ‣ 变换)"></a>变换(UV ‣ 变换)</h3><ul>
+<li>移动(<kbd>G</kbd>)</li>
+<li>旋转(<kbd>R</kbd>)</li>
+<li>缩放(<kbd>S</kbd>)</li>
+<li>切变(<kbd>Shift-Ctrl-Alt-S</kbd>)</li>
+</ul>
+<h3 id="随机-UV-‣-变换-‣-随机"><a href="#随机-UV-‣-变换-‣-随机" class="headerlink" title="随机(UV ‣ 变换 ‣ 随机)"></a>随机(UV ‣ 变换 ‣ 随机)</h3><h3 id="镜像-UV-‣-镜像-Ctrl-M"><a href="#镜像-UV-‣-镜像-Ctrl-M" class="headerlink" title="镜像(UV ‣ 镜像, Ctrl-M)"></a>镜像(UV ‣ 镜像, <kbd>Ctrl-M</kbd>)</h3><h3 id="吸附-UV-‣-吸附-Shift-S"><a href="#吸附-UV-‣-吸附-Shift-S" class="headerlink" title="吸附(UV ‣ 吸附, Shift-S)"></a>吸附(UV ‣ 吸附, <kbd>Shift-S</kbd>)</h3><h3 id="合并-UV-‣-合并-M"><a href="#合并-UV-‣-合并-M" class="headerlink" title="合并(UV ‣ 合并, M)"></a>合并(UV ‣ 合并, M)</h3><h3 id="拆分-UV-‣-拆分-Alt-M"><a href="#拆分-UV-‣-拆分-Alt-M" class="headerlink" title="拆分(UV ‣ 拆分, Alt-M)"></a>拆分(UV ‣ 拆分, Alt-M)</h3><h3 id="展开-UV-‣-展开-U"><a href="#展开-UV-‣-展开-U" class="headerlink" title="展开(UV ‣ 展开, U)"></a>展开(UV ‣ 展开, U)</h3><h3 id="钉固和取消钉固-UV-‣-钉固-x2F-取消钉固-P-x2F-Alt-P"><a href="#钉固和取消钉固-UV-‣-钉固-x2F-取消钉固-P-x2F-Alt-P" class="headerlink" title="钉固和取消钉固(UV ‣ 钉固&#x2F;取消钉固, P &#x2F; Alt + P)"></a>钉固和取消钉固(UV ‣ 钉固&#x2F;取消钉固, <kbd>P</kbd> &#x2F; <kbd>Alt + P</kbd>)</h3><p>钉固 UV 可以防止多次展开操作后的 UV 顶点移动</p>
+<h3 id="标记-x2F-清除缝合边"><a href="#标记-x2F-清除缝合边" class="headerlink" title="标记&#x2F;清除缝合边"></a>标记&#x2F;清除缝合边</h3><h3 id="沿孤岛边线生成缝合边"><a href="#沿孤岛边线生成缝合边" class="headerlink" title="沿孤岛边线生成缝合边"></a>沿孤岛边线生成缝合边</h3><h3 id="拼排孤岛"><a href="#拼排孤岛" class="headerlink" title="拼排孤岛"></a>拼排孤岛</h3><h3 id="孤岛比例平均化"><a href="#孤岛比例平均化" class="headerlink" title="孤岛比例平均化"></a>孤岛比例平均化</h3><h3 id="最小化拉伸"><a href="#最小化拉伸" class="headerlink" title="最小化拉伸"></a>最小化拉伸</h3><h3 id="缝合"><a href="#缝合" class="headerlink" title="缝合"></a>缝合</h3><h3 id="对齐"><a href="#对齐" class="headerlink" title="对齐"></a>对齐</h3><h3 id="旋转对齐"><a href="#旋转对齐" class="headerlink" title="旋转对齐"></a>旋转对齐</h3><h3 id="复制-UV"><a href="#复制-UV" class="headerlink" title="复制 UV"></a>复制 UV</h3><h3 id="粘帖-UV"><a href="#粘帖-UV" class="headerlink" title="粘帖 UV"></a>粘帖 UV</h3><h3 id="显示-x2F-隐藏面"><a href="#显示-x2F-隐藏面" class="headerlink" title="显示&#x2F;隐藏面"></a>显示&#x2F;隐藏面</h3><h3 id="导出-UV-布局图"><a href="#导出-UV-布局图" class="headerlink" title="导出 UV 布局图"></a>导出 UV 布局图</h3><h3 id="衰减编辑"><a href="#衰减编辑" class="headerlink" title="衰减编辑"></a>衰减编辑</h3><h3 id="UV-选项"><a href="#UV-选项" class="headerlink" title="UV 选项"></a>UV 选项</h3><h3 id="3D-视图"><a href="#3D-视图" class="headerlink" title="3D 视图"></a>3D 视图</h3><h4 id="旋转-UV"><a href="#旋转-UV" class="headerlink" title="旋转 UV"></a>旋转 UV</h4><h4 id="翻转-UV"><a href="#翻转-UV" class="headerlink" title="翻转 UV"></a>翻转 UV</h4>
                 <blockquote><p id='rainbow'> 🏝️ </p> <blockquote>
   <script>
 fetch('https://api.eatrice.top')
@@ -329,6 +340,16 @@ fetch('https://api.eatrice.top')
 <span class="category-chains">
   
   
+    
+      <span class="category-chain">
+        
+  <a href="/categories/Blender/" class="category-chain-item">Blender</a>
+  
+  
+
+      </span>
+    
+  
 </span>
 
     </div>
@@ -337,7 +358,7 @@ fetch('https://api.eatrice.top')
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/%E6%97%A5%E5%B8%B8%E8%AE%B0%E5%BD%95/" class="print-no-link">#日常记录</a>
+        <a href="/tags/Blender/" class="print-no-link">#Blender</a>
       
     </div>
   
@@ -349,8 +370,8 @@ fetch('https://api.eatrice.top')
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>你读书，就是为了杀人吗？！</div>
-      <div>https://mkamv.xyz/daily/2023/06/14/</div>
+      <div>建模网格体UV · 编辑 - Blender</div>
+      <div>https://mkamv.xyz/blender/model/mesh/uv/edit/</div>
     </div>
     <div class="license-meta">
       
@@ -362,7 +383,7 @@ fetch('https://api.eatrice.top')
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2023年6月14日</div>
+          <div>2023年7月12日</div>
         </div>
       
       
@@ -390,6 +411,29 @@ fetch('https://api.eatrice.top')
 
 
               
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/blender/model/mesh/uv/tools/" title="建模网格体UV · 工具 - Blender">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">建模网格体UV · 工具 - Blender</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/blender/model/mesh/uv/uv-unwrapping/" title="建模网格体UV · 展开 - Blender">
+                        <span class="hidden-mobile">建模网格体UV · 展开 - Blender</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
             </div>
 
             
@@ -405,7 +449,7 @@ fetch('https://api.eatrice.top')
         var options = Object.assign(
           {"clientID":"380b721444e388f986da","clientSecret":"cd4569aa7c4e07f1301593bbd51fb45572592099","repo":"mkamvi.github.io","owner":"Mkamvi","admin":["Mkamvi"],"language":"zh-CN","labels":["Gitalk"],"perPage":10,"pagerDirection":"last","distractionFreeMode":false,"createIssueManually":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token"},
           {
-            id: '38996a44ecbe4ef9dcc5aed1b9557f31'
+            id: 'e4f00642769a45055df8b3cfd8b4bf52'
           }
         )
         var gitalk = new Gitalk(options);
