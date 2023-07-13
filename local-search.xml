@@ -4,6 +4,33 @@
   
   
   <entry>
+    <title>Canvas设置高度100%出现滚动条问题</title>
+    <link href="/html/confused/canvas-style/"/>
+    <url>/html/confused/canvas-style/</url>
+    
+    <content type="html"><![CDATA[<p>查看默认display属性：</p><p>Canvas竟然是行内元素！CSS vertical-align基线对齐、预留空间，好坑啊！</p><p>下面这个说的比较清楚：</p><p><a href="https://www.bilibili.com/video/av943276909/?vd_source=231d7c3163c9cccae49860ce37d317a7">https://www.bilibili.com/video/av943276909/?vd_source=231d7c3163c9cccae49860ce37d317a7</a></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>HTML</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>HTML</tag>
+      
+      <tag>Canvas</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>建模网格体网格分析 · 网格分析 - Blender</title>
     <link href="/blender/model/mesh/mesh-analysis/mesh-analysis/"/>
     <url>/blender/model/mesh/mesh-analysis/mesh-analysis/</url>

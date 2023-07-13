@@ -117,7 +117,7 @@
     },
 
     modify: function () {
-      var angle = 0.15 - 0.1 / this.generation;
+      var angle = 0.14 - 0.1 / this.generation;
 
       this.p.add(this.v);
 
@@ -261,7 +261,7 @@
 
     var canvas_height = $window.height();
 
-    var center_x = canvas_width / 2;
+    var center_x = canvas_width;
 
     var stretch_factor = 600 / canvas_height;
 
@@ -271,7 +271,7 @@
 
     var canvas = $("#banner-canvas")[0];
 
-    canvas.width = canvas_width;
+    canvas.width = canvas_width * 2;
 
     canvas.height = canvas_height;
 
@@ -285,11 +285,11 @@
 
     t.init(ctx);
 
-    for (var i = 0; i < 7; i++) {
+    for (var i = 0; i < 14; i++) {
       new Branch(
         new Vector(center_x, canvas_height),
         new Vector(Math.random(-1, 1), -y_speed),
-        15 / stretch_factor,
+        14 / stretch_factor,
         Branch.randomrgba(0, 255, 1),
         t
       );
