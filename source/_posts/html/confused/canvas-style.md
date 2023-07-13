@@ -10,7 +10,7 @@ categories:
 
 查看默认display属性：
 
-Canvas竟然是行内元素！简单来说，CSS vertical-align好坑啊！
+Canvas竟然是行内元素！CSS vertical-align基线对齐、预留空间，好坑啊！
 
 下面这个说的比较清楚：
 
