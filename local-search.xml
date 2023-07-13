@@ -4,11 +4,61 @@
   
   
   <entry>
-    <title>建模网格体UV · 工具 - Blender</title>
-    <link href="/blender/model/mesh/uv/tools/"/>
-    <url>/blender/model/mesh/uv/tools/</url>
+    <title>建模网格体网格分析 · 网格分析 - Blender</title>
+    <link href="/blender/model/mesh/mesh-analysis/mesh-analysis/"/>
+    <url>/blender/model/mesh/mesh-analysis/mesh-analysis/</url>
     
-    <content type="html"><![CDATA[<h2 id="工具栏"><a href="#工具栏" class="headerlink" title="工具栏"></a>工具栏</h2><h3 id="撕裂-V"><a href="#撕裂-V" class="headerlink" title="撕裂(V)"></a>撕裂(<kbd>V</kbd>)</h3><p>撕裂工具将UV组件（顶点、边、面）与连接的组件分离。这些组件是沿着鼠标指针的方向被撕开的</p><h3 id="抓取"><a href="#抓取" class="headerlink" title="抓取"></a>抓取</h3><p>抓起用于拖动UV</p><h3 id="松弛"><a href="#松弛" class="headerlink" title="松弛"></a>松弛</h3><p>更均匀地分配UV。它的作用是沿着UV边缘拉动顶点，使UV解包达到平衡</p><h3 id="夹捏笔刷"><a href="#夹捏笔刷" class="headerlink" title="夹捏笔刷"></a>夹捏笔刷</h3><p>夹捏笔刷用于向笔刷中心移动UV顶点。可以按下 Ctrl-LMB 反转夹捏效果</p>]]></content>
+    <content type="html"><![CDATA[<h2 id="网格分析"><a href="#网格分析" class="headerlink" title="网格分析"></a>网格分析</h2><p>网格分析作用于 编辑模式 下 实体 视图着色方式。数值较高的区域显示为红色，数值较低的区域显示为蓝色。超出范围的几何元素显示为灰色</p><h3 id="悬垂"><a href="#悬垂" class="headerlink" title="悬垂"></a>悬垂</h3><h3 id="厚度"><a href="#厚度" class="headerlink" title="厚度"></a>厚度</h3><h3 id="交集"><a href="#交集" class="headerlink" title="交集"></a>交集</h3><h3 id="畸变"><a href="#畸变" class="headerlink" title="畸变"></a>畸变</h3><h3 id="锐边"><a href="#锐边" class="headerlink" title="锐边"></a>锐边</h3><h3 id="已知局限"><a href="#已知局限" class="headerlink" title="已知局限"></a>已知局限</h3><ol><li>只能与形变类修改器一起使用</li><li>对于高精度多边形网格，在编辑时会降低性能</li></ol>]]></content>
+    
+    
+    <categories>
+      
+      <category>Blender</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Blender</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>建模网格体重拓扑 · 重拓扑 - Blender</title>
+    <link href="/blender/model/mesh/retopology/retopology/"/>
+    <url>/blender/model/mesh/retopology/retopology/</url>
+    
+    <content type="html"><![CDATA[<h2 id="重拓扑"><a href="#重拓扑" class="headerlink" title="重拓扑"></a>重拓扑</h2><p>重拓扑是简化网格拓扑的过程，使其更简洁，更易于使用。雕刻或生成拓扑（例如通过 3D 扫描）产生的混乱拓扑存在重拓扑的需要。如果网格将用于某种形式的形变，则网格通常需要重新拓扑。形变可以包括绑定或物理模拟，如布料或软体。可以通过在编辑模式下操作几何体手动完成重新拓扑，或通过自动方法</p><h3 id="使用多边形构建工具"><a href="#使用多边形构建工具" class="headerlink" title="使用多边形构建工具"></a>使用多边形构建工具</h3><h3 id="重构网格"><a href="#重构网格" class="headerlink" title="重构网格"></a>重构网格</h3><h4 id="体素"><a href="#体素" class="headerlink" title="体素"></a>体素</h4><p>体素网格重构使用 OpenVDB 从当前几何体生成新的流形网格。它生成具有拓扑完全均匀分布的网格，并且一旦计算新网格，它没有任何性能损失。这使得体素网格重构非常适合雕刻，使得更加高精度细节下的雕刻成为可能，而其他类似功能如dyntopo，往往会带来更多的性能开销</p><h4 id="四边形"><a href="#四边形" class="headerlink" title="四边形"></a>四边形</h4><p>四边形网格重构使用Quadriflow算法创建一个基于 四边形 的网格，该网格具有很少的极点，且循环边遵循表面曲率。此方法相对较慢，但可产生更高质量的最终拓扑</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Blender</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Blender</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>建模网格体UV · 使用UV贴图 - Blender</title>
+    <link href="/blender/model/mesh/uv/applying-image/"/>
+    <url>/blender/model/mesh/uv/applying-image/</url>
+    
+    <content type="html"><![CDATA[<h2 id="使用UV贴图"><a href="#使用UV贴图" class="headerlink" title="使用UV贴图"></a>使用UV贴图</h2><ol><li>为物体创建材质</li><li>使用UV贴图<ul><li>使用生成的UV坐标</li><li>使用 UV展开 来手动生成UV坐标</li></ul></li></ol><h3 id="使用测试栅格"><a href="#使用测试栅格" class="headerlink" title="使用测试栅格"></a>使用测试栅格</h3><h3 id="图像纹理"><a href="#图像纹理" class="headerlink" title="图像纹理"></a>图像纹理</h3>]]></content>
     
     
     <categories>
@@ -34,6 +84,56 @@
     <url>/blender/model/mesh/uv/edit/</url>
     
     <content type="html"><![CDATA[<h2 id="编辑"><a href="#编辑" class="headerlink" title="编辑"></a>编辑</h2><ul><li>将一些碎片（UV 贴图）重新缝合到一起</li><li>最大化地利用图像空间</li><li>对细节面进行放大</li><li>调整&#x2F;缩放被拉伸的面</li><li>缩小过于粗糙和细节过多的面</li></ul><p>使用最小的给定空间，让大多数像素点给予 UV 贴图尽可能多的细节和精度。一个 UV 面可以小到一个像素（组成整张图像的小点）大小，也可以达到填满整个图像。你可能需要先做一些大的调整，然后再对布局进行微调</p><h3 id="变换-UV-‣-变换"><a href="#变换-UV-‣-变换" class="headerlink" title="变换(UV ‣ 变换)"></a>变换(UV ‣ 变换)</h3><ul><li>移动(<kbd>G</kbd>)</li><li>旋转(<kbd>R</kbd>)</li><li>缩放(<kbd>S</kbd>)</li><li>切变(<kbd>Shift-Ctrl-Alt-S</kbd>)</li></ul><h3 id="随机-UV-‣-变换-‣-随机"><a href="#随机-UV-‣-变换-‣-随机" class="headerlink" title="随机(UV ‣ 变换 ‣ 随机)"></a>随机(UV ‣ 变换 ‣ 随机)</h3><h3 id="镜像-UV-‣-镜像-Ctrl-M"><a href="#镜像-UV-‣-镜像-Ctrl-M" class="headerlink" title="镜像(UV ‣ 镜像, Ctrl-M)"></a>镜像(UV ‣ 镜像, <kbd>Ctrl-M</kbd>)</h3><h3 id="吸附-UV-‣-吸附-Shift-S"><a href="#吸附-UV-‣-吸附-Shift-S" class="headerlink" title="吸附(UV ‣ 吸附, Shift-S)"></a>吸附(UV ‣ 吸附, <kbd>Shift-S</kbd>)</h3><h3 id="合并-UV-‣-合并-M"><a href="#合并-UV-‣-合并-M" class="headerlink" title="合并(UV ‣ 合并, M)"></a>合并(UV ‣ 合并, M)</h3><h3 id="拆分-UV-‣-拆分-Alt-M"><a href="#拆分-UV-‣-拆分-Alt-M" class="headerlink" title="拆分(UV ‣ 拆分, Alt-M)"></a>拆分(UV ‣ 拆分, Alt-M)</h3><h3 id="展开-UV-‣-展开-U"><a href="#展开-UV-‣-展开-U" class="headerlink" title="展开(UV ‣ 展开, U)"></a>展开(UV ‣ 展开, U)</h3><h3 id="钉固和取消钉固-UV-‣-钉固-x2F-取消钉固-P-x2F-Alt-P"><a href="#钉固和取消钉固-UV-‣-钉固-x2F-取消钉固-P-x2F-Alt-P" class="headerlink" title="钉固和取消钉固(UV ‣ 钉固&#x2F;取消钉固, P &#x2F; Alt + P)"></a>钉固和取消钉固(UV ‣ 钉固&#x2F;取消钉固, <kbd>P</kbd> &#x2F; <kbd>Alt + P</kbd>)</h3><p>钉固 UV 可以防止多次展开操作后的 UV 顶点移动</p><h3 id="标记-x2F-清除缝合边"><a href="#标记-x2F-清除缝合边" class="headerlink" title="标记&#x2F;清除缝合边"></a>标记&#x2F;清除缝合边</h3><h3 id="沿孤岛边线生成缝合边"><a href="#沿孤岛边线生成缝合边" class="headerlink" title="沿孤岛边线生成缝合边"></a>沿孤岛边线生成缝合边</h3><h3 id="拼排孤岛"><a href="#拼排孤岛" class="headerlink" title="拼排孤岛"></a>拼排孤岛</h3><h3 id="孤岛比例平均化"><a href="#孤岛比例平均化" class="headerlink" title="孤岛比例平均化"></a>孤岛比例平均化</h3><h3 id="最小化拉伸"><a href="#最小化拉伸" class="headerlink" title="最小化拉伸"></a>最小化拉伸</h3><h3 id="缝合"><a href="#缝合" class="headerlink" title="缝合"></a>缝合</h3><h3 id="对齐"><a href="#对齐" class="headerlink" title="对齐"></a>对齐</h3><h3 id="旋转对齐"><a href="#旋转对齐" class="headerlink" title="旋转对齐"></a>旋转对齐</h3><h3 id="复制-UV"><a href="#复制-UV" class="headerlink" title="复制 UV"></a>复制 UV</h3><h3 id="粘帖-UV"><a href="#粘帖-UV" class="headerlink" title="粘帖 UV"></a>粘帖 UV</h3><h3 id="显示-x2F-隐藏面"><a href="#显示-x2F-隐藏面" class="headerlink" title="显示&#x2F;隐藏面"></a>显示&#x2F;隐藏面</h3><h3 id="导出-UV-布局图"><a href="#导出-UV-布局图" class="headerlink" title="导出 UV 布局图"></a>导出 UV 布局图</h3><h3 id="衰减编辑"><a href="#衰减编辑" class="headerlink" title="衰减编辑"></a>衰减编辑</h3><h3 id="UV-选项"><a href="#UV-选项" class="headerlink" title="UV 选项"></a>UV 选项</h3><h3 id="3D-视图"><a href="#3D-视图" class="headerlink" title="3D 视图"></a>3D 视图</h3><h4 id="旋转-UV"><a href="#旋转-UV" class="headerlink" title="旋转 UV"></a>旋转 UV</h4><h4 id="翻转-UV"><a href="#翻转-UV" class="headerlink" title="翻转 UV"></a>翻转 UV</h4>]]></content>
+    
+    
+    <categories>
+      
+      <category>Blender</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Blender</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>建模网格体UV · 工作流 - Blender</title>
+    <link href="/blender/model/mesh/uv/workflows/"/>
+    <url>/blender/model/mesh/uv/workflows/</url>
+    
+    <content type="html"><![CDATA[<h2 id="布局工作流"><a href="#布局工作流" class="headerlink" title="布局工作流"></a>布局工作流</h2><h3 id="传递-UV-贴图"><a href="#传递-UV-贴图" class="headerlink" title="传递 UV 贴图"></a>传递 UV 贴图</h3><p>如果两个网格有相同的几何&#x2F;顶点顺序，可以将 UV 映射从一个网格复制给另一个。这可以用于从包含完整 UV 的早期版本模型重建 UV。具体操作如下：</p><ol><li>选择（要将 UV 贴图复制到的）目标网格</li><li>Shift 选择源网格（包含完整 UV）</li><li>物体菜单 ‣ 生成关联项 ‣ 传递 UV 映射 (快捷键: Ctrl-L)</li></ol><h3 id="多-UV-贴图"><a href="#多-UV-贴图" class="headerlink" title="多 UV 贴图"></a>多 UV 贴图</h3><h3 id="优化-UV-布局"><a href="#优化-UV-布局" class="headerlink" title="优化 UV 布局"></a>优化 UV 布局</h3><h4 id="组合-UV-贴图"><a href="#组合-UV-贴图" class="headerlink" title="组合 UV 贴图"></a>组合 UV 贴图</h4><ol><li>选择面展开</li></ol><h4 id="迭代和优化"><a href="#迭代和优化" class="headerlink" title="迭代和优化"></a>迭代和优化</h4><h3 id="改进布局"><a href="#改进布局" class="headerlink" title="改进布局"></a>改进布局</h3><h4 id="重复利用贴图"><a href="#重复利用贴图" class="headerlink" title="重复利用贴图"></a>重复利用贴图</h4><h2 id="UDIM"><a href="#UDIM" class="headerlink" title="UDIM"></a>UDIM</h2><p>UDIM 能够将 UV 孤岛分布在多个不同的纹理上</p><h3 id="工作流程"><a href="#工作流程" class="headerlink" title="工作流程"></a>工作流程</h3><p>UDIM 工作流与任何其他 UV 贴图一样都是由展开网格开始。之后，用户应该决定要将 UV 贴图拆分成多少个纹理</p><ol><li>创建所需的分块</li><li>保存图像</li><li>删除该文件并将其替换为新的图像文件，保留旧文件名，将保存的图像文件替换为期望的纹理。或者通过在另一个应用程序中打开图像并修改图像的内容</li></ol><h3 id="文件替换标记"><a href="#文件替换标记" class="headerlink" title="文件替换标记"></a>文件替换标记</h3><ol><li>monster-basecolor.<UDIM>.png 将加载&#x2F;保存诸如 monster-basecolor.1021.png 等文件</li><li>monster-basecolor.<UVTILE>.png 将加载&#x2F;保存诸如 monster-basecolor.u1_v3.png 等文件</li></ol><h3 id="UDIM分块"><a href="#UDIM分块" class="headerlink" title="UDIM分块"></a>UDIM分块</h3>]]></content>
+    
+    
+    <categories>
+      
+      <category>Blender</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Blender</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>建模网格体UV · 工具 - Blender</title>
+    <link href="/blender/model/mesh/uv/tools/"/>
+    <url>/blender/model/mesh/uv/tools/</url>
+    
+    <content type="html"><![CDATA[<h2 id="工具栏"><a href="#工具栏" class="headerlink" title="工具栏"></a>工具栏</h2><h3 id="撕裂-V"><a href="#撕裂-V" class="headerlink" title="撕裂(V)"></a>撕裂(<kbd>V</kbd>)</h3><p>撕裂工具将UV组件（顶点、边、面）与连接的组件分离。这些组件是沿着鼠标指针的方向被撕开的</p><h3 id="抓取"><a href="#抓取" class="headerlink" title="抓取"></a>抓取</h3><p>抓起用于拖动UV</p><h3 id="松弛"><a href="#松弛" class="headerlink" title="松弛"></a>松弛</h3><p>更均匀地分配UV。它的作用是沿着UV边缘拉动顶点，使UV解包达到平衡</p><h3 id="夹捏笔刷"><a href="#夹捏笔刷" class="headerlink" title="夹捏笔刷"></a>夹捏笔刷</h3><p>夹捏笔刷用于向笔刷中心移动UV顶点。可以按下 Ctrl-LMB 反转夹捏效果</p>]]></content>
     
     
     <categories>
