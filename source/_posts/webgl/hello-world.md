@@ -1,5 +1,5 @@
 ---
-title: 如何一个WebGL程序 - WebGL
+title: 如何编写一个WebGL程序 - WebGL
 date: 2023年07月14日18:12:45
 tags:
   - WebGL
@@ -7,7 +7,7 @@ categories:
   - WebGL
 ---
 
-## 如何一个 WebGL 程序
+## 如何编写一个 WebGL 程序
 
 1. 通过 canvas 创建 WebGL 绘图上下文环境
 2. 着色器创建(顶点着色器和片元着色器)
