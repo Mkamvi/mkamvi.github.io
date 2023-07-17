@@ -4,58 +4,6 @@
   
   
   <entry>
-    <title>如何编写一个WebGL程序 - WebGL</title>
-    <link href="/webgl/hello-world/"/>
-    <url>/webgl/hello-world/</url>
-    
-    <content type="html"><![CDATA[<h2 id="如何编写一个-WebGL-程序"><a href="#如何编写一个-WebGL-程序" class="headerlink" title="如何编写一个 WebGL 程序"></a>如何编写一个 WebGL 程序</h2><ol><li><p>通过 canvas 创建 WebGL 绘图上下文环境</p></li><li><p>着色器创建(顶点着色器和片元着色器)</p><ul><li><p>创建着色器</p></li><li><p>加载着色器代码(GLSL)</p><ul><li>gl_Position: 指定栅格位置</li><li>gl_FragColor: 指定栅格颜色</li></ul></li><li><p>着色器代码编译</p></li></ul></li><li><p>创建着色器程序</p><ul><li>挂载顶点着色器</li><li>挂载片元着色器</li><li>链接程序</li></ul></li><li><p>查找着色器变量位置(用来绑定状态数据)</p></li><li><p>创建缓冲区(用来存储状态数据)</p></li><li><p>绑定缓存区(将指定状态位置绑定到缓冲区)</p></li><li><p>缓冲区存入数据(将 js 数据存入 webgl 缓冲区)</p></li><li><p>指定可视区域</p></li><li><p>指定当前绘制程序</p></li><li><p>启用变量属性(着色器变量)</p></li><li><p>指定着色器变量数据读取方式</p></li><li><p>指定绘制类型及顶点绘制数量</p></li><li><p>绘制</p></li></ol>]]></content>
-    
-    
-    <categories>
-      
-      <category>WebGL</category>
-      
-    </categories>
-    
-    
-    <tags>
-      
-      <tag>WebGL</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
-    <title>Canvas设置高度100%出现滚动条问题</title>
-    <link href="/html/confused/canvas-style/"/>
-    <url>/html/confused/canvas-style/</url>
-    
-    <content type="html"><![CDATA[<p>查看默认display属性：</p><p>Canvas竟然是行内元素！CSS vertical-align基线对齐、预留空间，好坑啊！</p><p>下面这个说的比较清楚：</p><p><a href="https://www.bilibili.com/video/av943276909/?vd_source=231d7c3163c9cccae49860ce37d317a7">https://www.bilibili.com/video/av943276909/?vd_source=231d7c3163c9cccae49860ce37d317a7</a></p>]]></content>
-    
-    
-    <categories>
-      
-      <category>HTML</category>
-      
-    </categories>
-    
-    
-    <tags>
-      
-      <tag>HTML</tag>
-      
-      <tag>Canvas</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
     <title>建模曲线 · 简介 - Blender</title>
     <link href="/blender/model/curves/introduction/"/>
     <url>/blender/model/curves/introduction/</url>
@@ -273,6 +221,58 @@
     <tags>
       
       <tag>Blender</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>如何编写一个WebGL程序 - WebGL</title>
+    <link href="/webgl/hello-world/"/>
+    <url>/webgl/hello-world/</url>
+    
+    <content type="html"><![CDATA[<h2 id="如何编写一个-WebGL-程序"><a href="#如何编写一个-WebGL-程序" class="headerlink" title="如何编写一个 WebGL 程序"></a>如何编写一个 WebGL 程序</h2><ol><li><p>通过 canvas 创建 WebGL 绘图上下文环境</p></li><li><p>着色器创建(顶点着色器和片元着色器)</p><ul><li><p>创建着色器</p></li><li><p>加载着色器代码(GLSL)</p><ul><li>gl_Position: 指定栅格位置</li><li>gl_FragColor: 指定栅格颜色</li></ul></li><li><p>着色器代码编译</p></li></ul></li><li><p>创建着色器程序</p><ul><li>挂载顶点着色器</li><li>挂载片元着色器</li><li>链接程序</li></ul></li><li><p>查找着色器变量位置(用来绑定状态数据)</p></li><li><p>创建缓冲区(用来存储状态数据)</p></li><li><p>绑定缓存区(将指定状态位置绑定到缓冲区)</p></li><li><p>缓冲区存入数据(将 js 数据存入 webgl 缓冲区)</p></li><li><p>指定可视区域</p></li><li><p>指定当前绘制程序</p></li><li><p>启用变量属性(着色器变量)</p></li><li><p>指定着色器变量数据读取方式</p></li><li><p>指定绘制类型及顶点绘制数量</p></li><li><p>绘制</p></li></ol>]]></content>
+    
+    
+    <categories>
+      
+      <category>WebGL</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>WebGL</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>Canvas设置高度100%出现滚动条问题</title>
+    <link href="/html/confused/canvas-style/"/>
+    <url>/html/confused/canvas-style/</url>
+    
+    <content type="html"><![CDATA[<p>查看默认display属性：</p><p>Canvas竟然是行内元素！CSS vertical-align基线对齐、预留空间，好坑啊！</p><p>下面这个说的比较清楚：</p><p><a href="https://www.bilibili.com/video/av943276909/?vd_source=231d7c3163c9cccae49860ce37d317a7">https://www.bilibili.com/video/av943276909/?vd_source=231d7c3163c9cccae49860ce37d317a7</a></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>HTML</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>HTML</tag>
+      
+      <tag>Canvas</tag>
       
     </tags>
     
