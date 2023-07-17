@@ -1,6 +1,6 @@
 ---
 title: 建模曲线 · 简介 - Blender
-date: 2023年07月17日10:10:21
+date: 2023-07-17 10:10:21
 tags:
   - Blender
 categories:

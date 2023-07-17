@@ -1,6 +1,6 @@
 ---
 title: 建模网格体UV · 使用UV贴图 - Blender
-date: 2023年07月13日10:36:42
+date: 2023-07-13 10:36:42
 tags:
   - Blender
 categories:

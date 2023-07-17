@@ -1,6 +1,6 @@
 ---
 title: 建模网格体UV · 编辑 - Blender
-date: 2023年07月12日11:13:15
+date: 2023-07-12 11:13:15
 tags:
   - Blender
 categories:
