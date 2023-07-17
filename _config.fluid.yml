@@ -156,8 +156,8 @@ color:
 
   # 副标题字体色
   # Color of navigation bar text
-  subtitle_color: "#fff"
-  subtitle_color_dark: "#d0d0d0"
+  subtitle_color: "#000"
+  subtitle_color_dark: "#000"
 
   # 全局字体色
   # Color of global text
@@ -538,7 +538,7 @@ index:
 post:
   banner_img: /img/良_居.jpg
   banner_img_height: 70
-  banner_mask_alpha: 0.7
+  banner_mask_alpha: 0
 
   # 文章在首页的默认封面图，当没有指定 index_img 时会使用该图片，若两者都为空则不显示任何图片
   # Path of the default post cover when `index_img` is not set. If both are empty, no image will be displayed
