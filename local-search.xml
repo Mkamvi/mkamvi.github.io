@@ -56,6 +56,106 @@
   
   
   <entry>
+    <title>建模曲线 · 简介 - Blender</title>
+    <link href="/blender/model/curves/introduction/"/>
+    <url>/blender/model/curves/introduction/</url>
+    
+    <content type="html"><![CDATA[<h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>曲线和 曲面 是Blender物体的特殊类型。它们用数学函数（插值）表示，而不是用一系列点之间的线性插值表示</p><p>Blender同时提供 贝塞尔 和 NURBS</p><p>某些建模技术，如 沿路径挤出轮廓 ，只能使用曲线。另一方面，当使用曲线时，顶点级控制更加困难，如果需要精细控制， 网格编辑 可能是更好的建模选择</p><p>贝塞尔曲线是设计字母或logo时最常用的曲线</p><p>它们在动画中也被广泛使用，可用作物体的移动路径（见下文中的约束）和随时间改变物体属性的 函数曲线</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Blender</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Blender</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>建模曲线 · 基本体 - Blender</title>
+    <link href="/blender/model/curves/primitives/"/>
+    <url>/blender/model/curves/primitives/</url>
+    
+    <content type="html"><![CDATA[]]></content>
+    
+    
+    <categories>
+      
+      <category>Blender</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Blender</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>建模曲线 · 结构 - Blender</title>
+    <link href="/blender/model/curves/structure/"/>
+    <url>/blender/model/curves/structure/</url>
+    
+    <content type="html"><![CDATA[<h2 id="样条线"><a href="#样条线" class="headerlink" title="样条线"></a>样条线</h2><h3 id="控制点"><a href="#控制点" class="headerlink" title="控制点"></a>控制点</h3><h2 id="样条线类型"><a href="#样条线类型" class="headerlink" title="样条线类型"></a>样条线类型</h2><h3 id="多段线"><a href="#多段线" class="headerlink" title="多段线"></a>多段线</h3><h3 id="贝塞尔"><a href="#贝塞尔" class="headerlink" title="贝塞尔"></a>贝塞尔</h3><h3 id="NURBS"><a href="#NURBS" class="headerlink" title="NURBS"></a>NURBS</h3>]]></content>
+    
+    
+    <categories>
+      
+      <category>Blender</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Blender</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>建模曲线工具 · 自由线 - Blender</title>
+    <link href="/blender/model/curves/tools/"/>
+    <url>/blender/model/curves/tools/</url>
+    
+    <content type="html"><![CDATA[<h2 id="工具栏"><a href="#工具栏" class="headerlink" title="工具栏"></a>工具栏</h2><h3 id="工具设置"><a href="#工具设置" class="headerlink" title="工具设置"></a>工具设置</h3><h2 id="类型"><a href="#类型" class="headerlink" title="类型"></a>类型</h2><h3 id="自由线"><a href="#自由线" class="headerlink" title="自由线"></a>自由线</h3><p>徒手绘制曲线</p><h3 id="曲线笔滤色"><a href="#曲线笔滤色" class="headerlink" title="曲线笔滤色"></a>曲线笔滤色</h3>]]></content>
+    
+    
+    <categories>
+      
+      <category>Blender</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Blender</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>建模网格体网格分析 · 网格分析 - Blender</title>
     <link href="/blender/model/mesh/mesh-analysis/mesh-analysis/"/>
     <url>/blender/model/mesh/mesh-analysis/mesh-analysis/</url>

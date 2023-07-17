@@ -292,6 +292,7 @@ sup > a::before,
 }
 .navbar .navbar-brand {
   color: var(--navbar-text-color);
+  text-shadow: #fff 1px 1px 3px;
 }
 .navbar .navbar-toggler .animated-icon span {
   background-color: var(--navbar-text-color);
@@ -847,7 +848,7 @@ i.iconfont {
   --color-mode: "light";
   --body-bg-color: #eee;
   --board-bg-color: #fff;
-  --text-color: #3c4858;
+  --text-color: #7e8a7d;
   --sec-text-color: #718096;
   --post-text-color: #2c3e50;
   --post-heading-color: #1a202c;
@@ -872,7 +873,7 @@ i.iconfont {
   :root:not([data-user-color-scheme]) {
     --body-bg-color: #181c27;
     --board-bg-color: #252d38;
-    --text-color: #c4c6c9;
+    --text-color: #7e8a7d;
     --sec-text-color: #a7a9ad;
     --post-text-color: #c4c6c9;
     --post-heading-color: #c4c6c9;
@@ -924,7 +925,7 @@ i.iconfont {
   [data-user-color-scheme="dark"] {
     --body-bg-color: #181c27;
     --board-bg-color: #252d38;
-    --text-color: #c4c6c9;
+    --text-color: #7e8a7d;
     --sec-text-color: #a7a9ad;
     --post-text-color: #c4c6c9;
     --post-heading-color: #c4c6c9;
@@ -1982,6 +1983,7 @@ input[type=checkbox] {
   width: 10rem;
   height: 10rem;
   z-index: 3;
+  filter: drop-shadow(3px 3px 7px #092d07) hue-rotate(69deg) brightness(0.7);
 }
 .about-avatar img {
   width: 100%;
@@ -1995,17 +1997,23 @@ input[type=checkbox] {
   margin-bottom: 0.5rem;
 }
 .about-name {
-  font-size: 1.75rem;
+  font-size: 14rem;
   font-weight: bold;
+  color: #677c67;
+  text-shadow: #092d07 7px 7px 7px;
+  filter: drop-shadow(3px 3px 7px #092d07) brightness(1.4) opacity(0.7);
 }
 .about-intro {
-  font-size: 1rem;
+  font-size: 0.7rem;
+  color: #55906c;
+  text-shadow: #092d07 1px 1px 3px;
 }
 .about-icons > a:not(:last-child) {
   margin-right: 0.5rem;
 }
 .about-icons > a > i {
-  font-size: 1.5rem;
+  font-size: 1rem;
+  color: #55906c;
 }
 .category-bar .category-list {
   max-height: 85vh;
