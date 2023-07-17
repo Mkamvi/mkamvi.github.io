@@ -7,7 +7,7 @@ var subtitle = page.subtitle || page.title
 
 <script src="/js/particles.js"></script>
 <div id="banner" class="banner" <%- theme.banner && theme.banner.parallax && 'parallax=true' %>
-     style="no-repeat center center; background-size: cover;">
+  style="background: url('<%- url_for(banner_img) %>') no-repeat center center; background-size: cover;">
   <div class="full-bg-img">
     <div id="particles-js"></div>
     <canvas id="banner-canvas"></canvas>
@@ -34,5 +34,3 @@ var subtitle = page.subtitle || page.title
     </div>
   </div>
 </div>
-<script src='/js/banner.js' async></script>
-<script src='/js/banner2.js' async></script>
