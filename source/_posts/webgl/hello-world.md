@@ -1,6 +1,6 @@
 ---
 title: 如何编写一个WebGL程序 - WebGL
-date: 2023年07月14日18:12:45
+date: 2023-07-14 18:12:45
 tags:
   - WebGL
 categories:
