@@ -21,6 +21,7 @@ h6:hover > .anchorjs-link {
   width: 100%;
   height: 100%;
   background-color: rgba(0,0,0,0.3);
+  backdrop-filter: invert(1);
 }
 .banner[parallax="true"] {
   will-change: transform;
