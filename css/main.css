@@ -2066,15 +2066,13 @@ input[type=checkbox] {
   text-shadow: #092d07 1px 1px 3px;
   animation: filter-huang 24s linear infinite;
 }
-.about-icons {
-  animation: filter-huang 24s linear infinite;
-}
 .about-icons > a:not(:last-child) {
   margin-right: 0.5rem;
 }
 .about-icons > a > i {
   font-size: 1rem;
   color: #55906c;
+  animation: filter-huang 24s linear infinite;
 }
 .category-bar .category-list {
   max-height: 85vh;
