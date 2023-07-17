@@ -2039,7 +2039,7 @@ input[type=checkbox] {
   width: 10rem;
   height: 10rem;
   z-index: 3;
-  animation: filter-huang 24s linear infinite;
+  animation: filter-huang 28s linear infinite;
   opacity: 0.7;
 }
 .about-avatar img {
@@ -2058,13 +2058,13 @@ input[type=checkbox] {
   font-weight: bold;
   color: #00fa00;
   text-shadow: #092d07 7px 7px 7px;
-  animation: filter-huang 24s linear infinite;
+  animation: filter-huang 28s linear infinite;
 }
 .about-intro {
   font-size: 0.7rem;
   color: #55906c;
   text-shadow: #092d07 1px 1px 3px;
-  animation: filter-huang 24s linear infinite;
+  animation: filter-huang 28s linear infinite;
 }
 .about-icons > a:not(:last-child) {
   margin-right: 0.5rem;
@@ -2072,7 +2072,7 @@ input[type=checkbox] {
 .about-icons > a > i {
   font-size: 1rem;
   color: #55906c;
-  animation: filter-huang 24s linear infinite;
+  animation: filter-huang 28s linear infinite;
 }
 .category-bar .category-list {
   max-height: 85vh;
