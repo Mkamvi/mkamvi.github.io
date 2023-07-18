@@ -4,11 +4,86 @@
   
   
   <entry>
+    <title>建模曲线 · 属性 - Blender</title>
+    <link href="/blender/model/curves/properties/"/>
+    <url>/blender/model/curves/properties/</url>
+    
+    <content type="html"><![CDATA[<h2 id="形状"><a href="#形状" class="headerlink" title="形状"></a>形状</h2><h2 id="几何数据"><a href="#几何数据" class="headerlink" title="几何数据"></a>几何数据</h2><h3 id="倒角"><a href="#倒角" class="headerlink" title="倒角"></a>倒角</h3><h3 id="开始-amp-映射"><a href="#开始-amp-映射" class="headerlink" title="开始 &amp; 映射"></a>开始 &amp; 映射</h3><h3 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h3><h2 id="路径动画"><a href="#路径动画" class="headerlink" title="路径动画"></a>路径动画</h2><h3 id="例子"><a href="#例子" class="headerlink" title="例子"></a>例子</h3><h2 id="活动样条线"><a href="#活动样条线" class="headerlink" title="活动样条线"></a>活动样条线</h2><h3 id="多段线"><a href="#多段线" class="headerlink" title="多段线"></a>多段线</h3><h3 id="贝塞尔"><a href="#贝塞尔" class="headerlink" title="贝塞尔"></a>贝塞尔</h3><h3 id="NURBS"><a href="#NURBS" class="headerlink" title="NURBS"></a>NURBS</h3>]]></content>
+    
+    
+    <categories>
+      
+      <category>Blender</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Blender</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>建模曲线 · 编辑 - Blender</title>
+    <link href="/blender/model/curves/edit/"/>
+    <url>/blender/model/curves/edit/</url>
+    
+    <content type="html"><![CDATA[<h2 id="变换面板"><a href="#变换面板" class="headerlink" title="变换面板"></a>变换面板</h2><h3 id="控制点，顶点"><a href="#控制点，顶点" class="headerlink" title="控制点，顶点"></a>控制点，顶点</h3><h3 id="空间"><a href="#空间" class="headerlink" title="空间"></a>空间</h3><h3 id="权重"><a href="#权重" class="headerlink" title="权重"></a>权重</h3><h3 id="半径"><a href="#半径" class="headerlink" title="半径"></a>半径</h3><h3 id="倾斜"><a href="#倾斜" class="headerlink" title="倾斜"></a>倾斜</h3><h2 id="曲线"><a href="#曲线" class="headerlink" title="曲线"></a>曲线</h2><h3 id="变换"><a href="#变换" class="headerlink" title="变换"></a>变换</h3><h3 id="半径-1"><a href="#半径-1" class="headerlink" title="半径"></a>半径</h3><h3 id="镜像"><a href="#镜像" class="headerlink" title="镜像"></a>镜像</h3><h3 id="吸附"><a href="#吸附" class="headerlink" title="吸附"></a>吸附</h3><h3 id="旋绕"><a href="#旋绕" class="headerlink" title="旋绕"></a>旋绕</h3><h3 id="新增副本"><a href="#新增副本" class="headerlink" title="新增副本"></a>新增副本</h3><h3 id="拆分"><a href="#拆分" class="headerlink" title="拆分"></a>拆分</h3><h3 id="分离"><a href="#分离" class="headerlink" title="分离"></a>分离</h3><h3 id="切换循环"><a href="#切换循环" class="headerlink" title="切换循环"></a>切换循环</h3><h3 id="设置样条类型"><a href="#设置样条类型" class="headerlink" title="设置样条类型"></a>设置样条类型</h3><h3 id="显示-x2F-隐藏"><a href="#显示-x2F-隐藏" class="headerlink" title="显示&#x2F;隐藏"></a>显示&#x2F;隐藏</h3><h3 id="清理"><a href="#清理" class="headerlink" title="清理"></a>清理</h3><h4 id="精简曲线"><a href="#精简曲线" class="headerlink" title="精简曲线"></a>精简曲线</h4><h3 id="删除"><a href="#删除" class="headerlink" title="删除"></a>删除</h3><h4 id="顶点"><a href="#顶点" class="headerlink" title="顶点"></a>顶点</h4><h4 id="线段"><a href="#线段" class="headerlink" title="线段"></a>线段</h4><h4 id="融并顶点"><a href="#融并顶点" class="headerlink" title="融并顶点"></a>融并顶点</h4><h2 id="控制点"><a href="#控制点" class="headerlink" title="控制点"></a>控制点</h2><h3 id="挤出曲线并移动"><a href="#挤出曲线并移动" class="headerlink" title="挤出曲线并移动"></a>挤出曲线并移动</h3><h3 id="创建线段"><a href="#创建线段" class="headerlink" title="创建线段"></a>创建线段</h3><h3 id="倾斜-1"><a href="#倾斜-1" class="headerlink" title="倾斜"></a>倾斜</h3><h3 id="清空倾斜"><a href="#清空倾斜" class="headerlink" title="清空倾斜"></a>清空倾斜</h3><h3 id="设置控制柄类型"><a href="#设置控制柄类型" class="headerlink" title="设置控制柄类型"></a>设置控制柄类型</h3><h3 id="重新计算控制柄"><a href="#重新计算控制柄" class="headerlink" title="重新计算控制柄"></a>重新计算控制柄</h3><h3 id="平滑化"><a href="#平滑化" class="headerlink" title="平滑化"></a>平滑化</h3><h3 id="平滑曲线倾斜"><a href="#平滑曲线倾斜" class="headerlink" title="平滑曲线倾斜"></a>平滑曲线倾斜</h3><h3 id="平滑曲线半径"><a href="#平滑曲线半径" class="headerlink" title="平滑曲线半径"></a>平滑曲线半径</h3><h3 id="平滑曲线权重"><a href="#平滑曲线权重" class="headerlink" title="平滑曲线权重"></a>平滑曲线权重</h3><h3 id="钩挂"><a href="#钩挂" class="headerlink" title="钩挂"></a>钩挂</h3><h3 id="创建父级顶点"><a href="#创建父级顶点" class="headerlink" title="创建父级顶点"></a>创建父级顶点</h3><h2 id="段数"><a href="#段数" class="headerlink" title="段数"></a>段数</h2><h3 id="细分"><a href="#细分" class="headerlink" title="细分"></a>细分</h3><h3 id="切换方向"><a href="#切换方向" class="headerlink" title="切换方向"></a>切换方向</h3><h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h2><h3 id="设置目标权重"><a href="#设置目标权重" class="headerlink" title="设置目标权重"></a>设置目标权重</h3><h3 id="添加顶点"><a href="#添加顶点" class="headerlink" title="添加顶点"></a>添加顶点</h3>]]></content>
+    
+    
+    <categories>
+      
+      <category>Blender</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Blender</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>建模曲线 · 选择 - Blender</title>
+    <link href="/blender/model/curves/selecting/"/>
+    <url>/blender/model/curves/selecting/</url>
+    
+    <content type="html"><![CDATA[<h2 id="选择"><a href="#选择" class="headerlink" title="选择"></a>选择</h2><h2 id="选择菜单"><a href="#选择菜单" class="headerlink" title="选择菜单"></a>选择菜单</h2><h2 id="随机选择"><a href="#随机选择" class="headerlink" title="随机选择"></a>随机选择</h2><h2 id="间隔式弃选"><a href="#间隔式弃选" class="headerlink" title="间隔式弃选"></a>间隔式弃选</h2><h2 id="选择关联项"><a href="#选择关联项" class="headerlink" title="选择关联项"></a>选择关联项</h2><h2 id="选择相似元素"><a href="#选择相似元素" class="headerlink" title="选择相似元素"></a>选择相似元素</h2><h2 id="选择下一项-x2F-上一项"><a href="#选择下一项-x2F-上一项" class="headerlink" title="选择下一项&#x2F;上一项"></a>选择下一项&#x2F;上一项</h2><h2 id="扩展选择-x2F-缩减选择"><a href="#扩展选择-x2F-缩减选择" class="headerlink" title="扩展选择&#x2F;缩减选择"></a>扩展选择&#x2F;缩减选择</h2><h2 id="拾取最短路径"><a href="#拾取最短路径" class="headerlink" title="拾取最短路径"></a>拾取最短路径</h2>]]></content>
+    
+    
+    <categories>
+      
+      <category>Blender</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Blender</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>建模曲线 · 基本体 - Blender</title>
     <link href="/blender/model/curves/primitives/"/>
     <url>/blender/model/curves/primitives/</url>
     
-    <content type="html"><![CDATA[]]></content>
+    <content type="html"><![CDATA[<h2 id="贝塞尔曲线"><a href="#贝塞尔曲线" class="headerlink" title="贝塞尔曲线"></a>贝塞尔曲线</h2><h2 id="贝塞尔圆环"><a href="#贝塞尔圆环" class="headerlink" title="贝塞尔圆环"></a>贝塞尔圆环</h2><h2 id="NURBS-曲线"><a href="#NURBS-曲线" class="headerlink" title="NURBS 曲线"></a>NURBS 曲线</h2><h2 id="NURBS-圆环"><a href="#NURBS-圆环" class="headerlink" title="NURBS 圆环"></a>NURBS 圆环</h2><h2 id="路径"><a href="#路径" class="headerlink" title="路径"></a>路径</h2><h2 id="空头发"><a href="#空头发" class="headerlink" title="空头发"></a>空头发</h2><h2 id="Fur"><a href="#Fur" class="headerlink" title="Fur"></a>Fur</h2>]]></content>
     
     
     <categories>
