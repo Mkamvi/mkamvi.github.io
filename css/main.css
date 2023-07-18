@@ -1,57 +1,57 @@
 @-moz-keyframes filter-huang {
   0% {
-    filter: drop-shadow(3px 3px 7px #092d07) brightness(1.4) opacity(1) invert(1) hue-rotate(0deg);
-    color: #008000;
+    filter: drop-shadow(3px 3px 7px #f25719) brightness(1) opacity(1) invert(0) hue-rotate(0deg);
+    color: #f9882f;
   }
   50% {
-    filter: drop-shadow(3px 3px 7px #092d07) brightness(2.8) opacity(1) invert(1) hue-rotate(360deg);
-    color: #008000;
+    filter: drop-shadow(3px 3px 7px #f25719) brightness(1) opacity(1) invert(0) hue-rotate(360deg);
+    color: #f9882f;
   }
   100% {
-    filter: drop-shadow(3px 3px 7px #092d07) brightness(1.4) opacity(1) invert(1) hue-rotate(0deg);
-    color: #008000;
+    filter: drop-shadow(3px 3px 7px #f25719) brightness(1) opacity(1) invert(0) hue-rotate(0deg);
+    color: #f9882f;
   }
 }
 @-webkit-keyframes filter-huang {
   0% {
-    filter: drop-shadow(3px 3px 7px #092d07) brightness(1.4) opacity(1) invert(1) hue-rotate(0deg);
-    color: #008000;
+    filter: drop-shadow(3px 3px 7px #f25719) brightness(1) opacity(1) invert(0) hue-rotate(0deg);
+    color: #f9882f;
   }
   50% {
-    filter: drop-shadow(3px 3px 7px #092d07) brightness(2.8) opacity(1) invert(1) hue-rotate(360deg);
-    color: #008000;
+    filter: drop-shadow(3px 3px 7px #f25719) brightness(1) opacity(1) invert(0) hue-rotate(360deg);
+    color: #f9882f;
   }
   100% {
-    filter: drop-shadow(3px 3px 7px #092d07) brightness(1.4) opacity(1) invert(1) hue-rotate(0deg);
-    color: #008000;
+    filter: drop-shadow(3px 3px 7px #f25719) brightness(1) opacity(1) invert(0) hue-rotate(0deg);
+    color: #f9882f;
   }
 }
 @-o-keyframes filter-huang {
   0% {
-    filter: drop-shadow(3px 3px 7px #092d07) brightness(1.4) opacity(1) invert(1) hue-rotate(0deg);
-    color: #008000;
+    filter: drop-shadow(3px 3px 7px #f25719) brightness(1) opacity(1) invert(0) hue-rotate(0deg);
+    color: #f9882f;
   }
   50% {
-    filter: drop-shadow(3px 3px 7px #092d07) brightness(2.8) opacity(1) invert(1) hue-rotate(360deg);
-    color: #008000;
+    filter: drop-shadow(3px 3px 7px #f25719) brightness(1) opacity(1) invert(0) hue-rotate(360deg);
+    color: #f9882f;
   }
   100% {
-    filter: drop-shadow(3px 3px 7px #092d07) brightness(1.4) opacity(1) invert(1) hue-rotate(0deg);
-    color: #008000;
+    filter: drop-shadow(3px 3px 7px #f25719) brightness(1) opacity(1) invert(0) hue-rotate(0deg);
+    color: #f9882f;
   }
 }
 @keyframes filter-huang {
   0% {
-    filter: drop-shadow(3px 3px 7px #092d07) brightness(1.4) opacity(1) invert(1) hue-rotate(0deg);
-    color: #008000;
+    filter: drop-shadow(3px 3px 7px #f25719) brightness(1) opacity(1) invert(0) hue-rotate(0deg);
+    color: #f9882f;
   }
   50% {
-    filter: drop-shadow(3px 3px 7px #092d07) brightness(2.8) opacity(1) invert(1) hue-rotate(360deg);
-    color: #008000;
+    filter: drop-shadow(3px 3px 7px #f25719) brightness(1) opacity(1) invert(0) hue-rotate(360deg);
+    color: #f9882f;
   }
   100% {
-    filter: drop-shadow(3px 3px 7px #092d07) brightness(1.4) opacity(1) invert(1) hue-rotate(0deg);
-    color: #008000;
+    filter: drop-shadow(3px 3px 7px #f25719) brightness(1) opacity(1) invert(0) hue-rotate(0deg);
+    color: #f9882f;
   }
 }
 .anchorjs-link {
@@ -2057,13 +2057,13 @@ input[type=checkbox] {
   font-size: 14rem;
   font-weight: bold;
   color: #00fa00;
-  text-shadow: #092d07 7px 7px 7px;
+  text-shadow: #f25719 7px 7px 7px;
   animation: filter-huang 28s linear infinite;
 }
 .about-intro {
   font-size: 0.7rem;
   color: #55906c;
-  text-shadow: #092d07 1px 1px 3px;
+  text-shadow: #f25719 1px 1px 3px;
   animation: filter-huang 28s linear infinite;
 }
 .about-icons > a:not(:last-child) {
