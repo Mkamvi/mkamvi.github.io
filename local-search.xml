@@ -4,6 +4,31 @@
   
   
   <entry>
+    <title>建模曲线 · 曲线显示- Blender</title>
+    <link href="/blender/model/curves/display/"/>
+    <url>/blender/model/curves/display/</url>
+    
+    <content type="html"><![CDATA[<h2 id="曲线显示"><a href="#曲线显示" class="headerlink" title="曲线显示"></a>曲线显示</h2><h3 id="控制柄"><a href="#控制柄" class="headerlink" title="控制柄"></a>控制柄</h3><h3 id="法向"><a href="#法向" class="headerlink" title="法向"></a>法向</h3>]]></content>
+    
+    
+    <categories>
+      
+      <category>Blender</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Blender</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>建模曲线 · 属性 - Blender</title>
     <link href="/blender/model/curves/properties/"/>
     <url>/blender/model/curves/properties/</url>
@@ -83,7 +108,7 @@
     <link href="/blender/model/curves/primitives/"/>
     <url>/blender/model/curves/primitives/</url>
     
-    <content type="html"><![CDATA[<h2 id="贝塞尔曲线"><a href="#贝塞尔曲线" class="headerlink" title="贝塞尔曲线"></a>贝塞尔曲线</h2><h2 id="贝塞尔圆环"><a href="#贝塞尔圆环" class="headerlink" title="贝塞尔圆环"></a>贝塞尔圆环</h2><h2 id="NURBS-曲线"><a href="#NURBS-曲线" class="headerlink" title="NURBS 曲线"></a>NURBS 曲线</h2><h2 id="NURBS-圆环"><a href="#NURBS-圆环" class="headerlink" title="NURBS 圆环"></a>NURBS 圆环</h2><h2 id="路径"><a href="#路径" class="headerlink" title="路径"></a>路径</h2><h2 id="空头发"><a href="#空头发" class="headerlink" title="空头发"></a>空头发</h2><h2 id="Fur"><a href="#Fur" class="headerlink" title="Fur"></a>Fur</h2>]]></content>
+    <content type="html"><![CDATA[<h2 id="贝塞尔曲线"><a href="#贝塞尔曲线" class="headerlink" title="贝塞尔曲线"></a>贝塞尔曲线</h2><h2 id="贝塞尔圆环"><a href="#贝塞尔圆环" class="headerlink" title="贝塞尔圆环"></a>贝塞尔圆环</h2><h2 id="NURBS-曲线"><a href="#NURBS-曲线" class="headerlink" title="NURBS 曲线"></a>NURBS 曲线</h2><h2 id="NURBS-圆环"><a href="#NURBS-圆环" class="headerlink" title="NURBS 圆环"></a>NURBS 圆环</h2><h2 id="路径"><a href="#路径" class="headerlink" title="路径"></a>路径</h2><h2 id="空头发"><a href="#空头发" class="headerlink" title="空头发"></a>空头发</h2><p>在雕刻模式中便可以添加头发</p><h2 id="Fur-物体-‣-快速效果，-快速物理效果"><a href="#Fur-物体-‣-快速效果，-快速物理效果" class="headerlink" title="Fur(物体 ‣ 快速效果， 快速物理效果)"></a>Fur(物体 ‣ 快速效果， 快速物理效果)</h2><h3 id="毛发"><a href="#毛发" class="headerlink" title="毛发"></a>毛发</h3><h3 id="爆破"><a href="#爆破" class="headerlink" title="爆破"></a>爆破</h3><h3 id="液体"><a href="#液体" class="headerlink" title="液体"></a>液体</h3><h3 id="烟雾"><a href="#烟雾" class="headerlink" title="烟雾"></a>烟雾</h3>]]></content>
     
     
     <categories>
@@ -108,7 +133,7 @@
     <link href="/blender/model/curves/structure/"/>
     <url>/blender/model/curves/structure/</url>
     
-    <content type="html"><![CDATA[<h2 id="样条线"><a href="#样条线" class="headerlink" title="样条线"></a>样条线</h2><h3 id="控制点"><a href="#控制点" class="headerlink" title="控制点"></a>控制点</h3><h2 id="样条线类型"><a href="#样条线类型" class="headerlink" title="样条线类型"></a>样条线类型</h2><h3 id="多段线"><a href="#多段线" class="headerlink" title="多段线"></a>多段线</h3><h3 id="贝塞尔"><a href="#贝塞尔" class="headerlink" title="贝塞尔"></a>贝塞尔</h3><h3 id="NURBS"><a href="#NURBS" class="headerlink" title="NURBS"></a>NURBS</h3>]]></content>
+    <content type="html"><![CDATA[<h2 id="样条线"><a href="#样条线" class="headerlink" title="样条线"></a>样条线</h2><h3 id="控制点"><a href="#控制点" class="headerlink" title="控制点"></a>控制点</h3><h2 id="样条线类型"><a href="#样条线类型" class="headerlink" title="样条线类型"></a>样条线类型</h2><h3 id="多段线"><a href="#多段线" class="headerlink" title="多段线"></a>多段线</h3><p>不插值</p><h3 id="贝塞尔"><a href="#贝塞尔" class="headerlink" title="贝塞尔"></a>贝塞尔</h3><p>控制点和控制柄</p><h3 id="NURBS"><a href="#NURBS" class="headerlink" title="NURBS"></a>NURBS</h3><p>贝塞尔是近似的，NURBS 是精确的</p>]]></content>
     
     
     <categories>
@@ -129,11 +154,11 @@
   
   
   <entry>
-    <title>建模曲线工具 · 自由线 - Blender</title>
+    <title>建模曲线 · 工具- Blender</title>
     <link href="/blender/model/curves/tools/"/>
     <url>/blender/model/curves/tools/</url>
     
-    <content type="html"><![CDATA[<h2 id="工具栏"><a href="#工具栏" class="headerlink" title="工具栏"></a>工具栏</h2><h3 id="工具设置"><a href="#工具设置" class="headerlink" title="工具设置"></a>工具设置</h3><h2 id="类型"><a href="#类型" class="headerlink" title="类型"></a>类型</h2><h3 id="自由线"><a href="#自由线" class="headerlink" title="自由线"></a>自由线</h3><p>徒手绘制曲线</p><h3 id="曲线笔滤色"><a href="#曲线笔滤色" class="headerlink" title="曲线笔滤色"></a>曲线笔滤色</h3>]]></content>
+    <content type="html"><![CDATA[<h2 id="工具"><a href="#工具" class="headerlink" title="工具"></a>工具</h2><h3 id="工具栏"><a href="#工具栏" class="headerlink" title="工具栏"></a>工具栏</h3><h4 id="选择"><a href="#选择" class="headerlink" title="选择"></a>选择</h4><h5 id="框选"><a href="#框选" class="headerlink" title="框选"></a>框选</h5><h5 id="刷选"><a href="#刷选" class="headerlink" title="刷选"></a>刷选</h5><h5 id="套索选择"><a href="#套索选择" class="headerlink" title="套索选择"></a>套索选择</h5><h4 id="光标"><a href="#光标" class="headerlink" title="光标"></a>光标</h4><h4 id="移动"><a href="#移动" class="headerlink" title="移动"></a>移动</h4><h4 id="旋转"><a href="#旋转" class="headerlink" title="旋转"></a>旋转</h4><h4 id="比例缩放"><a href="#比例缩放" class="headerlink" title="比例缩放"></a>比例缩放</h4><h4 id="变换"><a href="#变换" class="headerlink" title="变换"></a>变换</h4><h4 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h4><h5 id="注释行"><a href="#注释行" class="headerlink" title="注释行"></a>注释行</h5><h5 id="标注多边形"><a href="#标注多边形" class="headerlink" title="标注多边形"></a>标注多边形</h5><h5 id="标注橡皮擦"><a href="#标注橡皮擦" class="headerlink" title="标注橡皮擦"></a>标注橡皮擦</h5><h4 id="测量"><a href="#测量" class="headerlink" title="测量"></a>测量</h4><h4 id="自由线"><a href="#自由线" class="headerlink" title="自由线"></a>自由线</h4><h5 id="类型"><a href="#类型" class="headerlink" title="类型"></a>类型</h5><ul><li>多段线</li><li>贝塞尔</li></ul><h5 id="半径"><a href="#半径" class="headerlink" title="半径"></a>半径</h5><h5 id="使用压感"><a href="#使用压感" class="headerlink" title="使用压感"></a>使用压感</h5><h5 id="深度"><a href="#深度" class="headerlink" title="深度"></a>深度</h5><ul><li>光标</li><li>曲面</li></ul><h4 id="曲线笔"><a href="#曲线笔" class="headerlink" title="曲线笔"></a>曲线笔</h4><h4 id="挤出"><a href="#挤出" class="headerlink" title="挤出"></a>挤出</h4><h5 id="挤出-1"><a href="#挤出-1" class="headerlink" title="挤出"></a>挤出</h5><h5 id="挤出至光标"><a href="#挤出至光标" class="headerlink" title="挤出至光标"></a>挤出至光标</h5><h4 id="半径-1"><a href="#半径-1" class="headerlink" title="半径"></a>半径</h4><h4 id="倾斜"><a href="#倾斜" class="headerlink" title="倾斜"></a>倾斜</h4><h4 id="随机"><a href="#随机" class="headerlink" title="随机"></a>随机</h4><p>向伪随机方向移动选定的控制点</p>]]></content>
     
     
     <categories>
