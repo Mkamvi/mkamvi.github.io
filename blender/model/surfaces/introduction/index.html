@@ -16,22 +16,22 @@
   <meta name="author" content="荒">
   <meta name="keywords" content="大帅,博客,不良帅,mkamv,mkamvi,不良帅的博客,mkamv的博客">
   
-    <meta name="description" content="变换面板控制点，顶点空间权重半径倾斜曲线变换半径镜像吸附旋绕新增副本拆分分离切换循环设置样条类型显示&#x2F;隐藏清理精简曲线删除顶点线段融并顶点控制点挤出曲线并移动创建线段倾斜清空倾斜设置控制柄类型重新计算控制柄平滑化平滑曲线倾斜平滑曲线半径平滑曲线权重钩挂创建父级顶点段数细分切换方向其他设置目标权重添加顶点">
+    <meta name="description" content="简介曲线是 2D 物体，而曲面是其三维上的扩展。但是请注意，在 Blender 中，只能创建 NURBS 曲面，没有贝塞尔曲面（但是有 贝塞尔 结点类型，见下文），也没有多边形曲面（但是对于这些，可以使用网格）。虽然曲线和曲面共用同一物体类型（一样的还有文本…），但它们并不是同一回事；例如，不能使同一个物体里既包含曲线又包含曲面 由于曲面是 2D 的，所以它有两个插值坐标轴，U（类似于曲线中的）和">
 <meta property="og:type" content="article">
-<meta property="og:title" content="建模曲线 · 编辑 - Blender">
-<meta property="og:url" content="https://mkamv.xyz/blender/model/curves/edit/index.html">
+<meta property="og:title" content="建模面 · 简介 - Blender">
+<meta property="og:url" content="https://mkamv.xyz/blender/model/surfaces/introduction/index.html">
 <meta property="og:site_name" content="不良帅本帅">
-<meta property="og:description" content="变换面板控制点，顶点空间权重半径倾斜曲线变换半径镜像吸附旋绕新增副本拆分分离切换循环设置样条类型显示&#x2F;隐藏清理精简曲线删除顶点线段融并顶点控制点挤出曲线并移动创建线段倾斜清空倾斜设置控制柄类型重新计算控制柄平滑化平滑曲线倾斜平滑曲线半径平滑曲线权重钩挂创建父级顶点段数细分切换方向其他设置目标权重添加顶点">
+<meta property="og:description" content="简介曲线是 2D 物体，而曲面是其三维上的扩展。但是请注意，在 Blender 中，只能创建 NURBS 曲面，没有贝塞尔曲面（但是有 贝塞尔 结点类型，见下文），也没有多边形曲面（但是对于这些，可以使用网格）。虽然曲线和曲面共用同一物体类型（一样的还有文本…），但它们并不是同一回事；例如，不能使同一个物体里既包含曲线又包含曲面 由于曲面是 2D 的，所以它有两个插值坐标轴，U（类似于曲线中的）和">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2023-07-18T09:58:46.000Z">
-<meta property="article:modified_time" content="2023-07-26T03:26:28.727Z">
+<meta property="article:published_time" content="2023-07-26T11:07:44.000Z">
+<meta property="article:modified_time" content="2023-07-26T03:26:28.731Z">
 <meta property="article:author" content="荒">
 <meta property="article:tag" content="Blender">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title>建模曲线 · 编辑 - Blender - 不良帅本帅</title>
+  <title>建模面 · 简介 - Blender - 不良帅本帅</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -209,7 +209,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="建模曲线 · 编辑 - Blender"></span>
+            <span id="subtitle" data-typed-text="建模面 · 简介 - Blender"></span>
           
         </div>
 
@@ -220,8 +220,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2023-07-18 09:58" pubdate>
-          2023年7月18日 上午
+        <time datetime="2023-07-26 11:07" pubdate>
+          2023年7月26日 上午
         </time>
       </span>
     
@@ -232,7 +232,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          157 字
+          492 字
         
       </span>
     
@@ -243,7 +243,7 @@
         
         
         
-          2 分钟
+          5 分钟
         
       </span>
     
@@ -293,12 +293,16 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">建模曲线 · 编辑 - Blender</h1>
+            <h1 id="seo-header">建模面 · 简介 - Blender</h1>
             
             
               <div class="markdown-body">
                 
-                <h2 id="变换面板"><a href="#变换面板" class="headerlink" title="变换面板"></a>变换面板</h2><h3 id="控制点，顶点"><a href="#控制点，顶点" class="headerlink" title="控制点，顶点"></a>控制点，顶点</h3><h3 id="空间"><a href="#空间" class="headerlink" title="空间"></a>空间</h3><h3 id="权重"><a href="#权重" class="headerlink" title="权重"></a>权重</h3><h3 id="半径"><a href="#半径" class="headerlink" title="半径"></a>半径</h3><h3 id="倾斜"><a href="#倾斜" class="headerlink" title="倾斜"></a>倾斜</h3><h2 id="曲线"><a href="#曲线" class="headerlink" title="曲线"></a>曲线</h2><h3 id="变换"><a href="#变换" class="headerlink" title="变换"></a>变换</h3><h3 id="半径-1"><a href="#半径-1" class="headerlink" title="半径"></a>半径</h3><h3 id="镜像"><a href="#镜像" class="headerlink" title="镜像"></a>镜像</h3><h3 id="吸附"><a href="#吸附" class="headerlink" title="吸附"></a>吸附</h3><h3 id="旋绕"><a href="#旋绕" class="headerlink" title="旋绕"></a>旋绕</h3><h3 id="新增副本"><a href="#新增副本" class="headerlink" title="新增副本"></a>新增副本</h3><h3 id="拆分"><a href="#拆分" class="headerlink" title="拆分"></a>拆分</h3><h3 id="分离"><a href="#分离" class="headerlink" title="分离"></a>分离</h3><h3 id="切换循环"><a href="#切换循环" class="headerlink" title="切换循环"></a>切换循环</h3><h3 id="设置样条类型"><a href="#设置样条类型" class="headerlink" title="设置样条类型"></a>设置样条类型</h3><h3 id="显示-x2F-隐藏"><a href="#显示-x2F-隐藏" class="headerlink" title="显示&#x2F;隐藏"></a>显示&#x2F;隐藏</h3><h3 id="清理"><a href="#清理" class="headerlink" title="清理"></a>清理</h3><h4 id="精简曲线"><a href="#精简曲线" class="headerlink" title="精简曲线"></a>精简曲线</h4><h3 id="删除"><a href="#删除" class="headerlink" title="删除"></a>删除</h3><h4 id="顶点"><a href="#顶点" class="headerlink" title="顶点"></a>顶点</h4><h4 id="线段"><a href="#线段" class="headerlink" title="线段"></a>线段</h4><h4 id="融并顶点"><a href="#融并顶点" class="headerlink" title="融并顶点"></a>融并顶点</h4><h2 id="控制点"><a href="#控制点" class="headerlink" title="控制点"></a>控制点</h2><h3 id="挤出曲线并移动"><a href="#挤出曲线并移动" class="headerlink" title="挤出曲线并移动"></a>挤出曲线并移动</h3><h3 id="创建线段"><a href="#创建线段" class="headerlink" title="创建线段"></a>创建线段</h3><h3 id="倾斜-1"><a href="#倾斜-1" class="headerlink" title="倾斜"></a>倾斜</h3><h3 id="清空倾斜"><a href="#清空倾斜" class="headerlink" title="清空倾斜"></a>清空倾斜</h3><h3 id="设置控制柄类型"><a href="#设置控制柄类型" class="headerlink" title="设置控制柄类型"></a>设置控制柄类型</h3><h3 id="重新计算控制柄"><a href="#重新计算控制柄" class="headerlink" title="重新计算控制柄"></a>重新计算控制柄</h3><h3 id="平滑化"><a href="#平滑化" class="headerlink" title="平滑化"></a>平滑化</h3><h3 id="平滑曲线倾斜"><a href="#平滑曲线倾斜" class="headerlink" title="平滑曲线倾斜"></a>平滑曲线倾斜</h3><h3 id="平滑曲线半径"><a href="#平滑曲线半径" class="headerlink" title="平滑曲线半径"></a>平滑曲线半径</h3><h3 id="平滑曲线权重"><a href="#平滑曲线权重" class="headerlink" title="平滑曲线权重"></a>平滑曲线权重</h3><h3 id="钩挂"><a href="#钩挂" class="headerlink" title="钩挂"></a>钩挂</h3><h3 id="创建父级顶点"><a href="#创建父级顶点" class="headerlink" title="创建父级顶点"></a>创建父级顶点</h3><h2 id="段数"><a href="#段数" class="headerlink" title="段数"></a>段数</h2><h3 id="细分"><a href="#细分" class="headerlink" title="细分"></a>细分</h3><h3 id="切换方向"><a href="#切换方向" class="headerlink" title="切换方向"></a>切换方向</h3><h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h2><h3 id="设置目标权重"><a href="#设置目标权重" class="headerlink" title="设置目标权重"></a>设置目标权重</h3><h3 id="添加顶点"><a href="#添加顶点" class="headerlink" title="添加顶点"></a>添加顶点</h3>
+                <h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>曲线是 2D 物体，而曲面是其三维上的扩展。但是请注意，在 Blender 中，只能创建 NURBS 曲面，没有贝塞尔曲面（但是有 贝塞尔 结点类型，见下文），也没有多边形曲面（但是对于这些，可以使用网格）。虽然曲线和曲面共用同一物体类型（一样的还有文本…），但它们并不是同一回事；例如，不能使同一个物体里既包含曲线又包含曲面</p>
+<p>由于曲面是 2D 的，所以它有两个插值坐标轴，U（类似于曲线中的）和 V 坐标轴。重要的是要知道，两个维度的插值规则（结点、阶数、分辨率）可以是独立的（当然，对于所有包含 U 和 V 的设置项都适用）</p>
+<p>你也许会问， “但是曲面似乎是三维的，为什么只有二维？”要成为三维，物体需要有 “体积” ，但是曲面，即使是闭合的，也没有体积；它是无限薄的。曲面需要有厚度（也就是第三个维度），才会有体积。因此，它只是一个二维物体，并且只有两个插值维度或轴向或坐标（如果你知道一点数学，想想非欧几何——很好，曲面都是非欧 2D 平面……）。举几个 “现实生活”的例子，你可以卷起一张纸，来创建一个圆柱；然而，即使它 “产生” 了体积，纸片本身仍是一个（几乎……）二维物体！</p>
+<p>事实上，曲面与 挤出曲线 的结果非常相似</p>
+<h2 id="可视化"><a href="#可视化" class="headerlink" title="可视化"></a>可视化</h2><h2 id="转换"><a href="#转换" class="headerlink" title="转换"></a>转换</h2>
                 <blockquote><p id='rainbow'> 🏝️ </p> <blockquote>
   <script>
 fetch('https://api.eatrice.top')
@@ -353,8 +357,8 @@ fetch('https://api.eatrice.top')
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>建模曲线 · 编辑 - Blender</div>
-      <div>https://mkamv.xyz/blender/model/curves/edit/</div>
+      <div>建模面 · 简介 - Blender</div>
+      <div>https://mkamv.xyz/blender/model/surfaces/introduction/</div>
     </div>
     <div class="license-meta">
       
@@ -366,7 +370,7 @@ fetch('https://api.eatrice.top')
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2023年7月18日</div>
+          <div>2023年7月26日</div>
         </div>
       
       
@@ -398,18 +402,12 @@ fetch('https://api.eatrice.top')
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/blender/model/curves/properties/" title="建模曲线 · 属性 - Blender">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">建模曲线 · 属性 - Blender</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/blender/model/curves/selecting/" title="建模曲线 · 选择 - Blender">
-                        <span class="hidden-mobile">建模曲线 · 选择 - Blender</span>
+                      <a href="/blender/model/curves/display/" title="建模曲线 · 曲线显示- Blender">
+                        <span class="hidden-mobile">建模曲线 · 曲线显示- Blender</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
@@ -432,7 +430,7 @@ fetch('https://api.eatrice.top')
         var options = Object.assign(
           {"clientID":"380b721444e388f986da","clientSecret":"cd4569aa7c4e07f1301593bbd51fb45572592099","repo":"mkamvi.github.io","owner":"Mkamvi","admin":["Mkamvi"],"language":"zh-CN","labels":["Gitalk"],"perPage":10,"pagerDirection":"last","distractionFreeMode":false,"createIssueManually":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token"},
           {
-            id: 'e4bc68bb5d657af3414404deb90c04fd'
+            id: 'cba0cbfbbbe5d6fbf17cd4ea4aac284b'
           }
         )
         var gitalk = new Gitalk(options);
