@@ -44,7 +44,7 @@ jobs:
       contents: write
     steps:
       - name: Organization mirror
-        uses: Yikun/hub-mirror-action@mappings
+        uses: Yikun/hub-mirror-action@master
         with:
           src: github/Mkamvi
           dst: gitee/iWuzhi
