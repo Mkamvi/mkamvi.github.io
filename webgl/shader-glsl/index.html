@@ -24,7 +24,7 @@
 <meta property="og:description" content="顶点着色器一个顶点着色器的工作是生成裁剪空间坐标值，通常是以下的形式 123void main() &amp;#123;   gl_Position &#x3D; doMathToMakeClipspaceCoordinates&amp;#125;  每个顶点调用一次（顶点）着色器，每次调用都需要设置一个特殊的全局变量 gl_Position， 该变量的值就是裁减空间坐标值 顶点着色器需要的数据，可以通过以下三种方式获得:">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2023-06-19T11:47:05.000Z">
-<meta property="article:modified_time" content="2023-07-26T06:04:17.500Z">
+<meta property="article:modified_time" content="2023-07-28T03:32:33.425Z">
 <meta property="article:author" content="荒">
 <meta property="article:tag" content="WebGL">
 <meta name="twitter:card" content="summary_large_image">
@@ -202,9 +202,46 @@
 <script src="/js/particles.js"></script>
 <div id="banner" class="banner" parallax=true
   style="background: url('/img/%E8%89%AF_%E5%B1%85.jpg') no-repeat center center; background-size: cover;">
-  <div class="full-bg-img">
+  <div class="full-bg-img" onclick="rainVoice()">
     <div id="particles-js"></div>
     <canvas id="banner-canvas"></canvas>
+    <img
+      class="_img_1gdgv_11 _img_1gdgv_11"
+      alt=""
+      style="object-fit:fill;"
+      src="/img/rain.png" srcset="/img/loading.gif" lazyload
+    >
+    <video
+      src="/videos/rain.mp4"
+      muted="true"
+      autoplay="true"
+      auto-rotate="false"
+      playsinline="true"
+      x5-playsinline="true"
+      webkit-playsinline="true"
+      t7-video-player-type="inline"
+      crossorigin="anonymous"
+      loop="true"
+    >
+    </video>
+    <script>
+      function rainVoice() {
+        const audioEle = document.querySelector('#banner-audio-rain');
+        if (audioEle.paused) {
+          audioEle.play();
+        } else {
+          audioEle.pause();
+        }
+      }
+    </script>
+    <audio
+      autoplay
+      loop
+      src="/audios/rain.mp3"
+      id="banner-audio-rain"
+    >
+    </audio>
+
     <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0)">
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
