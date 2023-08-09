@@ -24,7 +24,7 @@
 <meta property="og:description" content="挤出顶点(顶点 ‣ 挤出顶点, Alt-E)挤出到光标(Ctrl-鼠标右键)顶点倒角边线倒角(边 ‣ 边线倒角, Ctrl-B)滑移顶点(顶点 ‣ 滑移顶点, Shift-Ctrl-B)从顶点创建边&#x2F;面(顶点 ‣从顶点创建边&#x2F;面, F)连接顶点路径(顶点 ‣ 连接顶点路径, J)连接顶点对(顶点 ‣ 连接顶点对)该工具通过在选定的顶点之间创建边并分割面来连接它们。它可以同时用于">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2023-06-30T09:45:35.000Z">
-<meta property="article:modified_time" content="2023-08-09T09:20:48.761Z">
+<meta property="article:modified_time" content="2023-08-09T09:38:02.804Z">
 <meta property="article:author" content="荒">
 <meta property="article:tag" content="Blender">
 <meta name="twitter:card" content="summary_large_image">
@@ -209,10 +209,10 @@
       class="_img_1gdgv_11 _img_1gdgv_11"
       alt=""
       style="object-fit:fill;"
-      src="/img/rain.png" srcset="/img/loading.gif" lazyload
+      src="/img/sky_cloud.png" srcset="/img/loading.gif" lazyload
     >
     <video
-      src="/videos/rain.avi"
+      src="/videos/sky_cloud.avi"
       muted="true"
       autoplay="true"
       auto-rotate="false"
@@ -228,14 +228,13 @@
       function rainVoice() {
         const audioEle = document.querySelector('#banner-audio-rain');
         if (audioEle.paused) {
-          audioEle.play();
+          // audioEle.play();
         } else {
-          audioEle.pause();
+          // audioEle.pause();
         }
       }
     </script>
     <audio
-      autoplay
       loop
       src="/audios/rain.mp3"
       id="banner-audio-rain"

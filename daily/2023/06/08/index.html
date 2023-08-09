@@ -24,7 +24,7 @@
 <meta property="og:description" content="今天继续看了Github Action的Context主题，主要还是如何在脚本执行过程中使用系统变量，以更加灵活的编写脚本，不过系统变量有点多，还没看完，脑壳疼 然后本来计划看看WebGL，然后接着做数字城市，但2D和3D的交互实现方案不满意，只能去优化方案：  通过解析模型(GLTF)查找位置信息，然后根据节点ID入库(需要去熟悉GLTF，极其麻烦) 在客户端遍历模型入口文件，通过借助Cesiu">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2023-06-08T11:09:31.000Z">
-<meta property="article:modified_time" content="2023-08-09T09:20:48.765Z">
+<meta property="article:modified_time" content="2023-08-09T09:38:02.804Z">
 <meta property="article:author" content="荒">
 <meta property="article:tag" content="日常记录">
 <meta name="twitter:card" content="summary_large_image">
@@ -209,10 +209,10 @@
       class="_img_1gdgv_11 _img_1gdgv_11"
       alt=""
       style="object-fit:fill;"
-      src="/img/rain.png" srcset="/img/loading.gif" lazyload
+      src="/img/sky_cloud.png" srcset="/img/loading.gif" lazyload
     >
     <video
-      src="/videos/rain.avi"
+      src="/videos/sky_cloud.avi"
       muted="true"
       autoplay="true"
       auto-rotate="false"
@@ -228,14 +228,13 @@
       function rainVoice() {
         const audioEle = document.querySelector('#banner-audio-rain');
         if (audioEle.paused) {
-          audioEle.play();
+          // audioEle.play();
         } else {
-          audioEle.pause();
+          // audioEle.pause();
         }
       }
     </script>
     <audio
-      autoplay
       loop
       src="/audios/rain.mp3"
       id="banner-audio-rain"
