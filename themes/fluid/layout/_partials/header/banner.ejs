@@ -15,10 +15,10 @@ var subtitle = page.subtitle || page.title
       class="_img_1gdgv_11 _img_1gdgv_11"
       alt=""
       style="object-fit:fill;"
-      src="/img/rain.png"
+      src="/img/sky_cloud.png"
     >
     <video
-      src="/videos/rain.avi"
+      src="/videos/sky_cloud.avi"
       muted="true"
       autoplay="true"
       auto-rotate="false"
@@ -34,14 +34,13 @@ var subtitle = page.subtitle || page.title
       function rainVoice() {
         const audioEle = document.querySelector('#banner-audio-rain');
         if (audioEle.paused) {
-          audioEle.play();
+          // audioEle.play();
         } else {
-          audioEle.pause();
+          // audioEle.pause();
         }
       }
     </script>
     <audio
-      autoplay
       loop
       src="/audios/rain.mp3"
       id="banner-audio-rain"
