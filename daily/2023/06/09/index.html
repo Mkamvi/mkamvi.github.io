@@ -24,7 +24,7 @@
 <meta property="og:description" content="今天主要跟后端对接了下位号位置关联的事，然后发现一个问题： 同一个位置下在模拟点击事件的时候，可能对应多个子设备穿透的问题，但目前只取了第一个，后台可能因为没有位号并未入库，所以会查不出设备信息，这个就有点烦。只能去调整SDK去做适配，通过检索匹配有效设备后再触发点击效果事件，不过还没弄完，麻烦 😩 然后Github Action上下文部分补充了：  vars job  然后早上起不来了… 😩">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2023-06-09T09:52:59.000Z">
-<meta property="article:modified_time" content="2023-08-09T09:38:02.804Z">
+<meta property="article:modified_time" content="2023-08-09T09:55:06.082Z">
 <meta property="article:author" content="荒">
 <meta property="article:tag" content="日常记录">
 <meta name="twitter:card" content="summary_large_image">
@@ -104,7 +104,7 @@
   <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
     <a class="navbar-brand" href="/">
-      <strong>荒</strong>
+      <strong>镜</strong>
     </a>
 
     <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
