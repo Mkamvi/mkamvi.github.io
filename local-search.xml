@@ -4,6 +4,31 @@
   
   
   <entry>
+    <title>着色节点 · 着色器 - Blender</title>
+    <link href="/blender/render/shader_nodes/shader/"/>
+    <url>/blender/render/shader_nodes/shader/</url>
+    
+    <content type="html"><![CDATA[<h2 id="相加着色器"><a href="#相加着色器" class="headerlink" title="相加着色器"></a>相加着色器</h2><p>合并两个着色器</p><h2 id="各项异性-BSDF"><a href="#各项异性-BSDF" class="headerlink" title="各项异性 BSDF"></a>各项异性 BSDF</h2><p>各向异性 BSDF 用于添加光泽反射，可以单独控制 U 和 V 方向的粗糙度。用于着色的切线是从活动的 UV 图中得到的。如果没有 UV 贴图，它们将使用基于网格边界盒的球体贴图自动生成</p><h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p>背景 着色器节点用于添加背景光。此节点仅应用于世界表面的输出</p><h2 id="漫射-BSDF"><a href="#漫射-BSDF" class="headerlink" title="漫射 BSDF"></a>漫射 BSDF</h2><p>漫反射 BSDF（双向散射分布函数） 节点用于添加 兰伯斯 和 奥伦-纳亚尔 漫反射</p><h2 id="自发光"><a href="#自发光" class="headerlink" title="自发光"></a>自发光</h2><p>自发光 节点用于添加朗伯发光着色器。例如，可以用于材质和灯光的表面输出</p><h2 id="玻璃BSDF"><a href="#玻璃BSDF" class="headerlink" title="玻璃BSDF"></a>玻璃BSDF</h2><p>玻璃 BSDF 用于添加一个类似于玻璃的着色器，在掠过的角度混合折射和反射。像透明着色器一样，只有纯白色才能使其透明</p><h2 id="光泽BSDF"><a href="#光泽BSDF" class="headerlink" title="光泽BSDF"></a>光泽BSDF</h2><p>光泽 BSDF 节点用于添加具有微面分布的反射，用于金属或镜面等材料</p><h2 id="毛发BSDF"><a href="#毛发BSDF" class="headerlink" title="毛发BSDF"></a>毛发BSDF</h2><p>头发 BSDF（双向散射分布函数） 节点用于为 头发 添加阴影</p><h2 id="阻隔"><a href="#阻隔" class="headerlink" title="阻隔"></a>阻隔</h2><p>Holdout 着色器节点用于在图像中创建一个 Alpha 透明度为零的 “孔”</p><h2 id="混合着色器"><a href="#混合着色器" class="headerlink" title="混合着色器"></a>混合着色器</h2><p>混合着色器 节点用于将两个着色器的效果混合在一起。混合可用于材料分层，例如，系数 输入接口可以连接到 混合权重 节点</p><h2 id="原理化BSDF（双向散射分布函数）"><a href="#原理化BSDF（双向散射分布函数）" class="headerlink" title="原理化BSDF（双向散射分布函数）"></a>原理化BSDF（双向散射分布函数）</h2><p>该着色器节点包含多个层，可以创建各种各样的材质。基础层为漫反射，金属度，次表面散射和透射。除此之外，还有镜面层，光泽层和透明涂层</p><h2 id="原理化毛发BSDF"><a href="#原理化毛发BSDF" class="headerlink" title="原理化毛发BSDF"></a>原理化毛发BSDF</h2><p>于渲染头发和毛发</p><h2 id="原理化体积"><a href="#原理化体积" class="headerlink" title="原理化体积"></a>原理化体积</h2><p>原理化体积 着色器将所有体积着色组件组合到一个易于使用的节点中。该节点含有散射，吸收和黑体辐射属性，因此，可以仅仅使用该着色器节点对烟雾和火焰等进行渲染</p><h2 id="折射-BSDF"><a href="#折射-BSDF" class="headerlink" title="折射 BSDF"></a>折射 BSDF</h2><p>用于添加具有锐利或微面分布的光泽折射，用于透射光的材料。为了获得最佳结果，应将此节点视为构建块，而不是单独使用，而是使用菲涅耳因子与光滑节点混合使用。否则，它将在边缘处产生相当暗的结果，以获得光泽的折射</p><h2 id="高光BSDF"><a href="#高光BSDF" class="headerlink" title="高光BSDF"></a>高光BSDF</h2><p>与 原理化 BSDF 节点类似，但却使用 高光 工作，而非金属度。它具有更少的参数，支持更少的功能</p><h2 id="次表面散射-SSS"><a href="#次表面散射-SSS" class="headerlink" title="次表面散射(SSS)"></a>次表面散射(SSS)</h2><p>次表面散射 节点用于为诸如面板，蜡，大理石，牛奶等材质添加简单的次表面多次散射效果。对于上述材质，光线不会直接从表面反射，而是会穿透表面并在内部反弹，然后被吸收或离开表面到达附近的点</p><h2 id="卡通BSDF"><a href="#卡通BSDF" class="headerlink" title="卡通BSDF"></a>卡通BSDF</h2><p>用于创建具有卡通灯光效果的 漫射 和 光泽 材质</p><h2 id="半透BSDF"><a href="#半透BSDF" class="headerlink" title="半透BSDF"></a>半透BSDF</h2><p>用于添加朗伯漫反射透射</p><h2 id="透明BSDF"><a href="#透明BSDF" class="headerlink" title="透明BSDF"></a>透明BSDF</h2><p>透明 BSDF 用于在没有折射的情况下增加透明度，直接穿过表面，就好像那里没有几何形状一样</p><h2 id="丝绒BSDF"><a href="#丝绒BSDF" class="headerlink" title="丝绒BSDF"></a>丝绒BSDF</h2><p>用于为布料等材料添加反射</p><h2 id="体积吸收"><a href="#体积吸收" class="headerlink" title="体积吸收"></a>体积吸收</h2><p>体积吸收着色器 节点允许光在通过体积时被吸收</p><h2 id="体积散射"><a href="#体积散射" class="headerlink" title="体积散射"></a>体积散射</h2><p>体积散射 节点允许光线在通过体积时产生散射现象。为场景添加雾效果是一个典型的用法</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Blender</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Blender</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>使用点动态绘制一个圆 - WebGL</title>
     <link href="/webgl/test-circle/"/>
     <url>/webgl/test-circle/</url>
