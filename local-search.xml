@@ -4,6 +4,31 @@
   
   
   <entry>
+    <title>着色节点 · 转换器 - Blender</title>
+    <link href="/blender/render/shader_nodes/converter/"/>
+    <url>/blender/render/shader_nodes/converter/</url>
+    
+    <content type="html"><![CDATA[<h2 id="黑体着色节点"><a href="#黑体着色节点" class="headerlink" title="黑体着色节点"></a>黑体着色节点</h2><p>黑体 节点将黑体温度转换为 RGB 值。用于材料发射自然光</p><h2 id="钳制节点"><a href="#钳制节点" class="headerlink" title="钳制节点"></a>钳制节点</h2><p>钳制 节点用于将数值钳制在最小值和最大值之间的范围内</p><h2 id="颜色渐变节点"><a href="#颜色渐变节点" class="headerlink" title="颜色渐变节点"></a>颜色渐变节点</h2><p>颜色渐变节点使用渐变的方式进行颜色值的匹配</p><h2 id="颜色合并"><a href="#颜色合并" class="headerlink" title="颜色合并"></a>颜色合并</h2><p>组合颜色节点 将来自其复合颜色通道的图像组合在一起。节点可以组合多个 颜色模式 ，具体取决于模式属性</p><h2 id="XYZ-合并"><a href="#XYZ-合并" class="headerlink" title="XYZ 合并"></a>XYZ 合并</h2><p>组合 XYZ 节点 将来自其各个组件的向量组合在一起</p><h2 id="浮点曲线"><a href="#浮点曲线" class="headerlink" title="浮点曲线"></a>浮点曲线</h2><p>浮点曲线 节点将输入浮点数映射到曲线并输出浮点值</p><h2 id="映射范围-注意和钳制的区别"><a href="#映射范围-注意和钳制的区别" class="headerlink" title="映射范围(注意和钳制的区别)"></a>映射范围(注意和钳制的区别)</h2><p>映射范围 节点将值从范围重新映射到目标范围</p><h2 id="运算节点"><a href="#运算节点" class="headerlink" title="运算节点"></a>运算节点</h2><p>运算节点 的功能是执行数学运算</p><h2 id="混合节点"><a href="#混合节点" class="headerlink" title="混合节点"></a>混合节点</h2><p>混合值、颜色、矢量</p><h2 id="RGB-到-BW"><a href="#RGB-到-BW" class="headerlink" title="RGB 到 BW"></a>RGB 到 BW</h2><p>RGB 到 BW 节点 将 RGB 彩色图像按亮度映射到灰度</p><h2 id="分离颜色"><a href="#分离颜色" class="headerlink" title="分离颜色"></a>分离颜色</h2><p>单独的颜色节点 将图像拆分为其复合颜色通道</p><h2 id="分离-XYZ"><a href="#分离-XYZ" class="headerlink" title="分离 XYZ"></a>分离 XYZ</h2><p>分成 XYZ 节点 将矢量拆分为其各个组件</p><h2 id="Shader-到-RGB"><a href="#Shader-到-RGB" class="headerlink" title="Shader 到 RGB"></a>Shader 到 RGB</h2><p>Shader –&gt; RGB 节点通常用于非真实感渲染，从而对 BSDF 的输出应用额外的效果</p><h2 id="矢量运算节点"><a href="#矢量运算节点" class="headerlink" title="矢量运算节点"></a>矢量运算节点</h2><p>矢量运算 节点对输入矢量执行选定的数学运算</p><h2 id="波长着色节点"><a href="#波长着色节点" class="headerlink" title="波长着色节点"></a>波长着色节点</h2><p>波长 节点将波长值转换为RGB值</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Blender</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Blender</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>着色节点 · 着色器 - Blender</title>
     <link href="/blender/render/shader_nodes/shader/"/>
     <url>/blender/render/shader_nodes/shader/</url>
