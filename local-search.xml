@@ -4,6 +4,31 @@
   
   
   <entry>
+    <title>viewBox属性 - SVG</title>
+    <link href="/svg/viewBox%E5%B1%9E%E6%80%A7%E5%90%AB%E4%B9%89/"/>
+    <url>/svg/viewBox%E5%B1%9E%E6%80%A7%E5%90%AB%E4%B9%89/</url>
+    
+    <content type="html"><![CDATA[<p>以下配置将以 100 大小的画图区域填充 200 大小的 svg 区域，就是指示在指定大小的 svg 容器中，展示那部分区域</p><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs HTML"><span class="hljs-tag">&lt;<span class="hljs-name">svg</span> <span class="hljs-attr">width</span>=<span class="hljs-string">&#x27;200&#x27;</span> <span class="hljs-attr">height</span>=<span class="hljs-string">&#x27;200&#x27;</span> <span class="hljs-attr">viewBox</span>=<span class="hljs-string">&quot;0 0 100 100&quot;</span> <span class="hljs-attr">xmlns</span>=<span class="hljs-string">&quot;http://www.w3.org/2000/svg&quot;</span>&gt;</span><br>  ...<br><span class="hljs-tag">&lt;/<span class="hljs-name">svg</span>&gt;</span><br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+    <categories>
+      
+      <category>SVG</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>SVG</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>着色节点 · 转换器 - Blender</title>
     <link href="/blender/render/shader_nodes/converter/"/>
     <url>/blender/render/shader_nodes/converter/</url>
@@ -617,8 +642,6 @@
     <tags>
       
       <tag>Blender</tag>
-      
-      <tag>[object Object]</tag>
       
     </tags>
     
