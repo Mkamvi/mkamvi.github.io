@@ -16,22 +16,22 @@
   <meta name="author" content="荒">
   <meta name="keywords" content="大帅,博客,不良帅,mkamv,mkamvi,不良帅的博客,mkamv的博客">
   
-    <meta name="description" content="今天接着把2D&#x2F;3D交互那坨代码优化了下， 对接了下实时数据，还发现一个问题： 在云桌面测试时，发现模拟点击事件找不到对应设备，因为云桌面比较卡，然后模型加载较慢，所以导致在透传鼠标事件获取目标设备时，设备还没渲染到可视区域。于是加了30S的递归循环，在没读到设备前，每一秒都去重新尝试一下，直到找到设备为止，这样基本就能找到设备了。 然后早上试了下使用倒角实现180°的转弯，结果还是不太">
+    <meta name="description" content="核心是借助 echarts 的 visualMap 属性： 示例1234567891011121314151617visualMap: [  &amp;#123;    dimension: 1, &#x2F;&#x2F; 数据维度索引（可以将series中的data看做一个二维数组）    seriesIndex: 4, &#x2F;&#x2F; 对应series的索引值，通过该属性可针对多个不同的的数据项设置不同的条件表达    outOf">
 <meta property="og:type" content="article">
-<meta property="og:title" content="杀人犯，你好">
-<meta property="og:url" content="https://mkamv.xyz/daily/2023/06/13/index.html">
+<meta property="og:title" content="如何在折线图上展示阈值 - echarts">
+<meta property="og:url" content="https://mkamv.xyz/echarts/%E5%A6%82%E4%BD%95%E5%9C%A8%E6%8A%98%E7%BA%BF%E5%9B%BE%E4%B8%8A%E5%B1%95%E7%A4%BA%E9%98%88%E5%80%BC/index.html">
 <meta property="og:site_name" content="不良帅本帅">
-<meta property="og:description" content="今天接着把2D&#x2F;3D交互那坨代码优化了下， 对接了下实时数据，还发现一个问题： 在云桌面测试时，发现模拟点击事件找不到对应设备，因为云桌面比较卡，然后模型加载较慢，所以导致在透传鼠标事件获取目标设备时，设备还没渲染到可视区域。于是加了30S的递归循环，在没读到设备前，每一秒都去重新尝试一下，直到找到设备为止，这样基本就能找到设备了。 然后早上试了下使用倒角实现180°的转弯，结果还是不太">
+<meta property="og:description" content="核心是借助 echarts 的 visualMap 属性： 示例1234567891011121314151617visualMap: [  &amp;#123;    dimension: 1, &#x2F;&#x2F; 数据维度索引（可以将series中的data看做一个二维数组）    seriesIndex: 4, &#x2F;&#x2F; 对应series的索引值，通过该属性可针对多个不同的的数据项设置不同的条件表达    outOf">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2023-06-13T20:55:16.000Z">
+<meta property="article:published_time" content="2023-09-05T10:53:10.000Z">
 <meta property="article:modified_time" content="2023-09-05T03:00:15.045Z">
 <meta property="article:author" content="荒">
-<meta property="article:tag" content="日常记录">
+<meta property="article:tag" content="echarts">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title>杀人犯，你好 - 不良帅本帅</title>
+  <title>如何在折线图上展示阈值 - echarts - 不良帅本帅</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -246,7 +246,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="杀人犯，你好"></span>
+            <span id="subtitle" data-typed-text="如何在折线图上展示阈值 - echarts"></span>
           
         </div>
 
@@ -257,8 +257,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2023-06-13 20:55" pubdate>
-          2023年6月13日 晚上
+        <time datetime="2023-09-05 10:53" pubdate>
+          2023年9月5日 上午
         </time>
       </span>
     
@@ -269,7 +269,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          342 字
+          311 字
         
       </span>
     
@@ -330,15 +330,13 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">杀人犯，你好</h1>
+            <h1 id="seo-header">如何在折线图上展示阈值 - echarts</h1>
             
             
               <div class="markdown-body">
                 
-                <p>今天接着把2D&#x2F;3D交互那坨代码优化了下， 对接了下实时数据，还发现一个问题：</p>
-<p>在云桌面测试时，发现模拟点击事件找不到对应设备，因为云桌面比较卡，然后模型加载较慢，所以导致在透传鼠标事件获取目标设备时，设备还没渲染到可视区域。于是加了30S的递归循环，在没读到设备前，每一秒都去重新尝试一下，直到找到设备为止，这样基本就能找到设备了。</p>
-<p>然后早上试了下使用倒角实现180°的转弯，结果还是不太理想，总觉得差些啥，今天上班路上仔细打量了下路边的自行车，唉，了然，对于立方体的上下两个边没有过渡，果然还得用细分加平滑去做，明天再做一遍看看效果吧 🤹‍♂️</p>
-<p>哦，上班时还偷偷耍了会Emacs，几天没练，组合键都忘光了要，干啥都要至少3个键位，干啥都离不开ctrl键，算了，吃灰去吧，不想练了</p>
+                <p>核心是借助 echarts 的 visualMap 属性：</p>
+<h2 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-attr">visualMap</span>: [<br>  &#123;<br>    <span class="hljs-attr">dimension</span>: <span class="hljs-number">1</span>, <span class="hljs-comment">// 数据维度索引（可以将series中的data看做一个二维数组）</span><br>    <span class="hljs-attr">seriesIndex</span>: <span class="hljs-number">4</span>, <span class="hljs-comment">// 对应series的索引值，通过该属性可针对多个不同的的数据项设置不同的条件表达</span><br>    <span class="hljs-attr">outOfRange</span>: &#123;<br>      <span class="hljs-attr">color</span>: <span class="hljs-string">&quot;red&quot;</span>, <span class="hljs-comment">// 超出范围的设置</span><br>    &#125;,<br>    <span class="hljs-attr">pieces</span>: [<br>      <span class="hljs-comment">// 针对单项的条件(限制)表达`</span><br>      &#123;<br>        <span class="hljs-attr">gt</span>: <span class="hljs-number">1000</span>,<br>        <span class="hljs-attr">lt</span>: <span class="hljs-number">1500</span>,<br>        <span class="hljs-attr">color</span>: <span class="hljs-string">&quot;cyan&quot;</span>,<br>      &#125;,<br>    ],<br>  &#125;,<br>];<br></code></pre></td></tr></table></figure>
 
                 <blockquote><p id='rainbow'> 🏝️ </p> <blockquote>
   <script>
@@ -364,6 +362,16 @@ fetch('https://api.eatrice.top')
 <span class="category-chains">
   
   
+    
+      <span class="category-chain">
+        
+  <a href="/categories/echarts/" class="category-chain-item">echarts</a>
+  
+  
+
+      </span>
+    
+  
 </span>
 
     </div>
@@ -372,7 +380,7 @@ fetch('https://api.eatrice.top')
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/%E6%97%A5%E5%B8%B8%E8%AE%B0%E5%BD%95/" class="print-no-link">#日常记录</a>
+        <a href="/tags/echarts/" class="print-no-link">#echarts</a>
       
     </div>
   
@@ -384,8 +392,8 @@ fetch('https://api.eatrice.top')
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>杀人犯，你好</div>
-      <div>https://mkamv.xyz/daily/2023/06/13/</div>
+      <div>如何在折线图上展示阈值 - echarts</div>
+      <div>https://mkamv.xyz/echarts/如何在折线图上展示阈值/</div>
     </div>
     <div class="license-meta">
       
@@ -397,7 +405,7 @@ fetch('https://api.eatrice.top')
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2023年6月13日</div>
+          <div>2023年9月5日</div>
         </div>
       
       
@@ -425,6 +433,23 @@ fetch('https://api.eatrice.top')
 
 
               
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/canvas/%E7%94%BB%E4%B8%80%E4%B8%AA%E5%9C%86%E5%BD%A2%E8%BF%9B%E5%BA%A6%E6%9D%A1/" title="画一个圆形进度条 - Canvas">
+                        <span class="hidden-mobile">画一个圆形进度条 - Canvas</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
             </div>
 
             
@@ -440,7 +465,7 @@ fetch('https://api.eatrice.top')
         var options = Object.assign(
           {"clientID":"380b721444e388f986da","clientSecret":"cd4569aa7c4e07f1301593bbd51fb45572592099","repo":"mkamvi.github.io","owner":"Mkamvi","admin":["Mkamvi"],"language":"zh-CN","labels":["Gitalk"],"perPage":10,"pagerDirection":"last","distractionFreeMode":false,"createIssueManually":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token"},
           {
-            id: '4c04a464572476903d431db376ad6950'
+            id: 'c5b7c1cc292d7421849bc657aa06f809'
           }
         )
         var gitalk = new Gitalk(options);
