@@ -4,6 +4,31 @@
   
   
   <entry>
+    <title>由Array.reverse引发的血案 - Vue</title>
+    <link href="/vue/Reverse%E5%BC%95%E5%8F%91%E7%9A%84%E6%97%A0%E9%99%90%E5%BE%AA%E7%8E%AF/"/>
+    <url>/vue/Reverse%E5%BC%95%E5%8F%91%E7%9A%84%E6%97%A0%E9%99%90%E5%BE%AA%E7%8E%AF/</url>
+    
+    <content type="html"><![CDATA[<h3 id="起因"><a href="#起因" class="headerlink" title="起因"></a>起因</h3><p>项目部署后访问页面，竟然直接卡死 ！</p><h3 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h3><p>Array.reverse() 竟然直接修改原数组！然后 Vue 里面便形成了 监听变化 &#x3D;&gt; 修改元素组 &#x3D;&gt; 变化 &#x3D;&gt; 监听变化 的无限循环中！</p><p>(一直以为是返回新数组！所以排查到是因为 reverse 调用引起的问题时，大吃一惊！)</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Vue</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Vue</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>Echarts使用setOption的合并方式</title>
     <link href="/echarts/Echarts%E4%BD%BF%E7%94%A8setOption%E7%9A%84%E5%90%88%E5%B9%B6%E6%96%B9%E5%BC%8F/"/>
     <url>/echarts/Echarts%E4%BD%BF%E7%94%A8setOption%E7%9A%84%E5%90%88%E5%B9%B6%E6%96%B9%E5%BC%8F/</url>
