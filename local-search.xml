@@ -4,6 +4,33 @@
   
   
   <entry>
+    <title>iframe在被移除的时候未触发beforeunload事件</title>
+    <link href="/html/confused/iframe-unload/"/>
+    <url>/html/confused/iframe-unload/</url>
+    
+    <content type="html"><![CDATA[<h3 id="原因分析"><a href="#原因分析" class="headerlink" title="原因分析"></a>原因分析</h3><p>beforeunload 事件仅当浏览器窗口关闭或者刷新时才会触发</p><h3 id="如何监听-iframe-移除"><a href="#如何监听-iframe-移除" class="headerlink" title="如何监听 iframe 移除"></a>如何监听 iframe 移除</h3><p>可以使用 unload&#x2F;pagehide 事件代替</p><ol><li>unload 事件当文档或一个子资源正在被卸载时触发</li><li>pagehide 事件当浏览器在显示与会话历史记录不同的页面的过程中隐藏当前页面时触发</li></ol>]]></content>
+    
+    
+    <categories>
+      
+      <category>HTML</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>HTML</tag>
+      
+      <tag>Iframe</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>由Array.reverse引发的血案 - Vue</title>
     <link href="/vue/Reverse%E5%BC%95%E5%8F%91%E7%9A%84%E6%97%A0%E9%99%90%E5%BE%AA%E7%8E%AF/"/>
     <url>/vue/Reverse%E5%BC%95%E5%8F%91%E7%9A%84%E6%97%A0%E9%99%90%E5%BE%AA%E7%8E%AF/</url>
