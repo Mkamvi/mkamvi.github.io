@@ -16,22 +16,22 @@
   <meta name="author" content="荒">
   <meta name="keywords" content="大帅,博客,不良帅,mkamv,mkamvi,不良帅的博客,mkamv的博客">
   
-    <meta name="description" content="核心命令1pkg [options] &lt;input&gt;  核心参数说明 -t: 指定目标类型，多个类型可用逗号分隔添加 -c: 指定配置文件 –out-path: 指定输出目录 -d: 显示 debug 信息，可以看到虚拟目内的文件结构，但因为加载了 node_modules，有点没法看  目标类型target 分为三个部分，使用中划线分隔：[node 版本]-[平台]-[系统架构] 示">
+    <meta name="description" content="潜意识第一反应就是 first-child: 然：表示在一组兄弟元素中的第一个元素 白: 只能选中第一个元素 第二反应就是 first-of-type: 然: 表示一组兄弟元素中其类型的第一个元素 白: 只能选中同类元素的第一个 那么如何选择一类(class 选择器)中的第一个原理：通过兄弟选择器第二个元素到结束，然后取非 123.class:not(.class ~ .class) &amp;#123;">
 <meta property="og:type" content="article">
-<meta property="og:title" content="将NodeJS应用打成一个可执行文件">
-<meta property="og:url" content="https://mkamv.xyz/js-libs/pkg/index.html">
+<meta property="og:title" content="如何选择第一个元素">
+<meta property="og:url" content="https://mkamv.xyz/css/%E7%94%BB%E4%B8%80%E4%B8%AA%E5%9C%86%E5%BD%A2%E8%BF%9B%E5%BA%A6%E6%9D%A1/index.html">
 <meta property="og:site_name" content="不良帅本帅">
-<meta property="og:description" content="核心命令1pkg [options] &lt;input&gt;  核心参数说明 -t: 指定目标类型，多个类型可用逗号分隔添加 -c: 指定配置文件 –out-path: 指定输出目录 -d: 显示 debug 信息，可以看到虚拟目内的文件结构，但因为加载了 node_modules，有点没法看  目标类型target 分为三个部分，使用中划线分隔：[node 版本]-[平台]-[系统架构] 示">
+<meta property="og:description" content="潜意识第一反应就是 first-child: 然：表示在一组兄弟元素中的第一个元素 白: 只能选中第一个元素 第二反应就是 first-of-type: 然: 表示一组兄弟元素中其类型的第一个元素 白: 只能选中同类元素的第一个 那么如何选择一类(class 选择器)中的第一个原理：通过兄弟选择器第二个元素到结束，然后取非 123.class:not(.class ~ .class) &amp;#123;">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2023-07-05T17:04:28.000Z">
+<meta property="article:published_time" content="2023-11-10T11:21:10.000Z">
 <meta property="article:modified_time" content="2023-11-10T03:37:45.616Z">
 <meta property="article:author" content="荒">
-<meta property="article:tag" content="js-libs">
+<meta property="article:tag" content="CSS">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title>将NodeJS应用打成一个可执行文件 - 不良帅本帅</title>
+  <title>如何选择第一个元素 - 不良帅本帅</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -246,7 +246,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="将NodeJS应用打成一个可执行文件"></span>
+            <span id="subtitle" data-typed-text="如何选择第一个元素"></span>
           
         </div>
 
@@ -257,8 +257,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2023-07-05 17:04" pubdate>
-          2023年7月5日 下午
+        <time datetime="2023-11-10 11:21" pubdate>
+          2023年11月10日 上午
         </time>
       </span>
     
@@ -269,7 +269,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          827 字
+          207 字
         
       </span>
     
@@ -280,7 +280,7 @@
         
         
         
-          7 分钟
+          2 分钟
         
       </span>
     
@@ -330,41 +330,19 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">将NodeJS应用打成一个可执行文件</h1>
+            <h1 id="seo-header">如何选择第一个元素</h1>
             
             
               <div class="markdown-body">
                 
-                <h3 id="核心命令"><a href="#核心命令" class="headerlink" title="核心命令"></a>核心命令</h3><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs cmd">pkg [options] &lt;input&gt;<br></code></pre></td></tr></table></figure>
-
-<h3 id="核心参数说明"><a href="#核心参数说明" class="headerlink" title="核心参数说明"></a>核心参数说明</h3><ul>
-<li>-t: 指定目标类型，多个类型可用逗号分隔添加</li>
-<li>-c: 指定配置文件</li>
-<li>–out-path: 指定输出目录</li>
-<li>-d: 显示 debug 信息，可以看到虚拟目内的文件结构，但因为加载了 node_modules，有点没法看</li>
-</ul>
-<h3 id="目标类型"><a href="#目标类型" class="headerlink" title="目标类型"></a>目标类型</h3><p>target 分为三个部分，使用中划线分隔：[node 版本]-[平台]-[系统架构]</p>
-<p>示例：node12-win-x64</p>
-<ul>
-<li>node 版本: (node8), node10, node12, node14, node16 or latest</li>
-<li>平台: alpine, linux, linuxstatic, win, macos, (freebsd)</li>
-<li>系统架构: x64, arm64, (armv6, armv7)</li>
-</ul>
-<p>Mac 和 Window 系统一般为：</p>
-<ul>
-<li>Mac: node14-macos-arm64</li>
-<li>Window: node14-win-x64</li>
-</ul>
-<p><em>Tips: Mac支持打出Window版本执行文件</em></p>
-<h3 id="配置文件"><a href="#配置文件" class="headerlink" title="配置文件"></a>配置文件</h3><p>在 package.json 中加入如下部分：</p>
-<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs json"><span class="hljs-attr">&quot;pkg&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">&#123;</span><br>    <span class="hljs-attr">&quot;scripts&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;build/**/*.js&quot;</span><span class="hljs-punctuation">,</span><br>    <span class="hljs-attr">&quot;assets&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">[</span> <span class="hljs-string">&quot;assets&quot;</span><span class="hljs-punctuation">,</span> <span class="hljs-string">&quot;images&quot;</span> <span class="hljs-punctuation">]</span><span class="hljs-punctuation">,</span><br>    <span class="hljs-attr">&quot;targets&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">[</span><br>      <span class="hljs-string">&quot;node14-macos-arm64&quot;</span><span class="hljs-punctuation">,</span><br>      <span class="hljs-string">&quot;node14-win-x64&quot;</span><br>    <span class="hljs-punctuation">]</span><span class="hljs-punctuation">,</span><br>    <span class="hljs-attr">&quot;outputPath&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;dist&quot;</span><br>  <span class="hljs-punctuation">&#125;</span><br></code></pre></td></tr></table></figure>
-
-<ul>
-<li>scripts: 这个没看懂</li>
-<li>assets: 指定需要额外打包的外部资源</li>
-</ul>
-<h3 id="快照文件系统"><a href="#快照文件系统" class="headerlink" title="快照文件系统"></a>快照文件系统</h3><p>在打包的过程中，pkg会收集项目文件并把它们放到可执行文件内部(叫做快照)，在应用执行过程中可以获取所有快照内文件</p>
-<p>快照结构：&#x2F;snapshot&#x2F;项目名称&#x2F;..资源路径</p>
+                <h2 id="潜意识"><a href="#潜意识" class="headerlink" title="潜意识"></a>潜意识</h2><p>第一反应就是 first-child:</p>
+<p>然：表示在一组兄弟元素中的第一个元素</p>
+<p>白: 只能选中第一个元素</p>
+<p>第二反应就是 first-of-type:</p>
+<p>然: 表示一组兄弟元素中其类型的第一个元素</p>
+<p>白: 只能选中同类元素的第一个</p>
+<h2 id="那么如何选择一类-class-选择器-中的第一个"><a href="#那么如何选择一类-class-选择器-中的第一个" class="headerlink" title="那么如何选择一类(class 选择器)中的第一个"></a>那么如何选择一类(class 选择器)中的第一个</h2><p>原理：通过兄弟选择器第二个元素到结束，然后取非</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs CSS"><span class="hljs-selector-class">.class</span><span class="hljs-selector-pseudo">:not</span>(<span class="hljs-selector-class">.class</span> ~ <span class="hljs-selector-class">.class</span>) &#123;<br>  // any style you want<br>&#125;<br></code></pre></td></tr></table></figure>
 
                 <blockquote><p id='rainbow'> 🏝️ </p> <blockquote>
   <script>
@@ -393,7 +371,7 @@ fetch('https://api.eatrice.top')
     
       <span class="category-chain">
         
-  <a href="/categories/js-libs/" class="category-chain-item">js-libs</a>
+  <a href="/categories/CSS/" class="category-chain-item">CSS</a>
   
   
 
@@ -408,7 +386,7 @@ fetch('https://api.eatrice.top')
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/js-libs/" class="print-no-link">#js-libs</a>
+        <a href="/tags/CSS/" class="print-no-link">#CSS</a>
       
     </div>
   
@@ -420,8 +398,8 @@ fetch('https://api.eatrice.top')
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>将NodeJS应用打成一个可执行文件</div>
-      <div>https://mkamv.xyz/js-libs/pkg/</div>
+      <div>如何选择第一个元素</div>
+      <div>https://mkamv.xyz/css/画一个圆形进度条/</div>
     </div>
     <div class="license-meta">
       
@@ -433,7 +411,7 @@ fetch('https://api.eatrice.top')
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2023年7月5日</div>
+          <div>2023年11月10日</div>
         </div>
       
       
@@ -465,18 +443,12 @@ fetch('https://api.eatrice.top')
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/blender/model/mesh/edit/uv-tool/" title="建模网格体编辑 · UV工具 - Blender">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">建模网格体编辑 · UV工具 - Blender</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/blender/model/mesh/edit/face-tool/" title="建模网格体编辑 · 面工具 - Blender">
-                        <span class="hidden-mobile">建模网格体编辑 · 面工具 - Blender</span>
+                      <a href="/html/confused/iframe-unload/" title="iframe在被移除的时候未触发beforeunload事件">
+                        <span class="hidden-mobile">iframe在被移除的时候未触发beforeunload事件</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
@@ -499,7 +471,7 @@ fetch('https://api.eatrice.top')
         var options = Object.assign(
           {"clientID":"380b721444e388f986da","clientSecret":"cd4569aa7c4e07f1301593bbd51fb45572592099","repo":"mkamvi.github.io","owner":"Mkamvi","admin":["Mkamvi"],"language":"zh-CN","labels":["Gitalk"],"perPage":10,"pagerDirection":"last","distractionFreeMode":false,"createIssueManually":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token"},
           {
-            id: '71bba5950fd3d07832f6c232b9f576a0'
+            id: 'ca94f10a16dbee321d6911d9f477b972'
           }
         )
         var gitalk = new Gitalk(options);
