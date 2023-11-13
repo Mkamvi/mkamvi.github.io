@@ -16,23 +16,22 @@
   <meta name="author" content="荒">
   <meta name="keywords" content="大帅,博客,不良帅,mkamv,mkamvi,不良帅的博客,mkamv的博客">
   
-    <meta name="description" content="原因分析beforeunload 事件仅当浏览器窗口关闭或者刷新时才会触发 如何监听 iframe 移除可以使用 unload&#x2F;pagehide 事件代替  unload 事件当文档或一个子资源正在被卸载时触发 pagehide 事件当浏览器在显示与会话历史记录不同的页面的过程中隐藏当前页面时触发">
+    <meta name="description" content="背景电脑磁盘满了，微信缓存站了20个G，Hah; 刚好有个外挂硬盘, SO: 如何将微信缓存挪到这个外挂硬盘第一步：退出微信第二步：挪动缓存到指定外挂磁盘目录第三步：创建软连接找到微信保存文件的目录，然后在MessageTemp(需要删除原来的)这一层，执行下面的命令:  ln -s 真实目录 MessageTemp  第四步：处理目录无法访问问题 sudo codesign –sign - –f">
 <meta property="og:type" content="article">
-<meta property="og:title" content="iframe在被移除的时候未触发beforeunload事件">
-<meta property="og:url" content="https://mkamv.xyz/html/confused/iframe-unload/index.html">
+<meta property="og:title" content="如何将微信缓存挂载到外挂硬盘">
+<meta property="og:url" content="https://mkamv.xyz/mac/%E5%A6%82%E4%BD%95%E5%BE%AE%E4%BF%A1%E7%BC%93%E5%AD%98%E6%8C%82%E8%BD%BD%E5%88%B0%E5%A4%96%E6%8C%82%E7%A1%AC%E7%9B%98/index.html">
 <meta property="og:site_name" content="不良帅本帅">
-<meta property="og:description" content="原因分析beforeunload 事件仅当浏览器窗口关闭或者刷新时才会触发 如何监听 iframe 移除可以使用 unload&#x2F;pagehide 事件代替  unload 事件当文档或一个子资源正在被卸载时触发 pagehide 事件当浏览器在显示与会话历史记录不同的页面的过程中隐藏当前页面时触发">
+<meta property="og:description" content="背景电脑磁盘满了，微信缓存站了20个G，Hah; 刚好有个外挂硬盘, SO: 如何将微信缓存挪到这个外挂硬盘第一步：退出微信第二步：挪动缓存到指定外挂磁盘目录第三步：创建软连接找到微信保存文件的目录，然后在MessageTemp(需要删除原来的)这一层，执行下面的命令:  ln -s 真实目录 MessageTemp  第四步：处理目录无法访问问题 sudo codesign –sign - –f">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2023-11-05T11:17:02.000Z">
+<meta property="article:published_time" content="2023-11-13T15:24:16.000Z">
 <meta property="article:modified_time" content="2023-11-13T07:42:53.367Z">
 <meta property="article:author" content="荒">
-<meta property="article:tag" content="HTML">
-<meta property="article:tag" content="Iframe">
+<meta property="article:tag" content="Mac">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title>iframe在被移除的时候未触发beforeunload事件 - 不良帅本帅</title>
+  <title>如何将微信缓存挂载到外挂硬盘 - 不良帅本帅</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -247,7 +246,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="iframe在被移除的时候未触发beforeunload事件"></span>
+            <span id="subtitle" data-typed-text="如何将微信缓存挂载到外挂硬盘"></span>
           
         </div>
 
@@ -258,8 +257,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2023-11-05 11:17" pubdate>
-          2023年11月5日 上午
+        <time datetime="2023-11-13 15:24" pubdate>
+          2023年11月13日 下午
         </time>
       </span>
     
@@ -270,7 +269,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          143 字
+          265 字
         
       </span>
     
@@ -281,7 +280,7 @@
         
         
         
-          2 分钟
+          3 分钟
         
       </span>
     
@@ -331,17 +330,22 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">iframe在被移除的时候未触发beforeunload事件</h1>
+            <h1 id="seo-header">如何将微信缓存挂载到外挂硬盘</h1>
             
             
               <div class="markdown-body">
                 
-                <h3 id="原因分析"><a href="#原因分析" class="headerlink" title="原因分析"></a>原因分析</h3><p>beforeunload 事件仅当浏览器窗口关闭或者刷新时才会触发</p>
-<h3 id="如何监听-iframe-移除"><a href="#如何监听-iframe-移除" class="headerlink" title="如何监听 iframe 移除"></a>如何监听 iframe 移除</h3><p>可以使用 unload&#x2F;pagehide 事件代替</p>
-<ol>
-<li>unload 事件当文档或一个子资源正在被卸载时触发</li>
-<li>pagehide 事件当浏览器在显示与会话历史记录不同的页面的过程中隐藏当前页面时触发</li>
-</ol>
+                <h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p>电脑磁盘满了，微信缓存站了20个G，Hah; 刚好有个外挂硬盘, SO:</p>
+<h2 id="如何将微信缓存挪到这个外挂硬盘"><a href="#如何将微信缓存挪到这个外挂硬盘" class="headerlink" title="如何将微信缓存挪到这个外挂硬盘"></a>如何将微信缓存挪到这个外挂硬盘</h2><h4 id="第一步：退出微信"><a href="#第一步：退出微信" class="headerlink" title="第一步：退出微信"></a>第一步：退出微信</h4><h4 id="第二步：挪动缓存到指定外挂磁盘目录"><a href="#第二步：挪动缓存到指定外挂磁盘目录" class="headerlink" title="第二步：挪动缓存到指定外挂磁盘目录"></a>第二步：挪动缓存到指定外挂磁盘目录</h4><h4 id="第三步：创建软连接"><a href="#第三步：创建软连接" class="headerlink" title="第三步：创建软连接"></a>第三步：创建软连接</h4><p>找到微信保存文件的目录，然后在MessageTemp(需要删除原来的)这一层，执行下面的命令:</p>
+<blockquote>
+<p>ln -s 真实目录 MessageTemp</p>
+</blockquote>
+<h4 id="第四步：处理目录无法访问问题"><a href="#第四步：处理目录无法访问问题" class="headerlink" title="第四步：处理目录无法访问问题"></a>第四步：处理目录无法访问问题</h4><blockquote>
+<p>sudo codesign –sign - –force –deep &#x2F;Applications&#x2F;WeChat.app — 解决目录无法写入。每次微信更新后需要再执行</p>
+</blockquote>
+<h4 id="第五步：登录微信"><a href="#第五步：登录微信" class="headerlink" title="第五步：登录微信"></a>第五步：登录微信</h4><blockquote>
+<p>OK, 瑞思拜 !</p>
+</blockquote>
 
                 <blockquote><p id='rainbow'> 🏝️ </p> <blockquote>
   <script>
@@ -370,7 +374,7 @@ fetch('https://api.eatrice.top')
     
       <span class="category-chain">
         
-  <a href="/categories/HTML/" class="category-chain-item">HTML</a>
+  <a href="/categories/Mac/" class="category-chain-item">Mac</a>
   
   
 
@@ -385,9 +389,7 @@ fetch('https://api.eatrice.top')
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/HTML/" class="print-no-link">#HTML</a>
-      
-        <a href="/tags/Iframe/" class="print-no-link">#Iframe</a>
+        <a href="/tags/Mac/" class="print-no-link">#Mac</a>
       
     </div>
   
@@ -399,8 +401,8 @@ fetch('https://api.eatrice.top')
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>iframe在被移除的时候未触发beforeunload事件</div>
-      <div>https://mkamv.xyz/html/confused/iframe-unload/</div>
+      <div>如何将微信缓存挂载到外挂硬盘</div>
+      <div>https://mkamv.xyz/mac/如何微信缓存挂载到外挂硬盘/</div>
     </div>
     <div class="license-meta">
       
@@ -412,7 +414,7 @@ fetch('https://api.eatrice.top')
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2023年11月5日</div>
+          <div>2023年11月13日</div>
         </div>
       
       
@@ -444,18 +446,12 @@ fetch('https://api.eatrice.top')
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/css/%E7%94%BB%E4%B8%80%E4%B8%AA%E5%9C%86%E5%BD%A2%E8%BF%9B%E5%BA%A6%E6%9D%A1/" title="如何选择第一个元素">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">如何选择第一个元素</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/vue/Reverse%E5%BC%95%E5%8F%91%E7%9A%84%E6%97%A0%E9%99%90%E5%BE%AA%E7%8E%AF/" title="由Array.reverse引发的血案 - Vue">
-                        <span class="hidden-mobile">由Array.reverse引发的血案 - Vue</span>
+                      <a href="/css/%E7%94%BB%E4%B8%80%E4%B8%AA%E5%9C%86%E5%BD%A2%E8%BF%9B%E5%BA%A6%E6%9D%A1/" title="如何选择第一个元素">
+                        <span class="hidden-mobile">如何选择第一个元素</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
@@ -478,7 +474,7 @@ fetch('https://api.eatrice.top')
         var options = Object.assign(
           {"clientID":"380b721444e388f986da","clientSecret":"cd4569aa7c4e07f1301593bbd51fb45572592099","repo":"mkamvi.github.io","owner":"Mkamvi","admin":["Mkamvi"],"language":"zh-CN","labels":["Gitalk"],"perPage":10,"pagerDirection":"last","distractionFreeMode":false,"createIssueManually":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token"},
           {
-            id: '3544f9c91071577d24fcb7040aadc2cf'
+            id: '59fe4b082da8d49204e628a3cc7b2df3'
           }
         )
         var gitalk = new Gitalk(options);
