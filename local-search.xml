@@ -4,6 +4,31 @@
   
   
   <entry>
+    <title>无法使用group问题 - Nexus</title>
+    <link href="/nexus/%E6%97%A0%E6%B3%95%E4%BD%BF%E7%94%A8group%E9%97%AE%E9%A2%98/"/>
+    <url>/nexus/%E6%97%A0%E6%B3%95%E4%BD%BF%E7%94%A8group%E9%97%AE%E9%A2%98/</url>
+    
+    <content type="html"><![CDATA[<h3 id="npm-login-无法登录"><a href="#npm-login-无法登录" class="headerlink" title="npm login 无法登录"></a>npm login 无法登录</h3><p>npm config设置了registry也无效，需要直接在命令后添加–registry</p><h3 id="npm-intall-无法安装依赖，提示401"><a href="#npm-intall-无法安装依赖，提示401" class="headerlink" title="npm intall 无法安装依赖，提示401"></a>npm intall 无法安装依赖，提示401</h3><ol><li>确认配置npm Bearer Token Realm，使其处于active</li><li>确认group的地址完全一致，包含最后一个 ‘&#x2F;‘</li></ol>]]></content>
+    
+    
+    <categories>
+      
+      <category>Nexus</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Nexus</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>React Develop Tool 在Chrome里出不来的问题- React</title>
     <link href="/react/Reverse%E5%BC%95%E5%8F%91%E7%9A%84%E6%97%A0%E9%99%90%E5%BE%AA%E7%8E%AF/"/>
     <url>/react/Reverse%E5%BC%95%E5%8F%91%E7%9A%84%E6%97%A0%E9%99%90%E5%BE%AA%E7%8E%AF/</url>

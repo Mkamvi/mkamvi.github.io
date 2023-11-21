@@ -16,23 +16,22 @@
   <meta name="author" content="荒">
   <meta name="keywords" content="大帅,博客,不良帅,mkamv,mkamvi,不良帅的博客,mkamv的博客">
   
-    <meta name="description" content="Github Actions 的组件工作流工作流程由签入到存储库的 YAML 文件定义，并在存储库中的事件触发时运行，也可以手动触发，或按定义的时间表触发。工作流程在存储库的 .github&#x2F;workflows 目录中定义，存储库可以有多个工作流程，每个工作流程都可以执行不同的任务集。 事件事件是存储库中触发工作流程运行的特定活动。 例如，当有人创建拉取请求、打开议题或将提交推送到存储库">
+    <meta name="description" content="npm login 无法登录npm config设置了registry也无效，需要直接在命令后添加–registry npm intall 无法安装依赖，提示401 确认配置npm Bearer Token Realm，使其处于active 确认group的地址完全一致，包含最后一个 ‘&#x2F;‘">
 <meta property="og:type" content="article">
-<meta property="og:title" content="关于 - Github Actions">
-<meta property="og:url" content="https://mkamv.xyz/github/gh-actions/abstract/index.html">
+<meta property="og:title" content="无法使用group问题 - Nexus">
+<meta property="og:url" content="https://mkamv.xyz/nexus/%E6%97%A0%E6%B3%95%E4%BD%BF%E7%94%A8group%E9%97%AE%E9%A2%98/index.html">
 <meta property="og:site_name" content="不良帅本帅">
-<meta property="og:description" content="Github Actions 的组件工作流工作流程由签入到存储库的 YAML 文件定义，并在存储库中的事件触发时运行，也可以手动触发，或按定义的时间表触发。工作流程在存储库的 .github&#x2F;workflows 目录中定义，存储库可以有多个工作流程，每个工作流程都可以执行不同的任务集。 事件事件是存储库中触发工作流程运行的特定活动。 例如，当有人创建拉取请求、打开议题或将提交推送到存储库">
+<meta property="og:description" content="npm login 无法登录npm config设置了registry也无效，需要直接在命令后添加–registry npm intall 无法安装依赖，提示401 确认配置npm Bearer Token Realm，使其处于active 确认group的地址完全一致，包含最后一个 ‘&#x2F;‘">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2023-06-06T09:44:22.000Z">
+<meta property="article:published_time" content="2023-11-21T17:41:07.000Z">
 <meta property="article:modified_time" content="2023-11-21T09:48:10.139Z">
 <meta property="article:author" content="荒">
-<meta property="article:tag" content="github">
-<meta property="article:tag" content="gh-actions">
+<meta property="article:tag" content="Nexus">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title>关于 - Github Actions - 不良帅本帅</title>
+  <title>无法使用group问题 - Nexus - 不良帅本帅</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -247,7 +246,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="关于 - Github Actions"></span>
+            <span id="subtitle" data-typed-text="无法使用group问题 - Nexus"></span>
           
         </div>
 
@@ -258,8 +257,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2023-06-06 09:44" pubdate>
-          2023年6月6日 上午
+        <time datetime="2023-11-21 17:41" pubdate>
+          2023年11月21日 下午
         </time>
       </span>
     
@@ -270,7 +269,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          1.5k 字
+          139 字
         
       </span>
     
@@ -281,7 +280,7 @@
         
         
         
-          13 分钟
+          2 分钟
         
       </span>
     
@@ -331,34 +330,17 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">关于 - Github Actions</h1>
+            <h1 id="seo-header">无法使用group问题 - Nexus</h1>
             
             
               <div class="markdown-body">
                 
-                <h3 id="Github-Actions-的组件"><a href="#Github-Actions-的组件" class="headerlink" title="Github Actions 的组件"></a>Github Actions 的组件</h3><h5 id="工作流"><a href="#工作流" class="headerlink" title="工作流"></a>工作流</h5><p>工作流程由签入到存储库的 YAML 文件定义，并在存储库中的事件触发时运行，也可以手动触发，或按定义的时间表触发。工作流程在存储库的 .github&#x2F;workflows 目录中定义，存储库可以有多个工作流程，每个工作流程都可以执行不同的任务集。</p>
-<h5 id="事件"><a href="#事件" class="headerlink" title="事件"></a>事件</h5><p>事件是存储库中触发工作流程运行的特定活动。 例如，当有人创建拉取请求、打开议题或将提交推送到存储库时。</p>
-<h5 id="作业"><a href="#作业" class="headerlink" title="作业"></a>作业</h5><p>作业是工作流中在同一运行器上执行的一组步骤。 每个步骤要么是一个将要执行的 shell 脚本，要么是一个将要运行的动作。 步骤按顺序执行，并且相互依赖。 由于每个步骤都在同一运行器上执行，因此您可以将数据从一个步骤共享到另一个步骤。 例如，可以有一个生成应用程序的步骤，后跟一个测试已生成应用程序的步骤。</p>
-<h5 id="操作"><a href="#操作" class="headerlink" title="操作"></a>操作</h5><p>操作是用于 GitHub Actions 平台的自定义应用程序，它执行复杂但经常重复的任务。 使用操作可帮助减少在工作流程文件中编写的重复代码量。</p>
-<h5 id="运行程序"><a href="#运行程序" class="headerlink" title="运行程序"></a>运行程序</h5><p>运行程序是触发工作流时运行工作流的服务器。 每个运行器一次可以运行一个作业。 GitHub 提供 Ubuntu Linux、Microsoft Windows 和 macOS 运行器来运行您的工作流程；每个工作流程运行都在新预配的全新虚拟机中执行。</p>
-<h5 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h5><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><code class="hljs YAML"><span class="hljs-comment"># .github/workflows/*.yml</span><br><br><span class="hljs-attr">name:</span> <span class="hljs-string">learn-github-actions</span>  <span class="hljs-comment"># 工作流名称</span><br><span class="hljs-attr">run-name:</span> <span class="hljs-string">$&#123;&#123;</span> <span class="hljs-string">github.actor</span> <span class="hljs-string">&#125;&#125;</span> <span class="hljs-string">is</span> <span class="hljs-string">learning</span> <span class="hljs-string">GitHub</span> <span class="hljs-string">Actions</span>  <span class="hljs-comment"># 工作流运行名称</span><br><span class="hljs-attr">on:</span> [<span class="hljs-string">push</span>]  <span class="hljs-comment"># 触发器，使用push事件</span><br><span class="hljs-attr">jobs:</span>  <span class="hljs-comment"># 工作流下的所有作业</span><br>  <span class="hljs-attr">check-bats-version:</span>  <span class="hljs-comment"># 定义一个作业名称</span><br>    <span class="hljs-attr">runs-on:</span> <span class="hljs-string">ubuntu-latest</span>  <span class="hljs-comment"># 运行程序</span><br>    <span class="hljs-attr">steps:</span>  <span class="hljs-comment"># 作业下的所有步骤</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-attr">uses:</span> <span class="hljs-string">actions/checkout@v3</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-attr">uses:</span> <span class="hljs-string">actions/setup-node@v3</span><br>        <span class="hljs-attr">with:</span><br>          <span class="hljs-attr">node-version:</span> <span class="hljs-string">&#x27;14&#x27;</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-attr">run:</span> <span class="hljs-string">npm</span> <span class="hljs-string">install</span> <span class="hljs-string">-g</span> <span class="hljs-string">bats</span>  <span class="hljs-comment"># 操作(执行命令)</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-attr">run:</span> <span class="hljs-string">bats</span> <span class="hljs-string">-v</span><br></code></pre></td></tr></table></figure>
-
-<h3 id="查找和自定义操作"><a href="#查找和自定义操作" class="headerlink" title="查找和自定义操作"></a>查找和自定义操作</h3><h5 id="使用-GitHub-Marketplace"><a href="#使用-GitHub-Marketplace" class="headerlink" title="使用 GitHub Marketplace"></a>使用 GitHub Marketplace</h5><h5 id="从相同仓库添加操作"><a href="#从相同仓库添加操作" class="headerlink" title="从相同仓库添加操作"></a>从相同仓库添加操作</h5><p>使用相对路径</p>
-<figure class="highlight gherkin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs gherkin">|<span class="hljs-string">-- hello-world (repository)</span><br><span class="hljs-string"></span>|<span class="hljs-string">   </span>|<span class="hljs-string">__ .github</span><br><span class="hljs-string"></span>|<span class="hljs-string">       └── workflows</span><br><span class="hljs-string"></span>|<span class="hljs-string">           └── my-first-workflow.yml</span><br><span class="hljs-string"></span>|<span class="hljs-string">       └── actions</span><br><span class="hljs-string"></span>|<span class="hljs-string">           </span>|<span class="hljs-string">__ hello-world-action</span><br><span class="hljs-string"></span>|<span class="hljs-string">               └── action.yml</span><br></code></pre></td></tr></table></figure>
-
-<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs YAML"><span class="hljs-attr">jobs:</span><br>  <span class="hljs-attr">build:</span><br>    <span class="hljs-attr">runs-on:</span> <span class="hljs-string">ubuntu-latest</span><br>    <span class="hljs-attr">steps:</span><br>      <span class="hljs-comment"># This step checks out a copy of your repository.</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-attr">uses:</span> <span class="hljs-string">actions/checkout@v3</span><br>      <span class="hljs-comment"># This step references the directory that contains the action.</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-attr">uses:</span> <span class="hljs-string">./.github/actions/hello-world-action</span><br></code></pre></td></tr></table></figure>
-
-<p>action.yml 文件用于提供操作的元数据。</p>
-<h5 id="从不同仓库添加操作"><a href="#从不同仓库添加操作" class="headerlink" title="从不同仓库添加操作"></a>从不同仓库添加操作</h5><figure class="highlight nestedtext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs nestedtext"><span class="hljs-attribute">jobs</span><span class="hljs-punctuation">:</span><br>  <span class="hljs-attribute">my_first_job</span><span class="hljs-punctuation">:</span><br>    <span class="hljs-attribute">steps</span><span class="hljs-punctuation">:</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-string">name: My first step</span><br>        <span class="hljs-attribute">uses</span><span class="hljs-punctuation">:</span> <span class="hljs-string">actions/setup-node@v3</span><br></code></pre></td></tr></table></figure>
-
-<h5 id="对自定义操作使用发行版管理"><a href="#对自定义操作使用发行版管理" class="headerlink" title="对自定义操作使用发行版管理"></a>对自定义操作使用发行版管理</h5><ol>
-<li>使用标签</li>
-<li>使用 SHA</li>
-<li>使用分支</li>
+                <h3 id="npm-login-无法登录"><a href="#npm-login-无法登录" class="headerlink" title="npm login 无法登录"></a>npm login 无法登录</h3><p>npm config设置了registry也无效，需要直接在命令后添加–registry</p>
+<h3 id="npm-intall-无法安装依赖，提示401"><a href="#npm-intall-无法安装依赖，提示401" class="headerlink" title="npm intall 无法安装依赖，提示401"></a>npm intall 无法安装依赖，提示401</h3><ol>
+<li>确认配置npm Bearer Token Realm，使其处于active</li>
+<li>确认group的地址完全一致，包含最后一个 ‘&#x2F;‘</li>
 </ol>
-<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs YAML"><span class="hljs-attr">steps:</span><br>  <span class="hljs-bullet">-</span> <span class="hljs-attr">uses:</span> <span class="hljs-string">actions/javascript-action@mai</span><br></code></pre></td></tr></table></figure>
 
-<h5 id="对操作使用输入和输出"><a href="#对操作使用输入和输出" class="headerlink" title="对操作使用输入和输出"></a>对操作使用输入和输出</h5>
                 <blockquote><p id='rainbow'> 🏝️ </p> <blockquote>
   <script>
 fetch('https://api.eatrice.top')
@@ -386,7 +368,7 @@ fetch('https://api.eatrice.top')
     
       <span class="category-chain">
         
-  <a href="/categories/github/" class="category-chain-item">github</a>
+  <a href="/categories/Nexus/" class="category-chain-item">Nexus</a>
   
   
 
@@ -401,9 +383,7 @@ fetch('https://api.eatrice.top')
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/github/" class="print-no-link">#github</a>
-      
-        <a href="/tags/gh-actions/" class="print-no-link">#gh-actions</a>
+        <a href="/tags/Nexus/" class="print-no-link">#Nexus</a>
       
     </div>
   
@@ -415,8 +395,8 @@ fetch('https://api.eatrice.top')
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>关于 - Github Actions</div>
-      <div>https://mkamv.xyz/github/gh-actions/abstract/</div>
+      <div>无法使用group问题 - Nexus</div>
+      <div>https://mkamv.xyz/nexus/无法使用group问题/</div>
     </div>
     <div class="license-meta">
       
@@ -428,7 +408,7 @@ fetch('https://api.eatrice.top')
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2023年6月6日</div>
+          <div>2023年11月21日</div>
         </div>
       
       
@@ -460,18 +440,12 @@ fetch('https://api.eatrice.top')
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/github/gh-actions/basic-feture/" title="基本功能 - Gihub Actions">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">基本功能 - Gihub Actions</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/gis/dc/%E6%A6%82%E8%A7%88/" title="DC文档概览">
-                        <span class="hidden-mobile">DC文档概览</span>
+                      <a href="/react/Reverse%E5%BC%95%E5%8F%91%E7%9A%84%E6%97%A0%E9%99%90%E5%BE%AA%E7%8E%AF/" title="React Develop Tool 在Chrome里出不来的问题- React">
+                        <span class="hidden-mobile">React Develop Tool 在Chrome里出不来的问题- React</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
@@ -494,7 +468,7 @@ fetch('https://api.eatrice.top')
         var options = Object.assign(
           {"clientID":"380b721444e388f986da","clientSecret":"cd4569aa7c4e07f1301593bbd51fb45572592099","repo":"mkamvi.github.io","owner":"Mkamvi","admin":["Mkamvi"],"language":"zh-CN","labels":["Gitalk"],"perPage":10,"pagerDirection":"last","distractionFreeMode":false,"createIssueManually":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token"},
           {
-            id: '83fa4199aaad5ef8c962a565da542884'
+            id: '1ff1b2fbfc83c61e0defac27619a2fdc'
           }
         )
         var gitalk = new Gitalk(options);
