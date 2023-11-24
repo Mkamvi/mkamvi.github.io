@@ -4,6 +4,31 @@
   
   
   <entry>
+    <title>Vue3中定义组件name - Vue</title>
+    <link href="/vue/Vue3%E4%B8%AD%E5%AE%9A%E4%B9%89%E7%BB%84%E4%BB%B6name/"/>
+    <url>/vue/Vue3%E4%B8%AD%E5%AE%9A%E4%B9%89%E7%BB%84%E4%BB%B6name/</url>
+    
+    <content type="html"><![CDATA[<h3 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h3><p>想要方便的通过组件名称在 vue dev tool 中查看对应的组件结构，选项式 API 可以通过设置 name 达到这一目的</p><h3 id="Vue3-0"><a href="#Vue3-0" class="headerlink" title="Vue3.0"></a>Vue3.0</h3><p>默认是通过的文件名称展示，不太灵活；除此之外，还可以通过 defineOptions()函数</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs VUE">defineOptions(&#123;<br>  name: &#x27;ComponentNameYouWant&#x27;<br>&#125;)<br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+    <categories>
+      
+      <category>Vue</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Vue</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>无法使用group问题 - Nexus</title>
     <link href="/nexus/%E6%97%A0%E6%B3%95%E4%BD%BF%E7%94%A8group%E9%97%AE%E9%A2%98/"/>
     <url>/nexus/%E6%97%A0%E6%B3%95%E4%BD%BF%E7%94%A8group%E9%97%AE%E9%A2%98/</url>

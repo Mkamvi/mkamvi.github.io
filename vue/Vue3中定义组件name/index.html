@@ -16,22 +16,22 @@
   <meta name="author" content="荒">
   <meta name="keywords" content="大帅,博客,不良帅,mkamv,mkamvi,不良帅的博客,mkamv的博客">
   
-    <meta name="description" content="挤出面(网格 ‣ 挤出 ‣ 各面, E)沿法向挤出面(网格 ‣ 挤出 ‣ 各面, Alt-E)挤出各个面(网格 ‣ 挤出 ‣ 各面, Alt-E, 快捷键咋还重复了呢 ???)内插面(面 ‣ 内插面, I)尖分面(面 ‣ 尖分面, ?)三角面(面 ‣ 面三角化, Ctrl-T)三角面-四角面(面 ‣ 三角面 -&gt; 四边面, Alt-J)此工具需要至少两个相邻三角面，才能生成一个四边面。即使选">
+    <meta name="description" content="背景想要方便的通过组件名称在 vue dev tool 中查看对应的组件结构，选项式 API 可以通过设置 name 达到这一目的 Vue3.0默认是通过的文件名称展示，不太灵活；除此之外，还可以通过 defineOptions()函数 123defineOptions(&amp;#123;  name: &amp;#x27;ComponentNameYouWant&amp;#x27;&amp;#125;)">
 <meta property="og:type" content="article">
-<meta property="og:title" content="建模网格体编辑 · 面工具 - Blender">
-<meta property="og:url" content="https://mkamv.xyz/blender/model/mesh/edit/face-tool/index.html">
+<meta property="og:title" content="Vue3中定义组件name - Vue">
+<meta property="og:url" content="https://mkamv.xyz/vue/Vue3%E4%B8%AD%E5%AE%9A%E4%B9%89%E7%BB%84%E4%BB%B6name/index.html">
 <meta property="og:site_name" content="不良帅本帅">
-<meta property="og:description" content="挤出面(网格 ‣ 挤出 ‣ 各面, E)沿法向挤出面(网格 ‣ 挤出 ‣ 各面, Alt-E)挤出各个面(网格 ‣ 挤出 ‣ 各面, Alt-E, 快捷键咋还重复了呢 ???)内插面(面 ‣ 内插面, I)尖分面(面 ‣ 尖分面, ?)三角面(面 ‣ 面三角化, Ctrl-T)三角面-四角面(面 ‣ 三角面 -&gt; 四边面, Alt-J)此工具需要至少两个相邻三角面，才能生成一个四边面。即使选">
+<meta property="og:description" content="背景想要方便的通过组件名称在 vue dev tool 中查看对应的组件结构，选项式 API 可以通过设置 name 达到这一目的 Vue3.0默认是通过的文件名称展示，不太灵活；除此之外，还可以通过 defineOptions()函数 123defineOptions(&amp;#123;  name: &amp;#x27;ComponentNameYouWant&amp;#x27;&amp;#125;)">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2023-07-04T09:48:34.000Z">
-<meta property="article:modified_time" content="2023-11-24T03:48:22.349Z">
+<meta property="article:published_time" content="2023-11-24T11:39:07.000Z">
+<meta property="article:modified_time" content="2023-11-24T03:48:22.353Z">
 <meta property="article:author" content="荒">
-<meta property="article:tag" content="Blender">
+<meta property="article:tag" content="Vue">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title>建模网格体编辑 · 面工具 - Blender - 不良帅本帅</title>
+  <title>Vue3中定义组件name - Vue - 不良帅本帅</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -246,7 +246,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="建模网格体编辑 · 面工具 - Blender"></span>
+            <span id="subtitle" data-typed-text="Vue3中定义组件name - Vue"></span>
           
         </div>
 
@@ -257,8 +257,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2023-07-04 09:48" pubdate>
-          2023年7月4日 上午
+        <time datetime="2023-11-24 11:39" pubdate>
+          2023年11月24日 中午
         </time>
       </span>
     
@@ -269,7 +269,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          583 字
+          175 字
         
       </span>
     
@@ -280,7 +280,7 @@
         
         
         
-          5 分钟
+          2 分钟
         
       </span>
     
@@ -330,15 +330,15 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">建模网格体编辑 · 面工具 - Blender</h1>
+            <h1 id="seo-header">Vue3中定义组件name - Vue</h1>
             
             
               <div class="markdown-body">
                 
-                <h2 id="挤出面-网格-‣-挤出-‣-各面-E"><a href="#挤出面-网格-‣-挤出-‣-各面-E" class="headerlink" title="挤出面(网格 ‣ 挤出 ‣ 各面, E)"></a>挤出面(网格 ‣ 挤出 ‣ 各面, <kbd>E</kbd>)</h2><h2 id="沿法向挤出面-网格-‣-挤出-‣-各面-Alt-E"><a href="#沿法向挤出面-网格-‣-挤出-‣-各面-Alt-E" class="headerlink" title="沿法向挤出面(网格 ‣ 挤出 ‣ 各面, Alt-E)"></a>沿法向挤出面(网格 ‣ 挤出 ‣ 各面, <kbd>Alt-E</kbd>)</h2><h2 id="挤出各个面-网格-‣-挤出-‣-各面-Alt-E-快捷键咋还重复了呢"><a href="#挤出各个面-网格-‣-挤出-‣-各面-Alt-E-快捷键咋还重复了呢" class="headerlink" title="挤出各个面(网格 ‣ 挤出 ‣ 各面, Alt-E, 快捷键咋还重复了呢 ???)"></a>挤出各个面(网格 ‣ 挤出 ‣ 各面, <kbd>Alt-E</kbd>, 快捷键咋还重复了呢 ???)</h2><h2 id="内插面-面-‣-内插面-I"><a href="#内插面-面-‣-内插面-I" class="headerlink" title="内插面(面 ‣ 内插面, I)"></a>内插面(面 ‣ 内插面, <kbd>I</kbd>)</h2><h2 id="尖分面-面-‣-尖分面"><a href="#尖分面-面-‣-尖分面" class="headerlink" title="尖分面(面 ‣ 尖分面, ?)"></a>尖分面(面 ‣ 尖分面, ?)</h2><h2 id="三角面-面-‣-面三角化-Ctrl-T"><a href="#三角面-面-‣-面三角化-Ctrl-T" class="headerlink" title="三角面(面 ‣ 面三角化, Ctrl-T)"></a>三角面(面 ‣ 面三角化, <kbd>Ctrl-T</kbd>)</h2><h2 id="三角面-四角面-面-‣-三角面-gt-四边面-Alt-J"><a href="#三角面-四角面-面-‣-三角面-gt-四边面-Alt-J" class="headerlink" title="三角面-四角面(面 ‣ 三角面 -&gt; 四边面, Alt-J)"></a>三角面-四角面(面 ‣ 三角面 -&gt; 四边面, <kbd>Alt-J</kbd>)</h2><p>此工具需要至少两个相邻三角面，才能生成一个四边面。即使选中偶数个三角面，也可能无法获得全部的四边面。事实上，此工具会从现有的三角面尽可能创建尽可能多的偶数个方形的四边面，这也意味着一些三角面会保留</p>
-<h2 id="面实体化-面-‣-面实体化"><a href="#面实体化-面-‣-面实体化" class="headerlink" title="面实体化(面 ‣ 面实体化)"></a>面实体化(面 ‣ 面实体化)</h2><h2 id="线框-面-‣-完美建面"><a href="#线框-面-‣-完美建面" class="headerlink" title="线框(面 ‣ 完美建面)"></a>线框(面 ‣ 完美建面)</h2><h2 id="填充-面-‣-填充-Alt-F"><a href="#填充-面-‣-填充-Alt-F" class="headerlink" title="填充(面 ‣ 填充, Alt-F)"></a>填充(面 ‣ 填充, <kbd>Alt-F</kbd>)</h2><h2 id="栅格填充-面-‣-栅格填充"><a href="#栅格填充-面-‣-栅格填充" class="headerlink" title="栅格填充(面 ‣ 栅格填充)"></a>栅格填充(面 ‣ 栅格填充)</h2><p>栅格填充 使用一对相连的循环边，或单个闭合的循环边，沿四周几何形状填充栅格</p>
-<h2 id="完美建面-面-‣-完美建面"><a href="#完美建面-面-‣-完美建面" class="headerlink" title="完美建面(面 ‣ 完美建面)"></a>完美建面(面 ‣ 完美建面)</h2><p>减面</p>
-<h2 id="交集·切割-面-‣-交集（切割）"><a href="#交集·切割-面-‣-交集（切割）" class="headerlink" title="交集·切割(面 ‣ 交集（切割）)"></a>交集·切割(面 ‣ 交集（切割）)</h2><h2 id="交集·布尔-面-‣-交集（布尔）"><a href="#交集·布尔-面-‣-交集（布尔）" class="headerlink" title="交集·布尔(面 ‣ 交集（布尔）)"></a>交集·布尔(面 ‣ 交集（布尔）)</h2><h2 id="焊接边线到面-面-‣-焊接边线到面"><a href="#焊接边线到面-面-‣-焊接边线到面" class="headerlink" title="焊接边线到面(面 ‣ 焊接边线到面)"></a>焊接边线到面(面 ‣ 焊接边线到面)</h2><h2 id="平滑着色与平直着色"><a href="#平滑着色与平直着色" class="headerlink" title="平滑着色与平直着色"></a>平滑着色与平直着色</h2><h4 id="平滑着色-物体（Object-‣-平滑着色-Shade-Smooth）"><a href="#平滑着色-物体（Object-‣-平滑着色-Shade-Smooth）" class="headerlink" title="平滑着色(物体（Object) ‣ 平滑着色(Shade Smooth）)"></a>平滑着色(物体（Object) ‣ 平滑着色(Shade Smooth）)</h4><h4 id="平直着色-物体（Object-‣-平直着色-Shade-Flat）"><a href="#平直着色-物体（Object-‣-平直着色-Shade-Flat）" class="headerlink" title="平直着色(物体（Object) ‣ 平直着色(Shade Flat）)"></a>平直着色(物体（Object) ‣ 平直着色(Shade Flat）)</h4><h2 id="面数据"><a href="#面数据" class="headerlink" title="面数据"></a>面数据</h2><h4 id="旋转颜色-面-‣-面数据-‣旋转颜色"><a href="#旋转颜色-面-‣-面数据-‣旋转颜色" class="headerlink" title="旋转颜色(面 ‣ 面数据 ‣旋转颜色)"></a>旋转颜色(面 ‣ 面数据 ‣旋转颜色)</h4><h4 id="翻转颜色-面-‣-面数据-‣反转颜色"><a href="#翻转颜色-面-‣-面数据-‣反转颜色" class="headerlink" title="翻转颜色(面 ‣ 面数据 ‣反转颜色)"></a>翻转颜色(面 ‣ 面数据 ‣反转颜色)</h4><h4 id="旋转UV-面-‣-面数据-‣-旋转-UV"><a href="#旋转UV-面-‣-面数据-‣-旋转-UV" class="headerlink" title="旋转UV (面 ‣ 面数据 ‣ 旋转 UV)"></a>旋转UV (面 ‣ 面数据 ‣ 旋转 UV)</h4><h4 id="翻转UV-面-‣-面数据-‣反转-UV"><a href="#翻转UV-面-‣-面数据-‣反转-UV" class="headerlink" title="翻转UV (面 ‣ 面数据 ‣反转 UV)"></a>翻转UV (面 ‣ 面数据 ‣反转 UV)</h4><h4 id="翻转四边形细分-面-‣-面数据-‣-翻转四边形细分"><a href="#翻转四边形细分-面-‣-面数据-‣-翻转四边形细分" class="headerlink" title="翻转四边形细分(面 ‣ 面数据 ‣ 翻转四边形细分)"></a>翻转四边形细分(面 ‣ 面数据 ‣ 翻转四边形细分)</h4><h4 id="标记自由面-面-‣面数据-‣-标记自由面"><a href="#标记自由面-面-‣面数据-‣-标记自由面" class="headerlink" title="标记自由面 (面 ‣面数据 ‣ 标记自由面)"></a>标记自由面 (面 ‣面数据 ‣ 标记自由面)</h4><h4 id="清除自由面-面-‣面数据-‣-清除自由面"><a href="#清除自由面-面-‣面数据-‣-清除自由面" class="headerlink" title="清除自由面 (面 ‣面数据 ‣ 清除自由面)"></a>清除自由面 (面 ‣面数据 ‣ 清除自由面)</h4>
+                <h3 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h3><p>想要方便的通过组件名称在 vue dev tool 中查看对应的组件结构，选项式 API 可以通过设置 name 达到这一目的</p>
+<h3 id="Vue3-0"><a href="#Vue3-0" class="headerlink" title="Vue3.0"></a>Vue3.0</h3><p>默认是通过的文件名称展示，不太灵活；除此之外，还可以通过 defineOptions()函数</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs VUE">defineOptions(&#123;<br>  name: &#x27;ComponentNameYouWant&#x27;<br>&#125;)<br></code></pre></td></tr></table></figure>
+
                 <blockquote><p id='rainbow'> 🏝️ </p> <blockquote>
   <script>
 fetch('https://api.eatrice.top')
@@ -366,7 +366,7 @@ fetch('https://api.eatrice.top')
     
       <span class="category-chain">
         
-  <a href="/categories/Blender/" class="category-chain-item">Blender</a>
+  <a href="/categories/Vue/" class="category-chain-item">Vue</a>
   
   
 
@@ -381,7 +381,7 @@ fetch('https://api.eatrice.top')
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/Blender/" class="print-no-link">#Blender</a>
+        <a href="/tags/Vue/" class="print-no-link">#Vue</a>
       
     </div>
   
@@ -393,8 +393,8 @@ fetch('https://api.eatrice.top')
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>建模网格体编辑 · 面工具 - Blender</div>
-      <div>https://mkamv.xyz/blender/model/mesh/edit/face-tool/</div>
+      <div>Vue3中定义组件name - Vue</div>
+      <div>https://mkamv.xyz/vue/Vue3中定义组件name/</div>
     </div>
     <div class="license-meta">
       
@@ -406,7 +406,7 @@ fetch('https://api.eatrice.top')
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2023年7月4日</div>
+          <div>2023年11月24日</div>
         </div>
       
       
@@ -438,18 +438,12 @@ fetch('https://api.eatrice.top')
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/js-libs/pkg/" title="将NodeJS应用打成一个可执行文件">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">将NodeJS应用打成一个可执行文件</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/blender/model/mesh/edit/edge-tool/" title="建模网格体编辑 · 边工具 - Blender">
-                        <span class="hidden-mobile">建模网格体编辑 · 边工具 - Blender</span>
+                      <a href="/nexus/%E6%97%A0%E6%B3%95%E4%BD%BF%E7%94%A8group%E9%97%AE%E9%A2%98/" title="无法使用group问题 - Nexus">
+                        <span class="hidden-mobile">无法使用group问题 - Nexus</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
@@ -472,7 +466,7 @@ fetch('https://api.eatrice.top')
         var options = Object.assign(
           {"clientID":"380b721444e388f986da","clientSecret":"cd4569aa7c4e07f1301593bbd51fb45572592099","repo":"mkamvi.github.io","owner":"Mkamvi","admin":["Mkamvi"],"language":"zh-CN","labels":["Gitalk"],"perPage":10,"pagerDirection":"last","distractionFreeMode":false,"createIssueManually":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token"},
           {
-            id: '449d0b7c0a4c56a6c1a6177f1030e63f'
+            id: '3cec0c07f6cc81438cff49bd4c59710d'
           }
         )
         var gitalk = new Gitalk(options);
