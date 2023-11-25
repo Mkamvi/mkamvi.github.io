@@ -4,6 +4,31 @@
   
   
   <entry>
+    <title>2023年11月25日 - 工作总结</title>
+    <link href="/work/2023-11-25/"/>
+    <url>/work/2023-11-25/</url>
+    
+    <content type="html"><![CDATA[<blockquote><p>区间项目：管理看板</p></blockquote><h3 id="rc-gantt库私有化扩展"><a href="#rc-gantt库私有化扩展" class="headerlink" title="rc-gantt库私有化扩展"></a>rc-gantt库私有化扩展</h3><ol><li>时间跨度限制</li><li>自动导航到当前项目开始时间</li><li>表格列初始化宽度异常问题(扩展属性字段后添加到store初始化依赖，导致多次初始化)</li></ol><h3 id="解决nexus-npm-仓库使用gropu无法安装依赖问题"><a href="#解决nexus-npm-仓库使用gropu无法安装依赖问题" class="headerlink" title="解决nexus npm 仓库使用gropu无法安装依赖问题"></a>解决nexus npm 仓库使用gropu无法安装依赖问题</h3><ol><li>见 <a href="/nexus/%E6%97%A0%E6%B3%95%E4%BD%BF%E7%94%A8group%E9%97%AE%E9%A2%98">无法使用group问题</a></li></ol><h3 id="管理看板与组态编辑器3D页面动作交互"><a href="#管理看板与组态编辑器3D页面动作交互" class="headerlink" title="管理看板与组态编辑器3D页面动作交互"></a>管理看板与组态编辑器3D页面动作交互</h3><ol><li>postMessage实现双向通信</li><li>指令式协议快速从管理看板调取组态3D API</li><li>设计管理看板视角控制组件及图层控制Checkbox组件</li></ol>]]></content>
+    
+    
+    <categories>
+      
+      <category>工作总结</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>工作总结</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>Vue3中定义组件name - Vue</title>
     <link href="/vue/Vue3%E4%B8%AD%E5%AE%9A%E4%B9%89%E7%BB%84%E4%BB%B6name/"/>
     <url>/vue/Vue3%E4%B8%AD%E5%AE%9A%E4%B9%89%E7%BB%84%E4%BB%B6name/</url>
