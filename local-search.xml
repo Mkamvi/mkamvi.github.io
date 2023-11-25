@@ -4,6 +4,60 @@
   
   
   <entry>
+    <title>运算符 - JavaScript · 基础</title>
+    <link href="/javascript/%E8%BF%90%E7%AE%97%E7%AC%A6/"/>
+    <url>/javascript/%E8%BF%90%E7%AE%97%E7%AC%A6/</url>
+    
+    <content type="html"><![CDATA[<h3 id="位运算"><a href="#位运算" class="headerlink" title="位运算"></a>位运算</h3><h5 id="lt-lt-左移"><a href="#lt-lt-左移" class="headerlink" title="&lt;&lt;  (左移)"></a>&lt;&lt;  (左移)</h5><p>左移操作符 (&lt;&lt;) 将第一个操作数向左移动指定位数，左边超出的位数将会被清除，右边将会补零</p><blockquote><p>x &lt;&lt; y: x * 2 ** y, 即结果是x乘以2的y次方，涉及到2倍数的数字相乘都可以使用左移运算提高执行效率</p></blockquote><h5 id="gt-gt-右移"><a href="#gt-gt-右移" class="headerlink" title="&gt;&gt;  (右移)"></a>&gt;&gt;  (右移)</h5><p>右移运算符（&gt;&gt;）将一个操作数的二进制表示形式向右移动指定位数，该操作数可以是数值或者 BigInt 类型。右边移出位被丢弃，左边移出的空位补符号位（最左边那位）。该操作也称为“符号位传播右移”（sign-propagating right shift）或“算术右移”（arithmetic right shift），因为返回值的符号位与第一个操作数的符号位相同</p><h5 id="gt-gt-gt-无符号右移"><a href="#gt-gt-gt-无符号右移" class="headerlink" title="&gt;&gt;&gt;  (无符号右移)"></a>&gt;&gt;&gt;  (无符号右移)</h5><blockquote><p>x &gt;&gt;&gt; 0: 这是被滥用的一个表达式，用于将非数字转换成0，或将数字转换为整数</p></blockquote><p>无符号右移运算符（&gt;&gt;&gt;）（零填充右移）将左操作数计算为无符号数，并将该数字的二进制表示形式移位为右操作数指定的位数，取模 32。向右移动的多余位将被丢弃，零位从左移入。其符号位变为 0，因此结果始终为非负数。与其他按位运算符不同，零填充右移返回一个无符号 32 位整数</p><blockquote><p>100 &gt;&gt;&gt; 32 与 100 &gt;&gt;&gt; 0结果相同，因为位偏移量将始终是介于 0 和 31 之间的正整数（包括 0 和 31）</p></blockquote><p>HoHo !</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>JavaScript</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>JavaScript</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>Array - 源码阅读 · lodash</title>
+    <link href="/code-reading/lodash/Array/"/>
+    <url>/code-reading/lodash/Array/</url>
+    
+    <content type="html"><![CDATA[<h3 id="slice"><a href="#slice" class="headerlink" title="_.slice()"></a>_.slice()</h3><h5 id="和原生-Array-slice-的区别"><a href="#和原生-Array-slice-的区别" class="headerlink" title="和原生 Array.slice 的区别"></a>和原生 Array.slice 的区别</h5><ol><li>返回的是一个密集数组，原生的有可能会返回一个稀疏数组</li><li>稀疏数组在迭代器里不会执行</li></ol><h5 id="源码细节"><a href="#源码细节" class="headerlink" title="源码细节"></a>源码细节</h5><ol><li>使用 &gt;&gt;&gt; 0 无符号右移运算符处理有可能的异常情况，将非整数变成一个整数</li><li>然后使用 while 循环做了一次浅拷贝</li></ol><h5 id="源码"><a href="#源码" class="headerlink" title="源码"></a>源码</h5><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><code class="hljs JavaScript"><span class="hljs-keyword">function</span> <span class="hljs-title function_">slice</span>(<span class="hljs-params">array, start, end</span>) &#123;<br>    <span class="hljs-keyword">let</span> length = array == <span class="hljs-literal">null</span> ? <span class="hljs-number">0</span> : array.<span class="hljs-property">length</span>;<br>    <span class="hljs-keyword">if</span> (!length) &#123;<br>        <span class="hljs-keyword">return</span> [];<br>    &#125;<br>    start = start == <span class="hljs-literal">null</span> ? <span class="hljs-number">0</span> : start;<br>    end = end === <span class="hljs-literal">undefined</span> ? length : end;<br><br>    <span class="hljs-keyword">if</span> (start &lt; <span class="hljs-number">0</span>) &#123;<br>        start = -start &gt; length ? <span class="hljs-number">0</span> : length + start;<br>    &#125;<br>    end = end &gt; length ? length : end;<br>    <span class="hljs-keyword">if</span> (end &lt; <span class="hljs-number">0</span>) &#123;<br>        end += length;<br>    &#125;<br>    length = start &gt; end ? <span class="hljs-number">0</span> : (end - start) &gt;&gt;&gt; <span class="hljs-number">0</span>;<br>    start &gt;&gt;&gt;= <span class="hljs-number">0</span>;<br><br>    <span class="hljs-keyword">let</span> index = -<span class="hljs-number">1</span>;<br>    <span class="hljs-keyword">const</span> result = <span class="hljs-keyword">new</span> <span class="hljs-title class_">Array</span>(length);<br>    <span class="hljs-keyword">while</span> (++index &lt; length) &#123;<br>        result[index] = array[index + start];<br>    &#125;<br>    <span class="hljs-keyword">return</span> result;<br>&#125;<br></code></pre></td></tr></table></figure><p>HoHo !</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>源码阅读</category>
+      
+      <category>lodash</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>源码阅读</tag>
+      
+      <tag>lodash</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>2023年11月25日 - 工作总结</title>
     <link href="/work/2023-11-25/"/>
     <url>/work/2023-11-25/</url>
