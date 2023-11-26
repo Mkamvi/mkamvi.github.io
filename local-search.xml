@@ -4,6 +4,39 @@
   
   
   <entry>
+    <title>数值 - Hero · Lua · Lua程序设计读书笔记</title>
+    <link href="/hzero/lua/Lua%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E6%95%B0%E5%80%BC/"/>
+    <url>/hzero/lua/Lua%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E6%95%B0%E5%80%BC/</url>
+    
+    <content type="html"><![CDATA[<h3 id="数值常量"><a href="#数值常量" class="headerlink" title="数值常量"></a>数值常量</h3><ol><li>双精度浮点格式(和JS一样)</li><li>32位整型和单精度浮点型(5.3版本引入，目前是5.4.6)</li><li>math.type()和type(), math.type能够区别数字类型</li></ol><h3 id="算术运算"><a href="#算术运算" class="headerlink" title="算术运算"></a>算术运算</h3><ol><li>+ - * &#x2F; &#x2F;&#x2F; % ^</li></ol><blockquote><p>&#x2F;&#x2F; floor除法，结果向下取整, ^是幂运算</p></blockquote><h3 id="关系运算"><a href="#关系运算" class="headerlink" title="关系运算"></a>关系运算</h3><ol><li>&lt; &gt; &lt;&#x3D; &gt;&#x3D; &#x3D;&#x3D; ~&#x3D;</li></ol><blockquote><p>~&#x3D; 是不等于</p></blockquote><h3 id="数学库"><a href="#数学库" class="headerlink" title="数学库"></a>数学库</h3><ol><li>math.random()</li><li>math.floor()</li><li>math.ceil()</li><li>math.modf()  向0取整，会返回小数部分作为第二个结果</li></ol><h3 id="表示范围"><a href="#表示范围" class="headerlink" title="表示范围"></a>表示范围</h3><ol><li>最大整数: 2^63 - 1(精简版使用32位)</li><li>出现溢出时会回环</li><li>1 &#x2F; 7 * 7 结果是0.999999994  而不是1(5.1版本测试是1，直接在线上测试是1.0，这个需要再调研下，0.1 + 0.2 &#x3D; 0.3，总之比JS处理的好多了)</li></ol><h3 id="惯例"><a href="#惯例" class="headerlink" title="惯例"></a>惯例</h3><ol><li>整型总是可以转换为浮点型</li><li>注意超过最大值(2^53)次时这种转换会出现异常</li><li>可以通过与0进行按位或运算，可以把浮点型值强制转换为整型值(若值超出范围则会抛出异常)</li><li>另一种强制转换方式是math.tointeger(), 不是整数或超出范围则返回nil</li></ol><h3 id="运算符优先级"><a href="#运算符优先级" class="headerlink" title="运算符优先级"></a>运算符优先级</h3>]]></content>
+    
+    
+    <categories>
+      
+      <category>Hero</category>
+      
+      <category>Lua</category>
+      
+      <category>Lua程序设计读书笔记</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Hero</tag>
+      
+      <tag>Lua</tag>
+      
+      <tag>Lua程序设计读书笔记</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>运算符 - JavaScript · 基础</title>
     <link href="/javascript/%E8%BF%90%E7%AE%97%E7%AC%A6/"/>
     <url>/javascript/%E8%BF%90%E7%AE%97%E7%AC%A6/</url>

@@ -16,22 +16,24 @@
   <meta name="author" content="荒">
   <meta name="keywords" content="大帅,博客,不良帅,mkamv,mkamvi,不良帅的博客,mkamv的博客">
   
-    <meta name="description" content="简介一般只有在模型基本不会改动时，才会做 UV 展开。网格的每个面都可以有许多 UV 纹理。每个 UV 纹理都可以为其分配一个单独的图像。在 UV 编辑器中将面展开到 UV 纹理时，会自动为网格的每个面指定四个 UV 坐标：这些坐标定义了图像或纹理映射到面上的方式。为了与 XYZ 坐标区分开来，U 轴和 V 轴用于标记每个点的坐标。因此得名，UV 开包装。这些坐标也可用于渲染或实时视口显示 工作流">
+    <meta name="description" content="数值常量 双精度浮点格式(和JS一样) 32位整型和单精度浮点型(5.3版本引入，目前是5.4.6) math.type()和type(), math.type能够区别数字类型  算术运算 + - * &#x2F; &#x2F;&#x2F; % ^   &#x2F;&#x2F; floor除法，结果向下取整, ^是幂运算  关系运算 &lt; &gt; &lt;&#x3D; &gt;&#x3D;">
 <meta property="og:type" content="article">
-<meta property="og:title" content="建模网格体UV · 展开 - Blender">
-<meta property="og:url" content="https://mkamv.xyz/blender/model/mesh/uv/uv-unwrapping/index.html">
+<meta property="og:title" content="数值 - Hero · Lua · Lua程序设计读书笔记">
+<meta property="og:url" content="https://mkamv.xyz/hzero/lua/Lua%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E6%95%B0%E5%80%BC/index.html">
 <meta property="og:site_name" content="不良帅本帅">
-<meta property="og:description" content="简介一般只有在模型基本不会改动时，才会做 UV 展开。网格的每个面都可以有许多 UV 纹理。每个 UV 纹理都可以为其分配一个单独的图像。在 UV 编辑器中将面展开到 UV 纹理时，会自动为网格的每个面指定四个 UV 坐标：这些坐标定义了图像或纹理映射到面上的方式。为了与 XYZ 坐标区分开来，U 轴和 V 轴用于标记每个点的坐标。因此得名，UV 开包装。这些坐标也可用于渲染或实时视口显示 工作流">
+<meta property="og:description" content="数值常量 双精度浮点格式(和JS一样) 32位整型和单精度浮点型(5.3版本引入，目前是5.4.6) math.type()和type(), math.type能够区别数字类型  算术运算 + - * &#x2F; &#x2F;&#x2F; % ^   &#x2F;&#x2F; floor除法，结果向下取整, ^是幂运算  关系运算 &lt; &gt; &lt;&#x3D; &gt;&#x3D;">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2023-07-07T10:43:26.000Z">
+<meta property="article:published_time" content="2023-11-26T17:55:41.000Z">
 <meta property="article:modified_time" content="2023-11-26T10:56:42.228Z">
 <meta property="article:author" content="荒">
-<meta property="article:tag" content="Blender">
+<meta property="article:tag" content="Hero">
+<meta property="article:tag" content="Lua">
+<meta property="article:tag" content="Lua程序设计读书笔记">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title>建模网格体UV · 展开 - Blender - 不良帅本帅</title>
+  <title>数值 - Hero · Lua · Lua程序设计读书笔记 - 不良帅本帅</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -246,7 +248,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="建模网格体UV · 展开 - Blender"></span>
+            <span id="subtitle" data-typed-text="数值 - Hero · Lua · Lua程序设计读书笔记"></span>
           
         </div>
 
@@ -257,8 +259,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2023-07-07 10:43" pubdate>
-          2023年7月7日 上午
+        <time datetime="2023-11-26 17:55" pubdate>
+          2023年11月26日 下午
         </time>
       </span>
     
@@ -269,7 +271,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          409 字
+          525 字
         
       </span>
     
@@ -280,7 +282,7 @@
         
         
         
-          4 分钟
+          5 分钟
         
       </span>
     
@@ -330,27 +332,46 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">建模网格体UV · 展开 - Blender</h1>
+            <h1 id="seo-header">数值 - Hero · Lua · Lua程序设计读书笔记</h1>
             
             
               <div class="markdown-body">
                 
-                <h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>一般只有在模型基本不会改动时，才会做 UV 展开。网格的每个面都可以有许多 UV 纹理。每个 UV 纹理都可以为其分配一个单独的图像。在 UV 编辑器中将面展开到 UV 纹理时，会自动为网格的每个面指定四个 UV 坐标：这些坐标定义了图像或纹理映射到面上的方式。为了与 XYZ 坐标区分开来，U 轴和 V 轴用于标记每个点的坐标。因此得名，UV 开包装。这些坐标也可用于渲染或实时视口显示</p>
-<h4 id="工作流程"><a href="#工作流程" class="headerlink" title="工作流程"></a>工作流程</h4><ol>
-<li>标记缝合边</li>
-<li>从 UV ‣ 展开 菜单或 3D 视口的 UV 菜单中选择一个 UV 映射方法</li>
-<li>添加测试图像，检查畸变</li>
-<li>在 UV 编辑器调整 UV</li>
+                <h3 id="数值常量"><a href="#数值常量" class="headerlink" title="数值常量"></a>数值常量</h3><ol>
+<li>双精度浮点格式(和JS一样)</li>
+<li>32位整型和单精度浮点型(5.3版本引入，目前是5.4.6)</li>
+<li>math.type()和type(), math.type能够区别数字类型</li>
 </ol>
-<h2 id="缝合边"><a href="#缝合边" class="headerlink" title="缝合边"></a>缝合边</h2><p>缝合线越多，拉伸越少，不过会给贴图流程带来麻烦。最好是在保证最少的拉伸的前提下，尽可能少用缝合线</p>
-<h4 id="工作流程-1"><a href="#工作流程-1" class="headerlink" title="工作流程"></a>工作流程</h4><ol>
-<li>类似于标记缝合边，但是是为锐边设置的</li>
-<li>展开</li>
-<li>反复调整缝合线</li>
-<li>手动调整 UV</li>
+<h3 id="算术运算"><a href="#算术运算" class="headerlink" title="算术运算"></a>算术运算</h3><ol>
+<li>+ - * &#x2F; &#x2F;&#x2F; % ^</li>
 </ol>
-<h2 id="标记缝合线-边-‣-标记-x2F-清除缝合边-Ctrl-E"><a href="#标记缝合线-边-‣-标记-x2F-清除缝合边-Ctrl-E" class="headerlink" title="标记缝合线(边 ‣ 标记&#x2F;清除缝合边, Ctrl-E)"></a>标记缝合线(边 ‣ 标记&#x2F;清除缝合边, <kbd>Ctrl-E</kbd>)</h2><h4 id="沿孤岛边线生成缝合边-UV-‣-沿孤岛边线生成缝合边"><a href="#沿孤岛边线生成缝合边-UV-‣-沿孤岛边线生成缝合边" class="headerlink" title="沿孤岛边线生成缝合边(UV ‣ 沿孤岛边线生成缝合边)"></a>沿孤岛边线生成缝合边(UV ‣ 沿孤岛边线生成缝合边)</h4><p>将现有 UV 孤岛边界标记为缝合边，可用在修改已展开网格的 UV 时</p>
-
+<blockquote>
+<p>&#x2F;&#x2F; floor除法，结果向下取整, ^是幂运算</p>
+</blockquote>
+<h3 id="关系运算"><a href="#关系运算" class="headerlink" title="关系运算"></a>关系运算</h3><ol>
+<li>&lt; &gt; &lt;&#x3D; &gt;&#x3D; &#x3D;&#x3D; ~&#x3D;</li>
+</ol>
+<blockquote>
+<p>~&#x3D; 是不等于</p>
+</blockquote>
+<h3 id="数学库"><a href="#数学库" class="headerlink" title="数学库"></a>数学库</h3><ol>
+<li>math.random()</li>
+<li>math.floor()</li>
+<li>math.ceil()</li>
+<li>math.modf()  向0取整，会返回小数部分作为第二个结果</li>
+</ol>
+<h3 id="表示范围"><a href="#表示范围" class="headerlink" title="表示范围"></a>表示范围</h3><ol>
+<li>最大整数: 2^63 - 1(精简版使用32位)</li>
+<li>出现溢出时会回环</li>
+<li>1 &#x2F; 7 * 7 结果是0.999999994  而不是1(5.1版本测试是1，直接在线上测试是1.0，这个需要再调研下，0.1 + 0.2 &#x3D; 0.3，总之比JS处理的好多了)</li>
+</ol>
+<h3 id="惯例"><a href="#惯例" class="headerlink" title="惯例"></a>惯例</h3><ol>
+<li>整型总是可以转换为浮点型</li>
+<li>注意超过最大值(2^53)次时这种转换会出现异常</li>
+<li>可以通过与0进行按位或运算，可以把浮点型值强制转换为整型值(若值超出范围则会抛出异常)</li>
+<li>另一种强制转换方式是math.tointeger(), 不是整数或超出范围则返回nil</li>
+</ol>
+<h3 id="运算符优先级"><a href="#运算符优先级" class="headerlink" title="运算符优先级"></a>运算符优先级</h3>
                 <blockquote><p id='rainbow'> 🏝️ </p> <blockquote>
   <script>
 fetch('https://api.eatrice.top')
@@ -378,8 +399,22 @@ fetch('https://api.eatrice.top')
     
       <span class="category-chain">
         
-  <a href="/categories/Blender/" class="category-chain-item">Blender</a>
+  <a href="/categories/Hero/" class="category-chain-item">Hero</a>
   
+  
+    <span>></span>
+    
+  <a href="/categories/Hero/Lua/" class="category-chain-item">Lua</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/Hero/Lua/Lua%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/" class="category-chain-item">Lua程序设计读书笔记</a>
+  
+  
+
+  
+
   
 
       </span>
@@ -393,7 +428,11 @@ fetch('https://api.eatrice.top')
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/Blender/" class="print-no-link">#Blender</a>
+        <a href="/tags/Hero/" class="print-no-link">#Hero</a>
+      
+        <a href="/tags/Lua/" class="print-no-link">#Lua</a>
+      
+        <a href="/tags/Lua%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/" class="print-no-link">#Lua程序设计读书笔记</a>
       
     </div>
   
@@ -405,8 +444,8 @@ fetch('https://api.eatrice.top')
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>建模网格体UV · 展开 - Blender</div>
-      <div>https://mkamv.xyz/blender/model/mesh/uv/uv-unwrapping/</div>
+      <div>数值 - Hero · Lua · Lua程序设计读书笔记</div>
+      <div>https://mkamv.xyz/hzero/lua/Lua程序设计读书笔记/数值/</div>
     </div>
     <div class="license-meta">
       
@@ -418,7 +457,7 @@ fetch('https://api.eatrice.top')
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2023年7月7日</div>
+          <div>2023年11月26日</div>
         </div>
       
       
@@ -450,18 +489,12 @@ fetch('https://api.eatrice.top')
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/blender/model/mesh/uv/tools/" title="建模网格体UV · 工具 - Blender">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">建模网格体UV · 工具 - Blender</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/blender/model/mesh/uv/uv-texture-spaces/" title="建模网格体UV · UV &amp; 纹理空间 - Blender">
-                        <span class="hidden-mobile">建模网格体UV · UV &amp; 纹理空间 - Blender</span>
+                      <a href="/javascript/%E8%BF%90%E7%AE%97%E7%AC%A6/" title="运算符 - JavaScript · 基础">
+                        <span class="hidden-mobile">运算符 - JavaScript · 基础</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
@@ -484,7 +517,7 @@ fetch('https://api.eatrice.top')
         var options = Object.assign(
           {"clientID":"380b721444e388f986da","clientSecret":"cd4569aa7c4e07f1301593bbd51fb45572592099","repo":"mkamvi.github.io","owner":"Mkamvi","admin":["Mkamvi"],"language":"zh-CN","labels":["Gitalk"],"perPage":10,"pagerDirection":"last","distractionFreeMode":false,"createIssueManually":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token"},
           {
-            id: 'add2a4494165fa45040800cc5c947072'
+            id: '3ad081af4e500ba0cbc38ce4f91b1330'
           }
         )
         var gitalk = new Gitalk(options);
