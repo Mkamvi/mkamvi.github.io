@@ -4,6 +4,31 @@
   
   
   <entry>
+    <title>WebSocket - Web</title>
+    <link href="/web/WebSocket/"/>
+    <url>/web/WebSocket/</url>
+    
+    <content type="html"><![CDATA[<h3 id="设计关键点"><a href="#设计关键点" class="headerlink" title="设计关键点"></a>设计关键点</h3><ol><li>onopen 事件确认连接建立</li><li>确认连接后可发送 send 事件</li><li>监听 message 事件获取后台推送消息</li><li>设计断线重连机制</li><li>不需要时及时调用 close 方法销毁</li></ol>]]></content>
+    
+    
+    <categories>
+      
+      <category>Web</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Web</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>树 - Hero · 算法 · 算法通关之路</title>
     <link href="/hzero/algo/%E7%AE%97%E6%B3%95%E9%80%9A%E8%BF%87%E4%B9%8B%E8%B7%AF/%E6%A0%91/"/>
     <url>/hzero/algo/%E7%AE%97%E6%B3%95%E9%80%9A%E8%BF%87%E4%B9%8B%E8%B7%AF/%E6%A0%91/</url>
