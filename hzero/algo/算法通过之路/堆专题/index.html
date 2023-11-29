@@ -16,22 +16,24 @@
   <meta name="author" content="荒">
   <meta name="keywords" content="大帅,博客,不良帅,mkamv,mkamvi,不良帅的博客,mkamv的博客">
   
-    <meta name="description" content="曲线显示控制柄法向">
+    <meta name="description" content="基本概念堆就是动态帮你求极值的，push和pop是其两个核心API  关键词：优先队列  动态求极值  跳表核心感觉跟搜索二叉树差不多，分层索引确实形成了一个搜索二叉树  Hah 二叉堆二叉堆就是一颗特殊的完全二叉树。它的特殊性只体现在一点，那就是父节点的权值不大于儿子的权值（小顶堆）">
 <meta property="og:type" content="article">
-<meta property="og:title" content="建模曲线 · 曲线显示- Blender">
-<meta property="og:url" content="https://mkamv.xyz/blender/model/curves/display/index.html">
+<meta property="og:title" content="堆 (上) - Hero · 算法 · 算法通关之路">
+<meta property="og:url" content="https://mkamv.xyz/hzero/algo/%E7%AE%97%E6%B3%95%E9%80%9A%E8%BF%87%E4%B9%8B%E8%B7%AF/%E5%A0%86%E4%B8%93%E9%A2%98/index.html">
 <meta property="og:site_name" content="不良帅本帅">
-<meta property="og:description" content="曲线显示控制柄法向">
+<meta property="og:description" content="基本概念堆就是动态帮你求极值的，push和pop是其两个核心API  关键词：优先队列  动态求极值  跳表核心感觉跟搜索二叉树差不多，分层索引确实形成了一个搜索二叉树  Hah 二叉堆二叉堆就是一颗特殊的完全二叉树。它的特殊性只体现在一点，那就是父节点的权值不大于儿子的权值（小顶堆）">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2023-07-19T09:32:31.000Z">
-<meta property="article:modified_time" content="2023-11-29T00:26:43.783Z">
+<meta property="article:published_time" content="2023-11-29T08:10:02.000Z">
+<meta property="article:modified_time" content="2023-11-29T00:26:43.787Z">
 <meta property="article:author" content="荒">
-<meta property="article:tag" content="Blender">
+<meta property="article:tag" content="Hero">
+<meta property="article:tag" content="算法">
+<meta property="article:tag" content="算法通关之路">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title>建模曲线 · 曲线显示- Blender - 不良帅本帅</title>
+  <title>堆 (上) - Hero · 算法 · 算法通关之路 - 不良帅本帅</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -246,7 +248,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="建模曲线 · 曲线显示- Blender"></span>
+            <span id="subtitle" data-typed-text="堆 (上) - Hero · 算法 · 算法通关之路"></span>
           
         </div>
 
@@ -257,8 +259,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2023-07-19 09:32" pubdate>
-          2023年7月19日 上午
+        <time datetime="2023-11-29 08:10" pubdate>
+          2023年11月29日 早上
         </time>
       </span>
     
@@ -269,7 +271,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          9 字
+          134 字
         
       </span>
     
@@ -280,7 +282,7 @@
         
         
         
-          1 分钟
+          2 分钟
         
       </span>
     
@@ -330,12 +332,18 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">建模曲线 · 曲线显示- Blender</h1>
+            <h1 id="seo-header">堆 (上) - Hero · 算法 · 算法通关之路</h1>
             
             
               <div class="markdown-body">
                 
-                <h2 id="曲线显示"><a href="#曲线显示" class="headerlink" title="曲线显示"></a>曲线显示</h2><h3 id="控制柄"><a href="#控制柄" class="headerlink" title="控制柄"></a>控制柄</h3><h3 id="法向"><a href="#法向" class="headerlink" title="法向"></a>法向</h3>
+                <h3 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h3><p>堆就是动态帮你求极值的，push和pop是其两个核心API</p>
+<blockquote>
+<p>关键词：优先队列  动态求极值</p>
+</blockquote>
+<h5 id="跳表"><a href="#跳表" class="headerlink" title="跳表"></a>跳表</h5><p>核心感觉跟搜索二叉树差不多，分层索引确实形成了一个搜索二叉树  Hah</p>
+<h5 id="二叉堆"><a href="#二叉堆" class="headerlink" title="二叉堆"></a>二叉堆</h5><p>二叉堆就是一颗特殊的完全二叉树。它的特殊性只体现在一点，那就是父节点的权值不大于儿子的权值（小顶堆）</p>
+
                 <blockquote><p id='rainbow'> 🏝️ </p> <blockquote>
   <script>
 fetch('https://api.eatrice.top')
@@ -363,8 +371,22 @@ fetch('https://api.eatrice.top')
     
       <span class="category-chain">
         
-  <a href="/categories/Blender/" class="category-chain-item">Blender</a>
+  <a href="/categories/Hero/" class="category-chain-item">Hero</a>
   
+  
+    <span>></span>
+    
+  <a href="/categories/Hero/%E7%AE%97%E6%B3%95/" class="category-chain-item">算法</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/Hero/%E7%AE%97%E6%B3%95/%E7%AE%97%E6%B3%95%E9%80%9A%E5%85%B3%E4%B9%8B%E8%B7%AF/" class="category-chain-item">算法通关之路</a>
+  
+  
+
+  
+
   
 
       </span>
@@ -378,7 +400,11 @@ fetch('https://api.eatrice.top')
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/Blender/" class="print-no-link">#Blender</a>
+        <a href="/tags/Hero/" class="print-no-link">#Hero</a>
+      
+        <a href="/tags/%E7%AE%97%E6%B3%95/" class="print-no-link">#算法</a>
+      
+        <a href="/tags/%E7%AE%97%E6%B3%95%E9%80%9A%E5%85%B3%E4%B9%8B%E8%B7%AF/" class="print-no-link">#算法通关之路</a>
       
     </div>
   
@@ -390,8 +416,8 @@ fetch('https://api.eatrice.top')
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>建模曲线 · 曲线显示- Blender</div>
-      <div>https://mkamv.xyz/blender/model/curves/display/</div>
+      <div>堆 (上) - Hero · 算法 · 算法通关之路</div>
+      <div>https://mkamv.xyz/hzero/algo/算法通过之路/堆专题/</div>
     </div>
     <div class="license-meta">
       
@@ -403,7 +429,7 @@ fetch('https://api.eatrice.top')
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2023年7月19日</div>
+          <div>2023年11月29日</div>
         </div>
       
       
@@ -435,18 +461,12 @@ fetch('https://api.eatrice.top')
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/blender/model/surfaces/introduction/" title="建模面 · 简介 - Blender">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">建模面 · 简介 - Blender</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/blender/model/curves/properties/" title="建模曲线 · 属性 - Blender">
-                        <span class="hidden-mobile">建模曲线 · 属性 - Blender</span>
+                      <a href="/web/WebSocket/" title="WebSocket - Web">
+                        <span class="hidden-mobile">WebSocket - Web</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
@@ -469,7 +489,7 @@ fetch('https://api.eatrice.top')
         var options = Object.assign(
           {"clientID":"380b721444e388f986da","clientSecret":"cd4569aa7c4e07f1301593bbd51fb45572592099","repo":"mkamvi.github.io","owner":"Mkamvi","admin":["Mkamvi"],"language":"zh-CN","labels":["Gitalk"],"perPage":10,"pagerDirection":"last","distractionFreeMode":false,"createIssueManually":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token"},
           {
-            id: '076f2cf57664d31620dcdc039ea48419'
+            id: 'a64e356eb9ce953de3729cc72cfe14c1'
           }
         )
         var gitalk = new Gitalk(options);
