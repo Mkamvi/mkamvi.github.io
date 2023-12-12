@@ -4,6 +4,31 @@
   
   
   <entry>
+    <title>内容超出后无法滚动查看全部 -  CSS · Flex</title>
+    <link href="/css/flex%E6%BB%9A%E5%8A%A8%E5%8C%BA%E5%B1%95%E7%A4%BA%E4%B8%8D%E5%85%A8%E9%97%AE%E9%A2%98/"/>
+    <url>/css/flex%E6%BB%9A%E5%8A%A8%E5%8C%BA%E5%B1%95%E7%A4%BA%E4%B8%8D%E5%85%A8%E9%97%AE%E9%A2%98/</url>
+    
+    <content type="html"><![CDATA[<h3 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h3><p>就是一个Flex盒子然后里面包含着诸多子项，比如有10 个，但是限制了容器的高度并且制定了子项的高度，这样的话容器放不下就只能滚动，但是实际结果是滚动条无法滚动到最上面，有一部分被截断了没法看全，大概代码如下：</p><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs CSS"><span class="hljs-selector-class">.container</span> &#123;<br>  <span class="hljs-attribute">display</span>: flex;<br>  <span class="hljs-attribute">flex-direction</span>: column;<br>  <span class="hljs-attribute">align-items</span>: center;<br>  <span class="hljs-attribute">justify-content</span>: center;<br>  <span class="hljs-attribute">height</span>: <span class="hljs-number">200px</span>;<br>  <span class="hljs-attribute">overflow-y</span>: auto;<br>&#125;<br><br><span class="hljs-selector-class">.item</span> &#123;<br>  <span class="hljs-attribute">height</span>: <span class="hljs-number">40px</span>;<br>&#125;<br></code></pre></td></tr></table></figure><p>很好奇，所以搜罗了一番：</p><p>这篇说的比较明白：</p><ol><li><a href="https://stackoverflow.com/questions/33454533/cant-scroll-to-top-of-flex-item-that-is-overflowing-container">https://stackoverflow.com/questions/33454533/cant-scroll-to-top-of-flex-item-that-is-overflowing-container</a></li></ol><p>这个快速给你提供了几种可行的解决方案，可以通过在容器外设置滚动条或者子项使用margin: auto代替justify-content和align-items.里面还链了一个MDN的讨论文档，但失效了。不过还有一段描述（抄了一段）：</p><p>与CSS中的其他居中方法不同，Flexbox的对齐属性进行“真正”居中。这意味着弹性项将保持居中，即使它们溢出弹性容器。</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>CSS</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>CSS</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>对数坐标 - echarts</title>
     <link href="/echarts/%E5%AF%B9%E6%95%B0%E5%9D%90%E6%A0%87/"/>
     <url>/echarts/%E5%AF%B9%E6%95%B0%E5%9D%90%E6%A0%87/</url>

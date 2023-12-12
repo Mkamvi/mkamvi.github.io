@@ -16,23 +16,22 @@
   <meta name="author" content="荒">
   <meta name="keywords" content="大帅,博客,不良帅,mkamv,mkamvi,不良帅的博客,mkamv的博客">
   
-    <meta name="description" content="1. Object.prototype.toString()可以从其返回值 [object Undefined] 中判断出其对象类型，包括数组">
+    <meta name="description" content="问题描述就是一个Flex盒子然后里面包含着诸多子项，比如有10 个，但是限制了容器的高度并且制定了子项的高度，这样的话容器放不下就只能滚动，但是实际结果是滚动条无法滚动到最上面，有一部分被截断了没法看全，大概代码如下： 123456789101112.container &amp;#123;  display: flex;  flex-direction: column;  align-items: ce">
 <meta property="og:type" content="article">
-<meta property="og:title" content="我不知道的JavaScript - 源码阅读 · lodash">
-<meta property="og:url" content="https://mkamv.xyz/code-reading/lodash/%E6%88%91%E4%B8%8D%E7%9F%A5%E9%81%93%E7%9A%84JavaScript/index.html">
+<meta property="og:title" content="内容超出后无法滚动查看全部 -  CSS · Flex">
+<meta property="og:url" content="https://mkamv.xyz/css/flex%E6%BB%9A%E5%8A%A8%E5%8C%BA%E5%B1%95%E7%A4%BA%E4%B8%8D%E5%85%A8%E9%97%AE%E9%A2%98/index.html">
 <meta property="og:site_name" content="不良帅本帅">
-<meta property="og:description" content="1. Object.prototype.toString()可以从其返回值 [object Undefined] 中判断出其对象类型，包括数组">
+<meta property="og:description" content="问题描述就是一个Flex盒子然后里面包含着诸多子项，比如有10 个，但是限制了容器的高度并且制定了子项的高度，这样的话容器放不下就只能滚动，但是实际结果是滚动条无法滚动到最上面，有一部分被截断了没法看全，大概代码如下： 123456789101112.container &amp;#123;  display: flex;  flex-direction: column;  align-items: ce">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2023-11-18T11:54:04.000Z">
+<meta property="article:published_time" content="2023-12-12T15:38:15.000Z">
 <meta property="article:modified_time" content="2023-12-12T08:03:18.397Z">
 <meta property="article:author" content="荒">
-<meta property="article:tag" content="源码阅读">
-<meta property="article:tag" content="lodash">
+<meta property="article:tag" content="CSS">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title>我不知道的JavaScript - 源码阅读 · lodash - 不良帅本帅</title>
+  <title>内容超出后无法滚动查看全部 -  CSS · Flex - 不良帅本帅</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -247,7 +246,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="我不知道的JavaScript - 源码阅读 · lodash"></span>
+            <span id="subtitle" data-typed-text="内容超出后无法滚动查看全部 -  CSS · Flex"></span>
           
         </div>
 
@@ -258,8 +257,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2023-11-18 11:54" pubdate>
-          2023年11月18日 中午
+        <time datetime="2023-12-12 15:38" pubdate>
+          2023年12月12日 下午
         </time>
       </span>
     
@@ -270,7 +269,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          67 字
+          582 字
         
       </span>
     
@@ -281,7 +280,7 @@
         
         
         
-          1 分钟
+          5 分钟
         
       </span>
     
@@ -331,12 +330,21 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">我不知道的JavaScript - 源码阅读 · lodash</h1>
+            <h1 id="seo-header">内容超出后无法滚动查看全部 -  CSS · Flex</h1>
             
             
               <div class="markdown-body">
                 
-                <h3 id="1-Object-prototype-toString"><a href="#1-Object-prototype-toString" class="headerlink" title="1. Object.prototype.toString()"></a>1. Object.prototype.toString()</h3><p>可以从其返回值 [object Undefined] 中判断出其对象类型，包括数组</p>
+                <h3 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h3><p>就是一个Flex盒子然后里面包含着诸多子项，比如有10 个，但是限制了容器的高度并且制定了子项的高度，这样的话容器放不下就只能滚动，但是实际结果是滚动条无法滚动到最上面，有一部分被截断了没法看全，大概代码如下：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs CSS"><span class="hljs-selector-class">.container</span> &#123;<br>  <span class="hljs-attribute">display</span>: flex;<br>  <span class="hljs-attribute">flex-direction</span>: column;<br>  <span class="hljs-attribute">align-items</span>: center;<br>  <span class="hljs-attribute">justify-content</span>: center;<br>  <span class="hljs-attribute">height</span>: <span class="hljs-number">200px</span>;<br>  <span class="hljs-attribute">overflow-y</span>: auto;<br>&#125;<br><br><span class="hljs-selector-class">.item</span> &#123;<br>  <span class="hljs-attribute">height</span>: <span class="hljs-number">40px</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>很好奇，所以搜罗了一番：</p>
+<p>这篇说的比较明白：</p>
+<ol>
+<li><a target="_blank" rel="noopener" href="https://stackoverflow.com/questions/33454533/cant-scroll-to-top-of-flex-item-that-is-overflowing-container">https://stackoverflow.com/questions/33454533/cant-scroll-to-top-of-flex-item-that-is-overflowing-container</a></li>
+</ol>
+<p>这个快速给你提供了几种可行的解决方案，可以通过在容器外设置滚动条或者子项使用margin: auto代替justify-content和align-items.里面还链了一个MDN的讨论文档，但失效了。不过还有一段描述（抄了一段）：</p>
+<p>与CSS中的其他居中方法不同，Flexbox的对齐属性进行“真正”居中。这意味着弹性项将保持居中，即使它们溢出弹性容器。</p>
 
                 <blockquote><p id='rainbow'> 🏝️ </p> <blockquote>
   <script>
@@ -365,15 +373,8 @@ fetch('https://api.eatrice.top')
     
       <span class="category-chain">
         
-  <a href="/categories/%E6%BA%90%E7%A0%81%E9%98%85%E8%AF%BB/" class="category-chain-item">源码阅读</a>
+  <a href="/categories/CSS/" class="category-chain-item">CSS</a>
   
-  
-    <span>></span>
-    
-  <a href="/categories/%E6%BA%90%E7%A0%81%E9%98%85%E8%AF%BB/lodash/" class="category-chain-item">lodash</a>
-  
-  
-
   
 
       </span>
@@ -387,9 +388,7 @@ fetch('https://api.eatrice.top')
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/%E6%BA%90%E7%A0%81%E9%98%85%E8%AF%BB/" class="print-no-link">#源码阅读</a>
-      
-        <a href="/tags/lodash/" class="print-no-link">#lodash</a>
+        <a href="/tags/CSS/" class="print-no-link">#CSS</a>
       
     </div>
   
@@ -401,8 +400,8 @@ fetch('https://api.eatrice.top')
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>我不知道的JavaScript - 源码阅读 · lodash</div>
-      <div>https://mkamv.xyz/code-reading/lodash/我不知道的JavaScript/</div>
+      <div>内容超出后无法滚动查看全部 -  CSS · Flex</div>
+      <div>https://mkamv.xyz/css/flex滚动区展示不全问题/</div>
     </div>
     <div class="license-meta">
       
@@ -414,7 +413,7 @@ fetch('https://api.eatrice.top')
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2023年11月18日</div>
+          <div>2023年12月12日</div>
         </div>
       
       
@@ -446,18 +445,12 @@ fetch('https://api.eatrice.top')
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/hzero/lua/Lua%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/Lua%E8%AF%AD%E8%A8%80%E5%85%A5%E9%97%A8/" title="Lua语言入门 - Hero · Lua · Lua程序设计读书笔记">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">Lua语言入门 - Hero · Lua · Lua程序设计读书笔记</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/mac/%E5%A6%82%E4%BD%95%E5%BE%AE%E4%BF%A1%E7%BC%93%E5%AD%98%E6%8C%82%E8%BD%BD%E5%88%B0%E5%A4%96%E6%8C%82%E7%A1%AC%E7%9B%98/" title="如何将微信缓存挂载到外挂硬盘">
-                        <span class="hidden-mobile">如何将微信缓存挂载到外挂硬盘</span>
+                      <a href="/echarts/%E5%AF%B9%E6%95%B0%E5%9D%90%E6%A0%87/" title="对数坐标 - echarts">
+                        <span class="hidden-mobile">对数坐标 - echarts</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
@@ -480,7 +473,7 @@ fetch('https://api.eatrice.top')
         var options = Object.assign(
           {"clientID":"380b721444e388f986da","clientSecret":"cd4569aa7c4e07f1301593bbd51fb45572592099","repo":"mkamvi.github.io","owner":"Mkamvi","admin":["Mkamvi"],"language":"zh-CN","labels":["Gitalk"],"perPage":10,"pagerDirection":"last","distractionFreeMode":false,"createIssueManually":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token"},
           {
-            id: '5f282608dabaff9891182040f8afa027'
+            id: 'f5dd98e181b2f8889ee5b3684021f6f7'
           }
         )
         var gitalk = new Gitalk(options);
