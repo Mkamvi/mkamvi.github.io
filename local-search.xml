@@ -4,6 +4,89 @@
   
   
   <entry>
+    <title>Object - 源码阅读 · lodash</title>
+    <link href="/code-reading/lodash/Object/"/>
+    <url>/code-reading/lodash/Object/</url>
+    
+    <content type="html"><![CDATA[<h3 id="Object"><a href="#Object" class="headerlink" title="Object"></a>Object</h3><h5 id="at-object-paths"><a href="#at-object-paths" class="headerlink" title="_.at(object, [paths])"></a>_.at(object, [paths])</h5><blockquote><p>返回一个由数组path作为key从object取到的所有值集合，这个可以很方便的从一个杂乱的对象数组中快速索引到想要获取到的一些对象或值</p></blockquote><p>path取值的实现是通过while循环，索引对象key而获得最终值</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>源码阅读</category>
+      
+      <category>lodash</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>源码阅读</tag>
+      
+      <tag>lodash</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>Function - 源码阅读 · lodash</title>
+    <link href="/code-reading/lodash/Function/"/>
+    <url>/code-reading/lodash/Function/</url>
+    
+    <content type="html"><![CDATA[<h3 id="Function"><a href="#Function" class="headerlink" title="Function"></a>Function</h3><h5 id="after-n-func"><a href="#after-n-func" class="headerlink" title="_.after(n, func)"></a>_.after(n, func)</h5><blockquote><p>返回一个函数，在该函数调用n次后执行func函数，这个在多个异步操作中确认所有任务都结束时感觉非常有用</p></blockquote><p>实现原理是借助闭包将n存储作计数用</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>源码阅读</category>
+      
+      <category>lodash</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>源码阅读</tag>
+      
+      <tag>lodash</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>基础知识 - art-template</title>
+    <link href="/art-template/%E5%9F%BA%E7%A1%80/"/>
+    <url>/art-template/%E5%9F%BA%E7%A1%80/</url>
+    
+    <content type="html"><![CDATA[<h2 id="模版"><a href="#模版" class="headerlink" title="模版"></a>模版</h2><p>同时支持支持标准语法和原始语法，标准语法支持基本模板语法以及基本 JavaScript 表达式；原始语法支持任意 JavaScript 语句，这和 EJS 一样</p><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs HTML"><br><span class="hljs-comment">&lt;!-- -------------------------------- 标准语法 --------------------------------- --&gt;</span><br>&#123;&#123;if user&#125;&#125;<br>  <span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span>&#123;&#123;user.name&#125;&#125;<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span><br>&#123;&#123;/if&#125;&#125;<br><br><br><span class="hljs-comment">&lt;!-- -------------------------------- 原始语法 --------------------------------- --&gt;</span><br>&lt;% if (user) &#123; %&gt;<br>  <span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span>&lt;%= user.name %&gt;<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span><br>&lt;% &#125; %&gt;<br></code></pre></td></tr></table></figure><h2 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h2><h3 id="变量输出"><a href="#变量输出" class="headerlink" title="变量输出"></a>变量输出</h3><h5 id="标准语法"><a href="#标准语法" class="headerlink" title="标准语法"></a>标准语法</h5><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs HTML">&#123;&#123;value&#125;&#125;<br>&#123;&#123;data.key&#125;&#125;<br>&#123;&#123;data[&#x27;key&#x27;]&#125;&#125;<br>&#123;&#123;a ? b : c&#125;&#125;<br>&#123;&#123;a || b&#125;&#125;<br>&#123;&#123;a + b&#125;&#125;<br></code></pre></td></tr></table></figure><h5 id="原始语法"><a href="#原始语法" class="headerlink" title="原始语法"></a>原始语法</h5><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs HTML">&lt;%= value %&gt;<br>&lt;%= data.key %&gt;<br>&lt;%= data[&#x27;key&#x27;] %&gt;<br>&lt;%= a ? b : c %&gt;<br>&lt;%= a || b %&gt;<br>&lt;%= a + b %&gt;<br></code></pre></td></tr></table></figure><h3 id="原生输出"><a href="#原生输出" class="headerlink" title="原生输出"></a>原生输出</h3><h5 id="标准语法-1"><a href="#标准语法-1" class="headerlink" title="标准语法"></a>标准语法</h5><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs HTML">&#123;&#123;@ value &#125;&#125;<br></code></pre></td></tr></table></figure><h5 id="原始语法-1"><a href="#原始语法-1" class="headerlink" title="原始语法"></a>原始语法</h5><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs HTML">&lt;%- value %&gt;<br></code></pre></td></tr></table></figure><h2 id="条件"><a href="#条件" class="headerlink" title="条件"></a>条件</h2><h5 id="标准语法-2"><a href="#标准语法-2" class="headerlink" title="标准语法"></a>标准语法</h5><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs HTML">&#123;&#123;if value&#125;&#125; ... &#123;&#123;/if&#125;&#125;<br>&#123;&#123;if v1&#125;&#125; ... &#123;&#123;else if v2&#125;&#125; ... &#123;&#123;/if&#125;&#125;<br></code></pre></td></tr></table></figure><h5 id="原始语法-2"><a href="#原始语法-2" class="headerlink" title="原始语法"></a>原始语法</h5><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs HTML">&lt;% if (value) &#123; %&gt; ... &lt;% &#125; %&gt;<br>&lt;% if (v1) &#123; %&gt; ... &lt;% &#125; else if (v2) &#123; %&gt; ... &lt;% &#125; %&gt;<br></code></pre></td></tr></table></figure><h2 id="循环"><a href="#循环" class="headerlink" title="循环"></a>循环</h2><h5 id="标准语法-3"><a href="#标准语法-3" class="headerlink" title="标准语法"></a>标准语法</h5><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs HTML">&#123;&#123;each target&#125;&#125;<br>    &#123;&#123;$index&#125;&#125; &#123;&#123;$value&#125;&#125;<br>&#123;&#123;/each&#125;&#125;<br></code></pre></td></tr></table></figure><h5 id="原始语法-3"><a href="#原始语法-3" class="headerlink" title="原始语法"></a>原始语法</h5><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs HTML">&lt;% for(var i = 0; i &lt; target.length; i++)&#123; %&gt;<br>    &lt;%= i %&gt; &lt;%= target[i] %&gt;<br>&lt;% &#125; %&gt;<br></code></pre></td></tr></table></figure><h2 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h2><h5 id="标准语法-4"><a href="#标准语法-4" class="headerlink" title="标准语法"></a>标准语法</h5><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs HTML">&#123;&#123;set temp = data.sub.content&#125;&#125;<br></code></pre></td></tr></table></figure><h5 id="原始语法-4"><a href="#原始语法-4" class="headerlink" title="原始语法"></a>原始语法</h5><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs HTML">&lt;% var temp = data.sub.content; %&gt;<br></code></pre></td></tr></table></figure><h2 id="模版继承"><a href="#模版继承" class="headerlink" title="模版继承"></a>模版继承</h2><h5 id="标准语法-5"><a href="#标准语法-5" class="headerlink" title="标准语法"></a>标准语法</h5><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs HTML">&#123;&#123;extend &#x27;./layout.art&#x27;&#125;&#125;<br><br><span class="hljs-comment">&lt;!-- 这个会注入到layout.art里面  类似vue里的slot name为head --&gt;</span><br>&#123;&#123;block &#x27;head&#x27;&#125;&#125; ... &#123;&#123;/block&#125;&#125;<br></code></pre></td></tr></table></figure><h5 id="原始语法-5"><a href="#原始语法-5" class="headerlink" title="原始语法"></a>原始语法</h5><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs HTML">&lt;% extend(&#x27;./layout.art&#x27;) %&gt;<br>&lt;% block(&#x27;head&#x27;, function()&#123; %&gt; ... &lt;% &#125;) %&gt;<br></code></pre></td></tr></table></figure><h2 id="子模版"><a href="#子模版" class="headerlink" title="子模版"></a>子模版</h2><h5 id="标准语法-6"><a href="#标准语法-6" class="headerlink" title="标准语法"></a>标准语法</h5><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs HTML">&#123;&#123;include &#x27;./header.art&#x27;&#125;&#125;<br>&#123;&#123;include &#x27;./header.art&#x27; data&#125;&#125;<br></code></pre></td></tr></table></figure><h5 id="原始语法-6"><a href="#原始语法-6" class="headerlink" title="原始语法"></a>原始语法</h5><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs HTML">&lt;% include(&#x27;./header.art&#x27;) %&gt;<br>&lt;% include(&#x27;./header.art&#x27;, data) %&gt;<br></code></pre></td></tr></table></figure><h2 id="过滤器"><a href="#过滤器" class="headerlink" title="过滤器"></a>过滤器</h2><h5 id="标准语法-7"><a href="#标准语法-7" class="headerlink" title="标准语法"></a>标准语法</h5><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs HTML">&#123;&#123;date | timestamp | dateFormat &#x27;yyyy-MM-dd hh:mm:ss&#x27;&#125;&#125;<br></code></pre></td></tr></table></figure><h5 id="原始语法-7"><a href="#原始语法-7" class="headerlink" title="原始语法"></a>原始语法</h5><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs HTML">&lt;%= $imports.dateFormat($imports.timestamp(date), &#x27;yyyy-MM-dd hh:mm:ss&#x27;) %&gt;<br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+    <categories>
+      
+      <category>art-template</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>art-template</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>内容超出后无法滚动查看全部 -  CSS · Flex</title>
     <link href="/css/flex%E6%BB%9A%E5%8A%A8%E5%8C%BA%E5%B1%95%E7%A4%BA%E4%B8%8D%E5%85%A8%E9%97%AE%E9%A2%98/"/>
     <url>/css/flex%E6%BB%9A%E5%8A%A8%E5%8C%BA%E5%B1%95%E7%A4%BA%E4%B8%8D%E5%85%A8%E9%97%AE%E9%A2%98/</url>
@@ -46,6 +129,35 @@
     <tags>
       
       <tag>echarts</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>Math - 源码阅读 · lodash</title>
+    <link href="/code-reading/lodash/Math/"/>
+    <url>/code-reading/lodash/Math/</url>
+    
+    <content type="html"><![CDATA[<h3 id="Math"><a href="#Math" class="headerlink" title="Math"></a>Math</h3><h5 id="add"><a href="#add" class="headerlink" title="_.add()"></a>_.add()</h5><ol><li>函数生成函数</li><li>baseToNumber(): 处理了Symbol, 其他使用了 <strong>+</strong> 操作符转换</li><li>baseToString(): 处理了Array，Symbol，-0(-0 &#x3D;&#x3D;&#x3D; 0，所以使用 1 &#x2F; -0 &#x3D;&#x3D;&#x3D; Number.NEGATIVE_INFINITY)</li><li>相加的两个参数有一个为字符串，则以字符串的规则相加(和原生JS的+运算符操作类似)</li><li>处理了undefined</li></ol>]]></content>
+    
+    
+    <categories>
+      
+      <category>源码阅读</category>
+      
+      <category>lodash</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>源码阅读</tag>
+      
+      <tag>lodash</tag>
       
     </tags>
     
