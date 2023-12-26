@@ -24,7 +24,7 @@
 <meta property="og:description" content="关于上下文上下文是一种访问工作流运行、变量、运行器环境、作业及步骤相关信息的方式。 每个上下文都是一个包含属性的对象，属性可以是字符串或其他对象。 使用表达式访问上下文1$&amp;#123;&amp;#123; &lt;context&gt; &amp;#125;&amp;#125;  访问上下文的两种方式 github[‘sha’] github.sha  上下文类型 默认环境变量：仅存在于执行作业的运行器上 上下文：你可以">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2023-06-08T17:15:03.000Z">
-<meta property="article:modified_time" content="2023-12-16T08:07:49.702Z">
+<meta property="article:modified_time" content="2023-12-26T03:16:14.427Z">
 <meta property="article:author" content="荒">
 <meta property="article:tag" content="github">
 <meta property="article:tag" content="gh-actions">
@@ -437,17 +437,7 @@
 </ol>
 <figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><code class="hljs YAML"><span class="hljs-attr">name:</span> <span class="hljs-string">Reusable</span> <span class="hljs-string">deploy</span> <span class="hljs-string">workflow</span><br><span class="hljs-attr">on:</span><br>  <span class="hljs-attr">workflow_call:</span><br>    <span class="hljs-attr">inputs:</span><br>      <span class="hljs-attr">build_id:</span><br>        <span class="hljs-attr">required:</span> <span class="hljs-literal">true</span><br>        <span class="hljs-attr">type:</span> <span class="hljs-string">number</span><br>      <span class="hljs-attr">deploy_target:</span><br>        <span class="hljs-attr">required:</span> <span class="hljs-literal">true</span><br>        <span class="hljs-attr">type:</span> <span class="hljs-string">string</span><br>      <span class="hljs-attr">perform_deploy:</span><br>        <span class="hljs-attr">required:</span> <span class="hljs-literal">true</span><br>        <span class="hljs-attr">type:</span> <span class="hljs-string">boolean</span><br><br><span class="hljs-attr">jobs:</span><br>  <span class="hljs-attr">deploy:</span><br>    <span class="hljs-attr">runs-on:</span> <span class="hljs-string">ubuntu-latest</span><br>    <span class="hljs-attr">if:</span> <span class="hljs-string">$&#123;&#123;</span> <span class="hljs-string">inputs.perform_deploy</span> <span class="hljs-string">&#125;&#125;</span><br>    <span class="hljs-attr">steps:</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-attr">name:</span> <span class="hljs-string">Deploy</span> <span class="hljs-string">build</span> <span class="hljs-string">to</span> <span class="hljs-string">target</span><br>        <span class="hljs-attr">run:</span> <span class="hljs-string">deploy</span> <span class="hljs-string">--build</span> <span class="hljs-string">$&#123;&#123;</span> <span class="hljs-string">inputs.build_id</span> <span class="hljs-string">&#125;&#125;</span> <span class="hljs-string">--target</span> <span class="hljs-string">$&#123;&#123;</span> <span class="hljs-string">inputs.deploy_target</span> <span class="hljs-string">&#125;&#125;</span><br></code></pre></td></tr></table></figure>
 
-                <blockquote><p id='rainbow'> 🏝️ </p> <blockquote>
-  <script>
-fetch('https://api.eatrice.top')
-  .then(response => response.json())
-  .then(data => {
-    var rainbow = document.getElementById('rainbow');
-    rainbow.innerHTML = data.Content;
-    rainbow.href = "https://rainbow.eatrice.top/?ID=" + data.ID;
-  })
-  .catch(console.error)
-</script> 
+                
               </div>
             
             <hr/>

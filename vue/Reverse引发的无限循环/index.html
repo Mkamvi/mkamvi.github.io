@@ -24,7 +24,7 @@
 <meta property="og:description" content="起因项目部署后访问页面，竟然直接卡死 ！ 原因Array.reverse() 竟然直接修改原数组！然后 Vue 里面便形成了 监听变化 &#x3D;&gt; 修改元素组 &#x3D;&gt; 变化 &#x3D;&gt; 监听变化 的无限循环中！ (一直以为是返回新数组！所以排查到是因为 reverse 调用引起的问题时，大吃一惊！)">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2023-09-20T10:21:46.000Z">
-<meta property="article:modified_time" content="2023-12-16T08:07:49.702Z">
+<meta property="article:modified_time" content="2023-12-26T03:16:14.427Z">
 <meta property="article:author" content="荒">
 <meta property="article:tag" content="Vue">
 <meta name="twitter:card" content="summary_large_image">
@@ -339,17 +339,7 @@
 <h3 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h3><p>Array.reverse() 竟然直接修改原数组！然后 Vue 里面便形成了 监听变化 &#x3D;&gt; 修改元素组 &#x3D;&gt; 变化 &#x3D;&gt; 监听变化 的无限循环中！</p>
 <p>(一直以为是返回新数组！所以排查到是因为 reverse 调用引起的问题时，大吃一惊！)</p>
 
-                <blockquote><p id='rainbow'> 🏝️ </p> <blockquote>
-  <script>
-fetch('https://api.eatrice.top')
-  .then(response => response.json())
-  .then(data => {
-    var rainbow = document.getElementById('rainbow');
-    rainbow.innerHTML = data.Content;
-    rainbow.href = "https://rainbow.eatrice.top/?ID=" + data.ID;
-  })
-  .catch(console.error)
-</script> 
+                
               </div>
             
             <hr/>

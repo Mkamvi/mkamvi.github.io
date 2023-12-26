@@ -24,7 +24,7 @@
 <meta property="og:description" content="顶点着色器一个顶点着色器的工作是生成裁剪空间坐标值，通常是以下的形式 123void main() &amp;#123;   gl_Position &#x3D; doMathToMakeClipspaceCoordinates&amp;#125;  每个顶点调用一次（顶点）着色器，每次调用都需要设置一个特殊的全局变量 gl_Position， 该变量的值就是裁减空间坐标值 顶点着色器需要的数据，可以通过以下三种方式获得:">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2023-06-19T11:47:05.000Z">
-<meta property="article:modified_time" content="2023-12-16T08:07:49.702Z">
+<meta property="article:modified_time" content="2023-12-26T03:16:14.427Z">
 <meta property="article:author" content="荒">
 <meta property="article:tag" content="WebGL">
 <meta name="twitter:card" content="summary_large_image">
@@ -420,17 +420,7 @@
 <p>GLSL 有一系列内置方法，其中大多数运算支持多种数据类型，并且一次可以运算多个分量，例如:</p>
 <figure class="highlight glsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><code class="hljs glsl"><span class="hljs-comment">// T可以是 float, vec2, vec3 或 vec4 。如果你传的是 vec4 返回的也是 vec4, 返回结果对应每个分量的正弦值。换句话说如果 v 是 vec4 类型</span><br>T <span class="hljs-built_in">sin</span>(T angle)<br><br><span class="hljs-type">vec4</span> s = <span class="hljs-built_in">sin</span>(v)<br>同<br><span class="hljs-type">vec4</span> s = <span class="hljs-type">vec4</span>(<span class="hljs-built_in">sin</span>(v.x), <span class="hljs-built_in">sin</span>(v.y), <span class="hljs-built_in">sin</span>(v.z), <span class="hljs-built_in">sin</span>(v.w))<br><br><span class="hljs-type">vec4</span> m = <span class="hljs-built_in">mix</span>(v1, v2, f);<br>同<br><span class="hljs-type">vec4</span> m = <span class="hljs-type">vec4</span>(<br>  <span class="hljs-built_in">mix</span>(v1.x, v2.x, f),<br>  <span class="hljs-built_in">mix</span>(v1.y, v2.y, f),<br>  <span class="hljs-built_in">mix</span>(v1.z, v2.z, f),<br>  <span class="hljs-built_in">mix</span>(v1.w, v2.w, f));<br></code></pre></td></tr></table></figure>
 
-                <blockquote><p id='rainbow'> 🏝️ </p> <blockquote>
-  <script>
-fetch('https://api.eatrice.top')
-  .then(response => response.json())
-  .then(data => {
-    var rainbow = document.getElementById('rainbow');
-    rainbow.innerHTML = data.Content;
-    rainbow.href = "https://rainbow.eatrice.top/?ID=" + data.ID;
-  })
-  .catch(console.error)
-</script> 
+                
               </div>
             
             <hr/>

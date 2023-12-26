@@ -4,6 +4,68 @@
   
   
   <entry>
+    <title>配置 - Nvim · 帮助文档</title>
+    <link href="/nvim/help/config/"/>
+    <url>/nvim/help/config/</url>
+    
+    <content type="html"><![CDATA[<h3 id="vimrc-文件"><a href="#vimrc-文件" class="headerlink" title="vimrc 文件"></a>vimrc 文件</h3><blockquote><p>:edit $MYVIMRC &#x2F;&#x2F; 在编辑器中执行即可打开配置文件</p></blockquote><ul><li>~&#x2F;.config&#x2F;nvim&#x2F;init.vim (Unix and OSX)</li><li>~&#x2F;AppData&#x2F;Local&#x2F;nvim&#x2F;init.vim (Windows)</li></ul><h3 id="添加一个包-package"><a href="#添加一个包-package" class="headerlink" title="添加一个包(package)"></a>添加一个包(package)</h3><ul><li>启动时自动加载</li><li>可选包</li></ul><blockquote><p>packadd</p></blockquote><p>内置的包管理器</p><h3 id="添加一个插件"><a href="#添加一个插件" class="headerlink" title="添加一个插件"></a>添加一个插件</h3><ul><li>全局插件(所有文件类型, 目录为~&#x2F;.local&#x2F;share&#x2F;nvim&#x2F;site&#x2F;plugin)</li><li>指定文件类型插件(插件目录为~&#x2F;.local&#x2F;share&#x2F;nvim&#x2F;site&#x2F;plugin)</li></ul><h5 id="为一种文件类型定义多个插件"><a href="#为一种文件类型定义多个插件" class="headerlink" title="为一种文件类型定义多个插件"></a>为一种文件类型定义多个插件</h5><pre><code class="hljs">ftplugin/&lt;filetype&gt;.vimftplugin/&lt;filetype&gt;_&lt;name&gt;.vimftplugin/&lt;filetype&gt;/&lt;name&gt;.vim</code></pre><h3 id="添加帮助文档"><a href="#添加帮助文档" class="headerlink" title="添加帮助文档"></a>添加帮助文档</h3><p>路径： ~&#x2F;.local&#x2F;share&#x2F;nvim&#x2F;site&#x2F;doc</p><h3 id="options-窗口"><a href="#options-窗口" class="headerlink" title="options 窗口"></a>options 窗口</h3><blockquote><p>:options</p></blockquote><p>可通过set * 设置(如：set ignorecase)</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Vim</category>
+      
+      <category>Nvim</category>
+      
+      <category>VimHelp</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Nvim</tag>
+      
+      <tag>Vim</tag>
+      
+      <tag>VimHelp</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>快捷键 - Nvim</title>
+    <link href="/nvim/shortcut/"/>
+    <url>/nvim/shortcut/</url>
+    
+    <content type="html"><![CDATA[<h3 id="常用快捷键"><a href="#常用快捷键" class="headerlink" title="常用快捷键"></a>常用快捷键</h3><table><thead><tr><th>快捷键</th><th>描述</th></tr></thead><tbody><tr><td>J</td><td>删除换行符</td></tr><tr><td>U</td><td>撤销行上所有操作，再次按下则是反撤销</td></tr><tr><td>O</td><td>当前行上方插入</td></tr><tr><td>ZZ</td><td>保存并退出</td></tr><tr><td>e!</td><td>恢复源文件并继续编辑</td></tr><tr><td>Ctrl-]</td><td>(帮助文档)进入子主题</td></tr><tr><td>Ctrl-T</td><td>(帮助文档)返回上一级</td></tr><tr><td>Ctrl-O</td><td>(帮助文档)回到初始的地方</td></tr></tbody></table>]]></content>
+    
+    
+    <categories>
+      
+      <category>Vim</category>
+      
+      <category>Nvim</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Nvim</tag>
+      
+      <tag>Vim</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>Object - 源码阅读 · lodash</title>
     <link href="/code-reading/lodash/Object/"/>
     <url>/code-reading/lodash/Object/</url>

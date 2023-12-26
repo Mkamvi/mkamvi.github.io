@@ -24,7 +24,7 @@
 <meta property="og:description" content="核心是借助 echarts 的 visualMap 属性： 示例1234567891011121314151617visualMap: [  &amp;#123;    dimension: 1, &#x2F;&#x2F; 数据维度索引（可以将series中的data看做一个二维数组）    seriesIndex: 4, &#x2F;&#x2F; 对应series的索引值，通过该属性可针对多个不同的的数据项设置不同的条件表达    outOf">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2023-09-05T10:53:10.000Z">
-<meta property="article:modified_time" content="2023-12-16T08:07:49.694Z">
+<meta property="article:modified_time" content="2023-12-26T03:16:14.427Z">
 <meta property="article:author" content="荒">
 <meta property="article:tag" content="echarts">
 <meta name="twitter:card" content="summary_large_image">
@@ -338,17 +338,7 @@
                 <p>核心是借助 echarts 的 visualMap 属性：</p>
 <h2 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-attr">visualMap</span>: [<br>  &#123;<br>    <span class="hljs-attr">dimension</span>: <span class="hljs-number">1</span>, <span class="hljs-comment">// 数据维度索引（可以将series中的data看做一个二维数组）</span><br>    <span class="hljs-attr">seriesIndex</span>: <span class="hljs-number">4</span>, <span class="hljs-comment">// 对应series的索引值，通过该属性可针对多个不同的的数据项设置不同的条件表达</span><br>    <span class="hljs-attr">outOfRange</span>: &#123;<br>      <span class="hljs-attr">color</span>: <span class="hljs-string">&quot;red&quot;</span>, <span class="hljs-comment">// 超出范围的设置</span><br>    &#125;,<br>    <span class="hljs-attr">pieces</span>: [<br>      <span class="hljs-comment">// 针对单项的条件(限制)表达`</span><br>      &#123;<br>        <span class="hljs-attr">gt</span>: <span class="hljs-number">1000</span>,<br>        <span class="hljs-attr">lt</span>: <span class="hljs-number">1500</span>,<br>        <span class="hljs-attr">color</span>: <span class="hljs-string">&quot;cyan&quot;</span>,<br>      &#125;,<br>    ],<br>  &#125;,<br>];<br></code></pre></td></tr></table></figure>
 
-                <blockquote><p id='rainbow'> 🏝️ </p> <blockquote>
-  <script>
-fetch('https://api.eatrice.top')
-  .then(response => response.json())
-  .then(data => {
-    var rainbow = document.getElementById('rainbow');
-    rainbow.innerHTML = data.Content;
-    rainbow.href = "https://rainbow.eatrice.top/?ID=" + data.ID;
-  })
-  .catch(console.error)
-</script> 
+                
               </div>
             
             <hr/>

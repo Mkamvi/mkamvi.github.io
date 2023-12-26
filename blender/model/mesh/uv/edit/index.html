@@ -24,7 +24,7 @@
 <meta property="og:description" content="编辑 将一些碎片（UV 贴图）重新缝合到一起 最大化地利用图像空间 对细节面进行放大 调整&#x2F;缩放被拉伸的面 缩小过于粗糙和细节过多的面  使用最小的给定空间，让大多数像素点给予 UV 贴图尽可能多的细节和精度。一个 UV 面可以小到一个像素（组成整张图像的小点）大小，也可以达到填满整个图像。你可能需要先做一些大的调整，然后再对布局进行微调 变换(UV ‣ 变换) 移动(G) 旋转(R)">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2023-07-12T11:13:15.000Z">
-<meta property="article:modified_time" content="2023-12-16T08:07:49.694Z">
+<meta property="article:modified_time" content="2023-12-26T03:16:14.423Z">
 <meta property="article:author" content="荒">
 <meta property="article:tag" content="Blender">
 <meta name="twitter:card" content="summary_large_image">
@@ -351,17 +351,7 @@
 </ul>
 <h3 id="随机-UV-‣-变换-‣-随机"><a href="#随机-UV-‣-变换-‣-随机" class="headerlink" title="随机(UV ‣ 变换 ‣ 随机)"></a>随机(UV ‣ 变换 ‣ 随机)</h3><h3 id="镜像-UV-‣-镜像-Ctrl-M"><a href="#镜像-UV-‣-镜像-Ctrl-M" class="headerlink" title="镜像(UV ‣ 镜像, Ctrl-M)"></a>镜像(UV ‣ 镜像, <kbd>Ctrl-M</kbd>)</h3><h3 id="吸附-UV-‣-吸附-Shift-S"><a href="#吸附-UV-‣-吸附-Shift-S" class="headerlink" title="吸附(UV ‣ 吸附, Shift-S)"></a>吸附(UV ‣ 吸附, <kbd>Shift-S</kbd>)</h3><h3 id="合并-UV-‣-合并-M"><a href="#合并-UV-‣-合并-M" class="headerlink" title="合并(UV ‣ 合并, M)"></a>合并(UV ‣ 合并, M)</h3><h3 id="拆分-UV-‣-拆分-Alt-M"><a href="#拆分-UV-‣-拆分-Alt-M" class="headerlink" title="拆分(UV ‣ 拆分, Alt-M)"></a>拆分(UV ‣ 拆分, Alt-M)</h3><h3 id="展开-UV-‣-展开-U"><a href="#展开-UV-‣-展开-U" class="headerlink" title="展开(UV ‣ 展开, U)"></a>展开(UV ‣ 展开, U)</h3><h3 id="钉固和取消钉固-UV-‣-钉固-x2F-取消钉固-P-x2F-Alt-P"><a href="#钉固和取消钉固-UV-‣-钉固-x2F-取消钉固-P-x2F-Alt-P" class="headerlink" title="钉固和取消钉固(UV ‣ 钉固&#x2F;取消钉固, P &#x2F; Alt + P)"></a>钉固和取消钉固(UV ‣ 钉固&#x2F;取消钉固, <kbd>P</kbd> &#x2F; <kbd>Alt + P</kbd>)</h3><p>钉固 UV 可以防止多次展开操作后的 UV 顶点移动</p>
 <h3 id="标记-x2F-清除缝合边"><a href="#标记-x2F-清除缝合边" class="headerlink" title="标记&#x2F;清除缝合边"></a>标记&#x2F;清除缝合边</h3><h3 id="沿孤岛边线生成缝合边"><a href="#沿孤岛边线生成缝合边" class="headerlink" title="沿孤岛边线生成缝合边"></a>沿孤岛边线生成缝合边</h3><h3 id="拼排孤岛"><a href="#拼排孤岛" class="headerlink" title="拼排孤岛"></a>拼排孤岛</h3><h3 id="孤岛比例平均化"><a href="#孤岛比例平均化" class="headerlink" title="孤岛比例平均化"></a>孤岛比例平均化</h3><h3 id="最小化拉伸"><a href="#最小化拉伸" class="headerlink" title="最小化拉伸"></a>最小化拉伸</h3><h3 id="缝合"><a href="#缝合" class="headerlink" title="缝合"></a>缝合</h3><h3 id="对齐"><a href="#对齐" class="headerlink" title="对齐"></a>对齐</h3><h3 id="旋转对齐"><a href="#旋转对齐" class="headerlink" title="旋转对齐"></a>旋转对齐</h3><h3 id="复制-UV"><a href="#复制-UV" class="headerlink" title="复制 UV"></a>复制 UV</h3><h3 id="粘帖-UV"><a href="#粘帖-UV" class="headerlink" title="粘帖 UV"></a>粘帖 UV</h3><h3 id="显示-x2F-隐藏面"><a href="#显示-x2F-隐藏面" class="headerlink" title="显示&#x2F;隐藏面"></a>显示&#x2F;隐藏面</h3><h3 id="导出-UV-布局图"><a href="#导出-UV-布局图" class="headerlink" title="导出 UV 布局图"></a>导出 UV 布局图</h3><h3 id="衰减编辑"><a href="#衰减编辑" class="headerlink" title="衰减编辑"></a>衰减编辑</h3><h3 id="UV-选项"><a href="#UV-选项" class="headerlink" title="UV 选项"></a>UV 选项</h3><h3 id="3D-视图"><a href="#3D-视图" class="headerlink" title="3D 视图"></a>3D 视图</h3><h4 id="旋转-UV"><a href="#旋转-UV" class="headerlink" title="旋转 UV"></a>旋转 UV</h4><h4 id="翻转-UV"><a href="#翻转-UV" class="headerlink" title="翻转 UV"></a>翻转 UV</h4>
-                <blockquote><p id='rainbow'> 🏝️ </p> <blockquote>
-  <script>
-fetch('https://api.eatrice.top')
-  .then(response => response.json())
-  .then(data => {
-    var rainbow = document.getElementById('rainbow');
-    rainbow.innerHTML = data.Content;
-    rainbow.href = "https://rainbow.eatrice.top/?ID=" + data.ID;
-  })
-  .catch(console.error)
-</script> 
+                
               </div>
             
             <hr/>

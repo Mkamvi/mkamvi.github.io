@@ -24,7 +24,7 @@
 <meta property="og:description" content="潜意识第一反应就是 first-child: 然：表示在一组兄弟元素中的第一个元素 白: 只能选中第一个元素 第二反应就是 first-of-type: 然: 表示一组兄弟元素中其类型的第一个元素 白: 只能选中同类元素的第一个 那么如何选择一类(class 选择器)中的第一个原理：通过兄弟选择器第二个元素到结束，然后取非 123.class:not(.class ~ .class) &amp;#123;">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2023-11-10T11:21:10.000Z">
-<meta property="article:modified_time" content="2023-12-16T08:07:49.694Z">
+<meta property="article:modified_time" content="2023-12-26T03:16:14.427Z">
 <meta property="article:author" content="荒">
 <meta property="article:tag" content="CSS">
 <meta name="twitter:card" content="summary_large_image">
@@ -344,17 +344,7 @@
 <h2 id="那么如何选择一类-class-选择器-中的第一个"><a href="#那么如何选择一类-class-选择器-中的第一个" class="headerlink" title="那么如何选择一类(class 选择器)中的第一个"></a>那么如何选择一类(class 选择器)中的第一个</h2><p>原理：通过兄弟选择器第二个元素到结束，然后取非</p>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs CSS"><span class="hljs-selector-class">.class</span><span class="hljs-selector-pseudo">:not</span>(<span class="hljs-selector-class">.class</span> ~ <span class="hljs-selector-class">.class</span>) &#123;<br>  // any style you want<br>&#125;<br></code></pre></td></tr></table></figure>
 
-                <blockquote><p id='rainbow'> 🏝️ </p> <blockquote>
-  <script>
-fetch('https://api.eatrice.top')
-  .then(response => response.json())
-  .then(data => {
-    var rainbow = document.getElementById('rainbow');
-    rainbow.innerHTML = data.Content;
-    rainbow.href = "https://rainbow.eatrice.top/?ID=" + data.ID;
-  })
-  .catch(console.error)
-</script> 
+                
               </div>
             
             <hr/>

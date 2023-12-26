@@ -24,7 +24,7 @@
 <meta property="og:description" content="今天早上把fluid主题的相关文档基本都看完了，包括进阶脚本注入部分，然后顺手把rainbow也给接了进来。 下午接着看实时航线统计的事，使用polyline作为动态航线展示，然后通过轨迹路线模拟飞机航行过程，就是数量太多时有性能问题，明天需要再整理下。 晚上接着在window系统配置nvim，过程中装了scoop，然后还报几个错误，不过不影响使用，缓几天了再研究研究。 然后今天的结果是：家里电脑">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2023-06-01T20:27:38.000Z">
-<meta property="article:modified_time" content="2023-12-16T08:07:49.694Z">
+<meta property="article:modified_time" content="2023-12-26T03:16:14.427Z">
 <meta property="article:author" content="荒">
 <meta property="article:tag" content="日常记录">
 <meta name="twitter:card" content="summary_large_image">
@@ -340,17 +340,7 @@
 <p>晚上接着在window系统配置nvim，过程中装了scoop，然后还报几个错误，不过不影响使用，缓几天了再研究研究。</p>
 <p>然后今天的结果是：家里电脑该弄的都弄好了，接下来就是撸起袖子开干的时候了。</p>
 
-                <blockquote><p id='rainbow'> 🏝️ </p> <blockquote>
-  <script>
-fetch('https://api.eatrice.top')
-  .then(response => response.json())
-  .then(data => {
-    var rainbow = document.getElementById('rainbow');
-    rainbow.innerHTML = data.Content;
-    rainbow.href = "https://rainbow.eatrice.top/?ID=" + data.ID;
-  })
-  .catch(console.error)
-</script> 
+                
               </div>
             
             <hr/>

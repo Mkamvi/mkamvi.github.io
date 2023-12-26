@@ -24,7 +24,7 @@
 <meta property="og:description" content="今天仔细分析了下实时航线的实现方式，了解了下如何计算球面的两点间距离(参考 Great-circle distance 和 Haversine formula)，然后优化了下飞机落地方向。 接着研究了两点之间动画插值方式  通过两点计算中间位置坐标 设置中间位置高度(类抛物线) 通过 Cesium.CatmullRomSplineI 获取任意时间点位置(evaluate) 通过自定义插值数量与 C">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2023-06-02T18:00:18.000Z">
-<meta property="article:modified_time" content="2023-12-16T08:07:49.694Z">
+<meta property="article:modified_time" content="2023-12-26T03:16:14.427Z">
 <meta property="article:author" content="荒">
 <meta property="article:tag" content="日常记录">
 <meta name="twitter:card" content="summary_large_image">
@@ -345,17 +345,7 @@
 </ol>
 <p>然后把飞行动画从Track(历史轨迹)替换成了DynamicLayer(动态图层)+DynamicModel(动态模型)方式，因为历史轨迹无法实时调整飞机位置，动态模型可以做到。</p>
 
-                <blockquote><p id='rainbow'> 🏝️ </p> <blockquote>
-  <script>
-fetch('https://api.eatrice.top')
-  .then(response => response.json())
-  .then(data => {
-    var rainbow = document.getElementById('rainbow');
-    rainbow.innerHTML = data.Content;
-    rainbow.href = "https://rainbow.eatrice.top/?ID=" + data.ID;
-  })
-  .catch(console.error)
-</script> 
+                
               </div>
             
             <hr/>
