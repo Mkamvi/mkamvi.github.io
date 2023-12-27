@@ -4,6 +4,31 @@
   
   
   <entry>
+    <title>序 - 微前端</title>
+    <link href="/micro-front/%E5%BA%8F/"/>
+    <url>/micro-front/%E5%BA%8F/</url>
+    
+    <content type="html"><![CDATA[<h3 id="几种实现方案"><a href="#几种实现方案" class="headerlink" title="几种实现方案"></a>几种实现方案</h3><h4 id="iframe"><a href="#iframe" class="headerlink" title="iframe"></a>iframe</h4><p>天然的跨应用集成方案，缺点也很明显(跨域通信限制、DOM割裂导致的类弹窗类区域限制)</p><h5 id="适用场景"><a href="#适用场景" class="headerlink" title="适用场景"></a>适用场景</h5><ul><li>全屏嵌入</li><li>需要快速集成的跨框架、跨版本的已有老项目</li></ul><h4 id="基于路由的渲染"><a href="#基于路由的渲染" class="headerlink" title="基于路由的渲染"></a>基于路由的渲染</h4><ol><li><p>SingleSPA:</p><p>基座应用统筹管理路由，基于路由渲染，基座管理和理解都相当费事，且很多事情都需要自己控制和约束</p></li><li><p>乾坤:</p><p>对single-spa做了进一步封装和完善，简化了注册流程，实现了应用隔离(沙箱)，但基于路由渲染的本质没有变化</p></li></ol><h5 id="适用场景-1"><a href="#适用场景-1" class="headerlink" title="适用场景"></a>适用场景</h5><ul><li>新项目</li><li>基于UMI的项目</li><li>需要跨框架开发的项目</li><li>需要在同一个宿主环境集成的项目</li></ul><h4 id="基于代理WebComponet的实现-已有的开源框架中看起来Bug都还比较多，不太稳定"><a href="#基于代理WebComponet的实现-已有的开源框架中看起来Bug都还比较多，不太稳定" class="headerlink" title="基于代理WebComponet的实现(已有的开源框架中看起来Bug都还比较多，不太稳定)"></a>基于代理WebComponet的实现(已有的开源框架中看起来Bug都还比较多，不太稳定)</h4><p>本质都是通过解析原有DOM，并代理到自定义元素之上</p><ol><li>无界</li><li>micro-app</li></ol><h5 id="适用场景-2"><a href="#适用场景-2" class="headerlink" title="适用场景"></a>适用场景</h5><ul><li>渐进式重构已有项目</li><li>有弹窗等需要跳出iframe限制的元素</li><li>需要沙箱环境防止污染的情况</li></ul><h4 id="基于Webpack的Module-Federation"><a href="#基于Webpack的Module-Federation" class="headerlink" title="基于Webpack的Module Federation"></a>基于Webpack的Module Federation</h4><p>本质上其实是提供了资源共享、资源分离和加载远程资源的能力</p><h5 id="适用场景-3"><a href="#适用场景-3" class="headerlink" title="适用场景"></a>适用场景</h5><ul><li>新项目</li><li>框架确定的项目</li></ul><h4 id="基于特定框架的组件化分离方式-目前看来通过Webpack-Module-Federation就能实现"><a href="#基于特定框架的组件化分离方式-目前看来通过Webpack-Module-Federation就能实现" class="headerlink" title="基于特定框架的组件化分离方式(目前看来通过Webpack Module Federation就能实现)"></a>基于特定框架的组件化分离方式(目前看来通过Webpack Module Federation就能实现)</h4><p>基于特定框架，如React、Vue等，将子应用设计成一个组件</p><h5 id="适用场景-4"><a href="#适用场景-4" class="headerlink" title="适用场景"></a>适用场景</h5><ul><li>新项目</li><li>框架确定的项目</li></ul>]]></content>
+    
+    
+    <categories>
+      
+      <category>微前端</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>微前端</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>配置 - Nvim · 帮助文档</title>
     <link href="/nvim/help/config/"/>
     <url>/nvim/help/config/</url>
