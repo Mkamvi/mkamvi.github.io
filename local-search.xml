@@ -4,6 +4,68 @@
   
   
   <entry>
+    <title>事件拦截 - HTML · Event</title>
+    <link href="/html/confused/%E4%BA%8B%E4%BB%B6/"/>
+    <url>/html/confused/%E4%BA%8B%E4%BB%B6/</url>
+    
+    <content type="html"><![CDATA[<h3 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h3><p>一些无关紧要的错误被抛到window.onerror事件上，导致异常触发了原有的事件监听，但原有的时间监听是框架内部的无法改动，所以需要拦截事件</p><p><a href="https://github.com/juggle/resize-observer/issues/103">https://github.com/juggle/resize-observer/issues/103</a></p><h3 id="阻止触发其他事件监听器"><a href="#阻止触发其他事件监听器" class="headerlink" title="阻止触发其他事件监听器"></a>阻止触发其他事件监听器</h3><p>event.stopImmediatePropagation()</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>HTML</category>
+      
+      <category>Event</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>HTML</tag>
+      
+      <tag>Event</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>常用技巧 - Nvim · 帮助文档</title>
+    <link href="/nvim/help/%E5%B8%B8%E7%94%A8%E6%8A%80%E5%B7%A7/"/>
+    <url>/nvim/help/%E5%B8%B8%E7%94%A8%E6%8A%80%E5%B7%A7/</url>
+    
+    <content type="html"><![CDATA[<h3 id="替换一个单词"><a href="#替换一个单词" class="headerlink" title="替换一个单词"></a>替换一个单词</h3><blockquote><p>:%s&#x2F;&lt;four&gt;&#x2F;4&#x2F;gc</p></blockquote><ul><li>% 匹配全行(文)</li><li>g 匹配单行全部</li><li>&lt; 匹配单词开始</li><li>&gt; 匹配单词开始</li><li>c 将会在每个匹配出给出确认提示</li></ul><h3 id="捕获"><a href="#捕获" class="headerlink" title="捕获"></a>捕获</h3><blockquote><p>:%s&#x2F;([^,]_), (._)&#x2F;\2 \1&#x2F;</p></blockquote><p>可以使用类正则的表达</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Vim</category>
+      
+      <category>Nvim</category>
+      
+      <category>VimHelp</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Nvim</tag>
+      
+      <tag>Vim</tag>
+      
+      <tag>VimHelp</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>序 - 微前端</title>
     <link href="/micro-front/%E5%BA%8F/"/>
     <url>/micro-front/%E5%BA%8F/</url>
@@ -66,7 +128,7 @@
     <link href="/nvim/shortcut/"/>
     <url>/nvim/shortcut/</url>
     
-    <content type="html"><![CDATA[<h3 id="常用快捷键"><a href="#常用快捷键" class="headerlink" title="常用快捷键"></a>常用快捷键</h3><table><thead><tr><th>快捷键</th><th>描述</th></tr></thead><tbody><tr><td>J</td><td>删除换行符</td></tr><tr><td>U</td><td>撤销行上所有操作，再次按下则是反撤销</td></tr><tr><td>O</td><td>当前行上方插入</td></tr><tr><td>ZZ</td><td>保存并退出</td></tr><tr><td>e!</td><td>恢复源文件并继续编辑</td></tr><tr><td>Ctrl-]</td><td>(帮助文档)进入子主题</td></tr><tr><td>Ctrl-T</td><td>(帮助文档)返回上一级</td></tr><tr><td>Ctrl-O</td><td>(帮助文档)回到初始的地方</td></tr></tbody></table>]]></content>
+    <content type="html"><![CDATA[<h3 id="常用快捷键"><a href="#常用快捷键" class="headerlink" title="常用快捷键"></a>常用快捷键</h3><table><thead><tr><th>快捷键</th><th>描述</th></tr></thead><tbody><tr><td>J</td><td>删除换行符</td></tr><tr><td>U</td><td>撤销行上所有操作，再次按下则是反撤销</td></tr><tr><td>O</td><td>当前行上方插入</td></tr><tr><td>ZZ</td><td>保存并退出</td></tr><tr><td>e!</td><td>恢复源文件并继续编辑</td></tr><tr><td>Ctrl-]</td><td>(帮助文档)进入子主题</td></tr><tr><td>Ctrl-T</td><td>(帮助文档)返回上一级</td></tr><tr><td>Ctrl-O</td><td>(帮助文档)回到初始的地方</td></tr><tr><td>d + i + [‘“{(…]</td><td>删除对应区间内的内容</td></tr><tr><td>jk</td><td>从编辑器模式到Normal模式(jdhao&#x2F;better-escape.vim)</td></tr><tr><td>g + Ctrl + g</td><td>显示文本统计情况</td></tr></tbody></table>]]></content>
     
     
     <categories>
