@@ -4,6 +4,35 @@
   
   
   <entry>
+    <title>axios-mock-adapter - 数据模拟 · 三方库</title>
+    <link href="/js-libs/mock/"/>
+    <url>/js-libs/mock/</url>
+    
+    <content type="html"><![CDATA[<h3 id="axios-mock-adapter"><a href="#axios-mock-adapter" class="headerlink" title="axios-mock-adapter"></a>axios-mock-adapter</h3><p>今天看大屏的源码时，发现了这个库，看了看发现真好用</p><p>基于axios的代码可以很随意和方便的在各自模块进行这种无侵入式的数据模拟，非常方便</p><blockquote><p><a href="https://www.npmjs.com/package/axios-mock-adapter">https://www.npmjs.com/package/axios-mock-adapter</a></p></blockquote>]]></content>
+    
+    
+    <categories>
+      
+      <category>js-libs</category>
+      
+      <category>axios</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>js-libs</tag>
+      
+      <tag>axios</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>事件拦截 - HTML · Event</title>
     <link href="/html/confused/%E4%BA%8B%E4%BB%B6/"/>
     <url>/html/confused/%E4%BA%8B%E4%BB%B6/</url>
