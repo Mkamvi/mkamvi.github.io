@@ -4,6 +4,72 @@
   
   
   <entry>
+    <title>0004 寻找两个正序数组的中位数 - Hero · 算法 · Leetcode</title>
+    <link href="/hzero/algo/leetcode/0004%20%E5%AF%BB%E6%89%BE%E4%B8%A4%E4%B8%AA%E6%AD%A3%E5%BA%8F%E6%95%B0%E7%BB%84%E7%9A%84%E4%B8%AD%E4%BD%8D%E6%95%B0/"/>
+    <url>/hzero/algo/leetcode/0004%20%E5%AF%BB%E6%89%BE%E4%B8%A4%E4%B8%AA%E6%AD%A3%E5%BA%8F%E6%95%B0%E7%BB%84%E7%9A%84%E4%B8%AD%E4%BD%8D%E6%95%B0/</url>
+    
+    <content type="html"><![CDATA[<h3 id="题目地址-0004-寻找两个正序数组的中位数"><a href="#题目地址-0004-寻找两个正序数组的中位数" class="headerlink" title="题目地址(0004. 寻找两个正序数组的中位数 )"></a>题目地址(0004. 寻找两个正序数组的中位数 )</h3><p><a href="https://leetcode-cn.com/problems/median-of-two-sorted-arrays/">https://leetcode-cn.com/problems/median-of-two-sorted-arrays/</a></p><h3 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h3><figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><code class="hljs txt"><br>给定两个大小为 m 和 n 的正序（从小到大）数组 nums1 和 nums2。<br><br>请你找出这两个正序数组的中位数，并且要求算法的时间复杂度为 O(log(m + n))。<br><br>你可以假设 nums1 和 nums2 不会同时为空。<br><br> <br><br>示例 1:<br><br>nums1 = [1, 3]<br>nums2 = [2]<br><br>则中位数是 2.0<br>示例 2:<br><br>nums1 = [1, 2]<br>nums2 = [3, 4]<br><br>则中位数是 (2 + 3)/2 = 2.5<br><br></code></pre></td></tr></table></figure><!-- ### 核心知识 --><h3 id="JS实现-粗暴版"><a href="#JS实现-粗暴版" class="headerlink" title="JS实现(粗暴版)"></a>JS实现(粗暴版)</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-comment">/**</span><br><span class="hljs-comment"> * <span class="hljs-doctag">@param</span> &#123;<span class="hljs-type">number[]</span>&#125; <span class="hljs-variable">nums1</span></span><br><span class="hljs-comment"> * <span class="hljs-doctag">@param</span> &#123;<span class="hljs-type">number[]</span>&#125; <span class="hljs-variable">nums2</span></span><br><span class="hljs-comment"> * <span class="hljs-doctag">@return</span> &#123;<span class="hljs-type">number</span>&#125;</span><br><span class="hljs-comment"> */</span><br><span class="hljs-keyword">var</span> findMedianSortedArrays = <span class="hljs-keyword">function</span> (<span class="hljs-params">nums1, nums2</span>) &#123;<br>  <span class="hljs-keyword">const</span> combinedArr = nums1.<span class="hljs-title function_">concat</span>(nums2).<span class="hljs-title function_">sort</span>(<span class="hljs-function">(<span class="hljs-params">a, b</span>) =&gt;</span> a - b);<br>  <span class="hljs-keyword">const</span> halfLen = combinedArr.<span class="hljs-property">length</span> / <span class="hljs-number">2</span>;<br>  <span class="hljs-keyword">if</span> (<span class="hljs-title class_">Number</span>.<span class="hljs-title function_">isInteger</span>(halfLen)) &#123;<br>    <span class="hljs-keyword">return</span> (combinedArr[halfLen - <span class="hljs-number">1</span>] + combinedArr[halfLen]) / <span class="hljs-number">2</span>;<br>  &#125; <span class="hljs-keyword">else</span> &#123;<br>    <span class="hljs-keyword">return</span> combinedArr[<span class="hljs-title class_">Math</span>.<span class="hljs-title function_">floor</span>(halfLen)];<br>  &#125;<br>&#125;;<br></code></pre></td></tr></table></figure><h3 id="JS实现-归并排序-粗暴版"><a href="#JS实现-归并排序-粗暴版" class="headerlink" title="JS实现(归并排序 粗暴版)"></a>JS实现(归并排序 粗暴版)</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-comment">/**</span><br><span class="hljs-comment"> * <span class="hljs-doctag">@param</span> &#123;<span class="hljs-type">number[]</span>&#125; <span class="hljs-variable">nums1</span></span><br><span class="hljs-comment"> * <span class="hljs-doctag">@param</span> &#123;<span class="hljs-type">number[]</span>&#125; <span class="hljs-variable">nums2</span></span><br><span class="hljs-comment"> * <span class="hljs-doctag">@return</span> &#123;<span class="hljs-type">number</span>&#125;</span><br><span class="hljs-comment"> */</span><br><span class="hljs-keyword">var</span> findMedianSortedArrays = <span class="hljs-keyword">function</span> (<span class="hljs-params">nums1, nums2</span>) &#123;<br>  <span class="hljs-keyword">const</span> combinedArr = [];<br><br>  <span class="hljs-keyword">while</span> (nums1.<span class="hljs-property">length</span> &gt; <span class="hljs-number">0</span> || nums2.<span class="hljs-property">length</span> &gt; <span class="hljs-number">0</span>) &#123;<br>    <span class="hljs-keyword">if</span> (nums1.<span class="hljs-property">length</span> === <span class="hljs-number">0</span>) &#123;<br>      combinedArr.<span class="hljs-title function_">push</span>(nums2.<span class="hljs-title function_">shift</span>());<br>    &#125; <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (nums2.<span class="hljs-property">length</span> === <span class="hljs-number">0</span>) &#123;<br>      combinedArr.<span class="hljs-title function_">push</span>(nums1.<span class="hljs-title function_">shift</span>());<br>    &#125; <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (nums1[<span class="hljs-number">0</span>] &lt; nums2[<span class="hljs-number">0</span>]) &#123;<br>      combinedArr.<span class="hljs-title function_">push</span>(nums1.<span class="hljs-title function_">shift</span>());<br>    &#125; <span class="hljs-keyword">else</span> &#123;<br>      combinedArr.<span class="hljs-title function_">push</span>(nums2.<span class="hljs-title function_">shift</span>());<br>    &#125;<br>  &#125;<br><br>  <span class="hljs-keyword">const</span> halfLen = combinedArr.<span class="hljs-property">length</span> / <span class="hljs-number">2</span>;<br>  <span class="hljs-keyword">if</span> (<span class="hljs-title class_">Number</span>.<span class="hljs-title function_">isInteger</span>(halfLen)) &#123;<br>    <span class="hljs-keyword">return</span> (combinedArr[halfLen - <span class="hljs-number">1</span>] + combinedArr[halfLen]) / <span class="hljs-number">2</span>;<br>  &#125; <span class="hljs-keyword">else</span> &#123;<br>    <span class="hljs-keyword">return</span> combinedArr[<span class="hljs-title class_">Math</span>.<span class="hljs-title function_">floor</span>(halfLen)];<br>  &#125;<br>&#125;;<br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+    <categories>
+      
+      <category>Hero</category>
+      
+      <category>算法</category>
+      
+      <category>Leetcode</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Hero</tag>
+      
+      <tag>算法</tag>
+      
+      <tag>Leetcode</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>0003 无重复字符的最长子串 - Hero · 算法 · Leetcode</title>
+    <link href="/hzero/algo/leetcode/0003%20%E6%97%A0%E9%87%8D%E5%A4%8D%E5%AD%97%E7%AC%A6%E7%9A%84%E6%9C%80%E9%95%BF%E5%AD%90%E4%B8%B2/"/>
+    <url>/hzero/algo/leetcode/0003%20%E6%97%A0%E9%87%8D%E5%A4%8D%E5%AD%97%E7%AC%A6%E7%9A%84%E6%9C%80%E9%95%BF%E5%AD%90%E4%B8%B2/</url>
+    
+    <content type="html"><![CDATA[<h3 id="题目地址-0003-无重复字符的最长子串"><a href="#题目地址-0003-无重复字符的最长子串" class="headerlink" title="题目地址(0003. 无重复字符的最长子串)"></a>题目地址(0003. 无重复字符的最长子串)</h3><p><a href="https://leetcode-cn.com/problems/longest-substring-without-repeating-characters/">https://leetcode-cn.com/problems/longest-substring-without-repeating-characters/</a></p><h3 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h3><figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><code class="hljs txt">给定一个字符串，请你找出其中不含有重复字符的 最长子串 的长度。<br><br>示例 1:<br><br>输入: &quot;abcabcbb&quot;<br>输出: 3<br>解释: 因为无重复字符的最长子串是 &quot;abc&quot;，所以其长度为 3。<br>示例 2:<br><br>输入: &quot;bbbbb&quot;<br>输出: 1<br>解释: 因为无重复字符的最长子串是 &quot;b&quot;，所以其长度为 1。<br>示例 3:<br><br>输入: &quot;pwwkew&quot;<br>输出: 3<br>解释: 因为无重复字符的最长子串是 &quot;wke&quot;，所以其长度为 3。<br>     请注意，你的答案必须是 子串 的长度，&quot;pwke&quot; 是一个子序列，不是子串。<br><br></code></pre></td></tr></table></figure><h3 id="核心知识"><a href="#核心知识" class="headerlink" title="核心知识"></a>核心知识</h3><ol><li>滑动窗口</li><li>哈希表</li></ol><h3 id="JS实现"><a href="#JS实现" class="headerlink" title="JS实现"></a>JS实现</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-comment">/**</span><br><span class="hljs-comment"> * <span class="hljs-doctag">@param</span> &#123;<span class="hljs-type">string</span>&#125; <span class="hljs-variable">s</span></span><br><span class="hljs-comment"> * <span class="hljs-doctag">@return</span> &#123;<span class="hljs-type">number</span>&#125;</span><br><span class="hljs-comment"> */</span><br><span class="hljs-keyword">var</span> lengthOfLongestSubstring = <span class="hljs-keyword">function</span> (<span class="hljs-params">s</span>) &#123;<br>  <span class="hljs-keyword">let</span> start = <span class="hljs-number">0</span>,<br>    end = <span class="hljs-number">0</span>,<br>    freqMap = &#123;&#125;,<br>    maxLen = <span class="hljs-number">0</span>;<br>  <span class="hljs-keyword">while</span> (end &lt; s.<span class="hljs-property">length</span>) &#123;<br>    <span class="hljs-keyword">if</span> (freqMap[s[end]] === <span class="hljs-literal">undefined</span>) &#123;<br>      freqMap[s[end]] = <span class="hljs-number">1</span>;<br>      maxLen = <span class="hljs-title class_">Math</span>.<span class="hljs-title function_">max</span>(maxLen, end - start + <span class="hljs-number">1</span>);<br>      end++;<br>    &#125; <span class="hljs-keyword">else</span> &#123;<br>      <span class="hljs-keyword">delete</span> freqMap[s[start]];<br>      start++;<br>    &#125;<br>  &#125;<br>  <span class="hljs-keyword">return</span> maxLen;<br>&#125;;<br></code></pre></td></tr></table></figure><h3 id="废话"><a href="#废话" class="headerlink" title="废话"></a>废话</h3><p>使用map确认是否有重复字符，滑动窗口记录当前最长的无重复子串. 在移除的过程中还是很挫，因为获得重复索引的话，start是可以直接一步跳到位的，而不必做无用的累加，但基于map的确认，还是需要逐个从map中移除.若使用数组的话，又会添加确认重复的检索负担</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Hero</category>
+      
+      <category>算法</category>
+      
+      <category>Leetcode</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Hero</tag>
+      
+      <tag>算法</tag>
+      
+      <tag>Leetcode</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>axios-mock-adapter - 数据模拟 · 三方库</title>
     <link href="/js-libs/mock/"/>
     <url>/js-libs/mock/</url>
