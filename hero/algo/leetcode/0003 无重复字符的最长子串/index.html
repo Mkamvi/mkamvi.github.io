@@ -16,24 +16,24 @@
   <meta name="author" content="荒">
   <meta name="keywords" content="大帅,博客,不良帅,mkamv,mkamvi,不良帅的博客,mkamv的博客">
   
-    <meta name="description" content="基本概念堆就是动态帮你求极值的，push和pop是其两个核心API  关键词：优先队列  动态求极值  跳表核心感觉跟搜索二叉树差不多，分层索引确实形成了一个搜索二叉树  Hah 二叉堆二叉堆就是一颗特殊的完全二叉树。它的特殊性只体现在一点，那就是父节点的权值不大于儿子的权值（小顶堆）">
+    <meta name="description" content="题目地址(0003. 无重复字符的最长子串)https:&#x2F;&#x2F;leetcode-cn.com&#x2F;problems&#x2F;longest-substring-without-repeating-characters&#x2F; 题目描述12345678910111213141516171819给定一个字符串，请你找出其中不含有重复字符的 最长子串 的长度。示例 1:输入: &quot;abcabcbb&quot;输出:">
 <meta property="og:type" content="article">
-<meta property="og:title" content="堆 (上) - Hero · 算法 · 算法通关之路">
-<meta property="og:url" content="https://mkamv.xyz/hzero/algo/%E7%AE%97%E6%B3%95%E9%80%9A%E8%BF%87%E4%B9%8B%E8%B7%AF/%E5%A0%86%E4%B8%93%E9%A2%98/index.html">
+<meta property="og:title" content="0003 无重复字符的最长子串 - Hero · 算法 · Leetcode">
+<meta property="og:url" content="https://mkamv.xyz/hero/algo/leetcode/0003%20%E6%97%A0%E9%87%8D%E5%A4%8D%E5%AD%97%E7%AC%A6%E7%9A%84%E6%9C%80%E9%95%BF%E5%AD%90%E4%B8%B2/index.html">
 <meta property="og:site_name" content="不良帅本帅">
-<meta property="og:description" content="基本概念堆就是动态帮你求极值的，push和pop是其两个核心API  关键词：优先队列  动态求极值  跳表核心感觉跟搜索二叉树差不多，分层索引确实形成了一个搜索二叉树  Hah 二叉堆二叉堆就是一颗特殊的完全二叉树。它的特殊性只体现在一点，那就是父节点的权值不大于儿子的权值（小顶堆）">
+<meta property="og:description" content="题目地址(0003. 无重复字符的最长子串)https:&#x2F;&#x2F;leetcode-cn.com&#x2F;problems&#x2F;longest-substring-without-repeating-characters&#x2F; 题目描述12345678910111213141516171819给定一个字符串，请你找出其中不含有重复字符的 最长子串 的长度。示例 1:输入: &quot;abcabcbb&quot;输出:">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2023-11-29T08:10:02.000Z">
-<meta property="article:modified_time" content="2024-01-01T08:01:11.045Z">
+<meta property="article:published_time" content="2023-12-30T14:51:24.000Z">
+<meta property="article:modified_time" content="2024-01-01T10:10:36.221Z">
 <meta property="article:author" content="荒">
 <meta property="article:tag" content="Hero">
 <meta property="article:tag" content="算法">
-<meta property="article:tag" content="算法通关之路">
+<meta property="article:tag" content="Leetcode">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title>堆 (上) - Hero · 算法 · 算法通关之路 - 不良帅本帅</title>
+  <title>0003 无重复字符的最长子串 - Hero · 算法 · Leetcode - 不良帅本帅</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -248,7 +248,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="堆 (上) - Hero · 算法 · 算法通关之路"></span>
+            <span id="subtitle" data-typed-text="0003 无重复字符的最长子串 - Hero · 算法 · Leetcode"></span>
           
         </div>
 
@@ -259,8 +259,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2023-11-29 08:10" pubdate>
-          2023年11月29日 早上
+        <time datetime="2023-12-30 14:51" pubdate>
+          2023年12月30日 下午
         </time>
       </span>
     
@@ -271,7 +271,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          134 字
+          946 字
         
       </span>
     
@@ -282,7 +282,7 @@
         
         
         
-          2 分钟
+          8 分钟
         
       </span>
     
@@ -332,17 +332,21 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">堆 (上) - Hero · 算法 · 算法通关之路</h1>
+            <h1 id="seo-header">0003 无重复字符的最长子串 - Hero · 算法 · Leetcode</h1>
             
             
               <div class="markdown-body">
                 
-                <h3 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h3><p>堆就是动态帮你求极值的，push和pop是其两个核心API</p>
-<blockquote>
-<p>关键词：优先队列  动态求极值</p>
-</blockquote>
-<h5 id="跳表"><a href="#跳表" class="headerlink" title="跳表"></a>跳表</h5><p>核心感觉跟搜索二叉树差不多，分层索引确实形成了一个搜索二叉树  Hah</p>
-<h5 id="二叉堆"><a href="#二叉堆" class="headerlink" title="二叉堆"></a>二叉堆</h5><p>二叉堆就是一颗特殊的完全二叉树。它的特殊性只体现在一点，那就是父节点的权值不大于儿子的权值（小顶堆）</p>
+                <h3 id="题目地址-0003-无重复字符的最长子串"><a href="#题目地址-0003-无重复字符的最长子串" class="headerlink" title="题目地址(0003. 无重复字符的最长子串)"></a>题目地址(0003. 无重复字符的最长子串)</h3><p><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/longest-substring-without-repeating-characters/">https://leetcode-cn.com/problems/longest-substring-without-repeating-characters/</a></p>
+<h3 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h3><figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><code class="hljs txt">给定一个字符串，请你找出其中不含有重复字符的 最长子串 的长度。<br><br>示例 1:<br><br>输入: &quot;abcabcbb&quot;<br>输出: 3<br>解释: 因为无重复字符的最长子串是 &quot;abc&quot;，所以其长度为 3。<br>示例 2:<br><br>输入: &quot;bbbbb&quot;<br>输出: 1<br>解释: 因为无重复字符的最长子串是 &quot;b&quot;，所以其长度为 1。<br>示例 3:<br><br>输入: &quot;pwwkew&quot;<br>输出: 3<br>解释: 因为无重复字符的最长子串是 &quot;wke&quot;，所以其长度为 3。<br>     请注意，你的答案必须是 子串 的长度，&quot;pwke&quot; 是一个子序列，不是子串。<br><br></code></pre></td></tr></table></figure>
+
+<h3 id="核心知识"><a href="#核心知识" class="headerlink" title="核心知识"></a>核心知识</h3><ol>
+<li>滑动窗口</li>
+<li>哈希表</li>
+</ol>
+<h3 id="JS实现"><a href="#JS实现" class="headerlink" title="JS实现"></a>JS实现</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-comment">/**</span><br><span class="hljs-comment"> * <span class="hljs-doctag">@param</span> &#123;<span class="hljs-type">string</span>&#125; <span class="hljs-variable">s</span></span><br><span class="hljs-comment"> * <span class="hljs-doctag">@return</span> &#123;<span class="hljs-type">number</span>&#125;</span><br><span class="hljs-comment"> */</span><br><span class="hljs-keyword">var</span> lengthOfLongestSubstring = <span class="hljs-keyword">function</span> (<span class="hljs-params">s</span>) &#123;<br>  <span class="hljs-keyword">let</span> start = <span class="hljs-number">0</span>,<br>    end = <span class="hljs-number">0</span>,<br>    freqMap = &#123;&#125;,<br>    maxLen = <span class="hljs-number">0</span>;<br>  <span class="hljs-keyword">while</span> (end &lt; s.<span class="hljs-property">length</span>) &#123;<br>    <span class="hljs-keyword">if</span> (freqMap[s[end]] === <span class="hljs-literal">undefined</span>) &#123;<br>      freqMap[s[end]] = <span class="hljs-number">1</span>;<br>      maxLen = <span class="hljs-title class_">Math</span>.<span class="hljs-title function_">max</span>(maxLen, end - start + <span class="hljs-number">1</span>);<br>      end++;<br>    &#125; <span class="hljs-keyword">else</span> &#123;<br>      <span class="hljs-keyword">delete</span> freqMap[s[start]];<br>      start++;<br>    &#125;<br>  &#125;<br>  <span class="hljs-keyword">return</span> maxLen;<br>&#125;;<br></code></pre></td></tr></table></figure>
+
+<h3 id="废话"><a href="#废话" class="headerlink" title="废话"></a>废话</h3><p>使用map确认是否有重复字符，滑动窗口记录当前最长的无重复子串. 在移除的过程中还是很挫，因为获得重复索引的话，start是可以直接一步跳到位的，而不必做无用的累加，但基于map的确认，还是需要逐个从map中移除.若使用数组的话，又会添加确认重复的检索负担</p>
 
                 
               </div>
@@ -371,7 +375,7 @@
   
     <span>></span>
     
-  <a href="/categories/Hero/%E7%AE%97%E6%B3%95/%E7%AE%97%E6%B3%95%E9%80%9A%E5%85%B3%E4%B9%8B%E8%B7%AF/" class="category-chain-item">算法通关之路</a>
+  <a href="/categories/Hero/%E7%AE%97%E6%B3%95/Leetcode/" class="category-chain-item">Leetcode</a>
   
   
 
@@ -394,7 +398,7 @@
       
         <a href="/tags/%E7%AE%97%E6%B3%95/" class="print-no-link">#算法</a>
       
-        <a href="/tags/%E7%AE%97%E6%B3%95%E9%80%9A%E5%85%B3%E4%B9%8B%E8%B7%AF/" class="print-no-link">#算法通关之路</a>
+        <a href="/tags/Leetcode/" class="print-no-link">#Leetcode</a>
       
     </div>
   
@@ -406,8 +410,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>堆 (上) - Hero · 算法 · 算法通关之路</div>
-      <div>https://mkamv.xyz/hzero/algo/算法通过之路/堆专题/</div>
+      <div>0003 无重复字符的最长子串 - Hero · 算法 · Leetcode</div>
+      <div>https://mkamv.xyz/hero/algo/leetcode/0003 无重复字符的最长子串/</div>
     </div>
     <div class="license-meta">
       
@@ -419,7 +423,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2023年11月29日</div>
+          <div>2023年12月30日</div>
         </div>
       
       
@@ -451,9 +455,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/code-reading/lodash/Math/" title="Math - 源码阅读 · lodash">
+                      <a href="/hero/algo/leetcode/0004%20%E5%AF%BB%E6%89%BE%E4%B8%A4%E4%B8%AA%E6%AD%A3%E5%BA%8F%E6%95%B0%E7%BB%84%E7%9A%84%E4%B8%AD%E4%BD%8D%E6%95%B0/" title="0004 寻找两个正序数组的中位数 - Hero · 算法 · Leetcode">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">Math - 源码阅读 · lodash</span>
+                        <span class="hidden-mobile">0004 寻找两个正序数组的中位数 - Hero · 算法 · Leetcode</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -461,8 +465,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/web/WebSocket/" title="WebSocket - Web">
-                        <span class="hidden-mobile">WebSocket - Web</span>
+                      <a href="/js-libs/mock/" title="axios-mock-adapter - 数据模拟 · 三方库">
+                        <span class="hidden-mobile">axios-mock-adapter - 数据模拟 · 三方库</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
@@ -485,7 +489,7 @@
         var options = Object.assign(
           {"clientID":"380b721444e388f986da","clientSecret":"cd4569aa7c4e07f1301593bbd51fb45572592099","repo":"mkamvi.github.io","owner":"Mkamvi","admin":["Mkamvi"],"language":"zh-CN","labels":["Gitalk"],"perPage":10,"pagerDirection":"last","distractionFreeMode":false,"createIssueManually":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token"},
           {
-            id: 'a64e356eb9ce953de3729cc72cfe14c1'
+            id: '068e12be8233a8a682f1e8b3c098d801'
           }
         )
         var gitalk = new Gitalk(options);

@@ -16,24 +16,24 @@
   <meta name="author" content="荒">
   <meta name="keywords" content="大帅,博客,不良帅,mkamv,mkamvi,不良帅的博客,mkamv的博客">
   
-    <meta name="description" content="数值常量 双精度浮点格式(和JS一样) 32位整型和单精度浮点型(5.3版本引入，目前是5.4.6) math.type()和type(), math.type能够区别数字类型  算术运算 + - * &#x2F; &#x2F;&#x2F; % ^   &#x2F;&#x2F; floor除法，结果向下取整, ^是幂运算  关系运算 &lt; &gt; &lt;&#x3D; &gt;&#x3D;">
+    <meta name="description" content="基本操作插入删除遍历操作技巧指针的修改链表的拼接环、边界、前后序虚拟头快慢指针如在不知长度的情况下获取中间点，核心是快指针和慢指针的相对位置及根据这两个可获得指针位置的使用 穿针引线如翻转链表的一部分，断开两边，反转后再重新链接  链表的核心是指针及指针的引用">
 <meta property="og:type" content="article">
-<meta property="og:title" content="数值 - Hero · Lua · Lua程序设计读书笔记">
-<meta property="og:url" content="https://mkamv.xyz/hzero/lua/Lua%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E6%95%B0%E5%80%BC/index.html">
+<meta property="og:title" content="链表 - Hero · 算法 · 算法通关之路">
+<meta property="og:url" content="https://mkamv.xyz/hero/algo/%E7%AE%97%E6%B3%95%E9%80%9A%E8%BF%87%E4%B9%8B%E8%B7%AF/%E9%93%BE%E8%A1%A8%E4%B8%93%E9%A2%98/index.html">
 <meta property="og:site_name" content="不良帅本帅">
-<meta property="og:description" content="数值常量 双精度浮点格式(和JS一样) 32位整型和单精度浮点型(5.3版本引入，目前是5.4.6) math.type()和type(), math.type能够区别数字类型  算术运算 + - * &#x2F; &#x2F;&#x2F; % ^   &#x2F;&#x2F; floor除法，结果向下取整, ^是幂运算  关系运算 &lt; &gt; &lt;&#x3D; &gt;&#x3D;">
+<meta property="og:description" content="基本操作插入删除遍历操作技巧指针的修改链表的拼接环、边界、前后序虚拟头快慢指针如在不知长度的情况下获取中间点，核心是快指针和慢指针的相对位置及根据这两个可获得指针位置的使用 穿针引线如翻转链表的一部分，断开两边，反转后再重新链接  链表的核心是指针及指针的引用">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2023-11-26T17:55:41.000Z">
-<meta property="article:modified_time" content="2024-01-01T08:01:11.045Z">
+<meta property="article:published_time" content="2023-11-27T07:25:57.000Z">
+<meta property="article:modified_time" content="2024-01-01T10:10:36.225Z">
 <meta property="article:author" content="荒">
 <meta property="article:tag" content="Hero">
-<meta property="article:tag" content="Lua">
-<meta property="article:tag" content="Lua程序设计读书笔记">
+<meta property="article:tag" content="算法">
+<meta property="article:tag" content="算法通关之路">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title>数值 - Hero · Lua · Lua程序设计读书笔记 - 不良帅本帅</title>
+  <title>链表 - Hero · 算法 · 算法通关之路 - 不良帅本帅</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -248,7 +248,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="数值 - Hero · Lua · Lua程序设计读书笔记"></span>
+            <span id="subtitle" data-typed-text="链表 - Hero · 算法 · 算法通关之路"></span>
           
         </div>
 
@@ -259,8 +259,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2023-11-26 17:55" pubdate>
-          2023年11月26日 下午
+        <time datetime="2023-11-27 07:25" pubdate>
+          2023年11月27日 早上
         </time>
       </span>
     
@@ -271,7 +271,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          525 字
+          127 字
         
       </span>
     
@@ -282,7 +282,7 @@
         
         
         
-          5 分钟
+          2 分钟
         
       </span>
     
@@ -332,46 +332,17 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">数值 - Hero · Lua · Lua程序设计读书笔记</h1>
+            <h1 id="seo-header">链表 - Hero · 算法 · 算法通关之路</h1>
             
             
               <div class="markdown-body">
                 
-                <h3 id="数值常量"><a href="#数值常量" class="headerlink" title="数值常量"></a>数值常量</h3><ol>
-<li>双精度浮点格式(和JS一样)</li>
-<li>32位整型和单精度浮点型(5.3版本引入，目前是5.4.6)</li>
-<li>math.type()和type(), math.type能够区别数字类型</li>
-</ol>
-<h3 id="算术运算"><a href="#算术运算" class="headerlink" title="算术运算"></a>算术运算</h3><ol>
-<li>+ - * &#x2F; &#x2F;&#x2F; % ^</li>
-</ol>
+                <h3 id="基本操作"><a href="#基本操作" class="headerlink" title="基本操作"></a>基本操作</h3><h5 id="插入"><a href="#插入" class="headerlink" title="插入"></a>插入</h5><h5 id="删除"><a href="#删除" class="headerlink" title="删除"></a>删除</h5><h5 id="遍历"><a href="#遍历" class="headerlink" title="遍历"></a>遍历</h5><h3 id="操作技巧"><a href="#操作技巧" class="headerlink" title="操作技巧"></a>操作技巧</h3><h5 id="指针的修改"><a href="#指针的修改" class="headerlink" title="指针的修改"></a>指针的修改</h5><h5 id="链表的拼接"><a href="#链表的拼接" class="headerlink" title="链表的拼接"></a>链表的拼接</h5><h5 id="环、边界、前后序"><a href="#环、边界、前后序" class="headerlink" title="环、边界、前后序"></a>环、边界、前后序</h5><h5 id="虚拟头"><a href="#虚拟头" class="headerlink" title="虚拟头"></a>虚拟头</h5><h5 id="快慢指针"><a href="#快慢指针" class="headerlink" title="快慢指针"></a>快慢指针</h5><p>如在不知长度的情况下获取中间点，核心是快指针和慢指针的相对位置及根据这两个可获得指针位置的使用</p>
+<h5 id="穿针引线"><a href="#穿针引线" class="headerlink" title="穿针引线"></a>穿针引线</h5><p>如翻转链表的一部分，断开两边，反转后再重新链接</p>
 <blockquote>
-<p>&#x2F;&#x2F; floor除法，结果向下取整, ^是幂运算</p>
+<p>链表的核心是指针及指针的引用</p>
 </blockquote>
-<h3 id="关系运算"><a href="#关系运算" class="headerlink" title="关系运算"></a>关系运算</h3><ol>
-<li>&lt; &gt; &lt;&#x3D; &gt;&#x3D; &#x3D;&#x3D; ~&#x3D;</li>
-</ol>
-<blockquote>
-<p>~&#x3D; 是不等于</p>
-</blockquote>
-<h3 id="数学库"><a href="#数学库" class="headerlink" title="数学库"></a>数学库</h3><ol>
-<li>math.random()</li>
-<li>math.floor()</li>
-<li>math.ceil()</li>
-<li>math.modf()  向0取整，会返回小数部分作为第二个结果</li>
-</ol>
-<h3 id="表示范围"><a href="#表示范围" class="headerlink" title="表示范围"></a>表示范围</h3><ol>
-<li>最大整数: 2^63 - 1(精简版使用32位)</li>
-<li>出现溢出时会回环</li>
-<li>1 &#x2F; 7 * 7 结果是0.999999994  而不是1(5.1版本测试是1，直接在线上测试是1.0，这个需要再调研下，0.1 + 0.2 &#x3D; 0.3，总之比JS处理的好多了)</li>
-</ol>
-<h3 id="惯例"><a href="#惯例" class="headerlink" title="惯例"></a>惯例</h3><ol>
-<li>整型总是可以转换为浮点型</li>
-<li>注意超过最大值(2^53)次时这种转换会出现异常</li>
-<li>可以通过与0进行按位或运算，可以把浮点型值强制转换为整型值(若值超出范围则会抛出异常)</li>
-<li>另一种强制转换方式是math.tointeger(), 不是整数或超出范围则返回nil</li>
-</ol>
-<h3 id="运算符优先级"><a href="#运算符优先级" class="headerlink" title="运算符优先级"></a>运算符优先级</h3>
+
                 
               </div>
             
@@ -394,12 +365,12 @@
   
     <span>></span>
     
-  <a href="/categories/Hero/Lua/" class="category-chain-item">Lua</a>
+  <a href="/categories/Hero/%E7%AE%97%E6%B3%95/" class="category-chain-item">算法</a>
   
   
     <span>></span>
     
-  <a href="/categories/Hero/Lua/Lua%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/" class="category-chain-item">Lua程序设计读书笔记</a>
+  <a href="/categories/Hero/%E7%AE%97%E6%B3%95/%E7%AE%97%E6%B3%95%E9%80%9A%E5%85%B3%E4%B9%8B%E8%B7%AF/" class="category-chain-item">算法通关之路</a>
   
   
 
@@ -420,9 +391,9 @@
       
         <a href="/tags/Hero/" class="print-no-link">#Hero</a>
       
-        <a href="/tags/Lua/" class="print-no-link">#Lua</a>
+        <a href="/tags/%E7%AE%97%E6%B3%95/" class="print-no-link">#算法</a>
       
-        <a href="/tags/Lua%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/" class="print-no-link">#Lua程序设计读书笔记</a>
+        <a href="/tags/%E7%AE%97%E6%B3%95%E9%80%9A%E5%85%B3%E4%B9%8B%E8%B7%AF/" class="print-no-link">#算法通关之路</a>
       
     </div>
   
@@ -434,8 +405,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>数值 - Hero · Lua · Lua程序设计读书笔记</div>
-      <div>https://mkamv.xyz/hzero/lua/Lua程序设计读书笔记/数值/</div>
+      <div>链表 - Hero · 算法 · 算法通关之路</div>
+      <div>https://mkamv.xyz/hero/algo/算法通过之路/链表专题/</div>
     </div>
     <div class="license-meta">
       
@@ -447,7 +418,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2023年11月26日</div>
+          <div>2023年11月27日</div>
         </div>
       
       
@@ -479,9 +450,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/hzero/algo/%E7%AE%97%E6%B3%95%E9%80%9A%E8%BF%87%E4%B9%8B%E8%B7%AF/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" title="数据结构 - Hero · 算法 · 算法通关之路">
+                      <a href="/hero/algo/%E7%AE%97%E6%B3%95%E9%80%9A%E8%BF%87%E4%B9%8B%E8%B7%AF/%E6%A0%91/" title="树 - Hero · 算法 · 算法通关之路">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">数据结构 - Hero · 算法 · 算法通关之路</span>
+                        <span class="hidden-mobile">树 - Hero · 算法 · 算法通关之路</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -489,8 +460,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/javascript/%E8%BF%90%E7%AE%97%E7%AC%A6/" title="运算符 - JavaScript · 基础">
-                        <span class="hidden-mobile">运算符 - JavaScript · 基础</span>
+                      <a href="/hero/algo/%E7%AE%97%E6%B3%95%E9%80%9A%E8%BF%87%E4%B9%8B%E8%B7%AF/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" title="数据结构 - Hero · 算法 · 算法通关之路">
+                        <span class="hidden-mobile">数据结构 - Hero · 算法 · 算法通关之路</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
@@ -513,7 +484,7 @@
         var options = Object.assign(
           {"clientID":"380b721444e388f986da","clientSecret":"cd4569aa7c4e07f1301593bbd51fb45572592099","repo":"mkamvi.github.io","owner":"Mkamvi","admin":["Mkamvi"],"language":"zh-CN","labels":["Gitalk"],"perPage":10,"pagerDirection":"last","distractionFreeMode":false,"createIssueManually":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token"},
           {
-            id: '3ad081af4e500ba0cbc38ce4f91b1330'
+            id: 'aecc6939b32d74aa39a1c2bf1c677413'
           }
         )
         var gitalk = new Gitalk(options);
