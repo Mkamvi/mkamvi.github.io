@@ -16,15 +16,15 @@
   <meta name="author" content="荒">
   <meta name="keywords" content="大帅,博客,不良帅,mkamv,mkamvi,不良帅的博客,mkamv的博客">
   
-    <meta name="description" content="简述代码运行流程和NodeJS差不多 定义一个函数1234567function fact(n)  if n &#x3D;&#x3D; 0 then    return 1  else    return n * fact(n - 1)  endend  交互模式和NodeJS一样可以直接在终端进行交互模式运行  dotfile(‘hello.lua’): 可以通过dotfile在交互模式下加载lua文件  注释12">
+    <meta name="description" content="简述代码运行流程和NodeJS差不多 定义一个函数1234567function fact(n)  if n &#x3D;&#x3D; 0 then    return 1  else    return n * fact(n - 1)  endend  交互模式和NodeJS一样可以直接在终端进行交互模式运行  dofile(‘hello.lua’): 可以通过dofile在交互模式下加载lua文件  注释1234">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Lua语言入门 - Hero · Lua · Lua程序设计读书笔记">
 <meta property="og:url" content="https://mkamv.xyz/hzero/lua/Lua%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/Lua%E8%AF%AD%E8%A8%80%E5%85%A5%E9%97%A8/index.html">
 <meta property="og:site_name" content="不良帅本帅">
-<meta property="og:description" content="简述代码运行流程和NodeJS差不多 定义一个函数1234567function fact(n)  if n &#x3D;&#x3D; 0 then    return 1  else    return n * fact(n - 1)  endend  交互模式和NodeJS一样可以直接在终端进行交互模式运行  dotfile(‘hello.lua’): 可以通过dotfile在交互模式下加载lua文件  注释12">
+<meta property="og:description" content="简述代码运行流程和NodeJS差不多 定义一个函数1234567function fact(n)  if n &#x3D;&#x3D; 0 then    return 1  else    return n * fact(n - 1)  endend  交互模式和NodeJS一样可以直接在终端进行交互模式运行  dofile(‘hello.lua’): 可以通过dofile在交互模式下加载lua文件  注释1234">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2023-11-18T18:33:00.000Z">
-<meta property="article:modified_time" content="2023-12-30T08:40:30.163Z">
+<meta property="article:modified_time" content="2024-01-01T08:01:11.045Z">
 <meta property="article:author" content="荒">
 <meta property="article:tag" content="Hero">
 <meta property="article:tag" content="Lua">
@@ -271,7 +271,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          290 字
+          341 字
         
       </span>
     
@@ -342,11 +342,12 @@
 
 <h3 id="交互模式"><a href="#交互模式" class="headerlink" title="交互模式"></a>交互模式</h3><p>和NodeJS一样可以直接在终端进行交互模式运行</p>
 <ol>
-<li>dotfile(‘hello.lua’): 可以通过dotfile在交互模式下加载lua文件</li>
+<li>dofile(‘hello.lua’): 可以通过dofile在交互模式下加载lua文件</li>
 </ol>
 <h3 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h3><figure class="highlight lua"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs LUA"><span class="hljs-comment">-- 单行注释</span><br><br><span class="hljs-comment">--[[</span><br><span class="hljs-comment">  多行注释</span><br><span class="hljs-comment">]]</span><br><br><span class="hljs-comment">--[[</span><br><span class="hljs-comment">  多行注释，这种写法只需放开注释开头即可</span><br><span class="hljs-comment">-- ]]</span><br><br></code></pre></td></tr></table></figure>
 
-<h3 id="全局变量？"><a href="#全局变量？" class="headerlink" title="全局变量？"></a>全局变量？</h3><h3 id="类型和值"><a href="#类型和值" class="headerlink" title="类型和值"></a>类型和值</h3><ol>
+<h3 id="全局变量"><a href="#全局变量" class="headerlink" title="全局变量"></a>全局变量</h3><p>全局变量无需声明即可使用，使用未经初始化的全局变量也不会导致错误(其值为nil)</p>
+<h3 id="类型和值"><a href="#类型和值" class="headerlink" title="类型和值"></a>类型和值</h3><ol>
 <li>nil</li>
 <li>boolean</li>
 <li>number</li>
@@ -356,6 +357,9 @@
 <li>thread</li>
 <li>table</li>
 </ol>
+<blockquote>
+<p>函数type()可以获值类型</p>
+</blockquote>
 <h3 id="逻辑运算符"><a href="#逻辑运算符" class="headerlink" title="逻辑运算符"></a>逻辑运算符</h3><ol>
 <li>and</li>
 <li>not</li>

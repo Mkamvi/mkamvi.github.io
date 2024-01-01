@@ -4,6 +4,39 @@
   
   
   <entry>
+    <title>字符串 - Hero · Lua · Lua程序设计读书笔记</title>
+    <link href="/hzero/lua/Lua%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E5%AD%97%E7%AC%A6%E4%B8%B2/"/>
+    <url>/hzero/lua/Lua%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E5%AD%97%E7%AC%A6%E4%B8%B2/</url>
+    
+    <content type="html"><![CDATA[<h3 id="长度操作符"><a href="#长度操作符" class="headerlink" title="长度操作符"></a>长度操作符</h3><figure class="highlight lua"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs lua"><span class="hljs-comment">-- #  使用 # 操作符可以获取字符串长度</span><br>#<span class="hljs-string">&#x27;aaa&#x27;</span><br><span class="hljs-comment">-- 3</span><br></code></pre></td></tr></table></figure><h3 id="连接操作符"><a href="#连接操作符" class="headerlink" title="连接操作符"></a>连接操作符</h3><figure class="highlight lua"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs lua"><span class="hljs-comment">-- ..  使用 .. 操作符可以获取字符串长度</span><br><span class="hljs-string">&#x27;Hello &#x27;</span> .. <span class="hljs-string">&#x27;World&#x27;</span><br><span class="hljs-comment">--  Hello World</span><br></code></pre></td></tr></table></figure><h3 id="多行字符串"><a href="#多行字符串" class="headerlink" title="多行字符串"></a>多行字符串</h3><figure class="highlight lua"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs lua">longString = <span class="hljs-string">[[</span><br><span class="hljs-string">  Hello,</span><br><span class="hljs-string">  Hello...</span><br><span class="hljs-string">]]</span><br></code></pre></td></tr></table></figure><h3 id="类型转换"><a href="#类型转换" class="headerlink" title="类型转换"></a>类型转换</h3><h5 id="tonumber"><a href="#tonumber" class="headerlink" title="tonumber()"></a>tonumber()</h5><h5 id="tostring"><a href="#tostring" class="headerlink" title="tostring()"></a>tostring()</h5><h3 id="字符串标准库"><a href="#字符串标准库" class="headerlink" title="字符串标准库"></a>字符串标准库</h3><ol><li>string.len(s)</li><li>string.reverse()</li><li>string.lower()</li><li>string.upper()</li><li>string.sub()</li><li>string.char()</li><li>string.byte()</li><li>string.format()</li><li>string.find()</li><li>string.gsub()</li></ol><h3 id="冒号操作符"><a href="#冒号操作符" class="headerlink" title="冒号操作符"></a>冒号操作符</h3><figure class="highlight lua"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs lua"><span class="hljs-comment">-- : 操作符可以用来函数调用</span><br><span class="hljs-built_in">string</span>.<span class="hljs-built_in">format</span>()<br><span class="hljs-comment">-- 可以重写为</span><br><span class="hljs-built_in">string</span>:<span class="hljs-built_in">format</span>()<br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+    <categories>
+      
+      <category>Hero</category>
+      
+      <category>Lua</category>
+      
+      <category>Lua程序设计读书笔记</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Hero</tag>
+      
+      <tag>Lua</tag>
+      
+      <tag>Lua程序设计读书笔记</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>0004 寻找两个正序数组的中位数 - Hero · 算法 · Leetcode</title>
     <link href="/hzero/algo/leetcode/0004%20%E5%AF%BB%E6%89%BE%E4%B8%A4%E4%B8%AA%E6%AD%A3%E5%BA%8F%E6%95%B0%E7%BB%84%E7%9A%84%E4%B8%AD%E4%BD%8D%E6%95%B0/"/>
     <url>/hzero/algo/leetcode/0004%20%E5%AF%BB%E6%89%BE%E4%B8%A4%E4%B8%AA%E6%AD%A3%E5%BA%8F%E6%95%B0%E7%BB%84%E7%9A%84%E4%B8%AD%E4%BD%8D%E6%95%B0/</url>
@@ -758,7 +791,7 @@
     <link href="/hzero/lua/Lua%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/Lua%E8%AF%AD%E8%A8%80%E5%85%A5%E9%97%A8/"/>
     <url>/hzero/lua/Lua%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/Lua%E8%AF%AD%E8%A8%80%E5%85%A5%E9%97%A8/</url>
     
-    <content type="html"><![CDATA[<h3 id="简述"><a href="#简述" class="headerlink" title="简述"></a>简述</h3><p>代码运行流程和NodeJS差不多</p><h3 id="定义一个函数"><a href="#定义一个函数" class="headerlink" title="定义一个函数"></a>定义一个函数</h3><figure class="highlight lua"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs LUA"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">fact</span><span class="hljs-params">(n)</span></span><br>  <span class="hljs-keyword">if</span> n == <span class="hljs-number">0</span> <span class="hljs-keyword">then</span><br>    <span class="hljs-keyword">return</span> <span class="hljs-number">1</span><br>  <span class="hljs-keyword">else</span><br>    <span class="hljs-keyword">return</span> n * fact(n - <span class="hljs-number">1</span>)<br>  <span class="hljs-keyword">end</span><br><span class="hljs-keyword">end</span><br></code></pre></td></tr></table></figure><h3 id="交互模式"><a href="#交互模式" class="headerlink" title="交互模式"></a>交互模式</h3><p>和NodeJS一样可以直接在终端进行交互模式运行</p><ol><li>dotfile(‘hello.lua’): 可以通过dotfile在交互模式下加载lua文件</li></ol><h3 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h3><figure class="highlight lua"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs LUA"><span class="hljs-comment">-- 单行注释</span><br><br><span class="hljs-comment">--[[</span><br><span class="hljs-comment">  多行注释</span><br><span class="hljs-comment">]]</span><br><br><span class="hljs-comment">--[[</span><br><span class="hljs-comment">  多行注释，这种写法只需放开注释开头即可</span><br><span class="hljs-comment">-- ]]</span><br><br></code></pre></td></tr></table></figure><h3 id="全局变量？"><a href="#全局变量？" class="headerlink" title="全局变量？"></a>全局变量？</h3><h3 id="类型和值"><a href="#类型和值" class="headerlink" title="类型和值"></a>类型和值</h3><ol><li>nil</li><li>boolean</li><li>number</li><li>string</li><li>userdata</li><li>fucntion</li><li>thread</li><li>table</li></ol><h3 id="逻辑运算符"><a href="#逻辑运算符" class="headerlink" title="逻辑运算符"></a>逻辑运算符</h3><ol><li>and</li><li>not</li><li>or</li></ol>]]></content>
+    <content type="html"><![CDATA[<h3 id="简述"><a href="#简述" class="headerlink" title="简述"></a>简述</h3><p>代码运行流程和NodeJS差不多</p><h3 id="定义一个函数"><a href="#定义一个函数" class="headerlink" title="定义一个函数"></a>定义一个函数</h3><figure class="highlight lua"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs LUA"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">fact</span><span class="hljs-params">(n)</span></span><br>  <span class="hljs-keyword">if</span> n == <span class="hljs-number">0</span> <span class="hljs-keyword">then</span><br>    <span class="hljs-keyword">return</span> <span class="hljs-number">1</span><br>  <span class="hljs-keyword">else</span><br>    <span class="hljs-keyword">return</span> n * fact(n - <span class="hljs-number">1</span>)<br>  <span class="hljs-keyword">end</span><br><span class="hljs-keyword">end</span><br></code></pre></td></tr></table></figure><h3 id="交互模式"><a href="#交互模式" class="headerlink" title="交互模式"></a>交互模式</h3><p>和NodeJS一样可以直接在终端进行交互模式运行</p><ol><li>dofile(‘hello.lua’): 可以通过dofile在交互模式下加载lua文件</li></ol><h3 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h3><figure class="highlight lua"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs LUA"><span class="hljs-comment">-- 单行注释</span><br><br><span class="hljs-comment">--[[</span><br><span class="hljs-comment">  多行注释</span><br><span class="hljs-comment">]]</span><br><br><span class="hljs-comment">--[[</span><br><span class="hljs-comment">  多行注释，这种写法只需放开注释开头即可</span><br><span class="hljs-comment">-- ]]</span><br><br></code></pre></td></tr></table></figure><h3 id="全局变量"><a href="#全局变量" class="headerlink" title="全局变量"></a>全局变量</h3><p>全局变量无需声明即可使用，使用未经初始化的全局变量也不会导致错误(其值为nil)</p><h3 id="类型和值"><a href="#类型和值" class="headerlink" title="类型和值"></a>类型和值</h3><ol><li>nil</li><li>boolean</li><li>number</li><li>string</li><li>userdata</li><li>fucntion</li><li>thread</li><li>table</li></ol><blockquote><p>函数type()可以获值类型</p></blockquote><h3 id="逻辑运算符"><a href="#逻辑运算符" class="headerlink" title="逻辑运算符"></a>逻辑运算符</h3><ol><li>and</li><li>not</li><li>or</li></ol>]]></content>
     
     
     <categories>
