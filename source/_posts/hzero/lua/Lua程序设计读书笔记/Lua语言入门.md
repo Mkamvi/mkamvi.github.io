@@ -31,7 +31,7 @@ end
 
 和NodeJS一样可以直接在终端进行交互模式运行
 
-1. dotfile('hello.lua'): 可以通过dotfile在交互模式下加载lua文件
+1. dofile('hello.lua'): 可以通过dofile在交互模式下加载lua文件
 
 
 ### 注释
@@ -49,7 +49,9 @@ end
 
 ```
 
-### 全局变量？
+### 全局变量
+
+全局变量无需声明即可使用，使用未经初始化的全局变量也不会导致错误(其值为nil)
 
 ### 类型和值
 
@@ -61,6 +63,8 @@ end
 6. fucntion
 7. thread
 8. table
+
+> 函数type()可以获值类型
 
 ### 逻辑运算符
 
