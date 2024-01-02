@@ -24,3 +24,4 @@ categories:
 | d + i + ['"{(...] | 删除对应区间内的内容                              |
 | jk                | 从编辑器模式到Normal模式(jdhao/better-escape.vim) |
 | g + Ctrl + g      | 显示文本统计情况                                  |
+| Ctrl + g          | 显示当前文件全路径                                |
