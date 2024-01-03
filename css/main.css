@@ -294,6 +294,13 @@ sup > a::before,
   color: var(--navbar-text-color);
   text-shadow: #fff 1px 1px 3px;
 }
+.navbar .navbar-brand img {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  background-color: transparent;
+  object-fit: cover;
+}
 .navbar .navbar-toggler .animated-icon span {
   background-color: var(--navbar-text-color);
 }
@@ -1992,20 +1999,19 @@ input[type=checkbox] {
   background-color: transparent;
   object-fit: cover;
   box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
-  filter: hue-rotate(186deg);
 }
 .about-info > div {
   margin-bottom: 0.5rem;
 }
 .about-name {
-  font-size: 14rem;
+  font-size: 3rem;
   font-weight: bold;
   color: var(--text-color);
-  text-shadow: var(--text-color) 7px 7px 7px;
+  text-shadow: var(--text-color) 3px 3px 3px;
   animation: filter-huang 28s linear infinite;
 }
 .about-intro {
-  font-size: 0.7rem;
+  font-size: 1rem;
   color: var(--text-color);
   text-shadow: var(--text-color) 1px 1px 3px;
   animation: filter-huang 28s linear infinite;
