@@ -4,6 +4,56 @@
   
   
   <entry>
+    <title>简介 - Blender · 物体</title>
+    <link href="/blender/object/introduction/"/>
+    <url>/blender/object/introduction/</url>
+    
+    <content type="html"><![CDATA[<h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>每个Blender 对象类型 （网格，光线，曲线，相机等）由两部分组成： 对象 和 对象数据 （有时缩写为 “ObData” ）：</p><ol><li><p>物体</p><p>保存有关特定元素的位置、旋转和尺寸的信息</p></li><li><p>物体数据</p><p>存放其他一切。例如：</p><ul><li>网格:存储几何、材质列表、顶点组等</li><li>摄像机: 存储焦距、景深、镜头尺寸等</li></ul></li></ol><h2 id="物体类型"><a href="#物体类型" class="headerlink" title="物体类型"></a>物体类型</h2><h4 id="网格-Mesh"><a href="#网格-Mesh" class="headerlink" title="网格(Mesh)"></a>网格(Mesh)</h4><h4 id="曲线-Curve"><a href="#曲线-Curve" class="headerlink" title="曲线(Curve)"></a>曲线(Curve)</h4><h4 id="曲面-Surface"><a href="#曲面-Surface" class="headerlink" title="曲面(Surface)"></a>曲面(Surface)</h4><h4 id="融球-Metaball"><a href="#融球-Metaball" class="headerlink" title="融球(Metaball)"></a>融球(Metaball)</h4><p>由数学函数（无顶点或控制点）形成的物体，定义了物体所在的3D体积。融球物体具有类似液体的质量，当将两个或多个融球放在一起时，它们通过平滑地圆润地连接而合并在一起，显示为一个统一的物体</p><h4 id="文本-Text"><a href="#文本-Text" class="headerlink" title="文本(Text)"></a>文本(Text)</h4><h4 id="体积"><a href="#体积" class="headerlink" title="体积"></a>体积</h4><p>由其他软件或 Blender 的 流体模拟器 生成的 OpenVDB 文档的容器</p><h4 id="蜡笔"><a href="#蜡笔" class="headerlink" title="蜡笔"></a>蜡笔</h4><h4 id="骨架"><a href="#骨架" class="headerlink" title="骨架"></a>骨架</h4><h4 id="晶格"><a href="#晶格" class="headerlink" title="晶格"></a>晶格</h4><p>不可渲染的线框，通常用于借助 晶格修改器，形变其他物体</p><h4 id="空物体"><a href="#空物体" class="headerlink" title="空物体"></a>空物体</h4><p>Null物体，是不能渲染的简单视觉变换节点物体 。它们用于控制其他物体的位置或移动</p><h4 id="图像"><a href="#图像" class="headerlink" title="图像"></a>图像</h4><h4 id="灯光"><a href="#灯光" class="headerlink" title="灯光"></a>灯光</h4><h4 id="光照探头"><a href="#光照探头" class="headerlink" title="光照探头"></a>光照探头</h4><p>用于EEVEE渲染引擎，用来记录间接光照的光照信息</p><h4 id="摄像机"><a href="#摄像机" class="headerlink" title="摄像机"></a>摄像机</h4><h4 id="扬声器"><a href="#扬声器" class="headerlink" title="扬声器"></a>扬声器</h4><h4 id="力场"><a href="#力场" class="headerlink" title="力场"></a>力场</h4><h4 id="集合实例"><a href="#集合实例" class="headerlink" title="集合实例"></a>集合实例</h4><p>允许从若干已存在的集合中选择。一旦选定，将产生一个空物体，包含被选集合的实例（集合实例化激活状态）</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Blender</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Blender</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>简介 - Blender · 场景</title>
+    <link href="/blender/scene/introduction/"/>
+    <url>/blender/scene/introduction/</url>
+    
+    <content type="html"><![CDATA[<h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>一个场景可以理解成一个世界，和其他3D 软件里的场景概念一致(如ThreeJS）, 每个场景都是一个独立的新世界</p><h4 id="场景菜单"><a href="#场景菜单" class="headerlink" title="场景菜单"></a>场景菜单</h4><p>右上角有个Scene菜单，可用于管理场景(新增、删除等)</p><h2 id="场景属性"><a href="#场景属性" class="headerlink" title="场景属性"></a>场景属性</h2><h4 id="摄像机"><a href="#摄像机" class="headerlink" title="摄像机"></a>摄像机</h4><h4 id="场景背景"><a href="#场景背景" class="headerlink" title="场景背景"></a>场景背景</h4><p>可以使用另外一个场景作为背景，这个很 🎨</p><h2 id="单位"><a href="#单位" class="headerlink" title="单位"></a>单位</h2><h2 id="重力"><a href="#重力" class="headerlink" title="重力"></a>重力</h2><h2 id="模拟"><a href="#模拟" class="headerlink" title="模拟"></a>模拟</h2><h2 id="插帧集"><a href="#插帧集" class="headerlink" title="插帧集"></a>插帧集</h2><h2 id="音频"><a href="#音频" class="headerlink" title="音频"></a>音频</h2><p>用于控制全局音频设置的选项</p><h2 id="刚体世界环境"><a href="#刚体世界环境" class="headerlink" title="刚体世界环境"></a>刚体世界环境</h2>]]></content>
+    
+    
+    <categories>
+      
+      <category>Blender</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Blender</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>registers - Nvim · 帮助文档</title>
     <link href="/nvim/help/resgisters/"/>
     <url>/nvim/help/resgisters/</url>
