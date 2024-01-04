@@ -4,6 +4,31 @@
   
   
   <entry>
+    <title>编辑 - Blender · 物体</title>
+    <link href="/blender/object/edit/"/>
+    <url>/blender/object/edit/</url>
+    
+    <content type="html"><![CDATA[<h2 id="变换"><a href="#变换" class="headerlink" title="变换"></a>变换</h2><h2 id="镜像"><a href="#镜像" class="headerlink" title="镜像"></a>镜像</h2><h2 id="清空"><a href="#清空" class="headerlink" title="清空"></a>清空</h2><h4 id="清空位置"><a href="#清空位置" class="headerlink" title="清空位置"></a>清空位置</h4><p><kbd>Alt-G</kbd></p><h4 id="清空缩放"><a href="#清空缩放" class="headerlink" title="清空缩放"></a>清空缩放</h4><p><kbd>Alt-S</kbd></p><h4 id="清空旋转"><a href="#清空旋转" class="headerlink" title="清空旋转"></a>清空旋转</h4><p><kbd>Alt-R</kbd></p><h2 id="关联复制"><a href="#关联复制" class="headerlink" title="关联复制"></a>关联复制</h2><p><kbd>Alt-D</kbd></p><p>顶点数据是引用，物体数据是复制。也就是说在编辑模式下的修改会同步所有物体，但物体的变换、缩放等物体数据各个物体会独立保留</p><h2 id="合并和层级关系"><a href="#合并和层级关系" class="headerlink" title="合并和层级关系"></a>合并和层级关系</h2><h4 id="合并"><a href="#合并" class="headerlink" title="合并"></a>合并</h4><p><kbd>Ctrl-J</kbd> （合并到活动物体，即合并到最后一个选中的物体上）</p><h4 id="父子关系"><a href="#父子关系" class="headerlink" title="父子关系"></a>父子关系</h4><ol><li>创建父级：<kbd>Ctrl-P</kbd> （最后选择父级, 即将多个物体同时挂载到活动物体上）</li><li>顶点父级：编辑模式下可以选择一个顶点作为父级顶点</li><li>清空父级: <kbd>Alt-P</kbd></li></ol>]]></content>
+    
+    
+    <categories>
+      
+      <category>Blender</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Blender</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>简介 - Blender · 物体</title>
     <link href="/blender/object/introduction/"/>
     <url>/blender/object/introduction/</url>
