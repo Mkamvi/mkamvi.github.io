@@ -4,11 +4,36 @@
   
   
   <entry>
+    <title>实例化 - Blender · 物体</title>
+    <link href="/blender/object/instancing/"/>
+    <url>/blender/object/instancing/</url>
+    
+    <content type="html"><![CDATA[<h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>就像是 <kbd>Alt-d</kbd> 关联复制一样，实例化后也是同一个物体</p><h2 id="顶点"><a href="#顶点" class="headerlink" title="顶点"></a>顶点</h2><p>实例顶点允许在 父元素 的每个顶点复制子对象，注意是父元素。感觉这个用途很宽泛，尤其和曲线配合的话，好玩又有用的的一个功能</p><h2 id="面"><a href="#面" class="headerlink" title="面"></a>面</h2><p>面和顶点的区别是在 父元素的 每个面上复制子对象</p><h2 id="集合"><a href="#集合" class="headerlink" title="集合"></a>集合</h2><p>为集合中的所有物体创建一个实例化集合，相当于复制了一整个集合</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Blender</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Blender</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>编辑 - Blender · 物体</title>
     <link href="/blender/object/edit/"/>
     <url>/blender/object/edit/</url>
     
-    <content type="html"><![CDATA[<h2 id="变换"><a href="#变换" class="headerlink" title="变换"></a>变换</h2><h2 id="镜像"><a href="#镜像" class="headerlink" title="镜像"></a>镜像</h2><h2 id="清空"><a href="#清空" class="headerlink" title="清空"></a>清空</h2><h4 id="清空位置"><a href="#清空位置" class="headerlink" title="清空位置"></a>清空位置</h4><p><kbd>Alt-G</kbd></p><h4 id="清空缩放"><a href="#清空缩放" class="headerlink" title="清空缩放"></a>清空缩放</h4><p><kbd>Alt-S</kbd></p><h4 id="清空旋转"><a href="#清空旋转" class="headerlink" title="清空旋转"></a>清空旋转</h4><p><kbd>Alt-R</kbd></p><h2 id="关联复制"><a href="#关联复制" class="headerlink" title="关联复制"></a>关联复制</h2><p><kbd>Alt-D</kbd></p><p>顶点数据是引用，物体数据是复制。也就是说在编辑模式下的修改会同步所有物体，但物体的变换、缩放等物体数据各个物体会独立保留</p><h2 id="合并和层级关系"><a href="#合并和层级关系" class="headerlink" title="合并和层级关系"></a>合并和层级关系</h2><h4 id="合并"><a href="#合并" class="headerlink" title="合并"></a>合并</h4><p><kbd>Ctrl-J</kbd> （合并到活动物体，即合并到最后一个选中的物体上）</p><h4 id="父子关系"><a href="#父子关系" class="headerlink" title="父子关系"></a>父子关系</h4><ol><li>创建父级：<kbd>Ctrl-P</kbd> （最后选择父级, 即将多个物体同时挂载到活动物体上）</li><li>顶点父级：编辑模式下可以选择一个顶点作为父级顶点</li><li>清空父级: <kbd>Alt-P</kbd></li></ol>]]></content>
+    <content type="html"><![CDATA[<h2 id="变换"><a href="#变换" class="headerlink" title="变换"></a>变换</h2><h2 id="镜像"><a href="#镜像" class="headerlink" title="镜像"></a>镜像</h2><h2 id="清空"><a href="#清空" class="headerlink" title="清空"></a>清空</h2><h4 id="清空位置"><a href="#清空位置" class="headerlink" title="清空位置"></a>清空位置</h4><p><kbd>Alt-G</kbd></p><h4 id="清空缩放"><a href="#清空缩放" class="headerlink" title="清空缩放"></a>清空缩放</h4><p><kbd>Alt-S</kbd></p><h4 id="清空旋转"><a href="#清空旋转" class="headerlink" title="清空旋转"></a>清空旋转</h4><p><kbd>Alt-R</kbd></p><h2 id="关联复制"><a href="#关联复制" class="headerlink" title="关联复制"></a>关联复制</h2><p><kbd>Alt-D</kbd></p><p>顶点数据是引用，物体数据是复制。也就是说在编辑模式下的修改会同步所有物体，但物体的变换、缩放等物体数据各个物体会独立保留</p><h2 id="合并和层级关系"><a href="#合并和层级关系" class="headerlink" title="合并和层级关系"></a>合并和层级关系</h2><h4 id="合并"><a href="#合并" class="headerlink" title="合并"></a>合并</h4><p><kbd>Ctrl-J</kbd> （合并到活动物体，即合并到最后一个选中的物体上）</p><h4 id="父子关系"><a href="#父子关系" class="headerlink" title="父子关系"></a>父子关系</h4><ol><li>创建父级：<kbd>Ctrl-P</kbd> （最后选择父级, 即将多个物体同时挂载到活动物体上）</li><li>顶点父级：编辑模式下可以选择一个顶点作为父级顶点</li><li>清空父级: <kbd>Alt-P</kbd></li></ol><h2 id="着色"><a href="#着色" class="headerlink" title="着色"></a>着色</h2><h4 id="平滑着色"><a href="#平滑着色" class="headerlink" title="平滑着色"></a>平滑着色</h4><h4 id="平直着色"><a href="#平直着色" class="headerlink" title="平直着色"></a>平直着色</h4><h4 id="阴影自动平滑着色"><a href="#阴影自动平滑着色" class="headerlink" title="阴影自动平滑着色"></a>阴影自动平滑着色</h4><p>浅角度的面，注意阴影</p><h2 id="刚体"><a href="#刚体" class="headerlink" title="刚体"></a>刚体</h2><h2 id="显示和隐藏"><a href="#显示和隐藏" class="headerlink" title="显示和隐藏"></a>显示和隐藏</h2><p><kbd>h</kbd></p><p>隐藏选中</p><p><kbd>Alt-h</kbd></p><p>显示所有</p><p><kbd>Shift-h</kbd></p><p>隐藏所有未选中项</p>]]></content>
     
     
     <categories>
