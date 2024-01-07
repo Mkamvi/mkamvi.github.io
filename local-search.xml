@@ -4,6 +4,81 @@
   
   
   <entry>
+    <title>简介 - Blender · 动画 · 关键帧</title>
+    <link href="/blender/animation/keyframes/introduction/"/>
+    <url>/blender/animation/keyframes/introduction/</url>
+    
+    <content type="html"><![CDATA[<h2 id="插帧集"><a href="#插帧集" class="headerlink" title="插帧集"></a>插帧集</h2><p>动画属性的集合，用于同时对多个属性进行动画关键帧插入。通过设置活动插帧集，可以非常快速的通过 <kbd>I</kbd> 键直接在时间轴上对所有集合里的数下插入关键帧，而无需选择相应属性</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Blender</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Blender</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>简介 - Blender · 雕刻 · 笔刷</title>
+    <link href="/blender/scrupt-paint/introduction/"/>
+    <url>/blender/scrupt-paint/introduction/</url>
+    
+    <content type="html"><![CDATA[<h2 id="笔刷"><a href="#笔刷" class="headerlink" title="笔刷"></a>笔刷</h2><h3 id="快捷键访问网格工具"><a href="#快捷键访问网格工具" class="headerlink" title="快捷键访问网格工具"></a>快捷键访问网格工具</h3><table><thead><tr><th>快捷键</th><th>描述</th></tr></thead><tbody><tr><td><kbd>f</kbd></td><td>设置笔刷大小</td></tr><tr><td><kbd>shift-f</kbd></td><td>设置笔刷强度</td></tr><tr><td><kbd>Ctrl-F</kbd></td><td>旋转笔刷纹理</td></tr></tbody></table><h2 id="自适应分辨率"><a href="#自适应分辨率" class="headerlink" title="自适应分辨率"></a>自适应分辨率</h2><h3 id="体素重构"><a href="#体素重构" class="headerlink" title="体素重构"></a>体素重构</h3><ul><li><kbd>R</kbd> 调整分辨率</li><li><kbd>Ctrl-R</kbd> 重构</li></ul><h3 id="动态拓扑"><a href="#动态拓扑" class="headerlink" title="动态拓扑"></a>动态拓扑</h3><p>❓ 文档说是快捷键和体素重构一样，但 <kbd>R</kbd> 键展示效果只有一个可以调整的圆，<kbd>Ctrl-R</kbd> 没有效果</p><h3 id="多级精度修改器"><a href="#多级精度修改器" class="headerlink" title="多级精度修改器"></a>多级精度修改器</h3><p>不实际修改原网格体，和细分修改器差不多</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Blender</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Blender</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>建模网格体编辑 · 简介 - Blender</title>
+    <link href="/blender/model/mesh/edit/introduction/"/>
+    <url>/blender/model/mesh/edit/introduction/</url>
+    
+    <content type="html"><![CDATA[<h2 id="快捷键访问网格工具"><a href="#快捷键访问网格工具" class="headerlink" title="快捷键访问网格工具"></a>快捷键访问网格工具</h2><table><thead><tr><th>快捷键</th><th>描述</th></tr></thead><tbody><tr><td><kbd>Ctrl+F</kbd></td><td>面工具</td></tr><tr><td><kbd>Ctrl+E</kbd></td><td>边工具</td></tr><tr><td><kbd>Ctrl+V</kbd></td><td>顶点工具</td></tr></tbody></table>]]></content>
+    
+    
+    <categories>
+      
+      <category>Blender</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Blender</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>实例化 - Blender · 物体</title>
     <link href="/blender/object/instancing/"/>
     <url>/blender/object/instancing/</url>
