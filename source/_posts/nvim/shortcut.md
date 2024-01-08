@@ -30,3 +30,4 @@ categories:
 | ds                | surround快捷键，移除包围符                                |
 | ys                | surround快捷键，插入包围付可以使用(ys3j", ysiw', ys2w{)等 |
 | yssb, yss)        | surround快捷键，整行插入圆括号                            |
+| zz                | 当前行移动到屏幕中央                                      |
