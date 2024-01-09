@@ -4,6 +4,60 @@
   
   
   <entry>
+    <title>3.x版本问题汇总 - React · Antd</title>
+    <link href="/react/antd_v3%E9%97%AE%E9%A2%98%E6%B1%87%E6%80%BB/"/>
+    <url>/react/antd_v3%E9%97%AE%E9%A2%98%E6%B1%87%E6%80%BB/</url>
+    
+    <content type="html"><![CDATA[<h2 id="表单"><a href="#表单" class="headerlink" title="表单"></a>表单</h2><h3 id="动态表单无法清空"><a href="#动态表单无法清空" class="headerlink" title="动态表单无法清空"></a>动态表单无法清空</h3><h4 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h4><p>动态表单在删除后，数据仍然保存在表单中，导致校验时出现对旧值的校验，及保存时整个数据结构与预期不一致</p><h4 id="问题分析"><a href="#问题分析" class="headerlink" title="问题分析"></a>问题分析</h4><p>getFieldDecoratorr()在3.x中(rc-from&#x2F;2.4.10)，使用ref判断组件是否卸载，而自定义的函数组件不支持ref，导致清理逻辑失效</p><p>这是ref实现的代码片段，注意clearField函数其实就是清理字段</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-title function_">saveRef</span>(<span class="hljs-params">name, _, component</span>) &#123;<br>   <span class="hljs-keyword">if</span> (!component) &#123;<br>     <span class="hljs-keyword">const</span> fieldMeta = <span class="hljs-variable language_">this</span>.<span class="hljs-property">fieldsStore</span>.<span class="hljs-title function_">getFieldMeta</span>(name);<br>     <span class="hljs-keyword">if</span> (!fieldMeta.<span class="hljs-property">preserve</span>) &#123;<br>       <span class="hljs-comment">// after destroy, delete data</span><br>       <span class="hljs-variable language_">this</span>.<span class="hljs-property">clearedFieldMetaCache</span>[name] = &#123;<br>         <span class="hljs-attr">field</span>: <span class="hljs-variable language_">this</span>.<span class="hljs-property">fieldsStore</span>.<span class="hljs-title function_">getField</span>(name),<br>         <span class="hljs-attr">meta</span>: fieldMeta,<br>       &#125;;<br>       <span class="hljs-variable language_">this</span>.<span class="hljs-title function_">clearField</span>(name);<br>     &#125;<br>     <span class="hljs-keyword">delete</span> <span class="hljs-variable language_">this</span>.<span class="hljs-property">domFields</span>[name];<br>     <span class="hljs-keyword">return</span>;<br>   &#125;<br>   <span class="hljs-variable language_">this</span>.<span class="hljs-property">domFields</span>[name] = <span class="hljs-literal">true</span>;<br>   <span class="hljs-variable language_">this</span>.<span class="hljs-title function_">recoverClearedField</span>(name);<br>   <span class="hljs-keyword">const</span> fieldMeta = <span class="hljs-variable language_">this</span>.<span class="hljs-property">fieldsStore</span>.<span class="hljs-title function_">getFieldMeta</span>(name);<br>   <span class="hljs-keyword">if</span> (fieldMeta) &#123;<br>     <span class="hljs-keyword">const</span> ref = fieldMeta.<span class="hljs-property">ref</span>;<br>     <span class="hljs-keyword">if</span> (ref) &#123;<br>       <span class="hljs-keyword">if</span> (<span class="hljs-keyword">typeof</span> ref === <span class="hljs-string">&#x27;string&#x27;</span>) &#123;<br>         <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">Error</span>(<span class="hljs-string">`can not set ref string for <span class="hljs-subst">$&#123;name&#125;</span>`</span>);<br>       &#125; <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (<span class="hljs-keyword">typeof</span> ref === <span class="hljs-string">&#x27;function&#x27;</span>) &#123;<br>         <span class="hljs-title function_">ref</span>(component);<br>       &#125; <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (<span class="hljs-title class_">Object</span>.<span class="hljs-property"><span class="hljs-keyword">prototype</span></span>.<span class="hljs-property">hasOwnProperty</span>.<span class="hljs-title function_">call</span>(ref, <span class="hljs-string">&#x27;current&#x27;</span>)) &#123;<br>         ref.<span class="hljs-property">current</span> = component;<br>       &#125;<br>     &#125;<br>   &#125;<br>   <span class="hljs-variable language_">this</span>.<span class="hljs-property">instances</span>[name] = component;<br> &#125;<br></code></pre></td></tr></table></figure><h4 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h4><p>给函数组件添加forwardRef，转发ref到子组件</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>React</category>
+      
+      <category>Antd</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>React</tag>
+      
+      <tag>Antd</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>快捷键 - Mac</title>
+    <link href="/mac/%E5%BF%AB%E6%8D%B7%E9%94%AE/"/>
+    <url>/mac/%E5%BF%AB%E6%8D%B7%E9%94%AE/</url>
+    
+    <content type="html"><![CDATA[<h2 id="快捷键"><a href="#快捷键" class="headerlink" title="快捷键"></a>快捷键</h2><table><thead><tr><th>快捷键</th><th>描述</th></tr></thead><tbody><tr><td><kbd>Alt-N</kbd></td><td>显示通知中心</td></tr><tr><td><kbd>Alt-A</kbd></td><td>显示启动台</td></tr><tr><td><kbd>F1</kbd></td><td>降低显示器亮度</td></tr><tr><td><kbd>F1</kbd></td><td>提高显示器亮度</td></tr><tr><td><kbd>Alt-D</kbd></td><td>显示桌面</td></tr><tr><td><kbd>Ctrl-8</kbd></td><td>焦点移动到菜单栏</td></tr><tr><td><kbd>Win-`</kbd></td><td>将焦点移动到下一窗口(屏幕)</td></tr><tr><td><kbd>Ctrl-F3</kbd></td><td>将焦点移动到程序坞</td></tr></tbody></table>]]></content>
+    
+    
+    <categories>
+      
+      <category>Mac</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Mac</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>命令行快速输入 - Hero · Nvim · 帮助文档</title>
     <link href="/nvim/help/command/"/>
     <url>/nvim/help/command/</url>
