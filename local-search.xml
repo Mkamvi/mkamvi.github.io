@@ -116,6 +116,31 @@
   
   
   <entry>
+    <title>简介 - Blender · 物理 · 粒子系统</title>
+    <link href="/blender/physics/particles/introduction/"/>
+    <url>/blender/physics/particles/introduction/</url>
+    
+    <content type="html"><![CDATA[<h2 id="影响因素"><a href="#影响因素" class="headerlink" title="影响因素"></a>影响因素</h2><ul><li>从网格出来的初始速度</li><li>发射源本身的运动</li><li>重力 或 阻力 的影响</li><li>风场、旋涡等力场的影响</li><li>与其他对象碰撞</li></ul><h2 id="结果类型"><a href="#结果类型" class="headerlink" title="结果类型"></a>结果类型</h2><ul><li>光晕</li><li>每个粒子可以替换为其他网格体（这个发挥空间着实大）</li><li>头发曲线</li></ul>]]></content>
+    
+    
+    <categories>
+      
+      <category>Blender</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Blender</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>命令行快速输入 - Hero · Nvim · 帮助文档</title>
     <link href="/nvim/help/command/"/>
     <url>/nvim/help/command/</url>
@@ -142,9 +167,9 @@
       
       <tag>Vim</tag>
       
-      <tag>Hero</tag>
-      
       <tag>VimHelp</tag>
+      
+      <tag>Hero</tag>
       
     </tags>
     
