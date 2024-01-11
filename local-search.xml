@@ -4,6 +4,64 @@
   
   
   <entry>
+    <title>基础编辑 - Emacs · 帮助文档</title>
+    <link href="/emacs/docs/basic_edit/"/>
+    <url>/emacs/docs/basic_edit/</url>
+    
+    <content type="html"><![CDATA[<h2 id="插入文本"><a href="#插入文本" class="headerlink" title="插入文本"></a>插入文本</h2><h3 id="输入"><a href="#输入" class="headerlink" title="输入"></a>输入</h3><p>emacs默认就可以直接键入字符，像普通的文本编辑器一样</p><h3 id="换行"><a href="#换行" class="headerlink" title="换行"></a>换行</h3><p>使用 <kbd>Enter</kbd> 可换行，使用 <kbd>Ctrl-j</kbd> 进行无自动缩进换行</p><h3 id="特殊键位"><a href="#特殊键位" class="headerlink" title="特殊键位"></a>特殊键位</h3><p>可用通过 <kbd>Ctrl-q</kbd> 键，后面按下的特殊键位(如Delete、Enter、甚至Ctrl-g)便能插入编辑器</p><h2 id="改变光标的位置"><a href="#改变光标的位置" class="headerlink" title="改变光标的位置"></a>改变光标的位置</h2><table><thead><tr><th>快捷键</th><th>描述</th></tr></thead><tbody><tr><td>Ctrl-f</td><td>向前移动一个字符</td></tr><tr><td>Ctrl-b</td><td>向后移动一个字符</td></tr><tr><td>Ctrl-p</td><td>向上移动一行</td></tr><tr><td>Ctrl-n</td><td>向下移动一行</td></tr><tr><td>Ctrl-a</td><td>移动到行首</td></tr><tr><td>Ctrl-e</td><td>移动到行尾</td></tr><tr><td>Alt-f</td><td>向前移动一个单词</td></tr><tr><td>Alt-b</td><td>向后移动一个单词</td></tr><tr><td>Alt-r</td><td>首行尾行反复横跳</td></tr><tr><td>Ctrl-v</td><td>屏幕向下一屏</td></tr><tr><td>Alt-v</td><td>屏幕向上一屏</td></tr><tr><td>Alt-g c n</td><td>移动到全文字符第n个位置</td></tr><tr><td>Alt-g Alt-g n</td><td>光标移动到第n行</td></tr><tr><td>Alt-g g n</td><td>光标移动到第n行</td></tr><tr><td>Alt-g Tab n</td><td>光标移动到当前行第n列</td></tr><tr><td>Ctrl-x Ctrl-n</td><td>默认被禁用了，应该还是设置列的</td></tr><tr><td>Ctrl-u Ctrl-x Ctrl-n</td><td>默认被禁用了，应该是取消光标列移动的</td></tr></tbody></table>]]></content>
+    
+    
+    <categories>
+      
+      <category>编辑器</category>
+      
+      <category>emacs</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>emacs</tag>
+      
+      <tag>编辑器</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>屏幕组织 - Emacs · 帮助文档</title>
+    <link href="/emacs/docs/screen/"/>
+    <url>/emacs/docs/screen/</url>
+    
+    <content type="html"><![CDATA[<h2 id="点-Point"><a href="#点-Point" class="headerlink" title="点(Point)"></a>点(Point)</h2><p>这个概览和vim里的光标一致</p><h2 id="回显区域-The-Echo-Area"><a href="#回显区域-The-Echo-Area" class="headerlink" title="回显区域(The Echo Area)"></a>回显区域(The Echo Area)</h2><p>vim里的最后一行输入命令</p><h2 id="模式线-The-Mode-Line"><a href="#模式线-The-Mode-Line" class="headerlink" title="模式线(The Mode Line)"></a>模式线(The Mode Line)</h2><h2 id="菜单栏-The-menu-bar"><a href="#菜单栏-The-menu-bar" class="headerlink" title="菜单栏(The menu bar)"></a>菜单栏(The menu bar)</h2>]]></content>
+    
+    
+    <categories>
+      
+      <category>编辑器</category>
+      
+      <category>emacs</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>emacs</tag>
+      
+      <tag>编辑器</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>3.x版本问题汇总 - React · Antd</title>
     <link href="/react/antd_v3%E9%97%AE%E9%A2%98%E6%B1%87%E6%80%BB/"/>
     <url>/react/antd_v3%E9%97%AE%E9%A2%98%E6%B1%87%E6%80%BB/</url>
@@ -2308,7 +2366,7 @@
     <link href="/emacs/tutoial/"/>
     <url>/emacs/tutoial/</url>
     
-    <content type="html"><![CDATA[<h3 id="翻页"><a href="#翻页" class="headerlink" title="翻页"></a>翻页</h3><table><thead><tr><th>快捷键</th><th>描述</th></tr></thead><tbody><tr><td>Ctrl + v</td><td>向下滚动一屏</td></tr><tr><td>Meta + v</td><td>向上移动一屏</td></tr><tr><td>Ctrl + l</td><td>重绘屏幕，并将光标所在行移动至中央(连续按可以在上中下反复横跳)</td></tr></tbody></table><h3 id="基本的光标控制"><a href="#基本的光标控制" class="headerlink" title="基本的光标控制"></a>基本的光标控制</h3><table><thead><tr><th>快捷键</th><th>描述</th></tr></thead><tbody><tr><td>Ctrl + p</td><td>上一行</td></tr><tr><td>Ctrl + n</td><td>下一行</td></tr><tr><td>Ctrl + b</td><td>向左移</td></tr><tr><td>Ctrl + f</td><td>向右移</td></tr><tr><td>Meta + b</td><td>向左移一个词</td></tr><tr><td>Meta + f</td><td>向右移一个词</td></tr><tr><td>Ctrl + a</td><td>移动到行首</td></tr><tr><td>Ctrl + e</td><td>移动到行尾</td></tr><tr><td>Meta + a</td><td>移动到句首</td></tr><tr><td>Meta + e</td><td>移动到句尾</td></tr></tbody></table><blockquote><p>通过 Meta 系列组合键用来操作由语言定义的单位(词、句子、单位)，而 Ctrl 系列组合键用来操作与语言无关的基本单位(字符、行)</p></blockquote>]]></content>
+    <content type="html"><![CDATA[<h3 id="退出"><a href="#退出" class="headerlink" title="退出"></a>退出</h3><table><thead><tr><th>快捷键</th><th>描述</th></tr></thead><tbody><tr><td>Ctrl-x Ctrl-c</td><td>退出emacs</td></tr><tr><td>Ctrl-z</td><td>最小化emacs</td></tr></tbody></table><h3 id="翻页"><a href="#翻页" class="headerlink" title="翻页"></a>翻页</h3><table><thead><tr><th>快捷键</th><th>描述</th></tr></thead><tbody><tr><td>Ctrl + v</td><td>向下滚动一屏</td></tr><tr><td>Meta + v</td><td>向上移动一屏</td></tr><tr><td>Ctrl + l</td><td>重绘屏幕，并将光标所在行移动至中央(连续按可以在上中下反复横跳)</td></tr></tbody></table><h3 id="基本的光标控制"><a href="#基本的光标控制" class="headerlink" title="基本的光标控制"></a>基本的光标控制</h3><table><thead><tr><th>快捷键</th><th>描述</th></tr></thead><tbody><tr><td>Ctrl + p</td><td>上一行</td></tr><tr><td>Ctrl + n</td><td>下一行</td></tr><tr><td>Ctrl + b</td><td>向左移</td></tr><tr><td>Ctrl + f</td><td>向右移</td></tr><tr><td>Meta + b</td><td>向左移一个词</td></tr><tr><td>Meta + f</td><td>向右移一个词</td></tr><tr><td>Ctrl + a</td><td>移动到行首</td></tr><tr><td>Ctrl + e</td><td>移动到行尾</td></tr><tr><td>Meta + a</td><td>移动到句首</td></tr><tr><td>Meta + e</td><td>移动到句尾</td></tr></tbody></table><blockquote><p>通过 Meta 系列组合键用来操作由语言定义的单位(词、句子、单位)，而 Ctrl 系列组合键用来操作与语言无关的基本单位(字符、行)</p></blockquote>]]></content>
     
     
     <categories>
