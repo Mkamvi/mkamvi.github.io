@@ -4,6 +4,35 @@
   
   
   <entry>
+    <title>事件冒泡的应用 - HTML · DOM</title>
+    <link href="/html/dom/event/"/>
+    <url>/html/dom/event/</url>
+    
+    <content type="html"><![CDATA[<h3 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h3><p>今天碰到一个问题，业务里有一个消息盒子，里面的内容是通过富文本配置出来的，最终通过React的dangerouslySetInnerHTML直接插入到了DOM中，然而里面有a标签，配置的本意是跳转内部链接，即打开平台内部的另外一个页面，然而a链接导致整个页面刷新了，体验非常不好（我们是单页面应用）</p><h3 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h3><p>要解决这个问题其实也很简答，就是拦截原生的a标签点击事件，然后通过e.preventDefault()阻止默认事件，即a链接的href跳转。关键就在于如何捕捉这个事件，因为a链接是在富文本里配置的字符串，没法直接和React中的代码交互，所以只能将这个事件加在富文本挂载的元素上，然后通过在冒泡阶段捕获点击事件，通过事件目标和配置的Href配置是否跳转的是内部路由，是的话就阻止默认事件，使用react-router的historr.push()跳转</p><h3 id="胡思乱想"><a href="#胡思乱想" class="headerlink" title="胡思乱想"></a>胡思乱想</h3><p>突然想到好多网站(知乎、CSDN)在跳转外部链接时，都会弹出一个新标签页，并让确认是否跳转该链接。现在想来，应该也是这种实现方案吧</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>HTML</category>
+      
+      <category>Event</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>HTML</tag>
+      
+      <tag>Event</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>基础编辑 - Emacs · 帮助文档</title>
     <link href="/emacs/docs/basic_edit/"/>
     <url>/emacs/docs/basic_edit/</url>
