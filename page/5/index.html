@@ -276,6 +276,137 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h2 class="index-header">
         
+        <a href="/code-reading/lodash/Array/" target="_self">
+          Array - 源码阅读 · lodash
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/code-reading/lodash/Array/" target="_self">
+        <div>
+          _.slice()和原生 Array.slice 的区别 返回的是一个密集数组，原生的有可能会返回一个稀疏数组 稀疏数组在迭代器里不会执行  源码细节 使用 &gt;&gt;&gt; 0 无符号右移运算符处理有可能的异常情况，将非整数变成一个整数 然后使用 while 循环做了一次浅拷贝  源码12345678910111213141516171819202122232425function sl
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2023-11-25 17:02" pubdate>
+              2023-11-25
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E6%BA%90%E7%A0%81%E9%98%85%E8%AF%BB/" class="category-chain-item">源码阅读</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/%E6%BA%90%E7%A0%81%E9%98%85%E8%AF%BB/lodash/" class="category-chain-item">lodash</a>
+  
+  
+
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E6%BA%90%E7%A0%81%E9%98%85%E8%AF%BB/">#源码阅读</a>
+            
+              <a href="/tags/lodash/">#lodash</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/work/2023-11-25/" target="_self">
+          2023年11月25日 - 工作总结
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/work/2023-11-25/" target="_self">
+        <div>
+          区间项目：管理看板  rc-gantt库私有化扩展 时间跨度限制 自动导航到当前项目开始时间 表格列初始化宽度异常问题(扩展属性字段后添加到store初始化依赖，导致多次初始化)  解决nexus npm 仓库使用gropu无法安装依赖问题 见 无法使用group问题  管理看板与组态编辑器3D页面动作交互 postMessage实现双向通信 指令式协议快速从管理看板调取组态3D API 设计管
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2023-11-25 11:53" pubdate>
+              2023-11-25
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E5%B7%A5%E4%BD%9C%E6%80%BB%E7%BB%93/" class="category-chain-item">工作总结</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E5%B7%A5%E4%BD%9C%E6%80%BB%E7%BB%93/">#工作总结</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
         <a href="/vue/Vue3%E4%B8%AD%E5%AE%9A%E4%B9%89%E7%BB%84%E4%BB%B6name/" target="_self">
           Vue3中定义组件name - Vue
         </a>
@@ -787,133 +918,11 @@
     </article>
   </div>
 
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h2 class="index-header">
-        
-        <a href="/vue/Reverse%E5%BC%95%E5%8F%91%E7%9A%84%E6%97%A0%E9%99%90%E5%BE%AA%E7%8E%AF/" target="_self">
-          由Array.reverse引发的血案 - Vue
-        </a>
-      </h2>
-
-      
-      <a class="index-excerpt index-excerpt__noimg" href="/vue/Reverse%E5%BC%95%E5%8F%91%E7%9A%84%E6%97%A0%E9%99%90%E5%BE%AA%E7%8E%AF/" target="_self">
-        <div>
-          起因项目部署后访问页面，竟然直接卡死 ！ 原因Array.reverse() 竟然直接修改原数组！然后 Vue 里面便形成了 监听变化 &#x3D;&gt; 修改元素组 &#x3D;&gt; 变化 &#x3D;&gt; 监听变化 的无限循环中！ (一直以为是返回新数组！所以排查到是因为 reverse 调用引起的问题时，大吃一惊！)
-        </div>
-      </a>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2023-09-20 10:21" pubdate>
-              2023-09-20
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3 d-flex align-items-center">
-            <i class="iconfont icon-category"></i>
-            
-
-<span class="category-chains">
-  
-  
-    
-      <span class="category-chain">
-        
-  <a href="/categories/Vue/" class="category-chain-item">Vue</a>
-  
-  
-
-      </span>
-    
-  
-</span>
-
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Vue/">#Vue</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h2 class="index-header">
-        
-        <a href="/echarts/Echarts%E4%BD%BF%E7%94%A8setOption%E7%9A%84%E5%90%88%E5%B9%B6%E6%96%B9%E5%BC%8F/" target="_self">
-          Echarts使用setOption的合并方式
-        </a>
-      </h2>
-
-      
-      <a class="index-excerpt index-excerpt__noimg" href="/echarts/Echarts%E4%BD%BF%E7%94%A8setOption%E7%9A%84%E5%90%88%E5%B9%B6%E6%96%B9%E5%BC%8F/" target="_self">
-        <div>
-          合并方式普通合并触发条件： 未设置 notMerge 参数 未设置 replaceMerge 参数  合并策略对于一种类型的组件（如：xAxis, series），新来的 option 中的每个“组件描述”（如：{type: ‘xAxis’, id: ‘xx’, name: ‘kk’, …}）会被尽量合并到已存在的组件中。剩余的情况，会在组件列表尾部创建新的组件。整体规则细节如下：  先依次对 o
-        </div>
-      </a>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2023-09-13 10:15" pubdate>
-              2023-09-13
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3 d-flex align-items-center">
-            <i class="iconfont icon-category"></i>
-            
-
-<span class="category-chains">
-  
-  
-    
-      <span class="category-chain">
-        
-  <a href="/categories/echarts/" class="category-chain-item">echarts</a>
-  
-  
-
-      </span>
-    
-  
-</span>
-
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/echarts/">#echarts</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
 
 
   <nav aria-label="navigation">
     <span class="pagination" id="pagination">
-      <a class="extend prev" rel="prev" href="/page/4/#board"><i class="iconfont icon-arrowleft"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/#board">3</a><a class="page-number" href="/page/4/#board">4</a><span class="page-number current">5</span><a class="page-number" href="/page/6/#board">6</a><a class="page-number" href="/page/7/#board">7</a><span class="space">&hellip;</span><a class="page-number" href="/page/10/#board">10</a><a class="extend next" rel="next" href="/page/6/#board"><i class="iconfont icon-arrowright"></i></a>
+      <a class="extend prev" rel="prev" href="/page/4/#board"><i class="iconfont icon-arrowleft"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/#board">3</a><a class="page-number" href="/page/4/#board">4</a><span class="page-number current">5</span><a class="page-number" href="/page/6/#board">6</a><a class="page-number" href="/page/7/#board">7</a><span class="space">&hellip;</span><a class="page-number" href="/page/11/#board">11</a><a class="extend next" rel="next" href="/page/6/#board"><i class="iconfont icon-arrowright"></i></a>
     </span>
   </nav>
 
