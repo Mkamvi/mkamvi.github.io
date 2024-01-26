@@ -1,0 +1,19 @@
+.gt-container.gt-container a {
+  color: #57c52b;
+}
+.gt-container.gt-container .gt-btn:not(.gt-btn-preview) {
+  background-color: #57c52b;
+  border-color: #57c52b;
+}
+.gt-container.gt-container .gt-btn-preview {
+  border-color: #57c52b;
+  color: #57c52b;
+}
+
+.gt-container .gt-svg svg {
+  fill: #57c52b;
+}
+
+.gt-container .gt-svg {
+  vertical-align: initial;
+}
