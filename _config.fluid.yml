@@ -425,7 +425,7 @@ open_graph:
 footer:
   # 页脚第一行文字的 HTML，建议保留 Fluid 的链接，用于向更多人推广本主题
   # HTML of the first line of the footer, it is recommended to keep the Fluid link to promote this theme to more people
-  content: " ---------------------- 仙 ---------------------- "
+  content: " ---------------------- 我，一直都在 ---------------------- "
 
   # 展示网站的 PV、UV 统计数
   # Display website PV and UV statistics
@@ -440,13 +440,13 @@ footer:
   # 国内大陆服务器的备案信息
   # For Chinese mainland website policy, other areas keep disable
   beian:
-    enable: false
+    enable: true
     # ICP证号
-    icp_text: 京ICP证123456号
+    icp_text: 陕ICP备2024025244号
     # 公安备案号，不填则只显示ICP
-    police_text: 京公网安备12345678号
+    police_text:
     # 公安备案的编号，用于URL跳转查询
-    police_code: 12345678
+    police_code:
     # 公安备案的图片. 为空时不显示备案图片
     police_icon: /img/police_beian.png
 
@@ -991,7 +991,7 @@ links:
   items:
     - {
         title: "Fluid Blog",
-        intro: "主题博客",
+        intro: "主题个人主页",
         link: "https://hexo.fluid-dev.com/",
         avatar: "/img/favicon.png",
       }
@@ -1016,7 +1016,7 @@ links:
   # Custom content at the bottom of the links
   custom:
     enable: false
-    content: "<hr><p>在下方留言申请加入我的友链，按如下格式提供信息：</p><ul><li>博客名：Fluid</li><li>简介：Fluid 主题官方博客</li><li>链接：https://hexo.fluid-dev.com</li><li>图片：https://hexo.fluid-dev.com/img/favicon.png</li></ul>"
+    content: "<hr><p>在下方留言申请加入我的友链，按如下格式提供信息：</p><ul><li>个人主页名：Fluid</li><li>简介：Fluid 主题官方个人主页</li><li>链接：https://hexo.fluid-dev.com</li><li>图片：https://hexo.fluid-dev.com/img/favicon.png</li></ul>"
 
   # 评论插件
   # Comment plugin
