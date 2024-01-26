@@ -5,7 +5,6 @@ var banner_mask_alpha = parseFloat(page.banner_mask_alpha || theme.index.banner_
 var subtitle = page.subtitle || page.title
 %>
 
-<script src="/js/particles.js"></script>
 <div id="banner" class="banner" <%- theme.banner && theme.banner.parallax && 'parallax=true' %>
   style="background: url('<%- url_for(banner_img) %>') no-repeat center center; background-size: cover;">
   <div class="full-bg-img" onclick="rainVoice()">
@@ -15,39 +14,8 @@ var subtitle = page.subtitle || page.title
       class="_img_1gdgv_11 _img_1gdgv_11"
       alt=""
       style="object-fit:cover;"
-      src="/img/白老板.jpg"
+      src="<%= url_for("/img/白老板.jpg") %>"
     >
-    <video
-      src="/videos/rain.avi"
-      muted="true"
-      autoplay="true"
-      auto-rotate="false"
-      playsinline="true"
-      x5-playsinline="true"
-      webkit-playsinline="true"
-      t7-video-player-type="inline"
-      crossorigin="anonymous"
-      loop="true"
-      style="display:none"
-    >
-    </video>
-    <script>
-      function rainVoice() {
-        const audioEle = document.querySelector('#banner-audio-rain');
-        if (audioEle.paused) {
-          // audioEle.play();
-        } else {
-          // audioEle.pause();
-        }
-      }
-    </script>
-    <audio
-      loop
-      src="/audios/rain.mp3"
-      id="banner-audio-rain"
-    >
-    </audio>
-
     <div class="mask flex-center" style="background-color: rgba(0, 0, 0, <%= parseFloat(banner_mask_alpha) %>)">
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
