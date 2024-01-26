@@ -4,6 +4,31 @@
   
   
   <entry>
+    <title>SSH断联问题 - Linux</title>
+    <link href="/notes/linux/ssh%E6%96%AD%E8%81%94%E9%97%AE%E9%A2%98/"/>
+    <url>/notes/linux/ssh%E6%96%AD%E8%81%94%E9%97%AE%E9%A2%98/</url>
+    
+    <content type="html"><![CDATA[<h3 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h3><p>通过 ssh user@ip 登录远程服务器，隔一段时间不操作后会自动端口，导致本地的终端无法操作</p><h3 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h3><p>修改&#x2F;etc&#x2F;ssh&#x2F;sshd_config文件</p><figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs Apache"><span class="hljs-attribute">ClientAliveInterval</span> <span class="hljs-number">60</span><br><span class="hljs-attribute">ClientAliveCountMax</span> <span class="hljs-number">3</span><br></code></pre></td></tr></table></figure><h3 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h3><p><a href="https://cloud.tencent.com/developer/article/1788071">https://cloud.tencent.com/developer/article/1788071</a></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Linux</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Linux</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>0006 Z 字形变换- Hero · 算法 · Leetcode</title>
     <link href="/notes/hero/algo/leetcode/0006%20Z%E5%AD%97%E5%BD%A2%E5%8F%98%E6%8D%A2/"/>
     <url>/notes/hero/algo/leetcode/0006%20Z%E5%AD%97%E5%BD%A2%E5%8F%98%E6%8D%A2/</url>
