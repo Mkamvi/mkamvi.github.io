@@ -4,6 +4,31 @@
   
   
   <entry>
+    <title>子目录部署 - Hexo</title>
+    <link href="/notes/hexo/%E5%AD%90%E7%9B%AE%E5%BD%95%E9%83%A8%E7%BD%B2/"/>
+    <url>/notes/hexo/%E5%AD%90%E7%9B%AE%E5%BD%95%E9%83%A8%E7%BD%B2/</url>
+    
+    <content type="html"><![CDATA[<h3 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h3><p>今天wanmeishijie.xyz的域名备案已经通过了，所以这个项目部署迁移到了腾讯云服务器上，挂载了HTTPS，暂时不想用二级域名，所以采用子目录的方式统一分发不同的服务。</p><h3 id="解决Hexo子目录问题"><a href="#解决Hexo子目录问题" class="headerlink" title="解决Hexo子目录问题"></a>解决Hexo子目录问题</h3><p>其实只需要设置root就可以了</p><p>可参考：<a href="https://hexo.io/zh-cn/docs/configuration">https://hexo.io/zh-cn/docs/configuration</a></p><h3 id="处理nginx配置"><a href="#处理nginx配置" class="headerlink" title="处理nginx配置"></a>处理nginx配置</h3><p>配置URL子路径映射</p><h3 id="处理Github-Action"><a href="#处理Github-Action" class="headerlink" title="处理Github Action"></a>处理Github Action</h3><p>因为之前是通过Github自动构建，且自动同步到gitee，这一步需要配置自动构建出的文件也需要加入子目录</p><p>我用的是 <a href="https://github.com/peaceiris/actions-gh-pages%E8%BF%99%E4%B8%AA%E6%8F%92%E4%BB%B6">https://github.com/peaceiris/actions-gh-pages这个插件</a> 因此只需配置destination_dir即可</p><figure class="highlight nestedtext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs nestedtext"><span class="hljs-bullet">-</span> <span class="hljs-string">name: Deploy</span><br>  <span class="hljs-attribute">uses</span><span class="hljs-punctuation">:</span> <span class="hljs-string">peaceiris/actions-gh-pages@v3</span><br>  <span class="hljs-attribute">with</span><span class="hljs-punctuation">:</span><br>    <span class="hljs-attribute">github_token</span><span class="hljs-punctuation">:</span> <span class="hljs-string">$&#123;&#123; secrets.GITHUB_TOKEN &#125;&#125;</span><br>    <span class="hljs-attribute">publish_dir</span><span class="hljs-punctuation">:</span> <span class="hljs-string">./public</span><br>    <span class="hljs-attribute">destination_dir</span><span class="hljs-punctuation">:</span> <span class="hljs-string">notes</span><br></code></pre></td></tr></table></figure><h3 id="服务器自动抓取-TODO"><a href="#服务器自动抓取-TODO" class="headerlink" title="服务器自动抓取(TODO)"></a>服务器自动抓取(TODO)</h3><p>这里想的是服务端留一个命令服务，限制可执行的一些命令，这样其他服务可以直接调取这些命令，而不用走鉴权流程，可以直接在Github Action中通过http执行Git pull动作，完成更新</p><p>…</p><p>容本帅再掉两根头发…</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Hexo</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Hexo</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>SSH断联问题 - Linux</title>
     <link href="/notes/linux/ssh%E6%96%AD%E8%81%94%E9%97%AE%E9%A2%98/"/>
     <url>/notes/linux/ssh%E6%96%AD%E8%81%94%E9%97%AE%E9%A2%98/</url>
@@ -279,9 +304,9 @@
       
       <tag>Vim</tag>
       
-      <tag>Hero</tag>
-      
       <tag>VimHelp</tag>
+      
+      <tag>Hero</tag>
       
     </tags>
     
