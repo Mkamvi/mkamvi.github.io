@@ -4,6 +4,39 @@
   
   
   <entry>
+    <title>复杂度分析 - Hero · 算法 · Hello 算法</title>
+    <link href="/notes/hero/algo/hello-algo/%E5%A4%8D%E6%9D%82%E5%BA%A6%E5%88%86%E6%9E%90/"/>
+    <url>/notes/hero/algo/hello-algo/%E5%A4%8D%E6%9D%82%E5%BA%A6%E5%88%86%E6%9E%90/</url>
+    
+    <content type="html"><![CDATA[<h2 id="时间复杂度"><a href="#时间复杂度" class="headerlink" title="时间复杂度"></a>时间复杂度</h2><h3 id="推算方法"><a href="#推算方法" class="headerlink" title="推算方法"></a>推算方法</h3><h4 id="第一步：统计操作数量"><a href="#第一步：统计操作数量" class="headerlink" title="第一步：统计操作数量"></a>第一步：统计操作数量</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">function</span> <span class="hljs-title function_">algorithm</span>(<span class="hljs-params">n</span>) &#123;<br>  <span class="hljs-keyword">let</span> a = <span class="hljs-number">1</span>; <span class="hljs-comment">// +0（技巧 1）</span><br>  a = a + n; <span class="hljs-comment">// +0（技巧 1）</span><br>  <span class="hljs-comment">// +n（技巧 2）</span><br>  <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">5</span> * n + <span class="hljs-number">1</span>; i++) &#123;<br>    <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-number">0</span>);<br>  &#125;<br>  <span class="hljs-comment">// +n*n（技巧 3）</span><br>  <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">2</span> * n; i++) &#123;<br>    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> j = <span class="hljs-number">0</span>; j &lt; n + <span class="hljs-number">1</span>; j++) &#123;<br>      <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-number">0</span>);<br>    &#125;<br>  &#125;<br>&#125;<br></code></pre></td></tr></table></figure><figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs txt"><br>// 精细统计<br>T(n) = 2n * (n + 1) + (5 * n + 1) + 2<br>     = 2n² + 7n + 3<br><br>// 粗略统计<br>T(n) = n² + n<br></code></pre></td></tr></table></figure><h4 id="第二步：判断渐近上界"><a href="#第二步：判断渐近上界" class="headerlink" title="第二步：判断渐近上界"></a>第二步：判断渐近上界</h4><p>时间复杂度由T(n)中最高阶的项来决定</p><p>示例：</p><table><thead><tr><th>操作数量(T(n))</th><th>时间复杂度O(f(n))</th></tr></thead><tbody><tr><td>1000</td><td>O(1)</td></tr><tr><td>3n + 2</td><td>O(n)</td></tr><tr><td>n² + 2n + 2</td><td>O(n²)</td></tr><tr><td>n<sup>3</sup> + 2</td><td>O(n<sup>3</sup>)</td></tr></tbody></table><h3 id="常见类型"><a href="#常见类型" class="headerlink" title="常见类型"></a>常见类型</h3><p>O(1) &lt; O(logn) &lt; O(n) &lt; O(nlogn) &lt; O(n²) &lt; O(2<sup>n</sup>) &lt; O(n!)</p><p>常数阶&lt; 对数阶 &lt; 线性阶 &lt; 线性对数阶 &lt; 平方阶 &lt; 指数阶 &lt; 阶乘阶</p><h3 id="最差、最佳、平均时间复杂度"><a href="#最差、最佳、平均时间复杂度" class="headerlink" title="最差、最佳、平均时间复杂度"></a>最差、最佳、平均时间复杂度</h3><p>“最差时间复杂度”对应函数渐近上界，使用大记号O表示。相应地，“最佳时间复杂度”对应函数渐近下界，用记号Ω表示</p><h2 id="空间复杂度"><a href="#空间复杂度" class="headerlink" title="空间复杂度"></a>空间复杂度</h2><p>一般只考虑 暂存数据、栈帧空间和输出数据三部分</p><h3 id="推算方法-1"><a href="#推算方法-1" class="headerlink" title="推算方法"></a>推算方法</h3><ol><li>以最差输入数据为准</li><li>以算法运行中的峰值内存为准</li></ol><h3 id="常见类型-1"><a href="#常见类型-1" class="headerlink" title="常见类型"></a>常见类型</h3><p>O(1) &lt; O(logn) &lt; O(n) &lt; O(n²) &lt; O(2<sup>n</sup>)</p><p>常数阶 &lt; 对数阶 &lt; 线性阶 &lt; 平方阶 &lt; 指数阶</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Hero</category>
+      
+      <category>算法</category>
+      
+      <category>Hello 算法</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Hero</tag>
+      
+      <tag>算法</tag>
+      
+      <tag>Hello 算法</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>子目录部署 - Hexo</title>
     <link href="/notes/hexo/%E5%AD%90%E7%9B%AE%E5%BD%95%E9%83%A8%E7%BD%B2/"/>
     <url>/notes/hexo/%E5%AD%90%E7%9B%AE%E5%BD%95%E9%83%A8%E7%BD%B2/</url>
@@ -304,9 +337,9 @@
       
       <tag>Vim</tag>
       
-      <tag>VimHelp</tag>
-      
       <tag>Hero</tag>
+      
+      <tag>VimHelp</tag>
       
     </tags>
     
