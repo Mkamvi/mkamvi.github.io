@@ -4,6 +4,39 @@
   
   
   <entry>
+    <title>数据结构分类 - Hero · 算法 · Hello 算法</title>
+    <link href="/notes/hero/algo/hello-algo/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%88%86%E7%B1%BB/"/>
+    <url>/notes/hero/algo/hello-algo/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%88%86%E7%B1%BB/</url>
+    
+    <content type="html"><![CDATA[<h2 id="逻辑结构：线性与非线性"><a href="#逻辑结构：线性与非线性" class="headerlink" title="逻辑结构：线性与非线性"></a>逻辑结构：线性与非线性</h2><h3 id="线性数据结构"><a href="#线性数据结构" class="headerlink" title="线性数据结构"></a>线性数据结构</h3><p>线性：数组、链表、栈、队列、哈希表</p><h3 id="非线性数据结构"><a href="#非线性数据结构" class="headerlink" title="非线性数据结构"></a>非线性数据结构</h3><p>树、堆、图、哈希表</p><h4 id="树形结构"><a href="#树形结构" class="headerlink" title="树形结构"></a>树形结构</h4><p>树、堆、哈希表</p><h4 id="网状结构"><a href="#网状结构" class="headerlink" title="网状结构"></a>网状结构</h4><p>图</p><h2 id="物理结构：连续和非连续"><a href="#物理结构：连续和非连续" class="headerlink" title="物理结构：连续和非连续"></a>物理结构：连续和非连续</h2><p>所有数据结构都是基于数组、链表或二者的组合实现的</p><h3 id="基于数组可实现"><a href="#基于数组可实现" class="headerlink" title="基于数组可实现"></a>基于数组可实现</h3><p>栈、队列、哈希表、树、堆、图、矩阵、张量</p><h3 id="基于链表可实现"><a href="#基于链表可实现" class="headerlink" title="基于链表可实现"></a>基于链表可实现</h3><p>栈、队列、哈希表、树、堆、图</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Hero</category>
+      
+      <category>算法</category>
+      
+      <category>Hello 算法</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Hero</tag>
+      
+      <tag>算法</tag>
+      
+      <tag>Hello 算法</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>复杂度分析 - Hero · 算法 · Hello 算法</title>
     <link href="/notes/hero/algo/hello-algo/%E5%A4%8D%E6%9D%82%E5%BA%A6%E5%88%86%E6%9E%90/"/>
     <url>/notes/hero/algo/hello-algo/%E5%A4%8D%E6%9D%82%E5%BA%A6%E5%88%86%E6%9E%90/</url>
