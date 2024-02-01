@@ -4,6 +4,72 @@
   
   
   <entry>
+    <title>哈希表- Hero · 算法 · Hello 算法</title>
+    <link href="/notes/hero/algo/hello-algo/%E5%93%88%E5%B8%8C%E8%A1%A8/"/>
+    <url>/notes/hero/algo/hello-algo/%E5%93%88%E5%B8%8C%E8%A1%A8/</url>
+    
+    <content type="html"><![CDATA[<h2 id="哈希表"><a href="#哈希表" class="headerlink" title="哈希表"></a>哈希表</h2><p>「哈希表 hash table」，又称「散列表」，它通过建立键 key 与值 value 之间的映射，实现高效的元素查询。具体而言，我们向哈希表中输入一个键 key ，则可以在时间内获取对应的值 value 。</p><h3 id="哈希表的常用操作"><a href="#哈希表的常用操作" class="headerlink" title="哈希表的常用操作"></a>哈希表的常用操作</h3><p>初始化、查询操作、添加键值对和删除键值对</p><h3 id="哈希表的实现"><a href="#哈希表的实现" class="headerlink" title="哈希表的实现"></a>哈希表的实现</h3><p>哈希函数的作用是将一个较大的输入空间映射到一个较小的输出空间。在哈希表中，输入空间是所有 key ，输出空间是所有桶（数组索引）。换句话说，输入一个 key ，我们可以通过哈希函数得到该 key 对应的键值对在数组中的存储位置</p><h3 id="哈希冲突与扩容"><a href="#哈希冲突与扩容" class="headerlink" title="哈希冲突与扩容"></a>哈希冲突与扩容</h3><p>从本质上看，哈希函数的作用是将所有 key 构成的输入空间映射到数组所有索引构成的输出空间，而输入空间往往远大于输出空间。因此，理论上一定存在“多个输入对应相同输出”的情况。</p><h2 id="哈希冲突"><a href="#哈希冲突" class="headerlink" title="哈希冲突"></a>哈希冲突</h2><h3 id="链式地址"><a href="#链式地址" class="headerlink" title="链式地址"></a>链式地址</h3><h3 id="开放寻址"><a href="#开放寻址" class="headerlink" title="开放寻址"></a>开放寻址</h3><h4 id="线性探测"><a href="#线性探测" class="headerlink" title="线性探测"></a>线性探测</h4><h4 id="平方探测"><a href="#平方探测" class="headerlink" title="平方探测"></a>平方探测</h4><h4 id="多次哈希"><a href="#多次哈希" class="headerlink" title="多次哈希"></a>多次哈希</h4><h3 id="编程语言的选择"><a href="#编程语言的选择" class="headerlink" title="编程语言的选择"></a>编程语言的选择</h3><ul><li>Python 采用开放寻址</li><li>Java和Go采用链式地址</li></ul><h2 id="哈希算法"><a href="#哈希算法" class="headerlink" title="哈希算法"></a>哈希算法</h2><h3 id="常见哈希算法"><a href="#常见哈希算法" class="headerlink" title="常见哈希算法"></a>常见哈希算法</h3><ul><li>MD5</li><li>SHA-1</li><li>SGA-2</li><li>SHA-3</li></ul>]]></content>
+    
+    
+    <categories>
+      
+      <category>Hero</category>
+      
+      <category>算法</category>
+      
+      <category>Hello 算法</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Hero</tag>
+      
+      <tag>算法</tag>
+      
+      <tag>Hello 算法</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>栈和队列 - Hero · 算法 · Hello 算法</title>
+    <link href="/notes/hero/algo/hello-algo/%E6%A0%88%E5%92%8C%E9%98%9F%E5%88%97/"/>
+    <url>/notes/hero/algo/hello-algo/%E6%A0%88%E5%92%8C%E9%98%9F%E5%88%97/</url>
+    
+    <content type="html"><![CDATA[<h2 id="栈"><a href="#栈" class="headerlink" title="栈"></a>栈</h2><p>「栈」 stack 是一种遵循先入后出逻辑的线性数据结构</p><h3 id="栈的常用操作"><a href="#栈的常用操作" class="headerlink" title="栈的常用操作"></a>栈的常用操作</h3><table><thead><tr><th>方法</th><th>描述</th><th>时间复杂度</th></tr></thead><tbody><tr><td>push()</td><td>元素入栈(添加到栈顶)</td><td>O(1)</td></tr><tr><td>pop()</td><td>栈顶元素出栈</td><td>O(1)</td></tr><tr><td>peek()</td><td>访问栈顶元素</td><td>O(1)</td></tr></tbody></table><h3 id="栈的实现"><a href="#栈的实现" class="headerlink" title="栈的实现"></a>栈的实现</h3><ul><li>基于链表的实现</li><li>基于数组的实现</li></ul><h3 id="栈的典型应用"><a href="#栈的典型应用" class="headerlink" title="栈的典型应用"></a>栈的典型应用</h3><ul><li>浏览器中的后退与前进、软件中的撤销与反撤销</li><li>程序内存管理(栈帧)</li></ul><h2 id="队列"><a href="#队列" class="headerlink" title="队列"></a>队列</h2><p>「队列 queue」是一种遵循先入先出规则的线性数据结构</p><h3 id="队列的常用操作"><a href="#队列的常用操作" class="headerlink" title="队列的常用操作"></a>队列的常用操作</h3><table><thead><tr><th>方法</th><th>描述</th><th>时间复杂度</th></tr></thead><tbody><tr><td>push()</td><td>元素入列(添加到末尾)</td><td>O(1)</td></tr><tr><td>pop()</td><td>队首元素出队</td><td>O(1)</td></tr><tr><td>peek()</td><td>访问队首元素</td><td>O(1)</td></tr></tbody></table><h3 id="队列的实现"><a href="#队列的实现" class="headerlink" title="队列的实现"></a>队列的实现</h3><ul><li>基于链表的实现(反向或空指针)</li><li>基于列表的实现</li></ul><h3 id="队列典型应用"><a href="#队列典型应用" class="headerlink" title="队列典型应用"></a>队列典型应用</h3><ul><li>淘宝订单</li><li>各类待办事项</li></ul><h2 id="双向队列"><a href="#双向队列" class="headerlink" title="双向队列"></a>双向队列</h2><h3 id="双向列表的实现"><a href="#双向列表的实现" class="headerlink" title="双向列表的实现"></a>双向列表的实现</h3><ul><li>基于双向链表</li><li>基于数组</li></ul><h3 id="双向队列的应用"><a href="#双向队列的应用" class="headerlink" title="双向队列的应用"></a>双向队列的应用</h3><p>双向队列兼具栈与队列的逻辑，因此它可以实现这两者的所有应用场景，同时提供更高的自由度。</p><p>当栈的长度超过一定数量时，软件需要在栈底（队首）执行删除操作。但栈无法实现该功能，此时就需要使用双向队列来替代栈</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Hero</category>
+      
+      <category>算法</category>
+      
+      <category>Hello 算法</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Hero</tag>
+      
+      <tag>算法</tag>
+      
+      <tag>Hello 算法</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>链表 - Hero · 算法 · Hello 算法</title>
     <link href="/notes/hero/algo/hello-algo/%E6%95%B0%E7%BB%84%E4%B8%8E%E9%93%BE%E8%A1%A8(%E4%BA%8C)/"/>
     <url>/notes/hero/algo/hello-algo/%E6%95%B0%E7%BB%84%E4%B8%8E%E9%93%BE%E8%A1%A8(%E4%BA%8C)/</url>
