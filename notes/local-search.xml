@@ -4,6 +4,39 @@
   
   
   <entry>
+    <title>浏览器返回功能测试 - HTML · 返回动作</title>
+    <link href="/notes/html/confused/%E6%B5%8F%E8%A7%88%E5%99%A8%E8%BF%94%E5%9B%9E%E5%8A%9F%E8%83%BD%E6%B5%8B%E8%AF%95/"/>
+    <url>/notes/html/confused/%E6%B5%8F%E8%A7%88%E5%99%A8%E8%BF%94%E5%9B%9E%E5%8A%9F%E8%83%BD%E6%B5%8B%E8%AF%95/</url>
+    
+    <content type="html"><![CDATA[<h2 id="页面加载销毁相关事件-按顺序"><a href="#页面加载销毁相关事件-按顺序" class="headerlink" title="页面加载销毁相关事件(按顺序)"></a>页面加载销毁相关事件(按顺序)</h2><h3 id="load"><a href="#load" class="headerlink" title="load"></a>load</h3><h3 id="pageshow"><a href="#pageshow" class="headerlink" title="pageshow"></a>pageshow</h3><h3 id="beforeunload"><a href="#beforeunload" class="headerlink" title="beforeunload"></a>beforeunload</h3><h3 id="pagehide"><a href="#pagehide" class="headerlink" title="pagehide"></a>pagehide</h3><h2 id="iframe内部跳转特点"><a href="#iframe内部跳转特点" class="headerlink" title="iframe内部跳转特点"></a>iframe内部跳转特点</h2><h3 id="a标签"><a href="#a标签" class="headerlink" title="a标签"></a>a标签</h3><ul><li>会触发iframe内部的load和pageshow事件</li><li>历史记录会+1</li></ul><h3 id="window-location-href"><a href="#window-location-href" class="headerlink" title="window.location.href"></a>window.location.href</h3><ul><li>会触发iframe内部的load和pageshow事件</li><li>历史记录会+1</li></ul><h3 id="window-location-reload"><a href="#window-location-reload" class="headerlink" title="window.location.reload"></a>window.location.reload</h3><ul><li>不会触发任何事件</li><li>历史记录保持不变</li></ul><h3 id="window-location-replace"><a href="#window-location-replace" class="headerlink" title="window.location.replace"></a>window.location.replace</h3><ul><li>会触发iframe内部load和pageshow事件</li><li>历史记录(长度)保持不变</li></ul><h3 id="window-history-pushState"><a href="#window-history-pushState" class="headerlink" title="window.history.pushState"></a>window.history.pushState</h3><ul><li>不会触发任何事件</li><li>历史记录会+1</li></ul><h3 id="window-history-replaceState"><a href="#window-history-replaceState" class="headerlink" title="window.history.replaceState"></a>window.history.replaceState</h3><ul><li>不会触发任何事件</li><li>历史记录不会+1</li></ul>]]></content>
+    
+    
+    <categories>
+      
+      <category>HTML</category>
+      
+      <category>iframe</category>
+      
+      <category>浏览器返回</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>HTML</tag>
+      
+      <tag>iframe</tag>
+      
+      <tag>浏览器返回</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>哈希表- Hero · 算法 · Hello 算法</title>
     <link href="/notes/hero/algo/hello-algo/%E5%93%88%E5%B8%8C%E8%A1%A8/"/>
     <url>/notes/hero/algo/hello-algo/%E5%93%88%E5%B8%8C%E8%A1%A8/</url>
