@@ -8,14 +8,6 @@ var subtitle = page.subtitle || page.title
 <div id="banner" class="banner" <%- theme.banner && theme.banner.parallax && 'parallax=true' %>
   style="background: url('<%- url_for(banner_img) %>') no-repeat center center; background-size: cover;">
   <div class="full-bg-img" onclick="rainVoice()">
-    <div id="particles-js"></div>
-    <canvas id="banner-canvas"></canvas>
-    <img
-      class="_img_1gdgv_11 _img_1gdgv_11"
-      alt=""
-      style="object-fit:cover;"
-      src="<%= url_for("/img/白老板.jpg") %>"
-    >
     <div class="mask flex-center" style="background-color: rgba(0, 0, 0, <%= parseFloat(banner_mask_alpha) %>)">
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
