@@ -8,7 +8,8 @@
     "deploy": "hexo deploy",
     "server": "hexo server",
     "g:w": "hexo generate -w",
-    "d": "hexo new daily -p daily/2023/06/$d"
+    "d": "hexo new daily -p daily/2023/06/$d",
+    "h:clean": "hexo clean"
   },
   "hexo": {
     "version": "6.3.0"
