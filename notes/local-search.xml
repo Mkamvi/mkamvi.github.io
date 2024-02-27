@@ -4,6 +4,56 @@
   
   
   <entry>
+    <title>SSH 免密登录 - Linux</title>
+    <link href="/notes/linux/%E5%85%8D%E5%AF%86%E7%99%BB%E5%BD%95/"/>
+    <url>/notes/linux/%E5%85%8D%E5%AF%86%E7%99%BB%E5%BD%95/</url>
+    
+    <content type="html"><![CDATA[<h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p>每次登录特别麻烦</p><h2 id="添加公钥"><a href="#添加公钥" class="headerlink" title="添加公钥"></a>添加公钥</h2><p>在目标Linux ~&#x2F;.ssh&#x2F;authorized_keys 文件中添加自己机器的ssh公钥</p><h2 id="配置目标机器IP及登录用户"><a href="#配置目标机器IP及登录用户" class="headerlink" title="配置目标机器IP及登录用户"></a>配置目标机器IP及登录用户</h2><p>在 ~&#x2F;.ssh&#x2F;config 文件中添加IP及登录用户</p><figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs crmsh">Host  karl<br>  HostName <span class="hljs-number">121.121</span>.<span class="hljs-number">121.121</span><br>  <span class="hljs-keyword">User</span>  <span class="hljs-title">abc</span><br>  IdentityFile  ~/.ssh/id_rsa<br><br></code></pre></td></tr></table></figure><h2 id="OK"><a href="#OK" class="headerlink" title="OK"></a>OK</h2><p>后面可直接通过ssh&#x2F;sftp karl快速登录</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Linux</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Linux</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>在Centos安装nginx并部署单页应用 - Linux</title>
+    <link href="/notes/linux/%E5%9C%A8Centos%E5%AE%89%E8%A3%85nginx/"/>
+    <url>/notes/linux/%E5%9C%A8Centos%E5%AE%89%E8%A3%85nginx/</url>
+    
+    <content type="html"><![CDATA[<h2 id="安装nginx"><a href="#安装nginx" class="headerlink" title="安装nginx"></a>安装nginx</h2><p>yum install nginx</p><h2 id="配置目录"><a href="#配置目录" class="headerlink" title="配置目录"></a>配置目录</h2><p>&#x2F;etc&#x2F;nginx&#x2F;</p><h2 id="安装unzip"><a href="#安装unzip" class="headerlink" title="安装unzip"></a>安装unzip</h2><p>yum install unzip</p><h2 id="服务启动"><a href="#服务启动" class="headerlink" title="服务启动"></a>服务启动</h2><p>service nginx start&#x2F;restart&#x2F;stop</p><h2 id="服务目录"><a href="#服务目录" class="headerlink" title="服务目录"></a>服务目录</h2><p>使用默认的&#x2F;usr&#x2F;share&#x2F;nginx&#x2F;html&#x2F;</p><h2 id="sftp"><a href="#sftp" class="headerlink" title="sftp"></a>sftp</h2><p>put 命名上传文件</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Linux</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Linux</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>2023 - 年度总结</title>
     <link href="/notes/annual-review/2023/"/>
     <url>/notes/annual-review/2023/</url>
