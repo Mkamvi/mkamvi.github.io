@@ -4,6 +4,31 @@
   
   
   <entry>
+    <title>确认Linux发行版本 - Linux</title>
+    <link href="/notes/linux/%E5%A6%82%E4%BD%95%E7%A1%AE%E8%AE%A4Linux%E5%8F%91%E8%A1%8C%E7%89%88%E6%9C%AC/"/>
+    <url>/notes/linux/%E5%A6%82%E4%BD%95%E7%A1%AE%E8%AE%A4Linux%E5%8F%91%E8%A1%8C%E7%89%88%E6%9C%AC/</url>
+    
+    <content type="html"><![CDATA[<h2 id="命令"><a href="#命令" class="headerlink" title="命令"></a>命令</h2><p>lsb_release -a</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Linux</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Linux</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>SSH 免密登录 - Linux</title>
     <link href="/notes/linux/%E5%85%8D%E5%AF%86%E7%99%BB%E5%BD%95/"/>
     <url>/notes/linux/%E5%85%8D%E5%AF%86%E7%99%BB%E5%BD%95/</url>
