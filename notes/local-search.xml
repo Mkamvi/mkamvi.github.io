@@ -4,6 +4,56 @@
   
   
   <entry>
+    <title>入门 - Rollup</title>
+    <link href="/notes/rollup/%E5%85%A5%E9%97%A8/"/>
+    <url>/notes/rollup/%E5%85%A5%E9%97%A8/</url>
+    
+    <content type="html"><![CDATA[<h2 id="入门"><a href="#入门" class="headerlink" title="入门"></a>入门</h2><h3 id="配置文件"><a href="#配置文件" class="headerlink" title="配置文件"></a>配置文件</h3><ul><li>rollup -c</li></ul><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-comment">// rollup.config.js</span><br><span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> &#123;<br>  <span class="hljs-attr">input</span>: <span class="hljs-string">&quot;src/main.js&quot;</span>,<br>  <span class="hljs-attr">output</span>: &#123;<br>    <span class="hljs-attr">file</span>: <span class="hljs-string">&quot;bundle.js&quot;</span>,<br>    <span class="hljs-attr">format</span>: <span class="hljs-string">&quot;cjs&quot;</span>,<br>  &#125;,<br>&#125;;<br></code></pre></td></tr></table></figure><h4 id="不相关的-批次构建"><a href="#不相关的-批次构建" class="headerlink" title="(不相关的)批次构建"></a>(不相关的)批次构建</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-comment">// rollup.config.js (building more than one bundle)</span><br><br><span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> [<br>  &#123;<br>    <span class="hljs-attr">input</span>: <span class="hljs-string">&quot;main-a.js&quot;</span>,<br>    <span class="hljs-attr">output</span>: &#123;<br>      <span class="hljs-attr">file</span>: <span class="hljs-string">&quot;dist/bundle-a.js&quot;</span>,<br>      <span class="hljs-attr">format</span>: <span class="hljs-string">&quot;cjs&quot;</span>,<br>    &#125;,<br>  &#125;,<br>  &#123;<br>    <span class="hljs-attr">input</span>: <span class="hljs-string">&quot;main-b.js&quot;</span>,<br>    <span class="hljs-attr">output</span>: [<br>      &#123;<br>        <span class="hljs-attr">file</span>: <span class="hljs-string">&quot;dist/bundle-b1.js&quot;</span>,<br>        <span class="hljs-attr">format</span>: <span class="hljs-string">&quot;cjs&quot;</span>,<br>      &#125;,<br>      &#123;<br>        <span class="hljs-attr">file</span>: <span class="hljs-string">&quot;dist/bundle-b2.js&quot;</span>,<br>        <span class="hljs-attr">format</span>: <span class="hljs-string">&quot;es&quot;</span>,<br>      &#125;,<br>    ],<br>  &#125;,<br>];<br></code></pre></td></tr></table></figure><h4 id="配置智能提示"><a href="#配置智能提示" class="headerlink" title="配置智能提示"></a>配置智能提示</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-comment">// rollup.config.js</span><br><span class="hljs-comment">/**</span><br><span class="hljs-comment"> * <span class="hljs-doctag">@type</span> &#123;<span class="hljs-type">import(&#x27;rollup&#x27;).RollupOptions</span>&#125;</span><br><span class="hljs-comment"> */</span><br></code></pre></td></tr></table></figure><h4 id="npm包加载"><a href="#npm包加载" class="headerlink" title="npm包加载"></a>npm包加载</h4><p>jj</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># 这将首先尝试加载包 &quot;rollup-config-my-special-config&quot;</span><br><span class="hljs-comment"># 如果失败，则尝试加载 &quot;my-special-config&quot;</span><br>rollup --config node:my-special-config<br></code></pre></td></tr></table></figure><h3 id="插件"><a href="#插件" class="headerlink" title="插件"></a>插件</h3><h3 id="代码分割"><a href="#代码分割" class="headerlink" title="代码分割"></a>代码分割</h3><h3 id="SystemJS"><a href="#SystemJS" class="headerlink" title="SystemJS"></a>SystemJS</h3>]]></content>
+    
+    
+    <categories>
+      
+      <category>Rollup</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Rollup</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>2024年03月02日11:44:47 - 周报</title>
+    <link href="/notes/weeks/2024-03-02/"/>
+    <url>/notes/weeks/2024-03-02/</url>
+    
+    <content type="html"><![CDATA[<h3 id="南网项目"><a href="#南网项目" class="headerlink" title="南网项目"></a>南网项目</h3><ul><li>jeecg</li><li>antdv + vite</li></ul><h3 id="官网部署"><a href="#官网部署" class="headerlink" title="官网部署"></a>官网部署</h3><ul><li>Centos</li><li>SEO</li></ul>]]></content>
+    
+    
+    <categories>
+      
+      <category>周报</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>周报</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>确认Linux发行版本 - Linux</title>
     <link href="/notes/linux/%E5%A6%82%E4%BD%95%E7%A1%AE%E8%AE%A4Linux%E5%8F%91%E8%A1%8C%E7%89%88%E6%9C%AC/"/>
     <url>/notes/linux/%E5%A6%82%E4%BD%95%E7%A1%AE%E8%AE%A4Linux%E5%8F%91%E8%A1%8C%E7%89%88%E6%9C%AC/</url>
@@ -80,8 +130,8 @@
   
   <entry>
     <title>2023 - 年度总结</title>
-    <link href="/notes/annual-review/2023/"/>
-    <url>/notes/annual-review/2023/</url>
+    <link href="/notes/years/2023/"/>
+    <url>/notes/years/2023/</url>
     
     <content type="html"><![CDATA[<h2 id="2-0-2-3"><a href="#2-0-2-3" class="headerlink" title="2 0 2 3"></a>2 0 2 3</h2><h3 id="工艺组态"><a href="#工艺组态" class="headerlink" title="工艺组态"></a>工艺组态</h3><blockquote><p>因为BIM业务的开展，今年对3D技术做了进一步的学习及应用</p></blockquote><ul><li>进一步对Cesium的学习及理解 (Fabric、材质、纹理、实体、网格体、原子、粒子系统等相关概念，并参考相关产品开发了气泡弹窗、管道流水、场景导出、键盘巡游、实时航线、行人漫游等场景通用组件)</li><li>在做工艺组态项目时，对3D模型格式做了大量调研，包含obj、3d tiles 、gltf等，并在此过程中对3d tiles原始模型写入业务数据，设计了2D页面与3D页面交互方案（包含实时数据、自动导航、节点高亮等）</li><li>HT 3D(新管理看板，提供模型交互方案)</li><li>ThreeJS(测试渲染性能)</li></ul><h3 id="运维平台"><a href="#运维平台" class="headerlink" title="运维平台"></a>运维平台</h3><blockquote><p>React + Umi，非常庞大且古老的项目</p></blockquote><ul><li><p>antd 5.0集成：因为使用antd 3.0实在是太痛苦了（缺乏大量常用组件，如FormList、骨架屏，尤其是在动态表单方面显得非常难用且有不少bug），于是尝试嵌入antd 5.0，借助命名空间成功将antd 5.0二次封装后集成到运维平台（无冲突的样式、可二次扩展）</p></li><li><p>甘特图：基于rc-gantt的二次改造</p></li><li><p>无界：新版流程集成（vue项目，因为内部有弹窗无法直接使用iframe，使用无界代理是最完美的集成方案）</p></li><li><p>物联网平台集成：使用动态组件的方式(因为是新项目，可以享受最新工程化构建框架的同时，非常简单的将其集成到任一React项目)</p></li></ul><h3 id="新管理看板"><a href="#新管理看板" class="headerlink" title="新管理看板"></a>新管理看板</h3><blockquote><p>Vue 3 + Vite + Echarts + HT 3D</p></blockquote><ul><li>canvas: 定制圆形精度条</li><li>echarts: 使用vue组件定制的悬浮效果(与系统其他弹窗共享、异常点位展示)</li><li>HT 3D：悬浮弹窗(包含计算表达式)、设计了M1机房与数据中心两个BIM页面的技术方案</li><li>2D 与 3D 页面集成交互（包含管道控制、视图切换、数据展示）</li></ul><h3 id="Nvim-amp-Emacs"><a href="#Nvim-amp-Emacs" class="headerlink" title="Nvim &amp; Emacs"></a>Nvim &amp; Emacs</h3><blockquote><p>这是信仰 ！</p></blockquote><ul><li>Nvim: nvim 版本做了一次升级(0.8 -&gt; 0.9)，且更新了大量配置，并兼容了Mac、Window(Neovide)、Linux(Ubunut，使用远程登录和Mac本身基本一样)三端</li><li>Emacs: 已经快要放弃了(无聊的时候还会玩一下)，超级冗长的组合键按的确实没有vim好用</li><li>Lua: 断断续续的学了一段时间，现在阅读和修改Nvim插件基本毫无压力</li></ul><h3 id="慢-不得不提"><a href="#慢-不得不提" class="headerlink" title="慢(不得不提)"></a>慢(不得不提)</h3><blockquote><p>以前做事总是火急火燎，或是非常急于处理当下问题，而经常忽略问题的本质（这种情况下处理的问题很有可能在未来的某一天又引发另外一个问题）</p></blockquote><ul><li>在编码前深度思考，这是一个非常好的习惯</li><li>在改别人代码时，首先要明白它为啥要这么写</li></ul><h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>今年主要在3D、项目之间的集成(数据交换、不同框架的集成)、Vue和Echarts方面积累了大量经验，然后Vim的使用已然炉火纯青，并养成了一个编码时深度思考的好习惯</p>]]></content>
     
