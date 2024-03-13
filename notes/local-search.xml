@@ -4,6 +4,58 @@
   
   
   <entry>
+    <title>根据矩阵偏移默认位置 - Gis · Cesium</title>
+    <link href="/notes/gis/cesium/%E6%A0%B9%E6%8D%AE%E7%9F%A9%E9%98%B5%E5%81%8F%E7%A7%BB%E9%BB%98%E8%AE%A4%E4%BD%8D%E7%BD%AE/"/>
+    <url>/notes/gis/cesium/%E6%A0%B9%E6%8D%AE%E7%9F%A9%E9%98%B5%E5%81%8F%E7%A7%BB%E9%BB%98%E8%AE%A4%E4%BD%8D%E7%BD%AE/</url>
+    
+    <content type="html"><![CDATA[<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-comment">/**</span><br><span class="hljs-comment"> * <span class="hljs-doctag">@author</span> M.k</span><br><span class="hljs-comment"> * <span class="hljs-doctag">@date</span> 2023-08-08 14:15:22</span><br><span class="hljs-comment"> */</span><br><br><span class="hljs-keyword">import</span> &#123; <span class="hljs-title class_">Cartographic</span>, <span class="hljs-title class_">Cartesian3</span>, <span class="hljs-title class_">Matrix4</span>, <span class="hljs-title class_">Math</span> <span class="hljs-keyword">as</span> <span class="hljs-title class_">CMath</span> &#125; <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;cesium&quot;</span>;<br><span class="hljs-keyword">import</span> fs <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;fs-extra&quot;</span>;<br><br><span class="hljs-keyword">import</span> sceneTree <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;./scenetree.json&quot;</span> assert &#123; <span class="hljs-attr">type</span>: <span class="hljs-string">&quot;json&quot;</span> &#125;;<br><br><span class="hljs-comment">// 模型矩阵</span><br><span class="hljs-keyword">const</span> modelMatrix = [<br>  <span class="hljs-number">0.8602507530759164</span>, -<span class="hljs-number">0.03947296554882054</span>, -<span class="hljs-number">0.5083409552879833</span>, <span class="hljs-number">0</span>,<br>  <span class="hljs-number">0.037086637569903456</span>, <span class="hljs-number">0.9992020380754338</span>, -<span class="hljs-number">0.014827960738338308</span>, <span class="hljs-number">0</span>,<br>  <span class="hljs-number">0.5085206221443497</span>, -<span class="hljs-number">0.006096892378968544</span>, <span class="hljs-number">0.8610282252965016</span>, <span class="hljs-number">0</span>,<br>  <span class="hljs-number">14058.754155613598</span>, <span class="hljs-number">1150.0035471664742</span>, -<span class="hljs-number">5630.882251806557</span>, <span class="hljs-number">1</span>,<br>];<br><br><span class="hljs-comment">// 添加位置属性</span><br><span class="hljs-title function_">nodeVisitor</span>(sceneTree.<span class="hljs-property">scenes</span>);<br><br><span class="hljs-comment">// 写入文件</span><br>fs.<span class="hljs-title function_">writeJsonSync</span>(<span class="hljs-string">&quot;./scenetree.new.json&quot;</span>, sceneTree);<br><br><span class="hljs-comment">// 访问节点并添加位置属性</span><br><span class="hljs-keyword">function</span> <span class="hljs-title function_">nodeVisitor</span>(<span class="hljs-params">data</span>) &#123;<br>  <span class="hljs-keyword">if</span> (!data?.<span class="hljs-property">length</span>) <span class="hljs-keyword">return</span>;<br>  data.<span class="hljs-title function_">forEach</span>(<span class="hljs-function">(<span class="hljs-params">d</span>) =&gt;</span> &#123;<br>    <span class="hljs-keyword">if</span> (d.<span class="hljs-property">sphere</span>) &#123;<br>      <span class="hljs-comment">// 节点原始笛卡尔坐标系位置</span><br>      <span class="hljs-keyword">const</span> nodeCenter = <span class="hljs-keyword">new</span> <span class="hljs-title class_">Cartesian3</span>(...d.<span class="hljs-property">sphere</span>.<span class="hljs-title function_">slice</span>(<span class="hljs-number">0</span>, <span class="hljs-number">3</span>));<br>      <span class="hljs-comment">// 节点偏移矩阵</span><br>      <span class="hljs-keyword">const</span> nodeMatrix = <span class="hljs-keyword">new</span> <span class="hljs-title class_">Matrix4</span>();<br>      <span class="hljs-title class_">Matrix4</span>.<span class="hljs-title function_">multiplyByTranslation</span>(modelMatrix, nodeCenter, nodeMatrix);<br>      <span class="hljs-comment">// 节点目标笛卡尔坐标系位置</span><br>      <span class="hljs-keyword">const</span> nodeCartesian = <span class="hljs-title class_">Matrix4</span>.<span class="hljs-title function_">getTranslation</span>(nodeMatrix, nodeCenter);<br>      <span class="hljs-comment">// 节点经纬度弧度</span><br>      <span class="hljs-keyword">const</span> nodeCartographic = <span class="hljs-title class_">Cartographic</span>.<span class="hljs-title function_">fromCartesian</span>(nodeCartesian);<br><br>      <span class="hljs-comment">// 经纬度&amp;高度</span><br>      <span class="hljs-keyword">const</span> lng = <span class="hljs-title class_">CMath</span>.<span class="hljs-title function_">toDegrees</span>(nodeCartographic.<span class="hljs-property">longitude</span>);<br>      <span class="hljs-keyword">const</span> lat = <span class="hljs-title class_">CMath</span>.<span class="hljs-title function_">toDegrees</span>(nodeCartographic.<span class="hljs-property">latitude</span>);<br>      <span class="hljs-keyword">const</span> height = nodeCartographic.<span class="hljs-property">height</span>;<br><br>      <span class="hljs-comment">// 添加位置属性</span><br>      d.<span class="hljs-property">position</span> = [lng, lat, height];<br>    &#125;<br>    <span class="hljs-title function_">nodeVisitor</span>(d.<span class="hljs-property">children</span>);<br>  &#125;);<br>&#125;<br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+    <categories>
+      
+      <category>Gis</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Gis</tag>
+      
+      <tag>Cesium</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>常见问题 - Babel</title>
+    <link href="/notes/babel/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/"/>
+    <url>/notes/babel/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/</url>
+    
+    <content type="html"><![CDATA[<h2 id="常见问题"><a href="#常见问题" class="headerlink" title="常见问题"></a>常见问题</h2><ol><li>@babel&#x2F;runtime</li></ol><p><a href="https://github.com/mui/material-ui/issues/23290">https://github.com/mui/material-ui/issues/23290</a></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Babel</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Babel</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>入门 - Rollup</title>
     <link href="/notes/rollup/%E5%85%A5%E9%97%A8/"/>
     <url>/notes/rollup/%E5%85%A5%E9%97%A8/</url>
@@ -2162,9 +2214,9 @@
       
       <tag>Gis</tag>
       
-      <tag>DC</tag>
-      
       <tag>Cesium</tag>
+      
+      <tag>DC</tag>
       
     </tags>
     
