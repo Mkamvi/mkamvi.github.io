@@ -4,6 +4,56 @@
   
   
   <entry>
+    <title>如何压缩y轴展示 - echarts</title>
+    <link href="/notes/echarts/%E5%A6%82%E4%BD%95%E5%8E%8B%E7%BC%A9y%E8%BD%B4%E4%B8%8B%E6%96%B9%E5%9D%90%E6%A0%87/"/>
+    <url>/notes/echarts/%E5%A6%82%E4%BD%95%E5%8E%8B%E7%BC%A9y%E8%BD%B4%E4%B8%8B%E6%96%B9%E5%9D%90%E6%A0%87/</url>
+    
+    <content type="html"><![CDATA[<h2 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h2><blockquote><p>将源数据执行立方操作，本质是放大大数区间，再将y轴取立方根获取源数值，但会导致数据偏差；和对数坐标刚好相反</p></blockquote><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">const</span> data = [<span class="hljs-number">0</span>, <span class="hljs-number">32</span>, <span class="hljs-number">31</span>, <span class="hljs-number">33</span>, <span class="hljs-number">31</span>, <span class="hljs-number">34</span>, <span class="hljs-number">33</span>];<br><br>option = &#123;<br>  <span class="hljs-attr">xAxis</span>: &#123;<br>    <span class="hljs-attr">type</span>: <span class="hljs-string">&quot;category&quot;</span>,<br>    <span class="hljs-attr">data</span>: [<span class="hljs-string">&quot;Mon&quot;</span>, <span class="hljs-string">&quot;Tue&quot;</span>, <span class="hljs-string">&quot;Wed&quot;</span>, <span class="hljs-string">&quot;Thu&quot;</span>, <span class="hljs-string">&quot;Fri&quot;</span>, <span class="hljs-string">&quot;Sat&quot;</span>, <span class="hljs-string">&quot;Sun&quot;</span>],<br>  &#125;,<br>  <span class="hljs-attr">yAxis</span>: &#123;<br>    <span class="hljs-attr">axisLabel</span>: &#123;<br>      <span class="hljs-attr">formatter</span>: <span class="hljs-keyword">function</span> (<span class="hljs-params">value, index</span>) &#123;<br>        <span class="hljs-keyword">return</span> <span class="hljs-title class_">Math</span>.<span class="hljs-title function_">cbrt</span>(value).<span class="hljs-title function_">toFixed</span>();<br>      &#125;,<br>    &#125;,<br>  &#125;,<br>  <span class="hljs-attr">tooltip</span>: &#123;<br>    <span class="hljs-attr">valueFormatter</span>: <span class="hljs-keyword">function</span> (<span class="hljs-params">value, index</span>) &#123;<br>      <span class="hljs-keyword">return</span> <span class="hljs-title class_">Math</span>.<span class="hljs-title function_">cbrt</span>(value).<span class="hljs-title function_">toFixed</span>();<br>    &#125;,<br>  &#125;,<br>  <span class="hljs-attr">visualMap</span>: &#123;<br>    <span class="hljs-attr">dimension</span>: <span class="hljs-number">0</span>,<br>    <span class="hljs-attr">pieces</span>: [<br>      &#123;<br>        <span class="hljs-attr">lte</span>: <span class="hljs-number">2</span>,<br>        <span class="hljs-attr">color</span>: <span class="hljs-string">&quot;orange&quot;</span>,<br>      &#125;,<br>      &#123;<br>        <span class="hljs-attr">gt</span>: <span class="hljs-number">2</span>,<br>        <span class="hljs-attr">lte</span>: <span class="hljs-number">4</span>,<br>        <span class="hljs-attr">color</span>: <span class="hljs-string">&quot;red&quot;</span>,<br>      &#125;,<br>      &#123;<br>        <span class="hljs-attr">gt</span>: <span class="hljs-number">2</span>,<br>        <span class="hljs-attr">color</span>: <span class="hljs-string">&quot;cyan&quot;</span>,<br>      &#125;,<br>    ],<br>  &#125;,<br>  <span class="hljs-attr">series</span>: [<br>    &#123;<br>      <span class="hljs-attr">data</span>: data.<span class="hljs-title function_">map</span>(<span class="hljs-function">(<span class="hljs-params">d</span>) =&gt;</span> d * d * d),<br>      <span class="hljs-attr">type</span>: <span class="hljs-string">&quot;line&quot;</span>,<br>      <span class="hljs-attr">smooth</span>: <span class="hljs-literal">true</span>,<br>    &#125;,<br>  ],<br>&#125;;<br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+    <categories>
+      
+      <category>echarts</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>echarts</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>如何分段展示曲线数据 - echarts</title>
+    <link href="/notes/echarts/%E5%A6%82%E4%BD%95%E5%88%86%E6%AE%B5%E5%B1%95%E7%A4%BA%E6%9B%B2%E7%BA%BF/"/>
+    <url>/notes/echarts/%E5%A6%82%E4%BD%95%E5%88%86%E6%AE%B5%E5%B1%95%E7%A4%BA%E6%9B%B2%E7%BA%BF/</url>
+    
+    <content type="html"><![CDATA[<h2 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h2><blockquote><p>关于series维度理解还是不够啊</p></blockquote><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><code class="hljs javascript">option = &#123;<br>  <span class="hljs-attr">xAxis</span>: &#123;<br>    <span class="hljs-attr">type</span>: <span class="hljs-string">&quot;category&quot;</span>,<br>    <span class="hljs-attr">data</span>: [<span class="hljs-string">&quot;Mon&quot;</span>, <span class="hljs-string">&quot;Tue&quot;</span>, <span class="hljs-string">&quot;Wed&quot;</span>, <span class="hljs-string">&quot;Thu&quot;</span>, <span class="hljs-string">&quot;Fri&quot;</span>, <span class="hljs-string">&quot;Sat&quot;</span>, <span class="hljs-string">&quot;Sun&quot;</span>],<br>  &#125;,<br>  <span class="hljs-attr">yAxis</span>: &#123;<br>    <span class="hljs-attr">type</span>: <span class="hljs-string">&quot;value&quot;</span>,<br>  &#125;,<br>  <span class="hljs-attr">visualMap</span>: &#123;<br>    <span class="hljs-attr">dimension</span>: <span class="hljs-number">0</span>,<br>    <span class="hljs-attr">pieces</span>: [<br>      &#123;<br>        <span class="hljs-attr">lte</span>: <span class="hljs-number">2</span>,<br>        <span class="hljs-attr">color</span>: <span class="hljs-string">&quot;orange&quot;</span>,<br>      &#125;,<br>      &#123;<br>        <span class="hljs-attr">gt</span>: <span class="hljs-number">2</span>,<br>        <span class="hljs-attr">lte</span>: <span class="hljs-number">4</span>,<br>        <span class="hljs-attr">color</span>: <span class="hljs-string">&quot;red&quot;</span>,<br>      &#125;,<br>      &#123;<br>        <span class="hljs-attr">gt</span>: <span class="hljs-number">2</span>,<br>        <span class="hljs-attr">color</span>: <span class="hljs-string">&quot;cyan&quot;</span>,<br>      &#125;,<br>    ],<br>  &#125;,<br>  <span class="hljs-attr">series</span>: [<br>    &#123;<br>      <span class="hljs-attr">data</span>: [<span class="hljs-number">150</span>, <span class="hljs-number">230</span>, <span class="hljs-number">224</span>, <span class="hljs-number">218</span>, <span class="hljs-number">135</span>, <span class="hljs-number">147</span>, <span class="hljs-number">260</span>],<br>      <span class="hljs-attr">type</span>: <span class="hljs-string">&quot;line&quot;</span>,<br>    &#125;,<br>  ],<br>&#125;;<br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+    <categories>
+      
+      <category>echarts</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>echarts</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>根据矩阵偏移默认位置 - Gis · Cesium</title>
     <link href="/notes/gis/cesium/%E6%A0%B9%E6%8D%AE%E7%9F%A9%E9%98%B5%E5%81%8F%E7%A7%BB%E9%BB%98%E8%AE%A4%E4%BD%8D%E7%BD%AE/"/>
     <url>/notes/gis/cesium/%E6%A0%B9%E6%8D%AE%E7%9F%A9%E9%98%B5%E5%81%8F%E7%A7%BB%E9%BB%98%E8%AE%A4%E4%BD%8D%E7%BD%AE/</url>
