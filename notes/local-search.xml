@@ -4,6 +4,35 @@
   
   
   <entry>
+    <title>为特定文件配置文件类型 - Nvim</title>
+    <link href="/notes/nvim/%E4%B8%BA%E7%89%B9%E5%AE%9A%E6%96%87%E4%BB%B6%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E7%B1%BB%E5%9E%8B/"/>
+    <url>/notes/nvim/%E4%B8%BA%E7%89%B9%E5%AE%9A%E6%96%87%E4%BB%B6%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E7%B1%BB%E5%9E%8B/</url>
+    
+    <content type="html"><![CDATA[<h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p>最近在vite整合分别使用react和vue项目，vue项目里部分文件后缀使用了.tsx，和react冲突，故在vite中将react的后缀改为了.rtsx，但这样一来编辑器就无法识别我当前的文件类型，没有语法高亮和自动提示</p><h2 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h2><figure class="highlight lua"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs lua">&#123;<br><span class="hljs-string">&quot;nathom/filetype.nvim&quot;</span>,<br><span class="hljs-built_in">config</span> = <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span></span><br><span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;filetype&quot;</span>).setup(&#123;<br>overrides = &#123;<br>extensions = &#123;<br>rtsx = <span class="hljs-string">&quot;typescriptreact&quot;</span>,<br>&#125;,<br>&#125;,<br>&#125;)<br><span class="hljs-keyword">end</span>,<br>&#125;,<br><br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+    <categories>
+      
+      <category>Vim</category>
+      
+      <category>Nvim</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Nvim</tag>
+      
+      <tag>Vim</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>如何压缩y轴展示 - echarts</title>
     <link href="/notes/echarts/%E5%A6%82%E4%BD%95%E5%8E%8B%E7%BC%A9y%E8%BD%B4%E4%B8%8B%E6%96%B9%E5%9D%90%E6%A0%87/"/>
     <url>/notes/echarts/%E5%A6%82%E4%BD%95%E5%8E%8B%E7%BC%A9y%E8%BD%B4%E4%B8%8B%E6%96%B9%E5%9D%90%E6%A0%87/</url>

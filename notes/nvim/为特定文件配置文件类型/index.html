@@ -16,22 +16,23 @@
   <meta name="author" content="源">
   <meta name="keywords" content="大帅,个人主页,不良帅,mkamv,mkamvi,不良帅的个人主页,mkamv的个人主页">
   
-    <meta name="description" content="起因项目部署后访问页面，竟然直接卡死 ！ 原因Array.reverse() 竟然直接修改原数组！然后 Vue 里面便形成了 监听变化 &#x3D;&gt; 修改元素组 &#x3D;&gt; 变化 &#x3D;&gt; 监听变化 的无限循环中！ (一直以为是返回新数组！所以排查到是因为 reverse 调用引起的问题时，大吃一惊！)">
+    <meta name="description" content="背景最近在vite整合分别使用react和vue项目，vue项目里部分文件后缀使用了.tsx，和react冲突，故在vite中将react的后缀改为了.rtsx，但这样一来编辑器就无法识别我当前的文件类型，没有语法高亮和自动提示 配置12345678910111213&amp;#123;	&quot;nathom&#x2F;filetype.nvim&quot;,	config &#x3D; function()		requ">
 <meta property="og:type" content="article">
-<meta property="og:title" content="由Array.reverse引发的血案 - Vue">
-<meta property="og:url" content="https://wanmeishijie.xyz/notes/vue/Reverse%E5%BC%95%E5%8F%91%E7%9A%84%E6%97%A0%E9%99%90%E5%BE%AA%E7%8E%AF/index.html">
+<meta property="og:title" content="为特定文件配置文件类型 - Nvim">
+<meta property="og:url" content="https://wanmeishijie.xyz/notes/nvim/%E4%B8%BA%E7%89%B9%E5%AE%9A%E6%96%87%E4%BB%B6%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E7%B1%BB%E5%9E%8B/index.html">
 <meta property="og:site_name" content="源的个人主页">
-<meta property="og:description" content="起因项目部署后访问页面，竟然直接卡死 ！ 原因Array.reverse() 竟然直接修改原数组！然后 Vue 里面便形成了 监听变化 &#x3D;&gt; 修改元素组 &#x3D;&gt; 变化 &#x3D;&gt; 监听变化 的无限循环中！ (一直以为是返回新数组！所以排查到是因为 reverse 调用引起的问题时，大吃一惊！)">
+<meta property="og:description" content="背景最近在vite整合分别使用react和vue项目，vue项目里部分文件后缀使用了.tsx，和react冲突，故在vite中将react的后缀改为了.rtsx，但这样一来编辑器就无法识别我当前的文件类型，没有语法高亮和自动提示 配置12345678910111213&amp;#123;	&quot;nathom&#x2F;filetype.nvim&quot;,	config &#x3D; function()		requ">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2023-09-20T10:21:46.000Z">
-<meta property="article:modified_time" content="2024-03-16T01:07:07.418Z">
+<meta property="article:published_time" content="2024-03-16T08:59:19.000Z">
+<meta property="article:modified_time" content="2024-03-16T01:07:07.414Z">
 <meta property="article:author" content="源">
-<meta property="article:tag" content="Vue">
+<meta property="article:tag" content="Nvim">
+<meta property="article:tag" content="Vim">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title>由Array.reverse引发的血案 - Vue - 源的个人主页</title>
+  <title>为特定文件配置文件类型 - Nvim - 源的个人主页</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -206,7 +207,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="由Array.reverse引发的血案 - Vue"></span>
+            <span id="subtitle" data-typed-text="为特定文件配置文件类型 - Nvim"></span>
           
         </div>
 
@@ -217,8 +218,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2023-09-20 10:21" pubdate>
-          2023年9月20日 上午
+        <time datetime="2024-03-16 08:59" pubdate>
+          2024年3月16日 早上
         </time>
       </span>
     
@@ -229,7 +230,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          151 字
+          329 字
         
       </span>
     
@@ -240,7 +241,7 @@
         
         
         
-          2 分钟
+          3 分钟
         
       </span>
     
@@ -290,14 +291,13 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">由Array.reverse引发的血案 - Vue</h1>
+            <h1 id="seo-header">为特定文件配置文件类型 - Nvim</h1>
             
             
               <div class="markdown-body">
                 
-                <h3 id="起因"><a href="#起因" class="headerlink" title="起因"></a>起因</h3><p>项目部署后访问页面，竟然直接卡死 ！</p>
-<h3 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h3><p>Array.reverse() 竟然直接修改原数组！然后 Vue 里面便形成了 监听变化 &#x3D;&gt; 修改元素组 &#x3D;&gt; 变化 &#x3D;&gt; 监听变化 的无限循环中！</p>
-<p>(一直以为是返回新数组！所以排查到是因为 reverse 调用引起的问题时，大吃一惊！)</p>
+                <h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p>最近在vite整合分别使用react和vue项目，vue项目里部分文件后缀使用了.tsx，和react冲突，故在vite中将react的后缀改为了.rtsx，但这样一来编辑器就无法识别我当前的文件类型，没有语法高亮和自动提示</p>
+<h2 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h2><figure class="highlight lua"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs lua">&#123;<br>	<span class="hljs-string">&quot;nathom/filetype.nvim&quot;</span>,<br>	<span class="hljs-built_in">config</span> = <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span></span><br>		<span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;filetype&quot;</span>).setup(&#123;<br>			overrides = &#123;<br>				extensions = &#123;<br>					rtsx = <span class="hljs-string">&quot;typescriptreact&quot;</span>,<br>				&#125;,<br>			&#125;,<br>		&#125;)<br>	<span class="hljs-keyword">end</span>,<br>&#125;,<br><br></code></pre></td></tr></table></figure>
 
                 
               </div>
@@ -316,8 +316,15 @@
     
       <span class="category-chain">
         
-  <a href="/notes/categories/Vue/" class="category-chain-item">Vue</a>
+  <a href="/notes/categories/Vim/" class="category-chain-item">Vim</a>
   
+  
+    <span>></span>
+    
+  <a href="/notes/categories/Vim/Nvim/" class="category-chain-item">Nvim</a>
+  
+  
+
   
 
       </span>
@@ -331,7 +338,9 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/notes/tags/Vue/" class="print-no-link">#Vue</a>
+        <a href="/notes/tags/Nvim/" class="print-no-link">#Nvim</a>
+      
+        <a href="/notes/tags/Vim/" class="print-no-link">#Vim</a>
       
     </div>
   
@@ -343,8 +352,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>由Array.reverse引发的血案 - Vue</div>
-      <div>https://wanmeishijie.xyz/notes/vue/Reverse引发的无限循环/</div>
+      <div>为特定文件配置文件类型 - Nvim</div>
+      <div>https://wanmeishijie.xyz/notes/nvim/为特定文件配置文件类型/</div>
     </div>
     <div class="license-meta">
       
@@ -356,7 +365,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2023年9月20日</div>
+          <div>2024年3月16日</div>
         </div>
       
       
@@ -388,18 +397,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/notes/html/confused/iframe-unload/" title="iframe在被移除的时候未触发beforeunload事件">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">iframe在被移除的时候未触发beforeunload事件</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/notes/echarts/Echarts%E4%BD%BF%E7%94%A8setOption%E7%9A%84%E5%90%88%E5%B9%B6%E6%96%B9%E5%BC%8F/" title="Echarts使用setOption的合并方式">
-                        <span class="hidden-mobile">Echarts使用setOption的合并方式</span>
+                      <a href="/notes/echarts/%E5%A6%82%E4%BD%95%E5%8E%8B%E7%BC%A9y%E8%BD%B4%E4%B8%8B%E6%96%B9%E5%9D%90%E6%A0%87/" title="如何压缩y轴展示 - echarts">
+                        <span class="hidden-mobile">如何压缩y轴展示 - echarts</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
@@ -422,7 +425,7 @@
         var options = Object.assign(
           {"clientID":"380b721444e388f986da","clientSecret":"cd4569aa7c4e07f1301593bbd51fb45572592099","repo":"mkamvi.github.io","owner":"Mkamvi","admin":["Mkamvi"],"language":"zh-CN","labels":["Gitalk"],"perPage":10,"pagerDirection":"last","distractionFreeMode":false,"createIssueManually":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token"},
           {
-            id: '541555d988153885e72618606bd2faa3'
+            id: 'ab4d6c1a9f1c9137ec94cec89b18ce56'
           }
         )
         var gitalk = new Gitalk(options);
