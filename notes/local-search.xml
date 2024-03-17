@@ -4,6 +4,31 @@
   
   
   <entry>
+    <title>2024-03-17 18:01:42 - 周报</title>
+    <link href="/notes/weeks/2024-03-17/"/>
+    <url>/notes/weeks/2024-03-17/</url>
+    
+    <content type="html"><![CDATA[<h2 id="运维平台可用性和健康度优化"><a href="#运维平台可用性和健康度优化" class="headerlink" title="运维平台可用性和健康度优化"></a>运维平台可用性和健康度优化</h2><ul><li>公式实值展示</li></ul><h2 id="运维平台集成-vue集成react"><a href="#运维平台集成-vue集成react" class="headerlink" title="运维平台集成(vue集成react)"></a>运维平台集成(vue集成react)</h2><ul><li>主题修改原理</li><li>登录页改造</li><li>antd-vue版本升级(3.x -&gt; 4.x)，主题设计</li><li>Vite中Vue和React共存方案设计</li></ul><h2 id="管理看板"><a href="#管理看板" class="headerlink" title="管理看板"></a>管理看板</h2><ul><li>echarts图例自定义，选中和未选择动态切换，文本颜色同系列</li><li>折线图y轴压缩(对数坐标，次方求值)</li><li>x轴区间颜色自定义</li></ul><h2 id="工艺组态"><a href="#工艺组态" class="headerlink" title="工艺组态"></a>工艺组态</h2><ul><li>重写6个场站位置信息</li></ul><h2 id="PDA项目"><a href="#PDA项目" class="headerlink" title="PDA项目"></a>PDA项目</h2><ul><li>Gradle</li><li>Android Studio</li><li>内嵌H5实时调试</li></ul>]]></content>
+    
+    
+    <categories>
+      
+      <category>周报</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>周报</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>为特定文件配置文件类型 - Nvim</title>
     <link href="/notes/nvim/%E4%B8%BA%E7%89%B9%E5%AE%9A%E6%96%87%E4%BB%B6%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E7%B1%BB%E5%9E%8B/"/>
     <url>/notes/nvim/%E4%B8%BA%E7%89%B9%E5%AE%9A%E6%96%87%E4%BB%B6%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E7%B1%BB%E5%9E%8B/</url>
