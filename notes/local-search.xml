@@ -4,6 +4,56 @@
   
   
   <entry>
+    <title>Reset - Git</title>
+    <link href="/notes/git/reset/"/>
+    <url>/notes/git/reset/</url>
+    
+    <content type="html"><![CDATA[<h2 id="Reset"><a href="#Reset" class="headerlink" title="Reset"></a>Reset</h2><ul><li>–soft</li><li>–mixed(默认)</li><li>–hard</li></ul>]]></content>
+    
+    
+    <categories>
+      
+      <category>Git</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Git</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>Rebase - Git</title>
+    <link href="/notes/git/rebase/"/>
+    <url>/notes/git/rebase/</url>
+    
+    <content type="html"><![CDATA[<h2 id="Rebase"><a href="#Rebase" class="headerlink" title="Rebase"></a>Rebase</h2><p>“确定将main变基到develop分支吗”</p><p>这句话的含义是将main分支的代码更新到与develop提交一致的记录，即将develop的分支的commit在main分支上重新提交一遍</p><p>git rebase A B 意思是：</p><p>将在B上的提交基于A的提交重新提一遍，然后重新指向B</p><p>如果你正在A分支git rebase &#x3D;&gt; git rebase origin&#x2F;A A</p><p>所谓变基，即修改基础提交(某个历史提交)</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Git</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Git</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>第3章 HTTP报文内的HTTP信息 - 计算机网络 · 《图解HTTP》</title>
     <link href="/notes/network/%E5%9B%BE%E8%A7%A3HTTP%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E7%AC%AC3%E7%AB%A0%20HTTP%E4%BF%9D%E6%B8%A9%E5%86%85%E7%9A%84HTTP%E4%BF%A1%E6%81%AF/"/>
     <url>/notes/network/%E5%9B%BE%E8%A7%A3HTTP%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E7%AC%AC3%E7%AB%A0%20HTTP%E4%BF%9D%E6%B8%A9%E5%86%85%E7%9A%84HTTP%E4%BF%A1%E6%81%AF/</url>
