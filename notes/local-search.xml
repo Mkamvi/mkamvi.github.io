@@ -4,6 +4,31 @@
   
   
   <entry>
+    <title>2024-03-25 20:07:48 - 一日总结</title>
+    <link href="/notes/days/2024-03-25/"/>
+    <url>/notes/days/2024-03-25/</url>
+    
+    <content type="html"><![CDATA[<h2 id="三省吾身"><a href="#三省吾身" class="headerlink" title="三省吾身"></a>三省吾身</h2><h3 id="HTTP状态码"><a href="#HTTP状态码" class="headerlink" title="HTTP状态码"></a>HTTP状态码</h3><ul><li>2xx</li><li>3xx</li><li>4xx</li><li>5xx</li></ul><h3 id="indexedDB"><a href="#indexedDB" class="headerlink" title="indexedDB"></a>indexedDB</h3><ul><li>存储键值对</li><li>基于事务</li><li>异步</li><li>使用DOM事件</li><li>面向对象</li><li>非SQL</li><li>同源策略</li><li>索引</li><li>游标</li></ul><h3 id="管理看板"><a href="#管理看板" class="headerlink" title="管理看板"></a>管理看板</h3><ul><li>自定义echarts图例问题(单路由多页面问题)</li><li>echarts数据断点补齐，补齐线段变色</li></ul><h3 id="数据结构和算法"><a href="#数据结构和算法" class="headerlink" title="数据结构和算法"></a>数据结构和算法</h3><p>??? &lt;!—- 打了个电话 —–&gt; ???</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>一日总结</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>一日总结</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>第4章 状态码告知从服务器端返回的请求结果 - 计算机网络 · 《图解HTTP》</title>
     <link href="/notes/network/%E5%9B%BE%E8%A7%A3HTTP%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E7%AC%AC4%E7%AB%A0%20%E8%BF%94%E5%9B%9E%E7%BB%93%E6%9E%9C%E7%9A%84HTTP%E7%8A%B6%E6%80%81%E7%A0%81/"/>
     <url>/notes/network/%E5%9B%BE%E8%A7%A3HTTP%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E7%AC%AC4%E7%AB%A0%20%E8%BF%94%E5%9B%9E%E7%BB%93%E6%9E%9C%E7%9A%84HTTP%E7%8A%B6%E6%80%81%E7%A0%81/</url>
