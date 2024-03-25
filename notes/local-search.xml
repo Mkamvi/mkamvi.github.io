@@ -4,6 +4,31 @@
   
   
   <entry>
+    <title>第4章 状态码告知从服务器端返回的请求结果 - 计算机网络 · 《图解HTTP》</title>
+    <link href="/notes/network/%E5%9B%BE%E8%A7%A3HTTP%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E7%AC%AC4%E7%AB%A0%20%E8%BF%94%E5%9B%9E%E7%BB%93%E6%9E%9C%E7%9A%84HTTP%E7%8A%B6%E6%80%81%E7%A0%81/"/>
+    <url>/notes/network/%E5%9B%BE%E8%A7%A3HTTP%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E7%AC%AC4%E7%AB%A0%20%E8%BF%94%E5%9B%9E%E7%BB%93%E6%9E%9C%E7%9A%84HTTP%E7%8A%B6%E6%80%81%E7%A0%81/</url>
+    
+    <content type="html"><![CDATA[<h3 id="1xx-信息性状态码"><a href="#1xx-信息性状态码" class="headerlink" title="1xx 信息性状态码"></a>1xx 信息性状态码</h3><p>接受的请求正在处理</p><h3 id="2xx-成功状态码"><a href="#2xx-成功状态码" class="headerlink" title="2xx 成功状态码"></a>2xx 成功状态码</h3><p>请求正常处理完毕</p><ul><li><p>200 OK</p><p>客户端的请求在服务器端被正常处理</p></li><li><p>204 No Content</p><p>请求处理成功，但没有资源可返回</p></li><li><p>206 Partial Content</p><p>响应报文中包含由Content-Range指定范围的实体内容</p></li></ul><h3 id="3xx-重定向状态码"><a href="#3xx-重定向状态码" class="headerlink" title="3xx 重定向状态码"></a>3xx 重定向状态码</h3><p>需要进行附加操作以完成请求</p><ul><li><p>301 Moved Permanently</p><p>永久重定向，表示请求资源已经被分配到新的URI</p></li><li><p>302 Found</p><p>临时重定向，表示请求的资源已被分配到了新的URI，希望用户（本次）能使用新的URI访问</p></li><li><p>303 See Other</p><p>表示请求对应的资源存在着另一个URI，应使用GET方法定向获取请求资源</p></li><li><p>304 Not Modified</p><p>服务器资源未改变，可直接使用客户端未过期的缓存</p></li><li><p>307 Temporary Redirect</p><p>临时重定向，与302一样，307 状态码可以确保请求方法和消息主体不会发生变化。如果使用 302 响应状态码，一些旧客户端会错误地将请求方法转换为 GET</p></li></ul><h3 id="4xx-客户端错误状态码"><a href="#4xx-客户端错误状态码" class="headerlink" title="4xx 客户端错误状态码"></a>4xx 客户端错误状态码</h3><p>服务器无法处理请求</p><ul><li><p>400 Bad Request</p><p>表示请求报文中存在语法错误</p></li><li><p>401 Unauthorized</p><p>请求需要有通过HTTP认证的认证信息</p></li><li><p>403 Forbidden</p><p>表示对请求资源的访问被服务器拒绝了</p></li><li><p>404 Not Found</p><p>表示服务器上无法找到请求的资源，也可用于服务端拒绝请求且不想说明理由时使用</p></li></ul><h3 id="5xx-服务错误状态码"><a href="#5xx-服务错误状态码" class="headerlink" title="5xx 服务错误状态码"></a>5xx 服务错误状态码</h3><p>服务器处理请求出错</p><ul><li><p>500 Internal Server Error</p><p>表示服务端在执行请求时发生了错误</p></li><li><p>503 Service Unavailable</p><p>表示服务器暂时处于超负载或正在进行停机维护，现在无法处理请求</p></li></ul>]]></content>
+    
+    
+    <categories>
+      
+      <category>计算机网络</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>计算机网络</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>Reset - Git</title>
     <link href="/notes/git/reset/"/>
     <url>/notes/git/reset/</url>
