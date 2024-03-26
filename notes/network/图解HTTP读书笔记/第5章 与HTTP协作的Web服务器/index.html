@@ -16,24 +16,22 @@
   <meta name="author" content="源">
   <meta name="keywords" content="大帅,个人主页,不良帅,mkamv,mkamvi,不良帅的个人主页,mkamv的个人主页">
   
-    <meta name="description" content="时间复杂度推算方法第一步：统计操作数量1234567891011121314function algorithm(n) &amp;#123;  let a &#x3D; 1; &#x2F;&#x2F; +0（技巧 1）  a &#x3D; a + n; &#x2F;&#x2F; +0（技巧 1）  &#x2F;&#x2F; +n（技巧 2）  for (let i &#x3D; 0; i &lt; 5 * n + 1; i++) &amp;#123;    console.log(0);  &amp;#125">
+    <meta name="description" content="Web服务器单主机多域名数据转发代理 缓存代理 透明代理  网关隧道缓存 有效期 客户端缓存">
 <meta property="og:type" content="article">
-<meta property="og:title" content="复杂度分析 - Hero · 算法 · Hello 算法">
-<meta property="og:url" content="https://wanmeishijie.xyz/notes/hero/algo/hello-algo/%E5%A4%8D%E6%9D%82%E5%BA%A6%E5%88%86%E6%9E%90/index.html">
+<meta property="og:title" content="第5章 与HTTP协作的Web服务器 - 计算机网络 · 《图解HTTP》">
+<meta property="og:url" content="https://wanmeishijie.xyz/notes/network/%E5%9B%BE%E8%A7%A3HTTP%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E7%AC%AC5%E7%AB%A0%20%E4%B8%8EHTTP%E5%8D%8F%E4%BD%9C%E7%9A%84Web%E6%9C%8D%E5%8A%A1%E5%99%A8/index.html">
 <meta property="og:site_name" content="源的个人主页">
-<meta property="og:description" content="时间复杂度推算方法第一步：统计操作数量1234567891011121314function algorithm(n) &amp;#123;  let a &#x3D; 1; &#x2F;&#x2F; +0（技巧 1）  a &#x3D; a + n; &#x2F;&#x2F; +0（技巧 1）  &#x2F;&#x2F; +n（技巧 2）  for (let i &#x3D; 0; i &lt; 5 * n + 1; i++) &amp;#123;    console.log(0);  &amp;#125">
+<meta property="og:description" content="Web服务器单主机多域名数据转发代理 缓存代理 透明代理  网关隧道缓存 有效期 客户端缓存">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2024-01-28T11:29:48.000Z">
-<meta property="article:modified_time" content="2024-03-25T13:56:47.548Z">
+<meta property="article:published_time" content="2024-03-26T07:59:10.000Z">
+<meta property="article:modified_time" content="2024-03-26T14:10:07.595Z">
 <meta property="article:author" content="源">
-<meta property="article:tag" content="Hero">
-<meta property="article:tag" content="算法">
-<meta property="article:tag" content="Hello 算法">
+<meta property="article:tag" content="计算机网络">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title>复杂度分析 - Hero · 算法 · Hello 算法 - 源的个人主页</title>
+  <title>第5章 与HTTP协作的Web服务器 - 计算机网络 · 《图解HTTP》 - 源的个人主页</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -208,7 +206,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="复杂度分析 - Hero · 算法 · Hello 算法"></span>
+            <span id="subtitle" data-typed-text="第5章 与HTTP协作的Web服务器 - 计算机网络 · 《图解HTTP》"></span>
           
         </div>
 
@@ -219,8 +217,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2024-01-28 11:29" pubdate>
-          2024年1月28日 上午
+        <time datetime="2024-03-26 07:59" pubdate>
+          2024年3月26日 早上
         </time>
       </span>
     
@@ -231,7 +229,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          722 字
+          40 字
         
       </span>
     
@@ -242,7 +240,7 @@
         
         
         
-          7 分钟
+          1 分钟
         
       </span>
     
@@ -292,51 +290,19 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">复杂度分析 - Hero · 算法 · Hello 算法</h1>
+            <h1 id="seo-header">第5章 与HTTP协作的Web服务器 - 计算机网络 · 《图解HTTP》</h1>
             
             
               <div class="markdown-body">
                 
-                <h2 id="时间复杂度"><a href="#时间复杂度" class="headerlink" title="时间复杂度"></a>时间复杂度</h2><h3 id="推算方法"><a href="#推算方法" class="headerlink" title="推算方法"></a>推算方法</h3><h4 id="第一步：统计操作数量"><a href="#第一步：统计操作数量" class="headerlink" title="第一步：统计操作数量"></a>第一步：统计操作数量</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">function</span> <span class="hljs-title function_">algorithm</span>(<span class="hljs-params">n</span>) &#123;<br>  <span class="hljs-keyword">let</span> a = <span class="hljs-number">1</span>; <span class="hljs-comment">// +0（技巧 1）</span><br>  a = a + n; <span class="hljs-comment">// +0（技巧 1）</span><br>  <span class="hljs-comment">// +n（技巧 2）</span><br>  <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">5</span> * n + <span class="hljs-number">1</span>; i++) &#123;<br>    <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-number">0</span>);<br>  &#125;<br>  <span class="hljs-comment">// +n*n（技巧 3）</span><br>  <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">2</span> * n; i++) &#123;<br>    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> j = <span class="hljs-number">0</span>; j &lt; n + <span class="hljs-number">1</span>; j++) &#123;<br>      <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-number">0</span>);<br>    &#125;<br>  &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
-
-<figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs txt"><br>// 精细统计<br>T(n) = 2n * (n + 1) + (5 * n + 1) + 2<br>     = 2n² + 7n + 3<br><br>// 粗略统计<br>T(n) = n² + n<br></code></pre></td></tr></table></figure>
-
-<h4 id="第二步：判断渐近上界"><a href="#第二步：判断渐近上界" class="headerlink" title="第二步：判断渐近上界"></a>第二步：判断渐近上界</h4><p>时间复杂度由T(n)中最高阶的项来决定</p>
-<p>示例：</p>
-<table>
-<thead>
-<tr>
-<th>操作数量(T(n))</th>
-<th>时间复杂度O(f(n))</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>1000</td>
-<td>O(1)</td>
-</tr>
-<tr>
-<td>3n + 2</td>
-<td>O(n)</td>
-</tr>
-<tr>
-<td>n² + 2n + 2</td>
-<td>O(n²)</td>
-</tr>
-<tr>
-<td>n<sup>3</sup> + 2</td>
-<td>O(n<sup>3</sup>)</td>
-</tr>
-</tbody></table>
-<h3 id="常见类型"><a href="#常见类型" class="headerlink" title="常见类型"></a>常见类型</h3><p>O(1) &lt; O(logn) &lt; O(n) &lt; O(nlogn) &lt; O(n²) &lt; O(2<sup>n</sup>) &lt; O(n!)</p>
-<p>常数阶&lt; 对数阶 &lt; 线性阶 &lt; 线性对数阶 &lt; 平方阶 &lt; 指数阶 &lt; 阶乘阶</p>
-<h3 id="最差、最佳、平均时间复杂度"><a href="#最差、最佳、平均时间复杂度" class="headerlink" title="最差、最佳、平均时间复杂度"></a>最差、最佳、平均时间复杂度</h3><p>“最差时间复杂度”对应函数渐近上界，使用大记号O表示。相应地，“最佳时间复杂度”对应函数渐近下界，用记号Ω表示</p>
-<h2 id="空间复杂度"><a href="#空间复杂度" class="headerlink" title="空间复杂度"></a>空间复杂度</h2><p>一般只考虑 暂存数据、栈帧空间和输出数据三部分</p>
-<h3 id="推算方法-1"><a href="#推算方法-1" class="headerlink" title="推算方法"></a>推算方法</h3><ol>
-<li>以最差输入数据为准</li>
-<li>以算法运行中的峰值内存为准</li>
-</ol>
-<h3 id="常见类型-1"><a href="#常见类型-1" class="headerlink" title="常见类型"></a>常见类型</h3><p>O(1) &lt; O(logn) &lt; O(n) &lt; O(n²) &lt; O(2<sup>n</sup>)</p>
-<p>常数阶 &lt; 对数阶 &lt; 线性阶 &lt; 平方阶 &lt; 指数阶</p>
+                <h2 id="Web服务器"><a href="#Web服务器" class="headerlink" title="Web服务器"></a>Web服务器</h2><h3 id="单主机多域名"><a href="#单主机多域名" class="headerlink" title="单主机多域名"></a>单主机多域名</h3><h3 id="数据转发"><a href="#数据转发" class="headerlink" title="数据转发"></a>数据转发</h3><h4 id="代理"><a href="#代理" class="headerlink" title="代理"></a>代理</h4><ul>
+<li>缓存代理</li>
+<li>透明代理</li>
+</ul>
+<h4 id="网关"><a href="#网关" class="headerlink" title="网关"></a>网关</h4><h4 id="隧道"><a href="#隧道" class="headerlink" title="隧道"></a>隧道</h4><h3 id="缓存"><a href="#缓存" class="headerlink" title="缓存"></a>缓存</h3><ul>
+<li>有效期</li>
+<li>客户端缓存</li>
+</ul>
 
                 
               </div>
@@ -355,22 +321,8 @@
     
       <span class="category-chain">
         
-  <a href="/notes/categories/Hero/" class="category-chain-item">Hero</a>
+  <a href="/notes/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" class="category-chain-item">计算机网络</a>
   
-  
-    <span>></span>
-    
-  <a href="/notes/categories/Hero/%E7%AE%97%E6%B3%95/" class="category-chain-item">算法</a>
-  
-  
-    <span>></span>
-    
-  <a href="/notes/categories/Hero/%E7%AE%97%E6%B3%95/Hello-%E7%AE%97%E6%B3%95/" class="category-chain-item">Hello 算法</a>
-  
-  
-
-  
-
   
 
       </span>
@@ -384,11 +336,7 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/notes/tags/Hero/" class="print-no-link">#Hero</a>
-      
-        <a href="/notes/tags/%E7%AE%97%E6%B3%95/" class="print-no-link">#算法</a>
-      
-        <a href="/notes/tags/Hello-%E7%AE%97%E6%B3%95/" class="print-no-link">#Hello 算法</a>
+        <a href="/notes/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" class="print-no-link">#计算机网络</a>
       
     </div>
   
@@ -400,8 +348,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>复杂度分析 - Hero · 算法 · Hello 算法</div>
-      <div>https://wanmeishijie.xyz/notes/hero/algo/hello-algo/复杂度分析/</div>
+      <div>第5章 与HTTP协作的Web服务器 - 计算机网络 · 《图解HTTP》</div>
+      <div>https://wanmeishijie.xyz/notes/network/图解HTTP读书笔记/第5章 与HTTP协作的Web服务器/</div>
     </div>
     <div class="license-meta">
       
@@ -413,7 +361,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2024年1月28日</div>
+          <div>2024年3月26日</div>
         </div>
       
       
@@ -445,9 +393,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/notes/hero/algo/hello-algo/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%88%86%E7%B1%BB/" title="数据结构分类 - Hero · 算法 · Hello 算法">
+                      <a href="/notes/days/2024-03-26/" title="2024-03-26 20:48:22 - 一日总结">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">数据结构分类 - Hero · 算法 · Hello 算法</span>
+                        <span class="hidden-mobile">2024-03-26 20:48:22 - 一日总结</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -455,8 +403,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/notes/hexo/%E5%AD%90%E7%9B%AE%E5%BD%95%E9%83%A8%E7%BD%B2/" title="子目录部署 - Hexo">
-                        <span class="hidden-mobile">子目录部署 - Hexo</span>
+                      <a href="/notes/days/2024-03-25/" title="2024-03-25 20:07:48 - 一日总结">
+                        <span class="hidden-mobile">2024-03-25 20:07:48 - 一日总结</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
@@ -479,7 +427,7 @@
         var options = Object.assign(
           {"clientID":"380b721444e388f986da","clientSecret":"cd4569aa7c4e07f1301593bbd51fb45572592099","repo":"mkamvi.github.io","owner":"Mkamvi","admin":["Mkamvi"],"language":"zh-CN","labels":["Gitalk"],"perPage":10,"pagerDirection":"last","distractionFreeMode":false,"createIssueManually":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token"},
           {
-            id: '453553339d4c8c646852940417914b98'
+            id: 'ac89cc26e9a685c2a8300340f42996c2'
           }
         )
         var gitalk = new Gitalk(options);

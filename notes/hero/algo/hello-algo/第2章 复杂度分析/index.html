@@ -16,15 +16,15 @@
   <meta name="author" content="源">
   <meta name="keywords" content="大帅,个人主页,不良帅,mkamv,mkamvi,不良帅的个人主页,mkamv的个人主页">
   
-    <meta name="description" content="栈「栈」 stack 是一种遵循先入后出逻辑的线性数据结构 栈的常用操作   方法 描述 时间复杂度    push() 元素入栈(添加到栈顶) O(1)   pop() 栈顶元素出栈 O(1)   peek() 访问栈顶元素 O(1)   栈的实现 基于链表的实现 基于数组的实现  栈的典型应用 浏览器中的后退与前进、软件中的撤销与反撤销 程序内存管理(栈帧)  队列「队列 queue」是一种遵">
+    <meta name="description" content="时间复杂度推算方法第一步：统计操作数量1234567891011121314function algorithm(n) &amp;#123;  let a &#x3D; 1; &#x2F;&#x2F; +0（技巧 1）  a &#x3D; a + n; &#x2F;&#x2F; +0（技巧 1）  &#x2F;&#x2F; +n（技巧 2）  for (let i &#x3D; 0; i &lt; 5 * n + 1; i++) &amp;#123;    console.log(0);  &amp;#125">
 <meta property="og:type" content="article">
-<meta property="og:title" content="栈和队列 - Hero · 算法 · Hello 算法">
-<meta property="og:url" content="https://wanmeishijie.xyz/notes/hero/algo/hello-algo/%E6%A0%88%E5%92%8C%E9%98%9F%E5%88%97/index.html">
+<meta property="og:title" content="复杂度分析 - Hero · 算法 · Hello 算法">
+<meta property="og:url" content="https://wanmeishijie.xyz/notes/hero/algo/hello-algo/%E7%AC%AC2%E7%AB%A0%20%E5%A4%8D%E6%9D%82%E5%BA%A6%E5%88%86%E6%9E%90/index.html">
 <meta property="og:site_name" content="源的个人主页">
-<meta property="og:description" content="栈「栈」 stack 是一种遵循先入后出逻辑的线性数据结构 栈的常用操作   方法 描述 时间复杂度    push() 元素入栈(添加到栈顶) O(1)   pop() 栈顶元素出栈 O(1)   peek() 访问栈顶元素 O(1)   栈的实现 基于链表的实现 基于数组的实现  栈的典型应用 浏览器中的后退与前进、软件中的撤销与反撤销 程序内存管理(栈帧)  队列「队列 queue」是一种遵">
+<meta property="og:description" content="时间复杂度推算方法第一步：统计操作数量1234567891011121314function algorithm(n) &amp;#123;  let a &#x3D; 1; &#x2F;&#x2F; +0（技巧 1）  a &#x3D; a + n; &#x2F;&#x2F; +0（技巧 1）  &#x2F;&#x2F; +n（技巧 2）  for (let i &#x3D; 0; i &lt; 5 * n + 1; i++) &amp;#123;    console.log(0);  &amp;#125">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2024-02-01T10:03:19.000Z">
-<meta property="article:modified_time" content="2024-03-25T13:56:47.548Z">
+<meta property="article:published_time" content="2024-01-28T11:29:48.000Z">
+<meta property="article:modified_time" content="2024-03-26T14:10:07.591Z">
 <meta property="article:author" content="源">
 <meta property="article:tag" content="Hero">
 <meta property="article:tag" content="算法">
@@ -33,7 +33,7 @@
   
   
   
-  <title>栈和队列 - Hero · 算法 · Hello 算法 - 源的个人主页</title>
+  <title>复杂度分析 - Hero · 算法 · Hello 算法 - 源的个人主页</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -208,7 +208,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="栈和队列 - Hero · 算法 · Hello 算法"></span>
+            <span id="subtitle" data-typed-text="复杂度分析 - Hero · 算法 · Hello 算法"></span>
           
         </div>
 
@@ -219,8 +219,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2024-02-01 10:03" pubdate>
-          2024年2月1日 上午
+        <time datetime="2024-01-28 11:29" pubdate>
+          2024年1月28日 上午
         </time>
       </span>
     
@@ -231,7 +231,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          416 字
+          722 字
         
       </span>
     
@@ -242,7 +242,7 @@
         
         
         
-          4 分钟
+          7 分钟
         
       </span>
     
@@ -292,83 +292,51 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">栈和队列 - Hero · 算法 · Hello 算法</h1>
+            <h1 id="seo-header">复杂度分析 - Hero · 算法 · Hello 算法</h1>
             
             
               <div class="markdown-body">
                 
-                <h2 id="栈"><a href="#栈" class="headerlink" title="栈"></a>栈</h2><p>「栈」 stack 是一种遵循先入后出逻辑的线性数据结构</p>
-<h3 id="栈的常用操作"><a href="#栈的常用操作" class="headerlink" title="栈的常用操作"></a>栈的常用操作</h3><table>
+                <h2 id="时间复杂度"><a href="#时间复杂度" class="headerlink" title="时间复杂度"></a>时间复杂度</h2><h3 id="推算方法"><a href="#推算方法" class="headerlink" title="推算方法"></a>推算方法</h3><h4 id="第一步：统计操作数量"><a href="#第一步：统计操作数量" class="headerlink" title="第一步：统计操作数量"></a>第一步：统计操作数量</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">function</span> <span class="hljs-title function_">algorithm</span>(<span class="hljs-params">n</span>) &#123;<br>  <span class="hljs-keyword">let</span> a = <span class="hljs-number">1</span>; <span class="hljs-comment">// +0（技巧 1）</span><br>  a = a + n; <span class="hljs-comment">// +0（技巧 1）</span><br>  <span class="hljs-comment">// +n（技巧 2）</span><br>  <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">5</span> * n + <span class="hljs-number">1</span>; i++) &#123;<br>    <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-number">0</span>);<br>  &#125;<br>  <span class="hljs-comment">// +n*n（技巧 3）</span><br>  <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">2</span> * n; i++) &#123;<br>    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> j = <span class="hljs-number">0</span>; j &lt; n + <span class="hljs-number">1</span>; j++) &#123;<br>      <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-number">0</span>);<br>    &#125;<br>  &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs txt"><br>// 精细统计<br>T(n) = 2n * (n + 1) + (5 * n + 1) + 2<br>     = 2n² + 7n + 3<br><br>// 粗略统计<br>T(n) = n² + n<br></code></pre></td></tr></table></figure>
+
+<h4 id="第二步：判断渐近上界"><a href="#第二步：判断渐近上界" class="headerlink" title="第二步：判断渐近上界"></a>第二步：判断渐近上界</h4><p>时间复杂度由T(n)中最高阶的项来决定</p>
+<p>示例：</p>
+<table>
 <thead>
 <tr>
-<th>方法</th>
-<th>描述</th>
-<th>时间复杂度</th>
+<th>操作数量(T(n))</th>
+<th>时间复杂度O(f(n))</th>
 </tr>
 </thead>
 <tbody><tr>
-<td>push()</td>
-<td>元素入栈(添加到栈顶)</td>
+<td>1000</td>
 <td>O(1)</td>
 </tr>
 <tr>
-<td>pop()</td>
-<td>栈顶元素出栈</td>
-<td>O(1)</td>
+<td>3n + 2</td>
+<td>O(n)</td>
 </tr>
 <tr>
-<td>peek()</td>
-<td>访问栈顶元素</td>
-<td>O(1)</td>
+<td>n² + 2n + 2</td>
+<td>O(n²)</td>
+</tr>
+<tr>
+<td>n<sup>3</sup> + 2</td>
+<td>O(n<sup>3</sup>)</td>
 </tr>
 </tbody></table>
-<h3 id="栈的实现"><a href="#栈的实现" class="headerlink" title="栈的实现"></a>栈的实现</h3><ul>
-<li>基于链表的实现</li>
-<li>基于数组的实现</li>
-</ul>
-<h3 id="栈的典型应用"><a href="#栈的典型应用" class="headerlink" title="栈的典型应用"></a>栈的典型应用</h3><ul>
-<li>浏览器中的后退与前进、软件中的撤销与反撤销</li>
-<li>程序内存管理(栈帧)</li>
-</ul>
-<h2 id="队列"><a href="#队列" class="headerlink" title="队列"></a>队列</h2><p>「队列 queue」是一种遵循先入先出规则的线性数据结构</p>
-<h3 id="队列的常用操作"><a href="#队列的常用操作" class="headerlink" title="队列的常用操作"></a>队列的常用操作</h3><table>
-<thead>
-<tr>
-<th>方法</th>
-<th>描述</th>
-<th>时间复杂度</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>push()</td>
-<td>元素入列(添加到末尾)</td>
-<td>O(1)</td>
-</tr>
-<tr>
-<td>pop()</td>
-<td>队首元素出队</td>
-<td>O(1)</td>
-</tr>
-<tr>
-<td>peek()</td>
-<td>访问队首元素</td>
-<td>O(1)</td>
-</tr>
-</tbody></table>
-<h3 id="队列的实现"><a href="#队列的实现" class="headerlink" title="队列的实现"></a>队列的实现</h3><ul>
-<li>基于链表的实现(反向或空指针)</li>
-<li>基于列表的实现</li>
-</ul>
-<h3 id="队列典型应用"><a href="#队列典型应用" class="headerlink" title="队列典型应用"></a>队列典型应用</h3><ul>
-<li>淘宝订单</li>
-<li>各类待办事项</li>
-</ul>
-<h2 id="双向队列"><a href="#双向队列" class="headerlink" title="双向队列"></a>双向队列</h2><h3 id="双向列表的实现"><a href="#双向列表的实现" class="headerlink" title="双向列表的实现"></a>双向列表的实现</h3><ul>
-<li>基于双向链表</li>
-<li>基于数组</li>
-</ul>
-<h3 id="双向队列的应用"><a href="#双向队列的应用" class="headerlink" title="双向队列的应用"></a>双向队列的应用</h3><p>双向队列兼具栈与队列的逻辑，因此它可以实现这两者的所有应用场景，同时提供更高的自由度。</p>
-<p>当栈的长度超过一定数量时，软件需要在栈底（队首）执行删除操作。但栈无法实现该功能，此时就需要使用双向队列来替代栈</p>
+<h3 id="常见类型"><a href="#常见类型" class="headerlink" title="常见类型"></a>常见类型</h3><p>O(1) &lt; O(logn) &lt; O(n) &lt; O(nlogn) &lt; O(n²) &lt; O(2<sup>n</sup>) &lt; O(n!)</p>
+<p>常数阶&lt; 对数阶 &lt; 线性阶 &lt; 线性对数阶 &lt; 平方阶 &lt; 指数阶 &lt; 阶乘阶</p>
+<h3 id="最差、最佳、平均时间复杂度"><a href="#最差、最佳、平均时间复杂度" class="headerlink" title="最差、最佳、平均时间复杂度"></a>最差、最佳、平均时间复杂度</h3><p>“最差时间复杂度”对应函数渐近上界，使用大记号O表示。相应地，“最佳时间复杂度”对应函数渐近下界，用记号Ω表示</p>
+<h2 id="空间复杂度"><a href="#空间复杂度" class="headerlink" title="空间复杂度"></a>空间复杂度</h2><p>一般只考虑 暂存数据、栈帧空间和输出数据三部分</p>
+<h3 id="推算方法-1"><a href="#推算方法-1" class="headerlink" title="推算方法"></a>推算方法</h3><ol>
+<li>以最差输入数据为准</li>
+<li>以算法运行中的峰值内存为准</li>
+</ol>
+<h3 id="常见类型-1"><a href="#常见类型-1" class="headerlink" title="常见类型"></a>常见类型</h3><p>O(1) &lt; O(logn) &lt; O(n) &lt; O(n²) &lt; O(2<sup>n</sup>)</p>
+<p>常数阶 &lt; 对数阶 &lt; 线性阶 &lt; 平方阶 &lt; 指数阶</p>
 
                 
               </div>
@@ -432,8 +400,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>栈和队列 - Hero · 算法 · Hello 算法</div>
-      <div>https://wanmeishijie.xyz/notes/hero/algo/hello-algo/栈和队列/</div>
+      <div>复杂度分析 - Hero · 算法 · Hello 算法</div>
+      <div>https://wanmeishijie.xyz/notes/hero/algo/hello-algo/第2章 复杂度分析/</div>
     </div>
     <div class="license-meta">
       
@@ -445,7 +413,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2024年2月1日</div>
+          <div>2024年1月28日</div>
         </div>
       
       
@@ -477,9 +445,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/notes/hero/algo/hello-algo/%E5%93%88%E5%B8%8C%E8%A1%A8/" title="哈希表- Hero · 算法 · Hello 算法">
+                      <a href="/notes/hero/algo/hello-algo/%E7%AC%AC3%E7%AB%A0%20%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" title="数据结构分类 - Hero · 算法 · Hello 算法">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">哈希表- Hero · 算法 · Hello 算法</span>
+                        <span class="hidden-mobile">数据结构分类 - Hero · 算法 · Hello 算法</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -487,8 +455,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/notes/hero/algo/hello-algo/%E6%95%B0%E7%BB%84%E4%B8%8E%E9%93%BE%E8%A1%A8(%E4%BA%8C)/" title="链表 - Hero · 算法 · Hello 算法">
-                        <span class="hidden-mobile">链表 - Hero · 算法 · Hello 算法</span>
+                      <a href="/notes/hexo/%E5%AD%90%E7%9B%AE%E5%BD%95%E9%83%A8%E7%BD%B2/" title="子目录部署 - Hexo">
+                        <span class="hidden-mobile">子目录部署 - Hexo</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
@@ -511,7 +479,7 @@
         var options = Object.assign(
           {"clientID":"380b721444e388f986da","clientSecret":"cd4569aa7c4e07f1301593bbd51fb45572592099","repo":"mkamvi.github.io","owner":"Mkamvi","admin":["Mkamvi"],"language":"zh-CN","labels":["Gitalk"],"perPage":10,"pagerDirection":"last","distractionFreeMode":false,"createIssueManually":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token"},
           {
-            id: '721ec2138d932a66c7a63832b3535c7c'
+            id: '0aa9766a6a1831d8f9fd514dd394123b'
           }
         )
         var gitalk = new Gitalk(options);
