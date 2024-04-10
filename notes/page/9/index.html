@@ -236,6 +236,128 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h2 class="index-header">
         
+        <a href="/notes/mac/%E5%A6%82%E4%BD%95%E5%BE%AE%E4%BF%A1%E7%BC%93%E5%AD%98%E6%8C%82%E8%BD%BD%E5%88%B0%E5%A4%96%E6%8C%82%E7%A1%AC%E7%9B%98/" target="_self">
+          如何将微信缓存挂载到外挂硬盘
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/notes/mac/%E5%A6%82%E4%BD%95%E5%BE%AE%E4%BF%A1%E7%BC%93%E5%AD%98%E6%8C%82%E8%BD%BD%E5%88%B0%E5%A4%96%E6%8C%82%E7%A1%AC%E7%9B%98/" target="_self">
+        <div>
+          背景电脑磁盘满了，微信缓存站了20个G，Hah; 刚好有个外挂硬盘, SO: 如何将微信缓存挪到这个外挂硬盘第一步：退出微信第二步：挪动缓存到指定外挂磁盘目录第三步：创建软连接找到微信保存文件的目录，然后在MessageTemp(需要删除原来的)这一层，执行下面的命令:  ln -s 真实目录 MessageTemp  第四步：处理目录无法访问问题 sudo codesign –sign - –f
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2023-11-13 15:24" pubdate>
+              2023-11-13
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/notes/categories/Mac/" class="category-chain-item">Mac</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/notes/tags/Mac/">#Mac</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/notes/css/%E7%94%BB%E4%B8%80%E4%B8%AA%E5%9C%86%E5%BD%A2%E8%BF%9B%E5%BA%A6%E6%9D%A1/" target="_self">
+          如何选择第一个元素
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/notes/css/%E7%94%BB%E4%B8%80%E4%B8%AA%E5%9C%86%E5%BD%A2%E8%BF%9B%E5%BA%A6%E6%9D%A1/" target="_self">
+        <div>
+          潜意识第一反应就是 first-child: 然：表示在一组兄弟元素中的第一个元素 白: 只能选中第一个元素 第二反应就是 first-of-type: 然: 表示一组兄弟元素中其类型的第一个元素 白: 只能选中同类元素的第一个 那么如何选择一类(class 选择器)中的第一个原理：通过兄弟选择器第二个元素到结束，然后取非 123.class:not(.class ~ .class) &#123;
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2023-11-10 11:21" pubdate>
+              2023-11-10
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/notes/categories/CSS/" class="category-chain-item">CSS</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/notes/tags/CSS/">#CSS</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
         <a href="/notes/html/confused/iframe-unload/" target="_self">
           iframe在被移除的时候未触发beforeunload事件
         </a>
@@ -713,130 +835,6 @@
             <i class="iconfont icon-tags"></i>
             
               <a href="/notes/tags/WebGL/">#WebGL</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h2 class="index-header">
-        
-        <a href="/notes/webgl/hello-world/" target="_self">
-          如何编写一个WebGL程序 - WebGL
-        </a>
-      </h2>
-
-      
-      <a class="index-excerpt index-excerpt__noimg" href="/notes/webgl/hello-world/" target="_self">
-        <div>
-          如何编写一个 WebGL 程序 通过 canvas 创建 WebGL 绘图上下文环境  着色器创建(顶点着色器和片元着色器)  创建着色器  加载着色器代码(GLSL)  gl_Position: 指定栅格位置 gl_FragColor: 指定栅格颜色   着色器代码编译    创建着色器程序  挂载顶点着色器 挂载片元着色器 链接程序   查找着色器变量位置(用来绑定状态数据)  创建缓冲区(用
-        </div>
-      </a>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2023-07-14 18:12" pubdate>
-              2023-07-14
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3 d-flex align-items-center">
-            <i class="iconfont icon-category"></i>
-            
-
-<span class="category-chains">
-  
-  
-    
-      <span class="category-chain">
-        
-  <a href="/notes/categories/WebGL/" class="category-chain-item">WebGL</a>
-  
-  
-
-      </span>
-    
-  
-</span>
-
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/notes/tags/WebGL/">#WebGL</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h2 class="index-header">
-        
-        <a href="/notes/html/confused/canvas-style/" target="_self">
-          Canvas设置高度100%出现滚动条问题
-        </a>
-      </h2>
-
-      
-      <a class="index-excerpt index-excerpt__noimg" href="/notes/html/confused/canvas-style/" target="_self">
-        <div>
-          查看默认display属性： Canvas竟然是行内元素！CSS vertical-align基线对齐、预留空间，好坑啊！ 下面这个说的比较清楚： https://www.bilibili.com/video/av943276909/?vd_source=231d7c3163c9cccae49860ce37d317a7
-        </div>
-      </a>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2023-07-13 15:28" pubdate>
-              2023-07-13
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3 d-flex align-items-center">
-            <i class="iconfont icon-category"></i>
-            
-
-<span class="category-chains">
-  
-  
-    
-      <span class="category-chain">
-        
-  <a href="/notes/categories/HTML/" class="category-chain-item">HTML</a>
-  
-  
-
-      </span>
-    
-  
-</span>
-
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/notes/tags/Canvas/">#Canvas</a>
-            
-              <a href="/notes/tags/HTML/">#HTML</a>
             
           </div>
         
