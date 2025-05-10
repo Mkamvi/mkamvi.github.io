@@ -7,32 +7,32 @@
 
 <head>
   <meta charset="UTF-8">
-  <link rel="apple-touch-icon" sizes="76x76" href="/notes/img/%E7%99%BD%E8%80%81%E6%9D%BF.jpg">
-  <link rel="icon" href="/notes/img/%E7%99%BD%E8%80%81%E6%9D%BF.jpg">
+  <link rel="apple-touch-icon" sizes="76x76" href="/notes/img/%E5%AB%8C%E5%BC%83.jpg">
+  <link rel="icon" href="/notes/img/%E5%AB%8C%E5%BC%83.jpg">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   
   <meta name="theme-color" content="#cadeff">
-  <meta name="author" content="源">
-  <meta name="keywords" content="大帅,个人主页,不良帅,mkamv,mkamvi,不良帅的个人主页,mkamv的个人主页">
+  <meta name="author" content="赛无忧">
+  <meta name="keywords" content="赛无忧">
   
     <meta name="description" content="背景今天碰到一个问题，业务里有一个消息盒子，里面的内容是通过富文本配置出来的，最终通过React的dangerouslySetInnerHTML直接插入到了DOM中，然而里面有a标签，配置的本意是跳转内部链接，即打开平台内部的另外一个页面，然而a链接导致整个页面刷新了，体验非常不好（我们是单页面应用） 解决方案要解决这个问题其实也很简答，就是拦截原生的a标签点击事件，然后通过e.preventDe">
 <meta property="og:type" content="article">
 <meta property="og:title" content="事件冒泡的应用 - HTML · DOM">
 <meta property="og:url" content="https://wanmeishijie.xyz/notes/html/dom/event/index.html">
-<meta property="og:site_name" content="源的个人主页">
+<meta property="og:site_name" content="赛无忧">
 <meta property="og:description" content="背景今天碰到一个问题，业务里有一个消息盒子，里面的内容是通过富文本配置出来的，最终通过React的dangerouslySetInnerHTML直接插入到了DOM中，然而里面有a标签，配置的本意是跳转内部链接，即打开平台内部的另外一个页面，然而a链接导致整个页面刷新了，体验非常不好（我们是单页面应用） 解决方案要解决这个问题其实也很简答，就是拦截原生的a标签点击事件，然后通过e.preventDe">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2024-01-23T21:26:15.000Z">
-<meta property="article:modified_time" content="2024-04-12T13:54:18.546Z">
-<meta property="article:author" content="源">
+<meta property="article:modified_time" content="2025-05-10T20:12:36.835Z">
+<meta property="article:author" content="赛无忧">
 <meta property="article:tag" content="HTML">
 <meta property="article:tag" content="Event">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title>事件冒泡的应用 - HTML · DOM - 源的个人主页</title>
+  <title>事件冒泡的应用 - HTML · DOM - 赛无忧</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -79,7 +79,7 @@
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
     Fluid.ctx = Object.assign({}, Fluid.ctx)
-    var CONFIG = {"hostname":"wanmeishijie.xyz","root":"/notes/","version":"1.9.5","typing":{"enable":true,"typeSpeed":70,"cursorChar":" 🐳","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"left","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"gtag":null},"search_path":"/notes/local-search.xml","include_content_in_search":true};
+    var CONFIG = {"hostname":"wanmeishijie.xyz","root":"/notes/","version":"1.9.5","typing":{"enable":false,"typeSpeed":70,"cursorChar":" 🐳","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"left","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"gtag":null},"search_path":"/notes/local-search.xml","include_content_in_search":true};
 
     if (CONFIG.web_analytics.follow_dnt) {
       var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
@@ -179,13 +179,6 @@
           
         
         
-          <li class="nav-item" id="search-btn">
-            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
-              <i class="iconfont icon-search"></i>
-            </a>
-          </li>
-          
-        
         
           <li class="nav-item" id="color-toggle-btn">
             <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
@@ -203,11 +196,11 @@
 <div id="banner" class="banner" parallax=true
   style="background: url('/notes/img/%E7%99%BD%E8%80%81%E6%9D%BF.jpg') no-repeat center center; background-size: cover;">
   <div class="full-bg-img" onclick="rainVoice()">
-    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0)">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.4)">
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="事件冒泡的应用 - HTML · DOM"></span>
+            <span id="subtitle">事件冒泡的应用 - HTML · DOM</span>
           
         </div>
 
@@ -360,7 +353,7 @@
       
         <div class="license-meta-item">
           <div>作者</div>
-          <div>源</div>
+          <div>赛无忧</div>
         </div>
       
       
@@ -496,28 +489,6 @@
     
 
     
-      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
-     aria-hidden="true">
-  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
-    <div class="modal-content">
-      <div class="modal-header text-center">
-        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
-        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body mx-3">
-        <div class="md-form mb-5">
-          <input type="text" id="local-search-input" class="form-control validate">
-          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
-        </div>
-        <div class="list-group" id="local-search-result"></div>
-      </div>
-    </div>
-  </div>
-</div>
-
-    
 
     
   </main>
@@ -566,21 +537,6 @@
 <script  src="/notes/js/events.js" ></script>
 <script  src="/notes/js/plugins.js" ></script>
 
-
-  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
-  <script>
-    (function (window, document) {
-      var typing = Fluid.plugins.typing;
-      var subtitle = document.getElementById('subtitle');
-      if (!subtitle || !typing) {
-        return;
-      }
-      var text = subtitle.getAttribute('data-typed-text');
-      
-        typing(text);
-      
-    })(window, document);
-  </script>
 
 
 
@@ -684,8 +640,6 @@
 
 
   <script>Fluid.plugins.imageCaption();</script>
-
-  <script  src="/notes/js/local-search.js" ></script>
 
 
 
