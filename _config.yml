@@ -3,13 +3,11 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: 源的个人主页
-subtitle: 请叫我大帅
-description: "大帅的个人主页"
-keywords: 大帅,个人主页,不良帅,mkamv,mkamvi,不良帅的个人主页,mkamv的个人主页
-author: 源
+title: 赛无忧
+description: "Save you !"
+keywords: 赛无忧
+author: 赛无忧
 language: zh-CN
-timezone: ""
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
