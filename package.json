@@ -8,7 +8,7 @@
     "deploy": "hexo deploy",
     "server": "hexo server",
     "g:w": "hexo generate -w",
-    "d": "hexo new daily -p daily/2023/06/$d",
+    "d": "zx ./build.mjs",
     "h:clean": "hexo clean"
   },
   "hexo": {
@@ -28,5 +28,9 @@
     "hexo-server": "^3.0.0",
     "hexo-theme-fluid": "^1.9.4",
     "hexo-theme-landscape": "^1.0.0"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.3",
+    "zx": "^8.5.3"
   }
 }
