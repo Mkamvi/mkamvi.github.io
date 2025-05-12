@@ -33,6 +33,7 @@
   },
   "devDependencies": {
     "cross-env": "^7.0.3",
+    "hexo-cli": "^4.3.2",
     "zx": "^8.5.3"
   }
 }
