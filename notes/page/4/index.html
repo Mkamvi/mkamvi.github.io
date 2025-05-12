@@ -229,6 +229,198 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h2 class="index-header">
         
+        <a href="/notes/weeks/2024-03-17/" target="_self">
+          2024-03-17 18:01:42 - 周报
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/notes/weeks/2024-03-17/" target="_self">
+        <div>
+          运维平台可用性和健康度优化 公式实值展示  运维平台集成(vue集成react) 主题修改原理 登录页改造 antd-vue版本升级(3.x -&gt; 4.x)，主题设计 Vite中Vue和React共存方案设计  管理看板 echarts图例自定义，选中和未选择动态切换，文本颜色同系列 折线图y轴压缩(对数坐标，次方求值) x轴区间颜色自定义  工艺组态 重写6个场站位置信息  PDA项目 G
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2024-03-17 18:01" pubdate>
+              2024-03-17
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/notes/categories/%E5%91%A8%E6%8A%A5/" class="category-chain-item">周报</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/notes/tags/%E5%91%A8%E6%8A%A5/">#周报</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/notes/nvim/%E4%B8%BA%E7%89%B9%E5%AE%9A%E6%96%87%E4%BB%B6%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E7%B1%BB%E5%9E%8B/" target="_self">
+          为特定文件配置文件类型 - Nvim
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/notes/nvim/%E4%B8%BA%E7%89%B9%E5%AE%9A%E6%96%87%E4%BB%B6%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E7%B1%BB%E5%9E%8B/" target="_self">
+        <div>
+          背景最近在vite整合分别使用react和vue项目，vue项目里部分文件后缀使用了.tsx，和react冲突，故在vite中将react的后缀改为了.rtsx，但这样一来编辑器就无法识别我当前的文件类型，没有语法高亮和自动提示 配置12345678910111213&#123;	&quot;nathom/filetype.nvim&quot;,	config = function()		requ
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2024-03-16 08:59" pubdate>
+              2024-03-16
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/notes/categories/Vim/" class="category-chain-item">Vim</a>
+  
+  
+    <span>></span>
+    
+  <a href="/notes/categories/Vim/Nvim/" class="category-chain-item">Nvim</a>
+  
+  
+
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/notes/tags/Nvim/">#Nvim</a>
+            
+              <a href="/notes/tags/Vim/">#Vim</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/notes/echarts/%E5%A6%82%E4%BD%95%E5%8E%8B%E7%BC%A9y%E8%BD%B4%E4%B8%8B%E6%96%B9%E5%9D%90%E6%A0%87/" target="_self">
+          如何压缩y轴展示 - echarts
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/notes/echarts/%E5%A6%82%E4%BD%95%E5%8E%8B%E7%BC%A9y%E8%BD%B4%E4%B8%8B%E6%96%B9%E5%9D%90%E6%A0%87/" target="_self">
+        <div>
+          示例 将源数据执行立方操作，本质是放大大数区间，再将y轴取立方根获取源数值，但会导致数据偏差；和对数坐标刚好相反  123456789101112131415161718192021222324252627282930313233343536373839404142434445const data = [0, 32, 31, 33, 31, 34, 33];option = &#123;  xAx
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2024-03-14 17:53" pubdate>
+              2024-03-14
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/notes/categories/echarts/" class="category-chain-item">echarts</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/notes/tags/echarts/">#echarts</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
         <a href="/notes/echarts/%E5%A6%82%E4%BD%95%E5%88%86%E6%AE%B5%E5%B1%95%E7%A4%BA%E6%9B%B2%E7%BA%BF/" target="_self">
           如何分段展示曲线数据 - echarts
         </a>
@@ -652,212 +844,11 @@
     </article>
   </div>
 
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h2 class="index-header">
-        
-        <a href="/notes/linux/%E5%9C%A8Centos%E5%AE%89%E8%A3%85nginx/" target="_self">
-          在Centos安装nginx并部署单页应用 - Linux
-        </a>
-      </h2>
-
-      
-      <a class="index-excerpt index-excerpt__noimg" href="/notes/linux/%E5%9C%A8Centos%E5%AE%89%E8%A3%85nginx/" target="_self">
-        <div>
-          安装nginxyum install nginx 配置目录&#x2F;etc&#x2F;nginx&#x2F; 安装unzipyum install unzip 服务启动service nginx start&#x2F;restart&#x2F;stop 服务目录使用默认的&#x2F;usr&#x2F;share&#x2F;nginx&#x2F;html&#x2F; sftpput 命名上传文件
-        </div>
-      </a>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2024-02-27 16:23" pubdate>
-              2024-02-27
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3 d-flex align-items-center">
-            <i class="iconfont icon-category"></i>
-            
-
-<span class="category-chains">
-  
-  
-    
-      <span class="category-chain">
-        
-  <a href="/notes/categories/Linux/" class="category-chain-item">Linux</a>
-  
-  
-
-      </span>
-    
-  
-</span>
-
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/notes/tags/Linux/">#Linux</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h2 class="index-header">
-        
-        <a href="/notes/years/2023/" target="_self">
-          2023 - 年度总结
-        </a>
-      </h2>
-
-      
-      <a class="index-excerpt index-excerpt__noimg" href="/notes/years/2023/" target="_self">
-        <div>
-          2 0 2 3工艺组态 因为BIM业务的开展，今年对3D技术做了进一步的学习及应用   进一步对Cesium的学习及理解 (Fabric、材质、纹理、实体、网格体、原子、粒子系统等相关概念，并参考相关产品开发了气泡弹窗、管道流水、场景导出、键盘巡游、实时航线、行人漫游等场景通用组件) 在做工艺组态项目时，对3D模型格式做了大量调研，包含obj、3d tiles 、gltf等，并在此过程中对3d t
-        </div>
-      </a>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2024-02-18 11:42" pubdate>
-              2024-02-18
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3 d-flex align-items-center">
-            <i class="iconfont icon-category"></i>
-            
-
-<span class="category-chains">
-  
-  
-    
-      <span class="category-chain">
-        
-  <a href="/notes/categories/%E5%B9%B4%E5%BA%A6%E6%80%BB%E7%BB%93/" class="category-chain-item">年度总结</a>
-  
-  
-
-      </span>
-    
-  
-</span>
-
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/notes/tags/%E5%B9%B4%E5%BA%A6%E6%80%BB%E7%BB%93/">#年度总结</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h2 class="index-header">
-        
-        <a href="/notes/html/confused/%E6%B5%8F%E8%A7%88%E5%99%A8%E8%BF%94%E5%9B%9E%E5%8A%9F%E8%83%BD%E6%B5%8B%E8%AF%95/" target="_self">
-          浏览器返回功能测试 - HTML · 返回动作
-        </a>
-      </h2>
-
-      
-      <a class="index-excerpt index-excerpt__noimg" href="/notes/html/confused/%E6%B5%8F%E8%A7%88%E5%99%A8%E8%BF%94%E5%9B%9E%E5%8A%9F%E8%83%BD%E6%B5%8B%E8%AF%95/" target="_self">
-        <div>
-          页面加载销毁相关事件(按顺序)loadpageshowbeforeunloadpagehideiframe内部跳转特点a标签 会触发iframe内部的load和pageshow事件 历史记录会+1  window.location.href 会触发iframe内部的load和pageshow事件 历史记录会+1  window.location.reload 不会触发任何事件 历史记录保持不变
-        </div>
-      </a>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2024-02-05 11:14" pubdate>
-              2024-02-05
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3 d-flex align-items-center">
-            <i class="iconfont icon-category"></i>
-            
-
-<span class="category-chains">
-  
-  
-    
-      <span class="category-chain">
-        
-  <a href="/notes/categories/HTML/" class="category-chain-item">HTML</a>
-  
-  
-    <span>></span>
-    
-  <a href="/notes/categories/HTML/iframe/" class="category-chain-item">iframe</a>
-  
-  
-    <span>></span>
-    
-  <a href="/notes/categories/HTML/iframe/%E6%B5%8F%E8%A7%88%E5%99%A8%E8%BF%94%E5%9B%9E/" class="category-chain-item">浏览器返回</a>
-  
-  
-
-  
-
-  
-
-      </span>
-    
-  
-</span>
-
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/notes/tags/HTML/">#HTML</a>
-            
-              <a href="/notes/tags/iframe/">#iframe</a>
-            
-              <a href="/notes/tags/%E6%B5%8F%E8%A7%88%E5%99%A8%E8%BF%94%E5%9B%9E/">#浏览器返回</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
 
 
   <nav aria-label="navigation">
     <span class="pagination" id="pagination">
-      <a class="extend prev" rel="prev" href="/notes/page/3/#board"><i class="iconfont icon-arrowleft"></i></a><a class="page-number" href="/notes/">1</a><a class="page-number" href="/notes/page/2/#board">2</a><a class="page-number" href="/notes/page/3/#board">3</a><span class="page-number current">4</span><a class="page-number" href="/notes/page/5/#board">5</a><a class="page-number" href="/notes/page/6/#board">6</a><span class="space">&hellip;</span><a class="page-number" href="/notes/page/11/#board">11</a><a class="extend next" rel="next" href="/notes/page/5/#board"><i class="iconfont icon-arrowright"></i></a>
+      <a class="extend prev" rel="prev" href="/notes/page/3/#board"><i class="iconfont icon-arrowleft"></i></a><a class="page-number" href="/notes/">1</a><a class="page-number" href="/notes/page/2/#board">2</a><a class="page-number" href="/notes/page/3/#board">3</a><span class="page-number current">4</span><a class="page-number" href="/notes/page/5/#board">5</a><a class="page-number" href="/notes/page/6/#board">6</a><span class="space">&hellip;</span><a class="page-number" href="/notes/page/12/#board">12</a><a class="extend next" rel="next" href="/notes/page/5/#board"><i class="iconfont icon-arrowright"></i></a>
     </span>
   </nav>
 
