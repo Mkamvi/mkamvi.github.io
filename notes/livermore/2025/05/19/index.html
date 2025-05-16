@@ -16,23 +16,22 @@
   <meta name="author" content="赛无忧">
   <meta name="keywords" content="赛无忧">
   
-    <meta name="description" content="表单动态表单无法清空问题描述动态表单在删除后，数据仍然保存在表单中，导致校验时出现对旧值的校验，及保存时整个数据结构与预期不一致 问题分析getFieldDecoratorr()在3.x中(rc-from&#x2F;2.4.10)，使用ref判断组件是否卸载，而自定义的函数组件不支持ref，导致清理逻辑失效 这是ref实现的代码片段，注意clearField函数其实就是清理字段 123456789">
+    <meta name="description" content="前日行情开盘快速下跌，但属于跌指数，上午直接确定止跌，应该能在3360附近找到新的支撑点，暂时安全，但上攻无力，仍要警惕阴跌风险 持股交易策略002626 金达威  心照不宣向上伐  拨云见日白担心  事出反常必有妖  顶一字直接炸板，尾盘再次顶板而未放量，资金承接能力强，且破新高，上升无压力，分别在早上第二次确认底部和下午开始拉升之前+1w，目前持仓2w，形势不对需立即出局 000513 丽珠集">
 <meta property="og:type" content="article">
-<meta property="og:title" content="3.x版本问题汇总 - React · Antd">
-<meta property="og:url" content="https://wanmeishijie.xyz/notes/react/antd_v3%E9%97%AE%E9%A2%98%E6%B1%87%E6%80%BB/index.html">
+<meta property="og:title" content="2025-05-19 - 股票操作日志">
+<meta property="og:url" content="https://wanmeishijie.xyz/notes/livermore/2025/05/19/index.html">
 <meta property="og:site_name" content="赛无忧">
-<meta property="og:description" content="表单动态表单无法清空问题描述动态表单在删除后，数据仍然保存在表单中，导致校验时出现对旧值的校验，及保存时整个数据结构与预期不一致 问题分析getFieldDecoratorr()在3.x中(rc-from&#x2F;2.4.10)，使用ref判断组件是否卸载，而自定义的函数组件不支持ref，导致清理逻辑失效 这是ref实现的代码片段，注意clearField函数其实就是清理字段 123456789">
+<meta property="og:description" content="前日行情开盘快速下跌，但属于跌指数，上午直接确定止跌，应该能在3360附近找到新的支撑点，暂时安全，但上攻无力，仍要警惕阴跌风险 持股交易策略002626 金达威  心照不宣向上伐  拨云见日白担心  事出反常必有妖  顶一字直接炸板，尾盘再次顶板而未放量，资金承接能力强，且破新高，上升无压力，分别在早上第二次确认底部和下午开始拉升之前+1w，目前持仓2w，形势不对需立即出局 000513 丽珠集">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2024-01-09T17:27:25.000Z">
-<meta property="article:modified_time" content="2025-05-16T14:19:06.363Z">
+<meta property="article:published_time" content="2025-05-16T21:23:06.000Z">
+<meta property="article:modified_time" content="2025-05-16T14:19:06.362Z">
 <meta property="article:author" content="赛无忧">
-<meta property="article:tag" content="React">
-<meta property="article:tag" content="Antd">
+<meta property="article:tag" content="股票操作日志">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title>3.x版本问题汇总 - React · Antd - 赛无忧</title>
+  <title>2025-05-19 - 股票操作日志 - 赛无忧</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -200,7 +199,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle">3.x版本问题汇总 - React · Antd</span>
+            <span id="subtitle">2025-05-19 - 股票操作日志</span>
           
         </div>
 
@@ -211,8 +210,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2024-01-09 17:27" pubdate>
-          2024年1月9日 下午
+        <time datetime="2025-05-16 21:23" pubdate>
+          2025年5月16日 晚上
         </time>
       </span>
     
@@ -223,7 +222,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          1.1k 字
+          1.3k 字
         
       </span>
     
@@ -234,7 +233,7 @@
         
         
         
-          9 分钟
+          12 分钟
         
       </span>
     
@@ -284,17 +283,120 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">3.x版本问题汇总 - React · Antd</h1>
+            <h1 id="seo-header">2025-05-19 - 股票操作日志</h1>
             
             
               <div class="markdown-body">
                 
-                <h2 id="表单"><a href="#表单" class="headerlink" title="表单"></a>表单</h2><h3 id="动态表单无法清空"><a href="#动态表单无法清空" class="headerlink" title="动态表单无法清空"></a>动态表单无法清空</h3><h4 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h4><p>动态表单在删除后，数据仍然保存在表单中，导致校验时出现对旧值的校验，及保存时整个数据结构与预期不一致</p>
-<h4 id="问题分析"><a href="#问题分析" class="headerlink" title="问题分析"></a>问题分析</h4><p>getFieldDecoratorr()在3.x中(rc-from&#x2F;2.4.10)，使用ref判断组件是否卸载，而自定义的函数组件不支持ref，导致清理逻辑失效</p>
-<p>这是ref实现的代码片段，注意clearField函数其实就是清理字段</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-title function_">saveRef</span>(<span class="hljs-params">name, _, component</span>) &#123;<br>   <span class="hljs-keyword">if</span> (!component) &#123;<br>     <span class="hljs-keyword">const</span> fieldMeta = <span class="hljs-variable language_">this</span>.<span class="hljs-property">fieldsStore</span>.<span class="hljs-title function_">getFieldMeta</span>(name);<br>     <span class="hljs-keyword">if</span> (!fieldMeta.<span class="hljs-property">preserve</span>) &#123;<br>       <span class="hljs-comment">// after destroy, delete data</span><br>       <span class="hljs-variable language_">this</span>.<span class="hljs-property">clearedFieldMetaCache</span>[name] = &#123;<br>         <span class="hljs-attr">field</span>: <span class="hljs-variable language_">this</span>.<span class="hljs-property">fieldsStore</span>.<span class="hljs-title function_">getField</span>(name),<br>         <span class="hljs-attr">meta</span>: fieldMeta,<br>       &#125;;<br>       <span class="hljs-variable language_">this</span>.<span class="hljs-title function_">clearField</span>(name);<br>     &#125;<br>     <span class="hljs-keyword">delete</span> <span class="hljs-variable language_">this</span>.<span class="hljs-property">domFields</span>[name];<br>     <span class="hljs-keyword">return</span>;<br>   &#125;<br>   <span class="hljs-variable language_">this</span>.<span class="hljs-property">domFields</span>[name] = <span class="hljs-literal">true</span>;<br>   <span class="hljs-variable language_">this</span>.<span class="hljs-title function_">recoverClearedField</span>(name);<br>   <span class="hljs-keyword">const</span> fieldMeta = <span class="hljs-variable language_">this</span>.<span class="hljs-property">fieldsStore</span>.<span class="hljs-title function_">getFieldMeta</span>(name);<br>   <span class="hljs-keyword">if</span> (fieldMeta) &#123;<br>     <span class="hljs-keyword">const</span> ref = fieldMeta.<span class="hljs-property">ref</span>;<br>     <span class="hljs-keyword">if</span> (ref) &#123;<br>       <span class="hljs-keyword">if</span> (<span class="hljs-keyword">typeof</span> ref === <span class="hljs-string">&#x27;string&#x27;</span>) &#123;<br>         <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">Error</span>(<span class="hljs-string">`can not set ref string for <span class="hljs-subst">$&#123;name&#125;</span>`</span>);<br>       &#125; <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (<span class="hljs-keyword">typeof</span> ref === <span class="hljs-string">&#x27;function&#x27;</span>) &#123;<br>         <span class="hljs-title function_">ref</span>(component);<br>       &#125; <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (<span class="hljs-title class_">Object</span>.<span class="hljs-property"><span class="hljs-keyword">prototype</span></span>.<span class="hljs-property">hasOwnProperty</span>.<span class="hljs-title function_">call</span>(ref, <span class="hljs-string">&#x27;current&#x27;</span>)) &#123;<br>         ref.<span class="hljs-property">current</span> = component;<br>       &#125;<br>     &#125;<br>   &#125;<br>   <span class="hljs-variable language_">this</span>.<span class="hljs-property">instances</span>[name] = component;<br> &#125;<br></code></pre></td></tr></table></figure>
-
-<h4 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h4><p>给函数组件添加forwardRef，转发ref到子组件</p>
+                <h2 id="前日行情"><a href="#前日行情" class="headerlink" title="前日行情"></a>前日行情</h2><p>开盘快速下跌，但属于跌指数，上午直接确定止跌，应该能在3360附近找到新的支撑点，暂时安全，但上攻无力，仍要警惕阴跌风险</p>
+<h2 id="持股交易策略"><a href="#持股交易策略" class="headerlink" title="持股交易策略"></a>持股交易策略</h2><h4 id="002626-金达威"><a href="#002626-金达威" class="headerlink" title="002626 金达威"></a>002626 金达威</h4><ul>
+<li><input disabled="" type="checkbox"> 心照不宣向上伐</li>
+<li><input disabled="" type="checkbox"> 拨云见日白担心</li>
+<li><input disabled="" type="checkbox"> 事出反常必有妖</li>
+</ul>
+<p>顶一字直接炸板，尾盘再次顶板而未放量，资金承接能力强，且破新高，上升无压力，分别在早上第二次确认底部和下午开始拉升之前+1w，目前持仓2w，形势不对需立即出局</p>
+<h4 id="000513-丽珠集团"><a href="#000513-丽珠集团" class="headerlink" title="000513 丽珠集团"></a>000513 丽珠集团</h4><ul>
+<li><input checked="" disabled="" type="checkbox"> 心照不宣向上伐</li>
+<li><input disabled="" type="checkbox"> 拨云见日白担心</li>
+<li><input disabled="" type="checkbox"> 事出反常必有妖</li>
+</ul>
+<p>结构性太强，早盘直接入2w，耐心持仓</p>
+<h4 id="600742-一汽富维"><a href="#600742-一汽富维" class="headerlink" title="600742 一汽富维"></a>600742 一汽富维</h4><ul>
+<li><input checked="" disabled="" type="checkbox"> 心照不宣向上伐</li>
+<li><input disabled="" type="checkbox"> 拨云见日白担心</li>
+<li><input checked="" disabled="" type="checkbox"> 事出反常必有妖</li>
+</ul>
+<p>截去3天前的上影线，属于放量上涨，且破前高，属于上攻信号，直接+2w，需警惕关注成家量</p>
+<h4 id="601136-首创证券"><a href="#601136-首创证券" class="headerlink" title="601136 首创证券"></a>601136 首创证券</h4><ul>
+<li><input checked="" disabled="" type="checkbox"> 心照不宣向上伐</li>
+<li><input disabled="" type="checkbox"> 拨云见日白担心</li>
+<li><input disabled="" type="checkbox"> 事出反常必有妖</li>
+</ul>
+<p>这是前天跟着证券那波拉升进的，目前表现还算良好，持仓2w，唯一一只感到不安的票子，再观察一个交易日，不达预期，直接清仓观望（可能会一路阴跌）</p>
+<h4 id="6003237-五芳斋"><a href="#6003237-五芳斋" class="headerlink" title="6003237 五芳斋"></a>6003237 五芳斋</h4><ul>
+<li><input disabled="" type="checkbox"> 心照不宣向上伐</li>
+<li><input disabled="" type="checkbox"> 拨云见日白担心</li>
+<li><input disabled="" type="checkbox"> 事出反常必有妖</li>
+</ul>
+<p>今天是一个不错的下跌预期，第二次回升果断+1w，注意利润回吐风险</p>
+<h4 id="000766-通化金马"><a href="#000766-通化金马" class="headerlink" title="000766 通化金马"></a>000766 通化金马</h4><ul>
+<li><input checked="" disabled="" type="checkbox"> 心照不宣向上伐</li>
+<li><input disabled="" type="checkbox"> 拨云见日白担心</li>
+<li><input checked="" disabled="" type="checkbox"> 事出反常必有妖</li>
+</ul>
+<p>意料之外的高开高走，在第二次上攻时果断+1w，盘中两次冲高回落，但尾盘预期较强，整体上升阶段承接差，但主力没走，持仓观察主力动向，情况不对及时撤退</p>
+<h4 id="600511-国药股份"><a href="#600511-国药股份" class="headerlink" title="600511 国药股份"></a>600511 国药股份</h4><ul>
+<li><input checked="" disabled="" type="checkbox"> 心照不宣向上伐</li>
+<li><input disabled="" type="checkbox"> 拨云见日白担心</li>
+<li><input checked="" disabled="" type="checkbox"> 事出反常必有妖</li>
+</ul>
+<p>上升趋势 + 稳，持仓观望一段时间</p>
+<h4 id="600511-国药股份-1"><a href="#600511-国药股份-1" class="headerlink" title="600511 国药股份"></a>600511 国药股份</h4><ul>
+<li><input checked="" disabled="" type="checkbox"> 心照不宣向上伐</li>
+<li><input disabled="" type="checkbox"> 拨云见日白担心</li>
+<li><input checked="" disabled="" type="checkbox"> 事出反常必有妖</li>
+</ul>
+<p>介入流感，+1w，上升趋势 + 稳，持仓观望一段时间</p>
+<h4 id="002584-西陇科学"><a href="#002584-西陇科学" class="headerlink" title="002584 西陇科学"></a>002584 西陇科学</h4><ul>
+<li><input checked="" disabled="" type="checkbox"> 心照不宣向上伐</li>
+<li><input checked="" disabled="" type="checkbox"> 拨云见日白担心</li>
+<li><input disabled="" type="checkbox"> 事出反常必有妖</li>
+</ul>
+<p>早盘第二次确认底部后，+1w，尾盘顶板，虽然快速回落，但收盘仍强于预期，持仓观望</p>
+<h4 id="300945-曼卡龙"><a href="#300945-曼卡龙" class="headerlink" title="300945 曼卡龙"></a>300945 曼卡龙</h4><ul>
+<li><input checked="" disabled="" type="checkbox"> 心照不宣向上伐</li>
+<li><input disabled="" type="checkbox"> 拨云见日白担心</li>
+<li><input disabled="" type="checkbox"> 事出反常必有妖</li>
+</ul>
+<p>破前高，买点黄金对冲风险，早盘拉升阶段+1w，拉升阶段，持仓观望几天</p>
+<h4 id="002864-盘龙药业"><a href="#002864-盘龙药业" class="headerlink" title="002864 盘龙药业"></a>002864 盘龙药业</h4><ul>
+<li><input disabled="" type="checkbox"> 心照不宣向上伐</li>
+<li><input disabled="" type="checkbox"> 拨云见日白担心</li>
+<li><input disabled="" type="checkbox"> 事出反常必有妖</li>
+</ul>
+<p>破前高，持药对抗风险，上升通道，在盘中第一次确认拉升阶段直接+1w，成家量略高，整体上涨承接差，注意风险</p>
+<h4 id="002864-盘龙药业-1"><a href="#002864-盘龙药业-1" class="headerlink" title="002864 盘龙药业"></a>002864 盘龙药业</h4><ul>
+<li><input disabled="" type="checkbox"> 心照不宣向上伐</li>
+<li><input disabled="" type="checkbox"> 拨云见日白担心</li>
+<li><input disabled="" type="checkbox"> 事出反常必有妖</li>
+</ul>
+<p>破前高，持药对抗风险，上升通道，在盘中第一次确认拉升阶段直接+1w，成家量略高，整体上涨承接差，注意风险</p>
+<h4 id="600201-生物股份"><a href="#600201-生物股份" class="headerlink" title="600201 生物股份"></a>600201 生物股份</h4><ul>
+<li><input disabled="" type="checkbox"> 心照不宣向上伐</li>
+<li><input checked="" disabled="" type="checkbox"> 拨云见日白担心</li>
+<li><input checked="" disabled="" type="checkbox"> 事出反常必有妖</li>
+</ul>
+<p>上升通道，尾盘强预期，+1w，持仓观望</p>
+<h4 id="600420-国药现代"><a href="#600420-国药现代" class="headerlink" title="600420 国药现代"></a>600420 国药现代</h4><ul>
+<li><input disabled="" type="checkbox"> 心照不宣向上伐</li>
+<li><input disabled="" type="checkbox"> 拨云见日白担心</li>
+<li><input checked="" disabled="" type="checkbox"> 事出反常必有妖</li>
+</ul>
+<p>上升通道，持药对抗风险，+1w，持仓观望</p>
+<h4 id="002404-嘉兴丝绸"><a href="#002404-嘉兴丝绸" class="headerlink" title="002404 嘉兴丝绸"></a>002404 嘉兴丝绸</h4><ul>
+<li><input disabled="" type="checkbox"> 心照不宣向上伐</li>
+<li><input checked="" disabled="" type="checkbox"> 拨云见日白担心</li>
+<li><input disabled="" type="checkbox"> 事出反常必有妖</li>
+</ul>
+<p>尾盘强预期，+1w，试水，持仓观望</p>
+<h4 id="002107-沃华医药"><a href="#002107-沃华医药" class="headerlink" title="002107 沃华医药"></a>002107 沃华医药</h4><ul>
+<li><input disabled="" type="checkbox"> 心照不宣向上伐</li>
+<li><input disabled="" type="checkbox"> 拨云见日白担心</li>
+<li><input checked="" disabled="" type="checkbox"> 事出反常必有妖</li>
+</ul>
+<p>红了一个月，之前没有做过这种票子，且今天放量上涨超预期，必须持仓观望, +1w</p>
+<h4 id="002022-科华生物"><a href="#002022-科华生物" class="headerlink" title="002022 科华生物"></a>002022 科华生物</h4><ul>
+<li><input disabled="" type="checkbox"> 心照不宣向上伐</li>
+<li><input disabled="" type="checkbox"> 拨云见日白担心</li>
+<li><input disabled="" type="checkbox"> 事出反常必有妖</li>
+</ul>
+<p>早盘想冲流感，开盘+1w，严重不及预期，随时准备跑路</p>
+<h4 id="603520-司太立"><a href="#603520-司太立" class="headerlink" title="603520 司太立"></a>603520 司太立</h4><ul>
+<li><input disabled="" type="checkbox"> 心照不宣向上伐</li>
+<li><input checked="" disabled="" type="checkbox"> 拨云见日白担心</li>
+<li><input checked="" disabled="" type="checkbox"> 事出反常必有妖</li>
+</ul>
+<p>极强预期，盘中第二次上攻果断+1w，主力未走，持仓观望，需要警惕成交量，提防主力反向跑路</p>
 
                 
               </div>
@@ -313,15 +415,8 @@
     
       <span class="category-chain">
         
-  <a href="/notes/categories/React/" class="category-chain-item">React</a>
+  <a href="/notes/categories/%E8%82%A1%E7%A5%A8%E6%93%8D%E4%BD%9C%E6%97%A5%E5%BF%97/" class="category-chain-item">股票操作日志</a>
   
-  
-    <span>></span>
-    
-  <a href="/notes/categories/React/Antd/" class="category-chain-item">Antd</a>
-  
-  
-
   
 
       </span>
@@ -335,9 +430,7 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/notes/tags/React/" class="print-no-link">#React</a>
-      
-        <a href="/notes/tags/Antd/" class="print-no-link">#Antd</a>
+        <a href="/notes/tags/%E8%82%A1%E7%A5%A8%E6%93%8D%E4%BD%9C%E6%97%A5%E5%BF%97/" class="print-no-link">#股票操作日志</a>
       
     </div>
   
@@ -349,8 +442,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>3.x版本问题汇总 - React · Antd</div>
-      <div>https://wanmeishijie.xyz/notes/react/antd_v3问题汇总/</div>
+      <div>2025-05-19 - 股票操作日志</div>
+      <div>https://wanmeishijie.xyz/notes/livermore/2025/05/19/</div>
     </div>
     <div class="license-meta">
       
@@ -362,7 +455,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2024年1月9日</div>
+          <div>2025年5月16日</div>
         </div>
       
       
@@ -394,18 +487,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/notes/emacs/docs/screen/" title="屏幕组织 - Emacs · 帮助文档">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">屏幕组织 - Emacs · 帮助文档</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/notes/mac/%E5%BF%AB%E6%8D%B7%E9%94%AE/" title="快捷键 - Mac">
-                        <span class="hidden-mobile">快捷键 - Mac</span>
+                      <a href="/notes/livermore/2025/05/16/" title="2025-05-16 - 股票操作日志">
+                        <span class="hidden-mobile">2025-05-16 - 股票操作日志</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
@@ -428,7 +515,7 @@
         var options = Object.assign(
           {"clientID":"380b721444e388f986da","clientSecret":"cd4569aa7c4e07f1301593bbd51fb45572592099","repo":"mkamvi.github.io","owner":"Mkamvi","admin":["Mkamvi"],"language":"zh-CN","labels":["Gitalk"],"perPage":10,"pagerDirection":"last","distractionFreeMode":false,"createIssueManually":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token"},
           {
-            id: '41a35b61c24b2e86359862192ac22745'
+            id: '3e955e8b6d3a6c1632e032683a2d4155'
           }
         )
         var gitalk = new Gitalk(options);
