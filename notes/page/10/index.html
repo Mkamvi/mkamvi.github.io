@@ -229,6 +229,76 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h2 class="index-header">
         
+        <a href="/notes/code-reading/lodash/Array/" target="_self">
+          Array - 源码阅读 · lodash
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/notes/code-reading/lodash/Array/" target="_self">
+        <div>
+          _.slice()和原生 Array.slice 的区别 返回的是一个密集数组，原生的有可能会返回一个稀疏数组 稀疏数组在迭代器里不会执行  源码细节 使用 &gt;&gt;&gt; 0 无符号右移运算符处理有可能的异常情况，将非整数变成一个整数 然后使用 while 循环做了一次浅拷贝  源码12345678910111213141516171819202122232425function sl
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2023-11-25 17:02" pubdate>
+              2023-11-25
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/notes/categories/%E6%BA%90%E7%A0%81%E9%98%85%E8%AF%BB/" class="category-chain-item">源码阅读</a>
+  
+  
+    <span>></span>
+    
+  <a href="/notes/categories/%E6%BA%90%E7%A0%81%E9%98%85%E8%AF%BB/lodash/" class="category-chain-item">lodash</a>
+  
+  
+
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/notes/tags/%E6%BA%90%E7%A0%81%E9%98%85%E8%AF%BB/">#源码阅读</a>
+            
+              <a href="/notes/tags/lodash/">#lodash</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
         <a href="/notes/work/2023-11-25/" target="_self">
           2023年11月25日 - 工作总结
         </a>
@@ -794,67 +864,6 @@
               <a href="/notes/tags/HTML/">#HTML</a>
             
               <a href="/notes/tags/Iframe/">#Iframe</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h2 class="index-header">
-        
-        <a href="/notes/vue/Reverse%E5%BC%95%E5%8F%91%E7%9A%84%E6%97%A0%E9%99%90%E5%BE%AA%E7%8E%AF/" target="_self">
-          由Array.reverse引发的血案 - Vue
-        </a>
-      </h2>
-
-      
-      <a class="index-excerpt index-excerpt__noimg" href="/notes/vue/Reverse%E5%BC%95%E5%8F%91%E7%9A%84%E6%97%A0%E9%99%90%E5%BE%AA%E7%8E%AF/" target="_self">
-        <div>
-          起因项目部署后访问页面，竟然直接卡死 ！ 原因Array.reverse() 竟然直接修改原数组！然后 Vue 里面便形成了 监听变化 &#x3D;&gt; 修改元素组 &#x3D;&gt; 变化 &#x3D;&gt; 监听变化 的无限循环中！ (一直以为是返回新数组！所以排查到是因为 reverse 调用引起的问题时，大吃一惊！)
-        </div>
-      </a>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2023-09-20 10:21" pubdate>
-              2023-09-20
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3 d-flex align-items-center">
-            <i class="iconfont icon-category"></i>
-            
-
-<span class="category-chains">
-  
-  
-    
-      <span class="category-chain">
-        
-  <a href="/notes/categories/Vue/" class="category-chain-item">Vue</a>
-  
-  
-
-      </span>
-    
-  
-</span>
-
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/notes/tags/Vue/">#Vue</a>
             
           </div>
         
